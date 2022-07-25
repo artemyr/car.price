@@ -26,3 +26,12 @@ Route::group(["namespace" => "Post"], function() {
     Route::patch('/posts/{post}', 'UpdateController')->name('post.update');
     Route::delete('/posts/{post}', 'DestroyController')->name('post.destroy');
 });
+
+Route::group(["namespace" => "Admin", 'prefix' => 'admin'], function() {
+
+    // Route::get('/admin', 'IndexController')->name('admin.index');
+
+    Route::group(["namespace" => "Post"], function() {
+        Route::get('/post', 'IndexController')->name('admin.post.index');
+    });
+});
