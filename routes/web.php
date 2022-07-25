@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::group(["namespace" => "Post"], function() {
     Route::get('/posts', 'IndexController')->name('post.index');
@@ -27,7 +25,7 @@ Route::group(["namespace" => "Post"], function() {
     Route::delete('/posts/{post}', 'DestroyController')->name('post.destroy');
 });
 
-Route::group(["namespace" => "Admin", 'prefix' => 'admin'], function() {
+Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admin'], function() {
 
     // Route::get('/admin', 'IndexController')->name('admin.index');
 
@@ -35,3 +33,7 @@ Route::group(["namespace" => "Admin", 'prefix' => 'admin'], function() {
         Route::get('/post', 'IndexController')->name('admin.post.index');
     });
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
