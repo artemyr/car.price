@@ -2,15 +2,21 @@
 
 namespace App\Http\Controllers\Post;
 
+use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\Post\FilterRequest;
+use App\Http\Filters\PostFilter;
 
 class IndexController extends Controller
 {
-    public function __invoke ()
+    public function __invoke (FilterRequest $request)
     {
-        $posts = Post::all();
+        $data = $request->validated();
+
+        $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
+        $posts = Post::filter($filter)->paginate(10);
+
         return view('post.index', compact('posts'));
     }
 }
