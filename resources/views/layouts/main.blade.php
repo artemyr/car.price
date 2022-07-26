@@ -13,7 +13,9 @@
         <nav>
             <ul>
                 <li><a href="{{ route('home') }}">Main</a></li>
+                @can('view', auth()->user())
                 <li><a href="{{ route('admin.post.index') }}">Admin</a></li>
+                @endcan
                 <li><a href="{{ route('post.index') }}">Posts index</a></li>
                 <li><a href="{{ route('post.create') }}">Post create</a></li>
             </ul>
