@@ -25,6 +25,6 @@ class DatabaseSeeder extends Seeder
             $post->tags()->attach($tagsIds);
         }
 
-        // \App\Models\User::factory(10)->create();
+        \App\Models\User::factory(1)->create();
     }
 }

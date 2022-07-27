@@ -3,13 +3,16 @@
 namespace App\Http\Controllers\Post;
 
 use App\Models\Post;
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Post\BaseController;
 use Illuminate\Http\Request;
 
-class ShowController extends Controller
+class ShowController extends BaseController
 {
-    public function __invoke (Post $post)
+    public function __invoke ($city, Post $post)
     {
-        return view('post.show', compact('post'));
+        $data['city'] = $this->initCity($city);
+        if(!$data['city']) return "cant find city";
+
+        return view('post.show', compact('post','city'));
     }
 }

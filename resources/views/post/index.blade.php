@@ -2,7 +2,7 @@
 @section('content')
 <div class="post-list">
     @foreach($posts as $post)
-        <div><a href="{{ route('post.show', $post->id) }}">{{ $post->id }}. {{ $post->title }}</a></div>
+        <div><a href="{{ route('post.show', [$city, $post->id]) }}">{{ $post->id }}. {{ $post->title }}</a></div>
     @endforeach
 </div>
 <div>

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.admin')
 @section('content')
 <div>
     <div class="mb-20">
@@ -25,6 +25,20 @@
     </div>
 </div>
 <div>
-    <a href="{{ route('post.index', $city) }}">Back</a>
+<div>
+    <form action="{{ route('admin.post.edit', $post->id) }}" method="GET">
+        @csrf
+        <input type="submit" value="Update">
+    </form>
+</div>
+<div>
+    <form action="{{ route('admin.post.destroy', $post->id) }}" method="POST">
+        @csrf
+        @method('delete')
+        <input type="submit" value="Delete">
+    </form>
+</div>
+<div>
+    <a href="{{ route('admin.post.index') }}">Back</a>
 </div>
 @endsection

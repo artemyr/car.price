@@ -12,13 +12,24 @@
     <div class="artemaster">
         <nav>
             <ul>
-                <li><a href="{{ route('home') }}">Main</a></li>
                 @can('view', auth()->user())
                 <li><a href="{{ route('admin.post.index') }}">Admin</a></li>
                 @endcan
-                <li><a href="{{ route('post.index') }}">Posts index</a></li>
-                <li><a href="{{ route('post.create') }}">Post create</a></li>
+
+                <li><a href="{{ route('post.index', 'krasnodar') }}">Posts krasnodar</a></li>
+                <li><a href="{{ route('post.index', 'moskow') }}">Posts moskow</a></li>
+
+                <li><a href="{{ route('home') }}">Auth</a></li>
+                <li><a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    Logout
+                    </a>
+                </li>
             </ul>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
         </nav>
         @yield('content')
     </div>
