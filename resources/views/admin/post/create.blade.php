@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 <div>
-   <form action="{{ route('post.store') }}" method="POST">
+   <form action="{{ route('admin.post.store') }}" method="POST">
         @csrf
         <div class="mb-20">
             <label for="title">Title</label>
@@ -46,6 +46,19 @@
                 @endforeach
             </select>
         </div>
+        
+        <div class="mb-20">
+            <label for="city">City</label>
+            <select name="city" id="city">
+                @foreach ($citys as $city)                    
+                    <option 
+                        value="{{ $city->id }}">
+                        {{ $city->title }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+
         <div>
             <input type="submit" value="Create">
         </div>

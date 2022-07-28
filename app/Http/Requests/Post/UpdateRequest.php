@@ -29,6 +29,7 @@ class UpdateRequest extends FormRequest
             'image' => 'string',
             'category_id' => '',
             'tags' => '',
+            'city' => '',
         ];
     }
 }

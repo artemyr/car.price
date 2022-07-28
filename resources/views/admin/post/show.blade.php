@@ -23,6 +23,10 @@
     <div class="mb-20">
         <p>Category: {{ $post->category->title }}</p>
     </div>
+
+    <div class="mb-20">
+        <p>City: {{ $post->city }}</p>
+    </div>
 </div>
 <div>
 <div>

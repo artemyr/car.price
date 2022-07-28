@@ -1,9 +1,9 @@
-@extends('layouts.main')
+@extends('layouts.admin')
 @section('content')
 <div>
     <!-- PUT - APPEND -->
     <!-- PACH - UPDATE -->
-   <form action="{{ route('post.update', $post->id) }}" method="POST">
+   <form action="{{ route('admin.post.update', $post->id) }}" method="POST">
         @csrf
         @method('patch')
         <div class="mb-20">
@@ -46,6 +46,22 @@
                 @endforeach
             </select>
         </div>
+
+        <div class="mb-20">
+            <label for="city">City</label>
+            <select name="city" id="city">
+                @foreach ($citys as $city)                    
+                    <option 
+                    
+                        {{ $city->id == $post->city ? ' selected' : '' }}
+
+                        value="{{ $city->id }}">
+                        {{ $city->title }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+
         <div>
             <input type="submit" value="Update">
         </div>

@@ -8,7 +8,7 @@
         <p>content:</p>
         <div>{{ $post->content }}</div>
     </div>
-    <div class="mb-20">{{ $post->image }}</div>
+    <div class="mb-20"><img src="{{ $post->image }}"></div>
     
     <div class="mb-20">{{ $post->likes }}</div>
 
