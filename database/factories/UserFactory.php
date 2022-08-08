@@ -27,7 +27,8 @@ class UserFactory extends Factory
             'name' => "admin",
             'email' => "artem.r@affetta.ru",
             'email_verified_at' => now(),
-            'password' => Hash::make('123456q'), // password
+            'password' => Hash::make('123456'), // password
+            'role' => 'admin',
             'remember_token' => Str::random(10),
         ];
     }

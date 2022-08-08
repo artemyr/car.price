@@ -1,28 +1,23 @@
 <?php
 
-namespace App\Http\Controllers\Post;
+namespace App\Http\Controllers\Review;
 
 use App\Http\Controllers\Controller;
-use App\Services\Post\Service;
 use App\Models\City;
 use App\Models\Category;
 
 class BaseController extends Controller 
 {
-    public $service;
-
     private $cities;
     private $categories;
 
-    public function __construct (Service $service)
+    public function __construct ()
     {
-        $this->service = $service;
-
         $this->cities = City::all();
         $this->categories = Category::all();
     }
 
-    public function getCitiesAndCategories() 
+    public function template_vars() 
     {
         return ['cities' => $this->cities, 'categories' => $this->categories];
     }

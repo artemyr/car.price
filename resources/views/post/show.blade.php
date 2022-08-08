@@ -8,10 +8,14 @@
         <p>content:</p>
         <div>{{ $post->content }}</div>
     </div>
+
+    @if(!empty($post->image))
     <div class="mb-20"><img src="{{ $post->image }}"></div>
+    @endif
     
     <div class="mb-20">{{ $post->likes }}</div>
 
+    @if($post->isNotEmpty)
     <div class="mb-20">
         <p>Tags:
             @foreach($post->tags as $tag)
@@ -19,12 +23,13 @@
             @endforeach
         </p>
     </div>
+    @endif
 
     <div class="mb-20">
         <p>Category: {{ $post->category->title }}</p>
     </div>
 </div>
 <div>
-    <a href="{{ route('post.index', $city) }}">Back</a>
+    <a href="{{ route('category', [$city->link, $category]) }}">Назад</a>
 </div>
 @endsection

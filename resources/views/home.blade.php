@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.empty')
 
 @section('content')
 <div class="container">
@@ -15,6 +15,8 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                    <a href="{{ route('main') }}">go home</a>
                 </div>
             </div>
         </div>

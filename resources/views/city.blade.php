@@ -2,6 +2,6 @@
 
 @section('content')
 
-главная
+В городе {{ $city->name_predloshniy_padesh }}
 
 @endsection

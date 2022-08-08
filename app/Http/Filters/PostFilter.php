@@ -11,7 +11,7 @@ class PostFilter extends AbstractFilter
     public const TITLE = 'title';
     public const CONTENT = 'content';
     public const CATEGORY_ID = 'category_id';
-    public const CITY = 'city';
+    public const CITY_ID = 'city_id';
 
 
     protected function getCallbacks(): array
@@ -20,7 +20,7 @@ class PostFilter extends AbstractFilter
             self::TITLE => [$this, 'title'],
             self::CONTENT => [$this, 'content'],
             self::CATEGORY_ID => [$this, 'categoryId'],
-            self::CITY => [$this, 'city'],
+            self::CITY_ID => [$this, 'cityId'],
         ];
     }
 
@@ -37,6 +37,11 @@ class PostFilter extends AbstractFilter
     public function categoryId(Builder $builder, $value)
     {
         $builder->where('category_id', $value);
+    }
+
+    public function cityId(Builder $builder, $value)
+    {
+        $builder->where('city_id', $value);
     }
 
     public function city(Builder $builder, $value)

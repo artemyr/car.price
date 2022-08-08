@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <div class="artemaster">
-        @include('includes.nav')
+    <div class="artemaster">       
         @yield('content')
     </div>
     <script defer src="{{ asset('js/app.js') }}"></script>

@@ -21,6 +21,11 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
+
     public function tags()
     {
         return $this->belongsToMany(Tag::class);

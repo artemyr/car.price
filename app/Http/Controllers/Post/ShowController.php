@@ -3,16 +3,17 @@
 namespace App\Http\Controllers\Post;
 
 use App\Models\Post;
+use App\Models\City;
 use App\Http\Controllers\Post\BaseController;
 use Illuminate\Http\Request;
 
 class ShowController extends BaseController
 {
-    public function __invoke ($city, Post $post)
+    public function __invoke ($city, $category, $post)
     {
-        $data['city'] = $this->initCity($city);
-        if(!$data['city']) return "cant find city";
+        $city = City::where('link', $city)->firstOrFail();
+        $post = Post::where('link', $post)->firstOrFail();
 
-        return view('post.show', compact('post','city'));
+        return view('post.show', compact('post', 'city', 'category') + $this->getCitiesAndCategories() );
     }
 }

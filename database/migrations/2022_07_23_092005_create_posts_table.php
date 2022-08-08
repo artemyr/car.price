@@ -15,16 +15,20 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('city');
+
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('city_id');
+
             $table->string('title');
             $table->text('content');
             $table->string('image')->nullable();
             $table->unsignedBigInteger('likes')->nullable();
             $table->boolean('is_published')->default(1);
-            $table->timestamps();
-            $table->softDeletes();
 
-            $table->unsignedBigInteger('category_id');
+            $table->string('link');
+
+            $table->timestamps();
+            $table->softDeletes();            
         });
     }
 

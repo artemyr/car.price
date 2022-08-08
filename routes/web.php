@@ -13,7 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'MainController@index')->name('main');
 
 
 
@@ -31,11 +30,38 @@ Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admi
 });
 
 
-Route::group(["namespace" => "Post"], function() {
-    Route::get('/{city}/posts', 'IndexController')->name('post.index');
-    Route::get('/{city}/posts/{post}', 'ShowController')->name('post.show');
-});
+// Route::group(["namespace" => "Post"], function() {
+//     Route::get('/{city}/posts', 'IndexController')->name('post.index');
+//     Route::get('/{city}/posts/{post}', 'ShowController')->name('post.show');
+// });
 
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
+Route::group(["namespace" => "Article"], function() {
+    Route::get('/{city}/articles', 'IndexController')->name('article.index');
+    Route::get('/{city}/articles/{article}', 'ShowController')->name('article.show');
+});
+
+
+
+Route::group(["namespace" => "Review"], function() {
+    Route::get('/{city}/otzivi', 'IndexController')->name('review.index');
+});
+
+
+
+
+// last
+Route::group(["namespace" => "City"], function() {
+    Route::get('/', 'IndexController')->name('main');
+    Route::get('/{city}', 'ShowController')->name('current_city');
+});
+Route::group(["namespace" => "Post"], function() {
+    Route::get('/{city}/{category}', 'CategoryController')->name('category');
+    Route::get('/{city}/{category}/{post}', 'ShowController')->name('post.show');
+});
