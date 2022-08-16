@@ -95,28 +95,24 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'краснодар - статья 1',
             'content' => 'объявление в городе краснодар 1',
-            'city_id' => 1,
             'link' => 'kras-1',
         ]; 
         $data[] = 
         [
             'title' => 'краснодар - статья 2',
             'content' => 'объявление в городе краснодар 2',
-            'city_id' => 1,
             'link' => 'kras-2',
         ];    
         $data[] = 
         [
             'title' => 'Москва - статья 1',
             'content' => 'объявление в городе Москва 1',
-            'city_id' => 2,
             'link' => 'mos-1',
         ]; 
         $data[] = 
         [
             'title' => 'Москва - статья 2',
             'content' => 'объявление в городе Москва 2',
-            'city_id' => 2,
             'link' => 'mos-2',
         ];     
 
@@ -131,25 +127,21 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'краснодар - отзыв 1',
             'content' => 'отзыв в городе краснодар 1',
-            'city_id' => 1,
         ]; 
         $data[] = 
         [
             'title' => 'краснодар - отзыв 2',
             'content' => 'отзыв в городе краснодар 2',
-            'city_id' => 1,
         ];    
         $data[] = 
         [
             'title' => 'Москва - отзыв 1',
             'content' => 'отзыв в городе Москва 1',
-            'city_id' => 2,
         ]; 
         $data[] = 
         [
             'title' => 'Москва - отзыв 2',
             'content' => 'отзыв в городе Москва 2',
-            'city_id' => 2,
         ];     
 
         foreach($data as $item)

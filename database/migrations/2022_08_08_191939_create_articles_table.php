@@ -15,7 +15,6 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('city_id');
 
             $table->string('link');
             $table->string('title');

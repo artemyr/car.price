@@ -24,8 +24,8 @@
             </ul>
         </li>
         <li><a href="#">Автодилерам</a></li>
-        <li><a href="{{ route('article.index', [($city->link) ?? $cities[0]->link]) }}">Статьи</a></li>
-        <li><a href="{{ route('review.index', [($city->link) ?? $cities[0]->link]) }}">Отзывы</a></li>
+        <li><a href="{{ route('article.index') }}">Статьи</a></li>
+        <li><a href="{{ route('review.index') }}">Отзывы</a></li>
 
         <li style="display:none"><a href="{{ route('home') }}">Auth</a></li>
         <li style="display:none"><a href="{{ route('logout') }}"

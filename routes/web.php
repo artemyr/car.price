@@ -43,14 +43,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::group(["namespace" => "Article"], function() {
-    Route::get('/{city}/articles', 'IndexController')->name('article.index');
-    Route::get('/{city}/articles/{article}', 'ShowController')->name('article.show');
+    Route::get('/articles', 'IndexController')->name('article.index');
+    Route::get('/articles/{article}', 'ShowController')->name('article.show');
 });
 
 
 
 Route::group(["namespace" => "Review"], function() {
-    Route::get('/{city}/otzivi', 'IndexController')->name('review.index');
+    Route::get('/otzivi', 'IndexController')->name('review.index');
 });
 
 

@@ -3,7 +3,7 @@
 
 @foreach($articles as $article)
 <div>
-    <a href="{{ route('article.show', [$city->link, $article->link]) }}">{{ $article->title }}</a>
+    <a href="{{ route('article.show', $article->link) }}">{{ $article->title }}</a>
 </div><br>
 @endforeach
 
