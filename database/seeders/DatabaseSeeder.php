@@ -33,8 +33,10 @@ class DatabaseSeeder extends Seeder
     private function createCategories()
     {
         $data = [];
-        $data[] = ['title' => 'Битые авто', 'link' => 'bitie-auto'];
-        $data[] = ['title' => 'Убитые авто', 'link' => 'ubitie-auto'];
+        $data[] = ['title' => 'С проблемами', 'link' => 's-problemami'];
+        $data[] = ['title' => 'По назначению', 'link' => 'po-naznacheniu'];
+        $data[] = ['title' => 'По кузову', 'link' => 'po-kuzovu'];
+        $data[] = ['title' => 'По рулю', 'link' => 'po-rulu'];
 
         foreach($data as $item)
             Category::create($item);

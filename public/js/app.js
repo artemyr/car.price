@@ -9,29 +9,24 @@
 
 // require('./bootstrap');
 (function (window) {
-  var city_selector_rel = '[data-js=chose-city]';
+  var modal_togglers = document.querySelectorAll('[modal-toggle]');
 
-  if (document.querySelector(city_selector_rel)) {
-    var city_selector = document.querySelector(city_selector_rel);
-
-    city_selector.onchange = function (e) {
-      window.location.href = "/" + city_selector.value;
-    };
+  if (modal_togglers) {
+    modal_togglers.forEach(function (currentValue, currentIndex, listObj) {
+      currentValue.onclick = function (e) {
+        var modal_target = e.target.attributes['modal-toggle'].value;
+        document.getElementById(modal_target).classList.add('active');
+      };
+    });
   }
-
-  document.querySelectorAll('a').forEach(function (el) {
-    if (el.attributes['href'].value == '#' || el.attributes['href'].value == '') {
-      el.classList.add('develop');
-    }
-  });
 })(window);
 
 /***/ }),
 
-/***/ "./resources/css/app.css":
-/*!*******************************!*\
-  !*** ./resources/css/app.css ***!
-  \*******************************/
+/***/ "./resources/css/app.scss":
+/*!********************************!*\
+  !*** ./resources/css/app.scss ***!
+  \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -179,7 +174,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

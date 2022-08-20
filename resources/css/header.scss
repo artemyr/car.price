@@ -1,0 +1,28 @@
+.top-menu {
+    li {
+        margin-right: 16px;
+    }
+
+    li:hover .top-menu__dropdown{
+        display: block;
+    }
+
+    .top-menu__dropdown {
+        display: none;
+        position: absolute;
+        padding: 20px 25px;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        box-shadow: 0px 2px 10px rgba(38, 46, 60, 0.15);
+    }
+}
+
+.header-nav {
+    padding: 20px 0 16px 0;
+}
+
+// .dropdown-menu {
+//     .dropdown-menu__item {
+        
+//     }
+// }

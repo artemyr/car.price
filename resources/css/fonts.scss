@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Geometria light"; 
+    src: url("/fonts/Geometria/geometria_light.otf") format("truetype");
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "Geometria bold"; 
+    src: url("/fonts/Geometria/geometria_bold.otf") format("truetype");
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+.font-Geometria {
+    font-family: "Geometria bold";
+    color: #2E3D4A;    
+}
+
+.logo_size {
+    font-size: 21.25px;
+    line-height: 26.73px
+}
+
+.logo_green {
+    font-family: "Geometria bold";
+    color: #06892B;
+}
+
+.top-menu {
+    .top-menu__item a,
+    .top-menu__item span {
+        font-family: "Geometria light";
+        color: #2E3D4A;
+        text-decoration: none;
+        font-weight: 800;
+        font-size: 16px;
+    }
+}
+
+.dropdown-menu {
+    .dropdown-menu__item a{
+        font-family: 'Geometria bold';
+        font-weight: 500;
+        font-size: 16px;
+        color: #000000;
+    }
+}
+
+.btn-green {
+    font-family: Geometria;
+    size: 16px;
+}

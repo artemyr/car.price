@@ -1,22 +1,17 @@
 // require('./bootstrap');
 
 (function(window){
-
-    const city_selector_rel = '[data-js=chose-city]';
-
-    if(document.querySelector(city_selector_rel))
+    const modal_togglers = document.querySelectorAll('[modal-toggle]');
+    if(modal_togglers)
     {
-        const city_selector = document.querySelector(city_selector_rel);
-
-        city_selector.onchange = function(e){
-            window.location.href = "/" + city_selector.value;
-        }
+        modal_togglers.forEach(
+            function (currentValue, currentIndex, listObj) {
+                currentValue.onclick = (e) => {
+                    const modal_target = e.target.attributes['modal-toggle'].value;
+                    document.getElementById(modal_target).classList.add('active');
+                }
+            },
+        );
     }
-
-    document.querySelectorAll('a').forEach((el) => {
-        if(el.attributes['href'].value == '#' || el.attributes['href'].value == ''){
-            el.classList.add('develop');
-        }
-    });
     
 })(window)
