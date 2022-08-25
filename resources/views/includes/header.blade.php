@@ -4,7 +4,7 @@
 
             <a class="d-flex ali-c link-reset" href="{{ route('main') }}">
                 <div><img src="{{ asset('img/svg/logo.svg') }}"></div>
-                <div><span class="font-Geometria logo_size">Car-price.<span class="logo_green">online</span></span></div>
+                <div><span class="logo">Car-price.<span class="logo_green">online</span></span></div>
             </a>
 
             <div class="m-1200">
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="d-flex ali-c m-1200">
-            <div class="top-menu">
+            <nav class="top-menu">
                 <ul class="d-flex">
                     @can('view', auth()->user())
                     <li class="top-menu__item"><a href="{{ route('admin.post.index') }}">Admin</a></li>
@@ -55,7 +55,7 @@
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                     @csrf
                 </form>
-            </div>
+            </nav>
             <div class="button-block">
                 <a class="btn btn-green" href="#">Оценка авто</a>
             </div>

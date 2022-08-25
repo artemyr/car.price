@@ -1,136 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Geometria";
-  src: url("/fonts/Geometria/geometria_medium.otf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Geometria light";
-  src: url("/fonts/Geometria/geometria_light.otf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Geometria bold";
-  src: url("/fonts/Geometria/geometria_bold.otf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-.font-Geometria {
-  font-family: "Geometria bold";
-  color: #2E3D4A;
-}
-
-.logo_size {
-  font-size: 21.25px;
-  line-height: 26.73px;
-}
-
-.logo_green {
-  font-family: "Geometria bold";
-  color: #06892B;
-}
-
-.top-menu .top-menu__item a,
-.top-menu .top-menu__item span {
-  font-family: "Geometria light";
-  color: #2E3D4A;
-  text-decoration: none;
-  font-weight: 800;
-  font-size: 16px;
-}
-
-.dropdown-menu .dropdown-menu__item a {
-  font-family: "Geometria bold";
-  font-weight: 500;
-  font-size: 16px;
-  color: #000000;
-}
-
-.modal .modal__link {
-  font-family: "Geometria light";
-  font-weight: 600;
-  font-size: 16px;
-  color: #2E3D4A;
-}
-
-.banner .banner__title {
-  font-family: "Geometria bold";
-  font-size: 40px;
-  color: #FFFFFF;
-}
-.banner .banner__subtitle {
-  font-family: "Geometria";
-  font-weight: 500;
-  font-size: 16px;
-  color: #FFFFFF;
-}
-.banner .banner__sign {
-  font-family: "Geometria";
-  font-weight: 500;
-  font-size: 14px;
-  color: #FFFFFF;
-}
-.banner .banner__sign a {
-  color: #FFFFFF;
-}
-
-.home-section .home-section__title {
-  font-family: "Geometria";
-  font-weight: 500;
-  font-size: 32px;
-  color: #2E3D4A;
-  text-align: center;
-}
-.home-section .home-section__subtitle {
-  font-family: "Geometria light";
-  font-weight: 400;
-  font-size: 16px;
-  text-align: center;
-}
-.home-section .home-section__footer {
-  text-align: center;
-}
-
-.howThisWork-steps .howThisWork-steps__step {
-  font-family: "Geometria";
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
-  color: #2E3D4A;
-  line-height: 74px;
-}
-.howThisWork-steps .howThisWork-steps__title {
-  font-family: "Geometria";
-  font-weight: 500;
-  font-size: 16px;
-  text-align: center;
-  color: #2E3D4A;
-}
-.howThisWork-steps .howThisWork-steps__subtitle {
-  font-family: "Geometria";
-  font-weight: 400;
-  font-size: 14px;
-  text-align: center;
-  color: #686868;
-}
-
-.btn-green {
-  font-family: Geometria;
-  font-size: 16px;
-  background-color: #06892B;
-  color: white;
-}
-
-.btn-orange {
-  font-family: "Geometria";
-  font-weight: 500;
-  font-size: 18px;
-  color: #FFFFFF;
-  background: #F58020;
-}
-
 /* Указываем box sizing */
 *,
 *::before,
@@ -212,6 +80,176 @@ select {
     scroll-behavior: auto !important;
   }
 }
+@font-face {
+  font-family: "Geometria";
+  src: url("/fonts/Geometria/geometria_medium.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Geometria light";
+  src: url("/fonts/Geometria/geometria_light.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Geometria bold";
+  src: url("/fonts/Geometria/geometria_bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+.logo {
+  font-size: 24px;
+  font-family: "Geometria bold";
+  color: #2E3D4A;
+}
+
+.logo_green {
+  font-family: "Geometria bold";
+  color: #06892B;
+}
+
+.top-menu .top-menu__item a,
+.top-menu .top-menu__item span {
+  font-family: "Geometria light";
+  color: #2E3D4A;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.header-nav .logo {
+  font-size: 21.25px;
+}
+
+.dropdown-menu .dropdown-menu__item a {
+  font-family: "Geometria bold";
+  font-weight: 500;
+  font-size: 16px;
+  color: #000000;
+}
+
+.modal .modal__link {
+  font-family: "Geometria light";
+  font-weight: 600;
+  font-size: 16px;
+  color: #2E3D4A;
+}
+
+.banner .banner__title {
+  font-family: "Geometria bold";
+  font-size: 40px;
+  color: #FFFFFF;
+}
+.banner .banner__subtitle {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.banner .banner__sign {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.banner .banner__sign a {
+  color: #FFFFFF;
+}
+
+.home-section .home-section__title {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 32px;
+  color: #2E3D4A;
+  text-align: center;
+}
+.home-section .home-section__subtitle {
+  font-family: "Geometria light";
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+.home-section .home-section__footer {
+  text-align: center;
+}
+
+.howThisWork-steps .howThisWork-steps__step {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #2E3D4A;
+  line-height: 74px;
+}
+.howThisWork-steps .howThisWork-steps__title {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #2E3D4A;
+}
+.howThisWork-steps .howThisWork-steps__subtitle {
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #686868;
+}
+
+.whereSell .whereSell__signs li {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 16px;
+  color: #2E3D4A;
+}
+.whereSell .whereSell-card__title {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 24px;
+  color: #2E3D4A;
+}
+.whereSell .whereSell-card__hours {
+  font-family: "Geometria light";
+  font-weight: 400;
+  font-size: 18px;
+  color: #2E3D4A;
+}
+
+.footer .footer__menu li {
+  font-family: "Geometria bold";
+  font-weight: 700;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.footer .footer__sign {
+  font-family: "Geometria light";
+  font-weight: 400;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.footer .footer__policy {
+  font-family: "Geometria light";
+  font-weight: 400;
+  font-size: 16px;
+  color: #87978C;
+}
+
+.btn-green {
+  font-family: Geometria;
+  font-size: 16px;
+  background-color: #06892B;
+  color: white;
+}
+
+.btn-orange {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  background: #F58020;
+}
+
 .d-none {
   display: none;
 }
@@ -286,6 +324,7 @@ select {
 .btn {
   display: inline-block;
   text-decoration: unset;
+  cursor: pointer;
 }
 
 .btn-green {
@@ -316,6 +355,29 @@ select {
 
 .header-nav {
   padding: 20px 0 16px 0;
+}
+
+.footer {
+  background-color: #232528;
+}
+.footer .footer__nav {
+  padding: 41px 0 25px 0;
+  border-bottom: 1px solid #4F5153;
+  margin-bottom: 24px;
+}
+.footer .footer__nav ul {
+  list-style: none;
+  padding: 0;
+}
+.footer .footer__nav ul li {
+  display: inline-block;
+  margin-left: 24px;
+}
+.footer .footer__sign {
+  margin-bottom: 16px;
+}
+.footer .footer__policy {
+  padding-bottom: 40px;
 }
 
 .modal {
@@ -407,4 +469,54 @@ select {
   border: 2px solid #06892B;
   border-radius: 100%;
   color: #FFFFFF;
+}
+
+.whereSell .whereSell__wrapper {
+  position: relative;
+}
+.whereSell .whereSell__wrapper .whereSell__advantages {
+  padding-top: 57px;
+}
+.whereSell .whereSell__wrapper .whereSell__signs ul {
+  list-style: none;
+  padding: 0;
+}
+.whereSell .whereSell__wrapper .whereSell__signs li {
+  padding: 20px 24px;
+}
+.whereSell .whereSell__wrapper .whereSell__sign_shadow {
+  background-image: linear-gradient(to right, #eeeeee, #f2f2f2, #f6f6f6, #fbfbfb, #ffffff);
+  border-radius: 16px;
+}
+.whereSell .whereSell__wrapper .whereSell__cards {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.whereSell .whereSell__wrapper .whereSell__cards .whereSell__card {
+  padding: 20px 24px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 4px 20px rgba(38, 46, 60, 0.15);
+  border-radius: 20px;
+  width: 263px;
+}
+.whereSell .whereSell__wrapper .whereSell__cards .whereSell-card_green {
+  border: 1px solid #06892B;
+}
+
+.whereSell-card .whereSell-card__title {
+  margin-bottom: 37px;
+}
+.whereSell-card .whereSell-card__hours {
+  margin-bottom: 38px;
+}
+.whereSell-card .whereSell-card__marks .whereSell-card__mark {
+  margin-bottom: 35px;
+}
+.whereSell-card .whereSell-card__marks .whereSell-card__mark img {
+  display: inline-block;
+  margin-right: 18px;
 }

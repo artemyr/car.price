@@ -1,0 +1,64 @@
+.whereSell {
+    .whereSell__wrapper{
+        position: relative;
+
+        .whereSell__advantages {
+            padding-top: 57px;
+        }
+
+        .whereSell__signs ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .whereSell__signs li{
+            padding: 20px 24px;
+        }
+
+        .whereSell__sign_shadow {
+            background-image: linear-gradient(to right, #eeeeee, #f2f2f2, #f6f6f6, #fbfbfb, #ffffff);
+            border-radius: 16px;
+        }
+
+        .whereSell__cards {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+
+            .whereSell__card {
+                padding: 20px 24px;
+                background: rgba(255, 255, 255, 0.7);
+                box-shadow: 0px 4px 20px rgba(38, 46, 60, 0.15);
+                border-radius: 20px;
+                width: 263px;
+            }
+
+            .whereSell-card_green {
+                border: 1px solid #06892B;
+            }
+        }
+    }
+}
+
+.whereSell-card {
+    .whereSell-card__title {
+        margin-bottom: 37px;
+    }
+    .whereSell-card__hours {
+        margin-bottom: 38px;
+    }
+    .whereSell-card__marks {
+
+        .whereSell-card__mark {
+            margin-bottom: 35px;
+
+            img{
+                display: inline-block;
+                margin-right: 18px;
+            }
+        }
+    }
+}

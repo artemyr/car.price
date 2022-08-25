@@ -4,6 +4,6 @@
 
 @include('includes.banner')
 
-@include('includes.howThisWork')
+@include('includes.staticInfo')
 
 @endsection

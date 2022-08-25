@@ -9,15 +9,17 @@
 </head>
 <body>
     
-    <nav>
+    <header>
     @include('includes.header')
-    </nav>
+    </header>
 
     <main>
     @yield('content')
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+    @include('includes.footer')
+    </footer>
 
     <div class="modal" id="choose-city" modal="window">
         <div class="modal__window">
