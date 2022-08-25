@@ -1,4 +1,11 @@
 @font-face {
+    font-family: "Geometria"; 
+    src: url("/fonts/Geometria/geometria_medium.otf") format("truetype");
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
     font-family: "Geometria light"; 
     src: url("/fonts/Geometria/geometria_light.otf") format("truetype");
     font-style: normal; 
@@ -47,7 +54,94 @@
     }
 }
 
+.modal {
+    .modal__link {
+        font-family: "Geometria light";
+        font-weight: 600;
+        font-size: 16px;
+        color: #2E3D4A;
+    }
+}
+
+.banner {
+    .banner__title {
+        font-family: 'Geometria bold';
+        font-size: 40px;
+        color: #FFFFFF;
+    }
+    .banner__subtitle {
+        font-family: 'Geometria';
+        font-weight: 500;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    .banner__sign {
+        font-family: 'Geometria';
+        font-weight: 500;
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+    .banner__sign a {
+        color: #FFFFFF;
+    }
+}
+
+.home-section {
+    .home-section__title {
+        font-family: 'Geometria';
+        font-weight: 500;
+        font-size: 32px;
+        color: #2E3D4A;
+        text-align: center;
+    }
+
+    .home-section__subtitle {
+        font-family: 'Geometria light';
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+    }
+    .home-section__footer{
+        text-align: center;
+    }
+}
+
+.howThisWork-steps {
+    .howThisWork-steps__step {
+        font-family: 'Geometria';
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        color: #2E3D4A;
+        line-height: 74px;
+    }
+    .howThisWork-steps__title {
+        font-family: 'Geometria';
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        color: #2E3D4A;
+    }
+    .howThisWork-steps__subtitle {
+        font-family: 'Geometria';
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: #686868;
+    }
+}
+
 .btn-green {
     font-family: Geometria;
-    size: 16px;
+    font-size: 16px;
+    background-color: #06892B;
+    color: white;
+}
+
+.btn-orange {
+    font-family: 'Geometria';
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    background: #F58020;
 }

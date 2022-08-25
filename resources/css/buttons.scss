@@ -1,10 +1,15 @@
 .btn {
+    // display: block;
+    display: inline-block;
+    text-decoration: unset;
+}
+
+.btn-green {
     border-radius: 8px;
     padding: 10px 48px;
 }
 
-.btn-green {
-    background-color: #06892B;
-    color: white;
-    text-decoration: unset;
+.btn-orange {
+    border-radius: 12px;
+    padding: 16px 65px;
 }

@@ -23,7 +23,7 @@
 
             </div>
         </div>
-        <div class="d-flex m-1200">
+        <div class="d-flex ali-c m-1200">
             <div class="top-menu">
                 <ul class="d-flex">
                     @can('view', auth()->user())

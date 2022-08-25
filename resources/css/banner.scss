@@ -1,0 +1,22 @@
+.banner {
+    background-color:#06892B;
+
+    .banner__top {
+        margin-bottom: 60px;
+    }
+
+    .banner__left {
+        padding: 90px 0;
+    }
+
+    .banner__row {
+        // display: flex;
+        position: relative;
+    }
+
+    .banner__image {
+        position: absolute;
+        bottom: 0;
+        right: -190px;
+    }
+}

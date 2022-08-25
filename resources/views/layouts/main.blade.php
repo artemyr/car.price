@@ -19,12 +19,12 @@
 
     <footer></footer>
 
-    <div class="modal" id="choose-city">
+    <div class="modal" id="choose-city" modal="window">
         <div class="modal__window">
             @foreach($cities as $item)
             <div>
-                <a class="{{ (($city->id ?? '') == $item->id ? 'active' : '') }}" 
-                    href="{{ $item->link }}">{{ $item->name }}
+                <a class="modal__link link-reset {{ (($city->id ?? '') == $item->id ? 'active' : '') }}" 
+                    href="{{ route('current_city', $item->link) }}">{{ $item->name }}
                 </a>
             </div>
             @endforeach

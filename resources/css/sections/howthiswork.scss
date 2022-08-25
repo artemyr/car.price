@@ -1,0 +1,52 @@
+.howThisWork {
+    background-color: #F7F7FF;
+
+    .howThisWork__steps{
+        padding: 56px 0;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    .howThisWork-steps {
+        .howThisWork-steps__step {
+            border: 2px solid #CCCCCC;
+            border-radius: 100%;
+            width: 76px;
+            margin: 0 auto;
+            position: relative;
+
+            .howThisWork-steps__step_green1 {
+                position: absolute;
+                border: 3px solid #06892B;
+                height: 100%;
+                width: 100%;
+                border-radius: 100%;
+                clip-path: polygon(50% 0, 50% 50%, 100% 50%, 100% 0);
+            }
+            .howThisWork-steps__step_green2 {
+                position: absolute;
+                border: 3px solid #06892B;
+                height: 100%;
+                width: 100%;
+                border-radius: 100%;
+                clip-path: polygon(50% 0, 50% 100%, 100% 100%, 100% 0);
+            }
+            .howThisWork-steps__step_green3 {
+                position: absolute;
+                border: 3px solid #06892B;
+                height: 100%;
+                width: 100%;
+                border-radius: 100%;
+                clip-path: polygon(50% 0, 50% 50%, 0 50%, 0 100%, 100% 100%, 100% 0);
+            }
+        }
+        
+        .howThisWork-steps__step_finaly {
+            background-color: #06892B;
+            border: 2px solid #06892B;
+            border-radius: 100%;
+            color: #FFFFFF;
+        }
+    }
+}

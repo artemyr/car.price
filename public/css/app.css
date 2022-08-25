@@ -1,5 +1,11 @@
 @charset "UTF-8";
 @font-face {
+  font-family: "Geometria";
+  src: url("/fonts/Geometria/geometria_medium.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
   font-family: "Geometria light";
   src: url("/fonts/Geometria/geometria_light.otf") format("truetype");
   font-style: normal;
@@ -42,9 +48,87 @@
   color: #000000;
 }
 
+.modal .modal__link {
+  font-family: "Geometria light";
+  font-weight: 600;
+  font-size: 16px;
+  color: #2E3D4A;
+}
+
+.banner .banner__title {
+  font-family: "Geometria bold";
+  font-size: 40px;
+  color: #FFFFFF;
+}
+.banner .banner__subtitle {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.banner .banner__sign {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+.banner .banner__sign a {
+  color: #FFFFFF;
+}
+
+.home-section .home-section__title {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 32px;
+  color: #2E3D4A;
+  text-align: center;
+}
+.home-section .home-section__subtitle {
+  font-family: "Geometria light";
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+}
+.home-section .home-section__footer {
+  text-align: center;
+}
+
+.howThisWork-steps .howThisWork-steps__step {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #2E3D4A;
+  line-height: 74px;
+}
+.howThisWork-steps .howThisWork-steps__title {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  color: #2E3D4A;
+}
+.howThisWork-steps .howThisWork-steps__subtitle {
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  color: #686868;
+}
+
 .btn-green {
   font-family: Geometria;
-  size: 16px;
+  font-size: 16px;
+  background-color: #06892B;
+  color: white;
+}
+
+.btn-orange {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  background: #F58020;
 }
 
 /* Указываем box sizing */
@@ -195,15 +279,23 @@ select {
     display: none;
   }
 }
+.home-section {
+  padding: 56px 0;
+}
+
 .btn {
+  display: inline-block;
+  text-decoration: unset;
+}
+
+.btn-green {
   border-radius: 8px;
   padding: 10px 48px;
 }
 
-.btn-green {
-  background-color: #06892B;
-  color: white;
-  text-decoration: unset;
+.btn-orange {
+  border-radius: 12px;
+  padding: 16px 65px;
 }
 
 .top-menu li {
@@ -219,6 +311,7 @@ select {
   background-color: #FFFFFF;
   border-radius: 8px;
   box-shadow: 0px 2px 10px rgba(38, 46, 60, 0.15);
+  z-index: 5;
 }
 
 .header-nav {
@@ -246,4 +339,72 @@ select {
 
 .modal.active {
   display: block;
+}
+
+.banner {
+  background-color: #06892B;
+}
+.banner .banner__top {
+  margin-bottom: 60px;
+}
+.banner .banner__left {
+  padding: 90px 0;
+}
+.banner .banner__row {
+  position: relative;
+}
+.banner .banner__image {
+  position: absolute;
+  bottom: 0;
+  right: -190px;
+}
+
+.howThisWork {
+  background-color: #F7F7FF;
+}
+.howThisWork .howThisWork__steps {
+  padding: 56px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.howThisWork .howThisWork-steps .howThisWork-steps__step {
+  border: 2px solid #CCCCCC;
+  border-radius: 100%;
+  width: 76px;
+  margin: 0 auto;
+  position: relative;
+}
+.howThisWork .howThisWork-steps .howThisWork-steps__step .howThisWork-steps__step_green1 {
+  position: absolute;
+  border: 3px solid #06892B;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  -webkit-clip-path: polygon(50% 0, 50% 50%, 100% 50%, 100% 0);
+          clip-path: polygon(50% 0, 50% 50%, 100% 50%, 100% 0);
+}
+.howThisWork .howThisWork-steps .howThisWork-steps__step .howThisWork-steps__step_green2 {
+  position: absolute;
+  border: 3px solid #06892B;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  -webkit-clip-path: polygon(50% 0, 50% 100%, 100% 100%, 100% 0);
+          clip-path: polygon(50% 0, 50% 100%, 100% 100%, 100% 0);
+}
+.howThisWork .howThisWork-steps .howThisWork-steps__step .howThisWork-steps__step_green3 {
+  position: absolute;
+  border: 3px solid #06892B;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  -webkit-clip-path: polygon(50% 0, 50% 50%, 0 50%, 0 100%, 100% 100%, 100% 0);
+          clip-path: polygon(50% 0, 50% 50%, 0 50%, 0 100%, 100% 100%, 100% 0);
+}
+.howThisWork .howThisWork-steps .howThisWork-steps__step_finaly {
+  background-color: #06892B;
+  border: 2px solid #06892B;
+  border-radius: 100%;
+  color: #FFFFFF;
 }
