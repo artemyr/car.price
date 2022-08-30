@@ -1,0 +1,52 @@
+.auction-cats{
+    .auction-cats__title {
+        text-align: left;
+    }
+    .auction-cats__wrapper {
+        margin-top: 16px;
+        padding: 25px 32px;
+        box-shadow: 0px 2px 10px rgba(36, 40, 49, 0.1);
+        border-radius: 16px;
+    }
+
+    .action-cats__root-cats {
+        margin-bottom: 25px;
+    }
+
+    .action-cats__button {
+        display: inline-block;
+        padding: 8px 20px;
+        border-radius: 6px;
+        font-family: 'Geometria light';
+        font-weight: 600;
+        font-size: 14px;
+        color: #6A6A6A;
+        border: 1px solid #EEEEEE;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .action-cats__button:hover{
+        color: #06892B;
+    }
+
+    .action-cats__button_active {
+        background: #06892B;
+        color: #FFFFFF;
+        font-weight: 700;
+    }
+
+    .action-cats__sub-cats a{
+        display: inline-block;
+        margin-right: 30px;
+        font-family: 'Geometria light';
+        font-weight: 400;
+        font-size: 16px;
+        color: #2E3D4A;
+        text-decoration: none;
+    }
+
+    .action-cats__sub-cats a:hover{
+        color: #06892B;
+    }
+}
