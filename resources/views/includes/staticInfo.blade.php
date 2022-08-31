@@ -208,3 +208,118 @@
 
     </div>
 </section>
+
+<section class="home-section contacts">
+    <div class="container">
+        <div class="home-section__title">Адреса и телефоны офисов CarPrice</div>
+
+        <div class="contacts__wrapper">
+            <div class="contacts__map">
+                <img src="{{ asset('img/map.jpg') }}">
+            </div>
+            <div class="contacts__list">
+                <div class="contacts__item contact-list-item">
+                    <div class="contact-list-item__title">Новороссийск</div>
+                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
+                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
+                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
+                </div>
+                <div class="contacts__item contact-list-item">
+                    <div class="contact-list-item__title">Новороссийск</div>
+                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
+                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
+                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
+                </div>
+                <div class="contacts__item contact-list-item">
+                    <div class="contact-list-item__title">Новороссийск</div>
+                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
+                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
+                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
+                </div>
+                <div class="contacts__item contact-list-item">
+                    <div class="contact-list-item__title">Новороссийск</div>
+                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
+                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
+                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
+                </div>
+                <div class="contacts__item contact-list-item">
+                    <div class="contact-list-item__title">Новороссийск</div>
+                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
+                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
+                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
+                </div>
+                <div class="contacts__item contact-list-item">
+                    <div class="contact-list-item__title">Новороссийск</div>
+                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
+                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
+                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-section__footer">
+            <a class="btn btn-orange">Записаться на осмотр</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="home-section auction-cats">
+    <div class="container">
+        <div class="home-section__title auction-cats__title">Категории аукциона</div>
+
+        <div class="auction-cats__wrapper">
+            <div class="action-cats__root-cats">
+                <div class="action-cats__button action-cats__button_active">По кузову</div>
+                <div class="action-cats__button">По назначению</div>
+                <div class="action-cats__button">С проблемами</div>
+                <div class="action-cats__button">По рулю</div>
+            </div>
+            <div class="action-cats__sub-cats">
+                <a href="#">Битые авто</a>
+                <a href="#">Конфискованные и арестованные авто</a>
+                <a href="#">Залоги, кредиты, должники, банки</a>
+                <a href="#">Авто по банкротству</a>
+                <a href="#">Лизинговые авто</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="home-section advantages">
+    <div class="container">
+        <div class="home-section__title advantages__title">Преимущества</div>
+
+        <div class="advantages__wrapper">
+            <div class="advantages__list">
+                <div class="advantages__item advantages-item">
+                    <div class="advantages-item__icon"><img src="{{ asset('img/svg/carloop.svg') }}"></div>
+                    <div class="advantages-item__title">Экспертная оценка</div>
+                    <div class="advantages-item__body">Все автомобили осматривают профессионалы, вам будет доступна полная информация о машине</div>
+                </div>
+                <div class="advantages__item advantages-item">
+                    <div class="advantages-item__icon"><img src="{{ asset('img/svg/guard.svg') }}"></div>
+                    <div class="advantages-item__title">Экспертная оценка</div>
+                    <div class="advantages-item__body">Все автомобили осматривают профессионалы, вам будет доступна полная информация о машине</div>
+                </div>
+                <div class="advantages__item advantages-item">
+                    <div class="advantages-item__icon"><img src="{{ asset('img/svg/list.svg') }}"></div>
+                    <div class="advantages-item__title">Экспертная оценка</div>
+                    <div class="advantages-item__body">Все автомобили осматривают профессионалы, вам будет доступна полная информация о машине</div>
+                </div>
+                <div class="advantages__item advantages-item">
+                    <div class="advantages-item__icon"><img src="{{ asset('img/svg/car.svg') }}"></div>
+                    <div class="advantages-item__title">Экспертная оценка</div>
+                    <div class="advantages-item__body">Все автомобили осматривают профессионалы, вам будет доступна полная информация о машине</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-section__footer">
+            <a class="btn btn-orange">Записаться на осмотр</a>
+        </div>
+
+    </div>
+</section>
+
