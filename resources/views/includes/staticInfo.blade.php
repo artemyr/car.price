@@ -57,8 +57,39 @@
     </div>
 </section>
 
+<section class="home-section whyCarPrice">
+    <div class="container">
+        <div class="home-section__title">Почему CarPrice?</div>
+
+        <div class="whyCarPrice__wrapper d-flex jc-sb">
+            <div class="whyCarPrice__item whyCarPrice__advantages">
+                <div class="whyCarPrice__advantages-item advantages-item">
+                    <div class="advantages-item__numbers">01</div>
+                    <div class="advantages-item__titles">Экономия времени</div>
+                    <div class="advantages-item__sign">Осмотр и оформление за 2 часа</div>
+                </div>
+                <div class="whyCarPrice__advantages-item advantages-item">
+                    <div class="advantages-item__numbers">02</div>
+                    <div class="advantages-item__titles">Выкуп любых авто</div>
+                    <div class="advantages-item__sign">Выкупаем как новые так и старые авто</div>
+                </div>
+                <div class="whyCarPrice__advantages-item advantages-item">
+                    <div class="advantages-item__numbers">03</div>
+                    <div class="advantages-item__titles">Деньги сразу в день обращения</div>
+                    <div class="advantages-item__sign">Без комиссий, без платы за оформление</div>
+                </div>
+            </div>
+            <div class="whyCarPrice__item">2</div>
+        </div>
+
+        <div class="home-section__footer">
+            <a class="btn btn-orange">Продать машину</a>
+        </div>
+    </div>
+</section>
+
 <section class="home-section whereSell">
-    <div class="container">        
+    <div class="container">
         <div class="home-section__title">Где выгоднее продавать автомобиль?</div>
 
         <div class="whereSell__wrapper">

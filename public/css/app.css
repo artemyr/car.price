@@ -520,3 +520,7 @@ select {
   display: inline-block;
   margin-right: 18px;
 }
+
+.whyCarPrice .whyCarPrice__wrapper {
+  padding: 70px 0 43px 0;
+}
