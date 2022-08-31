@@ -1,0 +1,15 @@
+.some-text {
+    background: #F7F7FF;
+
+    .some-text__wrapper {
+        gap: 49px;
+        padding-bottom: 48px;
+    }
+
+    .some-text__text {
+        font-family: 'Geometria';
+        font-weight: 400;
+        font-size: 16px;
+        color: #2E3D4A;
+    }
+}

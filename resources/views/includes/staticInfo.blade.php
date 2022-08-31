@@ -61,25 +61,46 @@
     <div class="container">
         <div class="home-section__title">Почему CarPrice?</div>
 
-        <div class="whyCarPrice__wrapper d-flex jc-sb">
-            <div class="whyCarPrice__item whyCarPrice__advantages">
-                <div class="whyCarPrice__advantages-item advantages-item">
-                    <div class="advantages-item__numbers">01</div>
-                    <div class="advantages-item__titles">Экономия времени</div>
-                    <div class="advantages-item__sign">Осмотр и оформление за 2 часа</div>
+        <div class="whyCarPrice__wrapper d-flex jc-sb ali-c">
+            <div class="whyCarPrice__item d-flex jc-sb">
+                <div class="whyCarPrice__advantages">
+                    <div class="whyCarPrice__advantages-item advantages-item">
+                        <div class="advantages-item__numbers">01</div>
+                        <div class="advantages-item__titles">Экономия времени</div>
+                        <div class="advantages-item__sign">Осмотр и оформление за 2 часа</div>
+                    </div>
+                    <div class="whyCarPrice__advantages-item advantages-item">
+                        <div class="advantages-item__numbers">02</div>
+                        <div class="advantages-item__titles">Выкуп любых авто</div>
+                        <div class="advantages-item__sign">Выкупаем как новые так и старые авто</div>
+                    </div>
+                    <div class="whyCarPrice__advantages-item advantages-item">
+                        <div class="advantages-item__numbers">03</div>
+                        <div class="advantages-item__titles">Деньги сразу в день обращения</div>
+                        <div class="advantages-item__sign">Без комиссий, без платы за оформление</div>
+                    </div>
                 </div>
-                <div class="whyCarPrice__advantages-item advantages-item">
-                    <div class="advantages-item__numbers">02</div>
-                    <div class="advantages-item__titles">Выкуп любых авто</div>
-                    <div class="advantages-item__sign">Выкупаем как новые так и старые авто</div>
+                <div class="whyCarPrice__advantages">
+                    <div class="whyCarPrice__advantages-item advantages-item">
+                        <div class="advantages-item__numbers">01</div>
+                        <div class="advantages-item__titles">Экономия времени</div>
+                        <div class="advantages-item__sign">Осмотр и оформление за 2 часа</div>
+                    </div>
+                    <div class="whyCarPrice__advantages-item advantages-item">
+                        <div class="advantages-item__numbers">02</div>
+                        <div class="advantages-item__titles">Выкуп любых авто</div>
+                        <div class="advantages-item__sign">Выкупаем как новые так и старые авто</div>
+                    </div>
+                    <div class="whyCarPrice__advantages-item advantages-item">
+                        <div class="advantages-item__numbers">03</div>
+                        <div class="advantages-item__titles">Деньги сразу в день обращения</div>
+                        <div class="advantages-item__sign">Без комиссий, без платы за оформление</div>
+                    </div>
                 </div>
-                <div class="whyCarPrice__advantages-item advantages-item">
-                    <div class="advantages-item__numbers">03</div>
-                    <div class="advantages-item__titles">Деньги сразу в день обращения</div>
-                    <div class="advantages-item__sign">Без комиссий, без платы за оформление</div>
-                </div>
+            </div>            
+            <div class="whyCarPrice__item">
+                <img src="{{ asset('img/advantagesvideo.png') }}">
             </div>
-            <div class="whyCarPrice__item">2</div>
         </div>
 
         <div class="home-section__footer">
@@ -323,3 +344,108 @@
     </div>
 </section>
 
+<section class="home-section some-text">
+    <div class="container">
+        <div class="some-text__wrapper d-flex jc-sb">
+            <div>
+                <a class="d-flex ali-c link-reset" href="{{ route('main') }}">
+                    <div><img src="{{ asset('img/svg/logo.svg') }}"></div>
+                    <div><span class="logo">Car-price.<span class="logo_green">online</span></span></div>
+                </a>
+                <div class="some-text__text">
+                Принимая во внимание показатели успешности, высокотехнологичная концепция общественного уклада позволяет выполнить важные задания по разработке системы обучения кадров, соответствующей насущным потребностям. Принимая во внимание показатели успешности, убеждённость некоторых оппонентов однозначно фиксирует необходимость системы массового участия. Внезапно, некоторые особенности внутренней политики представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть функционально разнесены на независимые элементы! 
+                </div>
+            </div>
+
+            <img src="{{ asset('img/sometext.jpg') }}">
+        </div>
+
+        <div class="home-section__footer">
+            <a class="btn btn-orange">Записаться на аукцион</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="home-section work-cities">
+    <div class="container">
+        <div class="home-section__title advantages__title">В каких городах работает CarPrice</div>
+        <div class="work-cities__list d-flex jc-sb">
+            <ul>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+                <li><a href="#">Москва</a></li>
+            </ul>
+        </div>
+    </div>
+</section>

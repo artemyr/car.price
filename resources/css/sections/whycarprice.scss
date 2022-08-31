@@ -3,7 +3,47 @@
         padding: 70px 0 43px 0;
     }
 
-    .whyCarPrice__advantages{
+    .whyCarPrice__advantages {
+        max-width: 232px;
+    }
 
+    .whyCarPrice__item {
+        gap:40px;
+    }
+}
+
+.advantages-item {
+    .advantages-item__numbers {
+        font-family: 'Geometria light';
+        font-weight: 400;
+        font-size: 20px;
+        color: #CCCCCC;
+        padding-left: 20px;
+        position: relative;
+    }
+    .advantages-item__numbers::before {
+        content: '';
+        position: absolute;
+        background: #06892B;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .advantages-item__titles {
+        font-family: 'Geometria light';
+        font-weight: 400;
+        font-size: 18px;
+        color: #2E3D4A;
+    }
+
+    .advantages-item__sign {
+        font-family: 'Geometria light';
+        font-weight: 400;
+        font-size: 14px;
+        color: #999999;
     }
 }

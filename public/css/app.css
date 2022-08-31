@@ -473,6 +473,7 @@ select {
 
 .whereSell .whereSell__wrapper {
   position: relative;
+  margin: 60px 0 80px 0;
 }
 .whereSell .whereSell__wrapper .whereSell__advantages {
   padding-top: 57px;
@@ -524,6 +525,45 @@ select {
 .whyCarPrice .whyCarPrice__wrapper {
   padding: 70px 0 43px 0;
 }
+.whyCarPrice .whyCarPrice__advantages {
+  max-width: 232px;
+}
+.whyCarPrice .whyCarPrice__item {
+  gap: 40px;
+}
+
+.advantages-item .advantages-item__numbers {
+  font-family: "Geometria light";
+  font-weight: 400;
+  font-size: 20px;
+  color: #CCCCCC;
+  padding-left: 20px;
+  position: relative;
+}
+.advantages-item .advantages-item__numbers::before {
+  content: "";
+  position: absolute;
+  background: #06892B;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.advantages-item .advantages-item__titles {
+  font-family: "Geometria light";
+  font-weight: 400;
+  font-size: 18px;
+  color: #2E3D4A;
+}
+.advantages-item .advantages-item__sign {
+  font-family: "Geometria light";
+  font-weight: 400;
+  font-size: 14px;
+  color: #999999;
+}
+
 .contacts .contacts__wrapper {
   padding: 60px 0 32px 0;
 }
@@ -700,4 +740,37 @@ select {
   font-size: 14px;
   text-align: center;
   color: #6A6A6A;
+}
+
+.some-text {
+  background: #F7F7FF;
+}
+.some-text .some-text__wrapper {
+  gap: 49px;
+  padding-bottom: 48px;
+}
+.some-text .some-text__text {
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 16px;
+  color: #2E3D4A;
+}
+
+.work-cities .work-cities__list {
+  padding-top: 40px;
+}
+.work-cities .work-cities__list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.work-cities .work-cities__list ul li {
+  margin-bottom: 16px;
+}
+.work-cities .work-cities__list ul li a {
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 16px;
+  color: #2E3D4A;
+  text-decoration: none;
 }
