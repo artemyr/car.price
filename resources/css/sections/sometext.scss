@@ -13,3 +13,9 @@
         color: #2E3D4A;
     }
 }
+
+@media (max-width: 991.98px) {
+    .some-text img {
+        display: none;
+    }
+}

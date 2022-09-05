@@ -1,5 +1,6 @@
 .banner {
     background-color:#06892B;
+    overflow: hidden;
 
     .banner__top {
         margin-bottom: 60px;
@@ -7,6 +8,8 @@
 
     .banner__left {
         padding: 90px 0;
+        z-index: 2;
+        position: relative;
     }
 
     .banner__row {
@@ -18,5 +21,18 @@
         position: absolute;
         bottom: 0;
         right: -190px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .banner {
+        .banner__image {
+            position: relative;
+            right: 0;
+        }
+
+        .banner__left {
+            padding: 0;
+        }
     }
 }

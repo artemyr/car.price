@@ -405,12 +405,15 @@ select {
 
 .banner {
   background-color: #06892B;
+  overflow: hidden;
 }
 .banner .banner__top {
   margin-bottom: 60px;
 }
 .banner .banner__left {
   padding: 90px 0;
+  z-index: 2;
+  position: relative;
 }
 .banner .banner__row {
   position: relative;
@@ -421,13 +424,22 @@ select {
   right: -190px;
 }
 
+@media (max-width: 767.98px) {
+  .banner .banner__image {
+    position: relative;
+    right: 0;
+  }
+  .banner .banner__left {
+    padding: 0;
+  }
+}
 .howThisWork {
   background-color: #F7F7FF;
 }
 .howThisWork .howThisWork__steps {
   padding: 56px 0;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
 }
 .howThisWork .howThisWork-steps .howThisWork-steps__step {
@@ -471,6 +483,11 @@ select {
   color: #FFFFFF;
 }
 
+@media (max-width: 991.98px) {
+  .howThisWork .howThisWork__steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .whereSell .whereSell__wrapper {
   position: relative;
   margin: 60px 0 80px 0;
@@ -722,6 +739,11 @@ select {
   padding: 40px 20px;
 }
 
+@media (max-width: 1199.98px) {
+  .advantages .advantages__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .advantages-item .advantages-item__icon img {
   margin: 0 auto;
   margin-bottom: 16px;
@@ -756,6 +778,11 @@ select {
   color: #2E3D4A;
 }
 
+@media (max-width: 991.98px) {
+  .some-text img {
+    display: none;
+  }
+}
 .work-cities .work-cities__list {
   padding-top: 40px;
 }
