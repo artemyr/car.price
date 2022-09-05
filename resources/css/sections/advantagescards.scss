@@ -26,6 +26,12 @@
     }
 }
 
+@media (max-width: 575.98px){
+    .advantages .advantages__list {
+        grid-template-columns: 1fr;
+    }
+}
+
 .advantages-item {
     .advantages-item__icon img {
         margin: 0 auto;

@@ -1,6 +1,9 @@
 .whyCarPrice {
     .whyCarPrice__wrapper {
         padding: 70px 0 43px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .whyCarPrice__advantages {
@@ -9,6 +12,31 @@
 
     .whyCarPrice__item {
         gap:40px;
+        display: flex;
+        justify-content: space-between;;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .whyCarPrice {
+        .whyCarPrice__wrapper {
+            flex-direction:column-reverse;
+        }
+    }
+}
+
+@media (max-width: 575.98px){
+    .whyCarPrice {
+        .whyCarPrice__item {
+            flex-direction: column;
+            gap: 0;
+        }
+        .whyCarPrice__advantages {
+            max-width: unset;
+        }
+        .whyCarPrice__wrapper {
+            align-items: unset;
+        }
     }
 }
 
@@ -47,3 +75,5 @@
         color: #999999;
     }
 }
+
+

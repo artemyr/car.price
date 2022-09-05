@@ -178,7 +178,7 @@ select {
 }
 
 .container {
-  padding: 0 15px;
+  padding: 0 20px;
 }
 
 @media (min-width: 575.98px) {
@@ -377,12 +377,19 @@ select {
 }
 
 @media (max-width: 767.98px) {
+  .banner {
+    padding-top: 70px;
+  }
   .banner .banner__image {
     position: relative;
     right: 0;
   }
   .banner .banner__left {
     padding: 0;
+  }
+  .banner .banner__title {
+    font-size: 30px;
+    line-height: 33px;
   }
 }
 .howThisWork {
@@ -462,6 +469,11 @@ select {
     grid-template-columns: 1fr 1fr;
   }
 }
+@media (max-width: 575.98px) {
+  .howThisWork .howThisWork__steps {
+    grid-template-columns: 1fr;
+  }
+}
 .whereSell .whereSell__wrapper {
   position: relative;
   margin: 60px 0 80px 0;
@@ -474,7 +486,15 @@ select {
   padding: 0;
 }
 .whereSell .whereSell__wrapper .whereSell__signs li {
-  padding: 20px 24px;
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 16px;
+  color: #2E3D4A;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  width: 50%;
+  height: 60px;
 }
 .whereSell .whereSell__wrapper .whereSell__sign_shadow {
   background-image: linear-gradient(to right, #eeeeee, #f2f2f2, #f6f6f6, #fbfbfb, #ffffff);
@@ -498,11 +518,8 @@ select {
 .whereSell .whereSell__wrapper .whereSell__cards .whereSell-card_green {
   border: 1px solid #06892B;
 }
-.whereSell .whereSell__signs li {
-  font-family: "Geometria";
-  font-weight: 500;
-  font-size: 16px;
-  color: #2E3D4A;
+.whereSell .whereSell__wrapper_hide {
+  display: none;
 }
 .whereSell .whereSell-card__title {
   font-family: "Geometria";
@@ -517,30 +534,82 @@ select {
   color: #2E3D4A;
 }
 
+@media (max-width: 1199.98px) {
+  .whereSell .whereSell__wrapper_hide {
+    display: block;
+  }
+  .whereSell .whereSell__wrapper .whereSell__cards {
+    grid-template-columns: 1fr;
+  }
+  .whereSell .whereSell__wrapper .whereSell__cards .whereSell__card_hide {
+    display: none;
+  }
+}
+@media (max-width: 575.98px) {
+  .whereSell .whereSell__wrapper .whereSell__cards .whereSell__card {
+    width: 190px;
+    padding: 14px 20px;
+  }
+  .whereSell .whereSell__wrapper .whereSell__signs li {
+    font-size: 14px;
+    height: 56px;
+    font-family: "Geometria light";
+    padding: 0 16px;
+  }
+  .whereSell .whereSell__wrapper .whereSell-card__title .logo {
+    font-size: 18px;
+  }
+}
 .whereSell-card .whereSell-card__title {
   margin-bottom: 37px;
 }
 .whereSell-card .whereSell-card__hours {
   margin-bottom: 38px;
+  height: 27px;
 }
 .whereSell-card .whereSell-card__marks .whereSell-card__mark {
-  margin-bottom: 35px;
-}
-.whereSell-card .whereSell-card__marks .whereSell-card__mark img {
-  display: inline-block;
-  margin-right: 18px;
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
 }
 
+@media (max-width: 575.98px) {
+  .whereSell-card .whereSell-card__marks .whereSell-card__mark {
+    margin-bottom: 32px;
+  }
+}
 .whyCarPrice .whyCarPrice__wrapper {
   padding: 70px 0 43px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .whyCarPrice .whyCarPrice__advantages {
   max-width: 232px;
 }
 .whyCarPrice .whyCarPrice__item {
   gap: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
+@media (max-width: 991.98px) {
+  .whyCarPrice .whyCarPrice__wrapper {
+    flex-direction: column-reverse;
+  }
+}
+@media (max-width: 575.98px) {
+  .whyCarPrice .whyCarPrice__item {
+    flex-direction: column;
+    gap: 0;
+  }
+  .whyCarPrice .whyCarPrice__advantages {
+    max-width: unset;
+  }
+  .whyCarPrice .whyCarPrice__wrapper {
+    align-items: unset;
+  }
+}
 .advantages-item .advantages-item__numbers {
   font-family: "Geometria light";
   font-weight: 400;
@@ -734,6 +803,11 @@ select {
 @media (max-width: 1199.98px) {
   .advantages .advantages__list {
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 575.98px) {
+  .advantages .advantages__list {
+    grid-template-columns: 1fr;
   }
 }
 .advantages-item .advantages-item__icon img {

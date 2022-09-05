@@ -47,6 +47,8 @@
 
 @media (max-width: 767.98px){
     .banner {
+        padding-top: 70px;
+
         .banner__image {
             position: relative;
             right: 0;
@@ -54,6 +56,10 @@
 
         .banner__left {
             padding: 0;
+        }
+        .banner__title {
+            font-size: 30px;
+            line-height: 33px;
         }
     }
 }

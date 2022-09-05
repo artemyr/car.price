@@ -7,13 +7,26 @@
             padding-top: 57px;
         }
 
-        .whereSell__signs ul {
-            list-style: none;
-            padding: 0;
-        }
+        .whereSell__signs {
 
-        .whereSell__signs li{
-            padding: 20px 24px;
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            li{
+                font-family: 'Geometria';
+                font-weight: 500;
+                font-size: 16px;
+                color: #2E3D4A;
+
+                display: flex;
+                align-items: center;
+
+                padding: 0 24px;
+                width: 50%;
+                height: 60px;
+            }
         }
 
         .whereSell__sign_shadow {
@@ -43,11 +56,8 @@
         }
     }
 
-    .whereSell__signs li{
-        font-family: 'Geometria';
-        font-weight: 500;
-        font-size: 16px;
-        color: #2E3D4A;
+    .whereSell__wrapper_hide{
+        display: none;
     }
 
     .whereSell-card__title{
@@ -65,21 +75,62 @@
     }
 }
 
+@media (max-width: 1199.98px){
+    .whereSell .whereSell__wrapper_hide {
+        display: block;
+    }
+    .whereSell .whereSell__wrapper {
+        .whereSell__cards {
+            grid-template-columns: 1fr;
+
+            .whereSell__card_hide {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 575.98px){
+    .whereSell .whereSell__wrapper {
+        .whereSell__cards .whereSell__card {
+            width: 190px;
+            padding: 14px 20px;
+        }
+        .whereSell__signs li{
+            font-size: 14px;
+            height: 56px;
+            font-family: 'Geometria light';
+            padding: 0 16px;
+        }
+        .whereSell-card__title .logo{
+            font-size: 18px;
+        }
+    }
+}
+
 .whereSell-card {
     .whereSell-card__title {
         margin-bottom: 37px;
     }
     .whereSell-card__hours {
         margin-bottom: 38px;
+        height: 27px;
     }
     .whereSell-card__marks {
 
         .whereSell-card__mark {
-            margin-bottom: 35px;
+            margin-bottom: 28px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
 
-            img{
-                display: inline-block;
-                margin-right: 18px;
+@media (max-width: 575.98px){
+    .whereSell-card {
+        .whereSell-card__marks {    
+            .whereSell-card__mark {
+                margin-bottom: 32px;
             }
         }
     }

@@ -61,8 +61,8 @@
     <div class="container">
         <div class="home-section__title">Почему CarPrice?</div>
 
-        <div class="whyCarPrice__wrapper d-flex jc-sb ali-c">
-            <div class="whyCarPrice__item d-flex jc-sb">
+        <div class="whyCarPrice__wrapper">
+            <div class="whyCarPrice__item">
                 <div class="whyCarPrice__advantages">
                     <div class="whyCarPrice__advantages-item advantages-item">
                         <div class="advantages-item__numbers">01</div>
@@ -82,17 +82,17 @@
                 </div>
                 <div class="whyCarPrice__advantages">
                     <div class="whyCarPrice__advantages-item advantages-item">
-                        <div class="advantages-item__numbers">01</div>
+                        <div class="advantages-item__numbers">04</div>
                         <div class="advantages-item__titles">Экономия времени</div>
                         <div class="advantages-item__sign">Осмотр и оформление за 2 часа</div>
                     </div>
                     <div class="whyCarPrice__advantages-item advantages-item">
-                        <div class="advantages-item__numbers">02</div>
+                        <div class="advantages-item__numbers">05</div>
                         <div class="advantages-item__titles">Выкуп любых авто</div>
                         <div class="advantages-item__sign">Выкупаем как новые так и старые авто</div>
                     </div>
                     <div class="whyCarPrice__advantages-item advantages-item">
-                        <div class="advantages-item__numbers">03</div>
+                        <div class="advantages-item__numbers">06</div>
                         <div class="advantages-item__titles">Деньги сразу в день обращения</div>
                         <div class="advantages-item__sign">Без комиссий, без платы за оформление</div>
                     </div>
@@ -117,7 +117,7 @@
             <div class="whereSell__advantages">
                 <div class="whereSell__signs">
                     <ul>
-                        <li class="whereSell__sign_shadow">Скорость продажи</li>
+                        <li class="whereSell__sign_shadow"><span>Скорость продажи</span></li>
                         <li>Ожидаемая стоимость</li>
                         <li class="whereSell__sign_shadow">Юридическая безопасность</li>
                         <li>Прозрачность оценки</li>
@@ -160,6 +160,82 @@
                         </div>
                     </div>
                 </div>
+                <div class="whereSell__card whereSell__card_hide whereSell-card ">
+                    <div class="whereSell-card__title">Автосалоны</div>
+                    <div class="whereSell-card__hours">6-7 часов</div>
+                    <div class="whereSell-card__marks">
+                    <div class="whereSell-card__mark">
+                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                        </div>
+                        <div class="whereSell-card__mark">
+                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                        </div>
+                        <div class="whereSell-card__mark">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                        </div>
+                        <div class="whereSell-card__mark">
+                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="whereSell__card whereSell__card_hide whereSell-card">
+                    <div class="whereSell-card__title">Объявления</div>
+                    <div class="whereSell-card__hours"><img src="{{ asset('img/svg/infinity.svg') }}"></div>
+                    <div class="whereSell-card__marks">
+                    <div class="whereSell-card__mark">
+                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                        </div>
+                        <div class="whereSell-card__mark">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                        </div>
+                        <div class="whereSell-card__mark">
+                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                        </div>
+                        <div class="whereSell-card__mark">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="whereSell__wrapper whereSell__wrapper_hide">
+            <div class="whereSell__advantages">
+                <div class="whereSell__signs">
+                    <ul>
+                        <li class="whereSell__sign_shadow">Скорость продажи</li>
+                        <li>Ожидаемая стоимость</li>
+                        <li class="whereSell__sign_shadow">Юридическая безопасность</li>
+                        <li>Прозрачность оценки</li>
+                        <li class="whereSell__sign_shadow">Комфорт сделки</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="whereSell__cards">
                 <div class="whereSell__card whereSell-card">
                     <div class="whereSell-card__title">Автосалоны</div>
                     <div class="whereSell-card__hours">6-7 часов</div>
@@ -190,6 +266,22 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="whereSell__wrapper whereSell__wrapper_hide">
+            <div class="whereSell__advantages">
+                <div class="whereSell__signs">
+                    <ul>
+                        <li class="whereSell__sign_shadow">Скорость продажи</li>
+                        <li>Ожидаемая стоимость</li>
+                        <li class="whereSell__sign_shadow">Юридическая безопасность</li>
+                        <li>Прозрачность оценки</li>
+                        <li class="whereSell__sign_shadow">Комфорт сделки</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="whereSell__cards">
                 <div class="whereSell__card whereSell-card">
                     <div class="whereSell-card__title">Объявления</div>
                     <div class="whereSell-card__hours"><img src="{{ asset('img/svg/infinity.svg') }}"></div>

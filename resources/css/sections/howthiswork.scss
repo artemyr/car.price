@@ -82,3 +82,11 @@
         }
     }
 }
+
+@media (max-width: 575.98px){
+    .howThisWork {
+        .howThisWork__steps {
+            grid-template-columns: 1fr;
+        }
+    }
+}
