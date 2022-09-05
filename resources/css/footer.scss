@@ -21,4 +21,26 @@
     .footer__policy {
         padding-bottom: 40px;
     }
+
+    .footer__menu {
+        li {
+            font-family: 'Geometria bold';
+            font-weight: 700;
+            font-size: 16px;
+            color: #FFFFFF;
+        }
+    }
+    .footer__sign {
+        font-family: 'Geometria light';
+        font-weight: 400;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+
+    .footer__policy {
+        font-family: 'Geometria light';
+        font-weight: 400;
+        font-size: 16px;
+        color: #87978C;
+    }
 }

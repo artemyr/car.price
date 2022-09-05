@@ -1,23 +1,23 @@
 @font-face {
-    font-family: "Geometria"; 
+    font-family: "Geometria";
     src: url("/fonts/Geometria/geometria_medium.otf") format("truetype");
-    font-style: normal; 
-    font-weight: normal; 
-} 
+    font-style: normal;
+    font-weight: normal;
+}
 
 @font-face {
-    font-family: "Geometria light"; 
+    font-family: "Geometria light";
     src: url("/fonts/Geometria/geometria_light.otf") format("truetype");
-    font-style: normal; 
-    font-weight: normal; 
-} 
+    font-style: normal;
+    font-weight: normal;
+}
 
 @font-face {
-    font-family: "Geometria bold"; 
+    font-family: "Geometria bold";
     src: url("/fonts/Geometria/geometria_bold.otf") format("truetype");
-    font-style: normal; 
-    font-weight: normal; 
-} 
+    font-style: normal;
+    font-weight: normal;
+}
 
 .logo {
     font-size: 24px;
@@ -28,64 +28,6 @@
 .logo_green {
     font-family: "Geometria bold";
     color: #06892B;
-}
-
-.top-menu {
-    .top-menu__item a,
-    .top-menu__item span {
-        font-family: "Geometria light";
-        color: #2E3D4A;
-        text-decoration: none;
-        font-weight: 800;
-        font-size: 16px;
-    }
-}
-
-.header-nav {
-    .logo {
-        font-size: 21.25px;
-    }
-}
-
-.dropdown-menu {
-    .dropdown-menu__item a{
-        font-family: 'Geometria bold';
-        font-weight: 500;
-        font-size: 16px;
-        color: #000000;
-    }
-}
-
-.modal {
-    .modal__link {
-        font-family: "Geometria light";
-        font-weight: 600;
-        font-size: 16px;
-        color: #2E3D4A;
-    }
-}
-
-.banner {
-    .banner__title {
-        font-family: 'Geometria bold';
-        font-size: 40px;
-        color: #FFFFFF;
-    }
-    .banner__subtitle {
-        font-family: 'Geometria';
-        font-weight: 500;
-        font-size: 16px;
-        color: #FFFFFF;
-    }
-    .banner__sign {
-        font-family: 'Geometria';
-        font-weight: 500;
-        font-size: 14px;
-        color: #FFFFFF;
-    }
-    .banner__sign a {
-        color: #FFFFFF;
-    }
 }
 
 .home-section {
@@ -105,78 +47,6 @@
     }
     .home-section__footer{
         text-align: center;
-    }
-}
-
-.howThisWork-steps {
-    .howThisWork-steps__step {
-        font-family: 'Geometria';
-        font-weight: 500;
-        font-size: 16px;
-        text-align: center;
-        color: #2E3D4A;
-        line-height: 74px;
-    }
-    .howThisWork-steps__title {
-        font-family: 'Geometria';
-        font-weight: 500;
-        font-size: 16px;
-        text-align: center;
-        color: #2E3D4A;
-    }
-    .howThisWork-steps__subtitle {
-        font-family: 'Geometria';
-        font-weight: 400;
-        font-size: 14px;
-        text-align: center;
-        color: #686868;
-    }
-}
-
-.whereSell {
-    .whereSell__signs li{
-        font-family: 'Geometria';
-        font-weight: 500;
-        font-size: 16px;
-        color: #2E3D4A;
-    }
-
-    .whereSell-card__title{
-        font-family: 'Geometria';
-        font-weight: 500;
-        font-size: 24px;
-        color: #2E3D4A;
-    }
-
-    .whereSell-card__hours {
-        font-family: 'Geometria light';
-        font-weight: 400;
-        font-size: 18px;
-        color: #2E3D4A;
-    }
-}
-
-.footer {
-    .footer__menu {
-        li {
-            font-family: 'Geometria bold';
-            font-weight: 700;
-            font-size: 16px;
-            color: #FFFFFF;
-        }
-    }
-    .footer__sign {
-        font-family: 'Geometria light';
-        font-weight: 400;
-        font-size: 16px;
-        color: #FFFFFF;
-    }
-
-    .footer__policy {
-        font-family: 'Geometria light';
-        font-weight: 400;
-        font-size: 16px;
-        color: #87978C;
     }
 }
 
