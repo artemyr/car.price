@@ -1,3 +1,23 @@
+<section class="home-section auction-cats auction-cats_mobile" style="display: none">
+    <div class="home-section__title auction-cats__title">Категории аукциона</div>
+
+    <div class="auction-cats__wrapper">
+        <div class="action-cats__root-cats">
+            <div class="action-cats__button action-cats__button_active">По кузову</div>
+            <div class="action-cats__button">По назначению</div>
+            <div class="action-cats__button">С проблемами</div>
+            <div class="action-cats__button">По рулю</div>
+        </div>
+        <div class="action-cats__sub-cats">
+            <a href="#">Битые авто</a>
+            <a href="#">Конфискованные и арестованные авто</a>
+            <a href="#">Залоги, кредиты, должники, банки</a>
+            <a href="#">Авто по банкротству</a>
+            <a href="#">Лизинговые авто</a>
+        </div>
+    </div>
+</section>
+
 <section class="home-section howThisWork">
     <div class="container">
         <div class="home-section__title">Как работает аукцион</div>
@@ -97,7 +117,7 @@
                         <div class="advantages-item__sign">Без комиссий, без платы за оформление</div>
                     </div>
                 </div>
-            </div>            
+            </div>
             <div class="whyCarPrice__item">
                 <img src="{{ asset('img/advantagesvideo.png') }}">
             </div>
@@ -127,10 +147,8 @@
             </div>
             <div class="whereSell__cards">
                 <div class="whereSell__card whereSell-card whereSell-card_green">
-                    <div class="whereSell-card__title">
-                        <span class="logo">
-                            Car-price.<span class="logo_green">online</span>
-                        </span>
+                    <div class="whereSell-card__title whereSell-card__title_main">
+                        Car-price.<span>online</span>
                     </div>
                     <div class="whereSell-card__hours">2 часа</div>
                     <div class="whereSell-card__marks">
@@ -400,6 +418,22 @@
     </div>
 </section>
 
+<section class="home-section-row questions">
+    <div class="container">
+
+        <div class="home-section-row__wrapper">
+            <div class="home-section-row__title">Частые<br> вопросы</div>
+            <div class="home-section-row__body">Порой, человек попадает в такие обстоятельства, когда деньги нужны не просто срочно, а немедленно. Что делать в такой ситуации? Банки в этом случае не помогут, так как процедура рассмотрения заявки и весь процесс достаточно длителен.
+                Выйти из затруднительного финансового положения, можно взяв займ денег онлайн. Достаточно иметь паспорт, доступ в интернет и пару минут свободного времени.
+            </div>
+        </div>
+
+        <div class="home-section-row__footer">
+            <a class="btn btn-orange">Записаться на осмотр</a>
+        </div>
+    </div>
+</section>
+
 <section class="home-section advantages">
     <div class="container">
         <div class="home-section__title advantages__title">Преимущества</div>
@@ -440,12 +474,12 @@
     <div class="container">
         <div class="some-text__wrapper d-flex jc-sb">
             <div>
-                <a class="d-flex ali-c link-reset" href="{{ route('main') }}">
-                    <div><img src="{{ asset('img/svg/logo.svg') }}"></div>
-                    <div><span class="logo">Car-price.<span class="logo_green">online</span></span></div>
+                <a class="some-text__logo logo link-reset" href="{{ route('main') }}">
+                    <div class="logo__svg"><img src="{{ asset('img/svg/logo.svg') }}"></div>
+                    <div><span class="some-text__logo-text logo__text">Car-price.<span>online</span></span></div>
                 </a>
                 <div class="some-text__text">
-                Принимая во внимание показатели успешности, высокотехнологичная концепция общественного уклада позволяет выполнить важные задания по разработке системы обучения кадров, соответствующей насущным потребностям. Принимая во внимание показатели успешности, убеждённость некоторых оппонентов однозначно фиксирует необходимость системы массового участия. Внезапно, некоторые особенности внутренней политики представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть функционально разнесены на независимые элементы! 
+                Принимая во внимание показатели успешности, высокотехнологичная концепция общественного уклада позволяет выполнить важные задания по разработке системы обучения кадров, соответствующей насущным потребностям. Принимая во внимание показатели успешности, убеждённость некоторых оппонентов однозначно фиксирует необходимость системы массового участия. Внезапно, некоторые особенности внутренней политики представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть функционально разнесены на независимые элементы!
                 </div>
             </div>
 

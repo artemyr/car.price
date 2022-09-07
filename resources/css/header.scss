@@ -39,7 +39,27 @@
 .header-nav {
     padding: 20px 0 16px 0;
 
-    .logo {
+    .header-nav__logo-font {
         font-size: 21.25px;
     }
+
+    .header-nav__choose-city {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .header-nav__logo::after {
+        content:'';
+        width: 1px;
+        height:16px;
+        background: #DDDDDD;
+    }
 }
+
+@media (max-width: 1199.98px){
+    .header-nav .header-nav__logo::after {
+        display: none;
+    }
+}
+

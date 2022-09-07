@@ -1,12 +1,10 @@
 <div class="container">
     <div class="footer__nav">
         <div class="d-flex jc-sb ali-c">
-            <div class="logo">
-                <a class="d-flex ali-c link-reset" href="{{ route('main') }}">
-                    <div><img src="{{ asset('img/svg/footerlogo.svg') }}"></div>
-                    <div><span class="logo">Car-price.<span class="logo_green">online</span></span></div>
-                </a>
-            </div>
+            <a class="logo link-reset" href="{{ route('main') }}">
+                <div class="logo__svg"><img src="{{ asset('img/svg/footerlogo.svg') }}"></div>
+                <div><span class="footer__logo-text logo__text">Car-price.<span>online</span></span></div>
+            </a>
             <div class="footer__menu">
                 <ul>
                     <li>Автодилерам</li>

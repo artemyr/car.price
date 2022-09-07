@@ -1,0 +1,11 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: "Geometria bold";
+    color: #2E3D4A;
+
+    .logo__text span{
+        color: #06892B;
+    }
+}

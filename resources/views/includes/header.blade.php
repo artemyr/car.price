@@ -2,9 +2,9 @@
     <div class="header-nav d-flex jc-sb ali-c">
         <div class="d-flex ali-c fl-gap-10">
 
-            <a class="d-flex ali-c link-reset" href="{{ route('main') }}">
-                <div><img src="{{ asset('img/svg/logo.svg') }}"></div>
-                <div><span class="logo">Car-price.<span class="logo_green">online</span></span></div>
+            <a class="header-nav__logo logo link-reset" href="{{ route('main') }}">
+                <div class="logo__svg"><img src="{{ asset('img/svg/logo.svg') }}"></div>
+                <div><span class="header-nav__logo-font logo__text">Car-price.<span>online</span></span></div>
             </a>
 
             <div class="m-1200">
@@ -15,7 +15,8 @@
                     @endforeach
                 </select> -->
 
-                <div class="top-menu">
+                <div class="header-nav__choose-city top-menu">
+                    <img src="{{ asset('img/svg/pointer.svg') }}">
                     <div class="top-menu__item cursor-pointer" modal-toggle="choose-city">
                         <span class="pointer-events-none">{{ $city->name ?? 'Выберите город' }}</span>
                     </div>

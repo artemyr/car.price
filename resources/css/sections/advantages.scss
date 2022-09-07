@@ -4,7 +4,7 @@
         margin: 60px 0 80px 0;
 
         .whereSell__advantages {
-            padding-top: 57px;
+            padding-top: 69px;
         }
 
         .whereSell__signs {
@@ -43,7 +43,7 @@
             gap: 20px;
 
             .whereSell__card {
-                padding: 20px 24px;
+                padding: 20px 24px 40px;
                 background: rgba(255, 255, 255, 0.7);
                 box-shadow: 0px 4px 20px rgba(38, 46, 60, 0.15);
                 border-radius: 20px;
@@ -65,6 +65,7 @@
         font-weight: 500;
         font-size: 24px;
         color: #2E3D4A;
+        line-height: 30px;
     }
 
     .whereSell-card__hours {
@@ -72,6 +73,9 @@
         font-weight: 400;
         font-size: 18px;
         color: #2E3D4A;
+        height: 20px;
+        display: flex;
+        align-items: center;
     }
 }
 
@@ -102,7 +106,7 @@
             font-family: 'Geometria light';
             padding: 0 16px;
         }
-        .whereSell-card__title .logo{
+        .whereSell-card__title {
             font-size: 18px;
         }
     }
@@ -112,23 +116,30 @@
     .whereSell-card__title {
         margin-bottom: 37px;
     }
+    .whereSell-card__title_main {
+        color: #2E3D4A;
+        span {color:#06892B}
+    }
     .whereSell-card__hours {
-        margin-bottom: 38px;
+        margin-bottom: 37px;
         height: 27px;
     }
     .whereSell-card__marks {
 
         .whereSell-card__mark {
-            margin-bottom: 28px;
+            margin-bottom: 36px;
             display: flex;
             justify-content: space-between;
         }
+    }
+    .whereSell-card__marks :last-child {
+        margin:0;
     }
 }
 
 @media (max-width: 575.98px){
     .whereSell-card {
-        .whereSell-card__marks {    
+        .whereSell-card__marks {
             .whereSell-card__mark {
                 margin-bottom: 32px;
             }

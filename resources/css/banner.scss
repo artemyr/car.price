@@ -1,5 +1,5 @@
 .banner {
-    background-color:#06892B;
+    background: radial-gradient(25.2% 85.16% at 68.96% 64.94%, rgba(235, 255, 0, 0.5) 0%, rgba(235, 255, 0, 0) 100%), #06892B;
     overflow: hidden;
 
     .banner__top {
@@ -27,18 +27,23 @@
         font-family: 'Geometria bold';
         font-size: 40px;
         color: #FFFFFF;
+        line-height: 44px;
+        margin-bottom: 16px;
     }
     .banner__subtitle {
         font-family: 'Geometria';
         font-weight: 500;
         font-size: 16px;
         color: #FFFFFF;
+        line-height: 24px;
     }
     .banner__sign {
         font-family: 'Geometria';
         font-weight: 500;
         font-size: 14px;
         color: #FFFFFF;
+        margin-top: 16px;
+        line-height: 18px;
     }
     .banner__sign a {
         color: #FFFFFF;
@@ -48,6 +53,7 @@
 @media (max-width: 767.98px){
     .banner {
         padding-top: 70px;
+        background: radial-gradient(80.89% 55.68% at 105.73% 58.07%, rgba(235, 255, 0, 0.5) 0%, rgba(235, 255, 0, 0) 100%), #06892B;
 
         .banner__image {
             position: relative;

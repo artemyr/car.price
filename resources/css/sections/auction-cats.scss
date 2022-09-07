@@ -1,4 +1,5 @@
 .auction-cats{
+
     .auction-cats__title {
         text-align: left;
     }
@@ -11,6 +12,8 @@
 
     .action-cats__root-cats {
         margin-bottom: 25px;
+        white-space: nowrap;
+        overflow: auto;
     }
 
     .action-cats__button {
@@ -48,5 +51,22 @@
 
     .action-cats__sub-cats a:hover{
         color: #06892B;
+    }
+}
+
+.auction-cats.auction-cats_mobile .auction-cats__wrapper {
+    border-radius: 0;
+}
+
+
+@media (max-width: 1199.98px){
+    .auction-cats.auction-cats_mobile {
+        display: block;
+    }
+}
+
+@media (max-width: 767.98px){
+    .auction-cats .action-cats__sub-cats a{
+        display: block;
     }
 }

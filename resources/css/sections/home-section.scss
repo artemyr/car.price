@@ -1,0 +1,56 @@
+.home-section {
+    padding: 56px 0;
+
+    .home-section__title {
+        font-family: 'Geometria';
+        font-weight: 500;
+        font-size: 32px;
+        color: #2E3D4A;
+        text-align: center;
+    }
+
+    .home-section__subtitle {
+        font-family: 'Geometria light';
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+    }
+    .home-section__footer{
+        text-align: center;
+    }
+}
+
+.home-section-row {
+    .home-section-row__title {
+        font-family: 'Geometria';
+        font-weight: 500;
+        font-size: 32px;
+        color: #2E3D4A;
+    }
+    .home-section-row__wrapper{
+        display: flex;
+        gap: 100px;
+    }
+    .home-section-row__body{
+        padding-bottom: 32px;
+    }
+    .home-section-row__footer{
+        text-align: center;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .home-section {
+        padding: 48px 0;
+    }
+    .home-section-row .home-section-row__wrapper{
+        display: block;
+    }
+}
+
+@media (max-width: 575.98px){
+    .home-section .home-section__title {
+        font-size: 24px;
+    }
+}
+
