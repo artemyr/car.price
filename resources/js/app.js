@@ -1,28 +1,21 @@
 // require('./bootstrap');
 
 (function(window){
-    const modal_togglers = document.querySelectorAll('[modal-toggle]');
-    if(modal_togglers)
-    {
-        modal_togglers.forEach(
-            function (currentValue, currentIndex, listObj) {
-                currentValue.onclick = (e) => {
-                    const modal_target = e.target.attributes['modal-toggle'].value;
-                    document.getElementById(modal_target).classList.add('active');
-                }
-            },
-        );
-    }
+    const myModal = new HystModal({
+        linkAttributeName: "data-hystmodal",
+    });
 
-    const modal_windows = document.querySelectorAll('[modal=window]');
-    if(modal_windows)
+    var swiper = new Swiper(".mySwiper", 
     {
-        modal_windows.forEach(
-            function (currentValue, currentIndex, listObj) {
-                currentValue.onclick = (e) => {
-                    const modal_target = e.target.classList.remove('active')
-                }
-            },
-        );
-    }
+        slidesPerView: 3,
+        spaceBetween: 28,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+    });
 })(window)

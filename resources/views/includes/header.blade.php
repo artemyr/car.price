@@ -8,17 +8,10 @@
             </a>
 
             <div class="m-1200">
-                <!-- <select data-js="chose-city">
-                    <option value="">Выберите город</option>
-                    @foreach($cities as $item)
-                    <option {{ (($city->id ?? '') == $item->id ? ' selected ' : '') }}value="{{ $item->link }}">{{ $item->name }}</option>
-                    @endforeach
-                </select> -->
-
                 <div class="header-nav__choose-city top-menu">
                     <img src="{{ asset('img/svg/pointer.svg') }}">
-                    <div class="top-menu__item cursor-pointer" modal-toggle="choose-city">
-                        <span class="pointer-events-none">{{ $city->name ?? 'Выберите город' }}</span>
+                    <div class="top-menu__item cursor-pointer">
+                        <span data-hystmodal="#myModal">{{ $city->name ?? 'Выберите город' }}</span>
                     </div>
                 </div>
 

@@ -418,6 +418,81 @@
     </div>
 </section>
 
+<section class="reviews">
+    <div class="reviews__container container">
+        <div class="reviews__title">Отзывы</div>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="reviews__slide swiper-slide">
+                    <img class="reviews__image" src="{{ asset('img/car.jpg') }}">
+                    <div class="review__body">
+                        <div class="review__author review-author">
+                            <div class="review-author__ava">
+                                <img src="{{ asset('img/preson.jpg') }}">
+                            </div>
+                            <div>
+                                <div class="review-author__stars">
+                                    <img src="{{ asset('img/svg/star.svg') }}">
+                                    <img src="{{ asset('img/svg/star.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                </div>
+                                <div class="review-author__name">
+                                    Апполинария Гашигашвилия
+                                </div>
+                                <div class="review-author__subtitle">
+                                    30.08.2021  Великий Новгород  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__title">
+asd
+                        </div>
+                        <div class="review__text">
+                            
+                        </div>
+                        <div class="review__showmore">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews__slide swiper-slide">
+                    <img class="reviews__image" src="{{ asset('img/car.jpg') }}">
+                    <div class="review__body">
+                        123
+                    </div>
+                </div>
+                <div class="reviews__slide swiper-slide">
+                    <img class="reviews__image" src="{{ asset('img/car.jpg') }}">
+                    <div class="review__body">
+                        123
+                    </div>
+                </div>
+                <div class="reviews__slide swiper-slide">
+                    <img class="reviews__image" src="{{ asset('img/car.jpg') }}">
+                    <div class="review__body">
+                        123
+                    </div>
+                </div>
+                <div class="reviews__slide swiper-slide">
+                    <img class="reviews__image" src="{{ asset('img/car.jpg') }}">
+                    <div class="review__body">
+                        123
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews__toggler reviews__toggler_right swiper-button-next"><img src="{{ asset('img/svg/arrour.svg') }}"></div>
+        <div class="reviews__toggler reviews__toggler_left swiper-button-prev"><img src="{{ asset('img/svg/arrouw.svg') }}"></div>
+        <div class="reviews__pagination swiper-pagination"></div>
+    </div>
+    <div class="reviews__footer">
+        <a class="btn btn-orange">Записаться на осмотр</a>
+    </div>
+</section>
+
 <section class="home-section-row questions">
     <div class="container">
 

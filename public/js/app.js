@@ -9,26 +9,21 @@
 
 // require('./bootstrap');
 (function (window) {
-  var modal_togglers = document.querySelectorAll('[modal-toggle]');
-
-  if (modal_togglers) {
-    modal_togglers.forEach(function (currentValue, currentIndex, listObj) {
-      currentValue.onclick = function (e) {
-        var modal_target = e.target.attributes['modal-toggle'].value;
-        document.getElementById(modal_target).classList.add('active');
-      };
-    });
-  }
-
-  var modal_windows = document.querySelectorAll('[modal=window]');
-
-  if (modal_windows) {
-    modal_windows.forEach(function (currentValue, currentIndex, listObj) {
-      currentValue.onclick = function (e) {
-        var modal_target = e.target.classList.remove('active');
-      };
-    });
-  }
+  var myModal = new HystModal({
+    linkAttributeName: "data-hystmodal"
+  });
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 28,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    }
+  });
 })(window);
 
 /***/ }),

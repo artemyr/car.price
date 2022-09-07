@@ -176,6 +176,17 @@ select {
   color: #06892B;
 }
 
+.swiper-pagination-bullet {
+  height: 4px;
+  width: 43px;
+  border-radius: 26px;
+  margin: 0 9px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #0D6064;
+}
+
 .btn {
   display: inline-block;
   text-decoration: unset;
@@ -317,20 +328,7 @@ select {
   color: #87978C;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
 .modal .modal__window {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   padding: 40px 40px 40px 50px;
   background-color: #fff;
   border-radius: 10px;
@@ -340,10 +338,20 @@ select {
   font-weight: 600;
   font-size: 16px;
   color: #2E3D4A;
-}
-
-.modal.active {
   display: block;
+  margin-bottom: 16px;
+}
+.modal .modal__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+.modal .modal__title {
+  font-family: "Geometria";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  color: #2E3D4A;
 }
 
 .banner {
@@ -943,4 +951,72 @@ select {
   font-size: 16px;
   color: #2E3D4A;
   text-decoration: none;
+}
+
+.reviews {
+  background: #F7F7FF;
+  padding: 60px 0;
+  margin-bottom: 56px;
+}
+.reviews .reviews__container {
+  position: relative;
+}
+.reviews .reviews__slide {
+  background-color: white;
+}
+.reviews .reviews__title {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: #2E3D4A;
+  margin-bottom: 32px;
+}
+.reviews .reviews__footer {
+  margin-top: 60px;
+  text-align: center;
+}
+.reviews .reviews__image {
+  width: 100%;
+}
+.reviews .review__body {
+  padding: 20px 20px 30px;
+}
+.reviews .reviews__toggler {
+  width: 38px;
+}
+.reviews .reviews__toggler_left {
+  left: -20px;
+}
+.reviews .reviews__toggler_right {
+  right: -20px;
+}
+.reviews .reviews__pagination {
+  bottom: -35px;
+}
+.reviews .review__author {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.review-author .review-author__stars {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 4px;
+}
+.review-author .review-author__name {
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #2E3D4A;
+  margin-bottom: 4px;
+}
+.review-author .review-author__subtitle {
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #999999;
 }
