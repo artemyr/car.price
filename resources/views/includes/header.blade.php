@@ -36,7 +36,11 @@
                         <ul class="top-menu__dropdown dropdown-menu">
                             @foreach($categories as $category)
                             <li class="dropdown-menu__item">
+                                <div class="dropdown-menu__icon"><img src="{{ asset('img/svg/menu-icon.svg') }}"></div>
                                 <a class="" href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
+                                <div class="dropdown-menu__subtitle">
+                                    Да каких лиц предназначено
+                                </div>
                             </li>
                             @endforeach
                         </ul>
