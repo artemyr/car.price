@@ -10,12 +10,13 @@
         padding: 41px 0 25px 0;
         border-bottom: 1px solid #4F5153;
         margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        ul {list-style: none;padding: 0;}
-
-        ul li {
-            display: inline-block;
-            margin-left: 24px;
+        ul {
+            display: flex;
+            gap: 24px;
         }
     }
 
@@ -33,6 +34,7 @@
             font-weight: 700;
             font-size: 16px;
             color: #FFFFFF;
+            line-height: 24px;
         }
     }
     .footer__sign {
@@ -47,5 +49,16 @@
         font-weight: 400;
         font-size: 16px;
         color: #87978C;
+    }
+
+    .footer__logo {
+        margin-bottom: 12px;
+    }
+}
+
+
+@media (max-width: 767.98px){
+    .footer .footer__nav {
+        display: block;
     }
 }

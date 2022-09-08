@@ -1,0 +1,116 @@
+.slider {
+    padding: 60px 0;
+    margin-bottom: 56px;
+    overflow: hidden;
+
+    .slider__container{
+        position: relative;
+    }
+
+    .slider__slide {
+        background-color: white;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .slider__title {
+        font-family: 'Geometria';
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 40px;
+        color: #2E3D4A;
+        margin-bottom: 32px;
+    }
+
+    .review__title {
+        font-family: 'Geometria';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+        color: #2E3D4A;
+        margin-bottom: 8px;
+    }
+
+    .review__text {
+        font-family: 'Geometria light';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        color: #2E3D4A;
+        line-height: 21px;
+        margin-bottom: 6px;
+    }
+
+    .review__showmore{
+        font-family: 'Geometria';
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+        color: #06892B;
+        cursor: pointer;
+    }
+
+    .review__showmore:hover {
+        text-decoration: underline;
+    }
+
+    .slider__footer {
+        margin-top: 60px;
+        text-align: center;
+    }
+
+    .slider__image {
+        width: 100%;
+    }
+
+    .review__body {
+        padding: 20px 20px 30px;
+    }
+
+    .slider__toggler {
+        width: 38px;
+    }
+
+    .slider__pagination {
+        bottom: -35px;
+    }
+
+    .review__author {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+
+    .swiper-pagination-bullet {
+        height: 4px;
+        width: 43px;
+        border-radius: 26px;
+        margin: 0 9px !important;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #0D6064;
+    }
+
+    .slider__toggler_left {
+        left: -20px;
+    }
+
+    .slider__toggler_right {
+        right: -20px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .slider {
+        .slider__toggler_right {
+            top: 0;
+            right: 20px;
+        }
+
+        .slider__toggler_left {
+            top: 0;
+            right: calc(38px + 24px + 20px);
+            left: auto;
+        }
+    }
+}

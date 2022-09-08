@@ -1,62 +1,8 @@
 .reviews {
     background: #F7F7FF;
-    padding: 60px 0;
-    margin-bottom: 56px;
-
-    .reviews__container{
-        position: relative;
-    }
-
-    .reviews__slide {
-        background-color: white;
-    }
-
-    .reviews__title {
-        font-family: 'Geometria';
-        font-weight: 500;
-        font-size: 32px;
-        line-height: 40px;
-        color: #2E3D4A;
-        margin-bottom: 32px;
-    }
-
-    .reviews__footer {
-        margin-top: 60px;
-        text-align: center;
-    }
-
-    .reviews__image {
-        width: 100%;
-    }
-
-    .review__body {
-        padding: 20px 20px 30px;
-    }
-
-    .reviews__toggler {
-        width: 38px;
-    }
-
-    .reviews__toggler_left {
-        left: -20px;
-    }
-
-    .reviews__toggler_right {
-        right: -20px;
-    }
-
-    .reviews__pagination {
-        bottom: -35px;
-    }
-
-    .review__author {
-        display: flex;
-        gap: 16px;
-        margin-bottom: 20px;
-    }
 }
 
-.review-author {    
+.review-author {
     .review-author__stars {
         display: flex;
         gap: 2px;

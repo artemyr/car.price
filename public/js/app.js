@@ -13,15 +13,43 @@
     linkAttributeName: "data-hystmodal"
   });
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
+    slidesPerView: 1,
     spaceBetween: 28,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
+      nextEl: "#sw1r",
+      prevEl: "#sw1l"
     },
     pagination: {
-      el: ".swiper-pagination",
+      el: "#sw1p",
       clickable: true
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 2
+      }
+    }
+  });
+  var swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 1,
+    spaceBetween: 28,
+    navigation: {
+      nextEl: "#sw2r",
+      prevEl: "#sw2l"
+    },
+    pagination: {
+      el: "#sw2p",
+      clickable: true
+    },
+    breakpoints: {
+      1200: {
+        slidesPerView: 3
+      },
+      768: {
+        slidesPerView: 2
+      }
     }
   });
 
@@ -64,9 +92,11 @@
       if (el.classList.contains('not-active')) {
         el.classList.remove('not-active');
         el.style.height = heightEl + 'px';
+        btn.classList.add('active');
       } else {
         el.classList.add('not-active');
         el.style.height = startHeight + 'px';
+        btn.classList.remove('active');
       }
     });
     var observer = new MutationObserver(function (mutationRecords) {
@@ -105,8 +135,32 @@
     }
   }
 
+  function init_spoilers() {
+    var screenWidth = window.screen.width;
+
+    if (screenWidth > 576) {
+      var buttons = document.querySelectorAll('[data-spoiler="button"]');
+      buttons.forEach(function (button, index) {
+        button.style.display = 'none';
+      });
+      return;
+    }
+
+    var spoilers = document.querySelectorAll('[data-spoiler="block"]');
+    spoilers.forEach(function (spoiler, index) {
+      var button = spoiler.querySelector('[data-spoiler="button"]');
+      var hide = spoiler.querySelectorAll('[data-spoiler="hide"]');
+      hide.forEach(function (el, index) {
+        el.style.overflow = 'hidden';
+        el.style.transition = 'height 0.3s';
+        smoothView(button, el);
+      });
+    });
+  }
+
   init_accordion('first_active');
   init_tabs();
+  init_spoilers();
 })(window);
 
 /***/ }),

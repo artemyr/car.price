@@ -429,13 +429,13 @@
     </div>
 </section>
 
-<section class="reviews">
-    <div class="reviews__container container">
-        <div class="reviews__title">Отзывы</div>
+<section class="reviews slider">
+    <div class="slider__container container">
+        <div class="slider__title">Отзывы</div>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="reviews__slide swiper-slide">
-                    <img class="reviews__image" src="{{ asset('img/car.jpg') }}">
+                <div class="slider__slide swiper-slide">
+                    <img class="slider__image" src="{{ asset('img/car.jpg') }}">
                     <div class="review__body">
                         <div class="review__author review-author">
                             <div class="review-author__ava">
@@ -453,53 +453,232 @@
                                     Апполинария Гашигашвилия
                                 </div>
                                 <div class="review-author__subtitle">
-                                    30.08.2021  Великий Новгород  
+                                    30.08.2021  Великий Новгород
                                 </div>
                             </div>
                         </div>
                         <div class="review__title">
-                            asd
+                            Могло быть лучше
                         </div>
                         <div class="review__text">
-                            
+                            Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.
                         </div>
                         <div class="review__showmore">
-                            
+                            Читать полностью
                         </div>
                     </div>
                 </div>
-                <div class="reviews__slide swiper-slide">
-                    <img class="reviews__image" src="{{ asset('img/car.jpg') }}">
+                <div class="slider__slide swiper-slide">
+                    <img class="slider__image" src="{{ asset('img/car.jpg') }}">
                     <div class="review__body">
-                        123
+                        <div class="review__author review-author">
+                            <div class="review-author__ava">
+                                <img src="{{ asset('img/preson.jpg') }}">
+                            </div>
+                            <div>
+                                <div class="review-author__stars">
+                                    <img src="{{ asset('img/svg/star.svg') }}">
+                                    <img src="{{ asset('img/svg/star.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                </div>
+                                <div class="review-author__name">
+                                    Апполинария Гашигашвилия
+                                </div>
+                                <div class="review-author__subtitle">
+                                    30.08.2021  Великий Новгород
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__title">
+                            Могло быть лучше
+                        </div>
+                        <div class="review__text">
+                            Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.
+                        </div>
+                        <div class="review__showmore">
+                            Читать полностью
+                        </div>
                     </div>
                 </div>
-                <div class="reviews__slide swiper-slide">
-                    <img class="reviews__image" src="{{ asset('img/car.jpg') }}">
+                <div class="slider__slide swiper-slide">
+                    <img class="slider__image" src="{{ asset('img/car.jpg') }}">
                     <div class="review__body">
-                        123
+                        <div class="review__author review-author">
+                            <div class="review-author__ava">
+                                <img src="{{ asset('img/preson.jpg') }}">
+                            </div>
+                            <div>
+                                <div class="review-author__stars">
+                                    <img src="{{ asset('img/svg/star.svg') }}">
+                                    <img src="{{ asset('img/svg/star.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                </div>
+                                <div class="review-author__name">
+                                    Апполинария Гашигашвилия
+                                </div>
+                                <div class="review-author__subtitle">
+                                    30.08.2021  Великий Новгород
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__title">
+                            Могло быть лучше
+                        </div>
+                        <div class="review__text">
+                            Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.
+                        </div>
+                        <div class="review__showmore">
+                            Читать полностью
+                        </div>
                     </div>
                 </div>
-                <div class="reviews__slide swiper-slide">
-                    <img class="reviews__image" src="{{ asset('img/car.jpg') }}">
+                <div class="slider__slide swiper-slide">
+                    <img class="slider__image" src="{{ asset('img/car.jpg') }}">
                     <div class="review__body">
-                        123
+                        <div class="review__author review-author">
+                            <div class="review-author__ava">
+                                <img src="{{ asset('img/preson.jpg') }}">
+                            </div>
+                            <div>
+                                <div class="review-author__stars">
+                                    <img src="{{ asset('img/svg/star.svg') }}">
+                                    <img src="{{ asset('img/svg/star.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                </div>
+                                <div class="review-author__name">
+                                    Апполинария Гашигашвилия
+                                </div>
+                                <div class="review-author__subtitle">
+                                    30.08.2021  Великий Новгород
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__title">
+                            Могло быть лучше
+                        </div>
+                        <div class="review__text">
+                            Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.
+                        </div>
+                        <div class="review__showmore">
+                            Читать полностью
+                        </div>
                     </div>
                 </div>
-                <div class="reviews__slide swiper-slide">
-                    <img class="reviews__image" src="{{ asset('img/car.jpg') }}">
+                <div class="slider__slide swiper-slide">
+                    <img class="slider__image" src="{{ asset('img/car.jpg') }}">
                     <div class="review__body">
-                        123
+                        <div class="review__author review-author">
+                            <div class="review-author__ava">
+                                <img src="{{ asset('img/preson.jpg') }}">
+                            </div>
+                            <div>
+                                <div class="review-author__stars">
+                                    <img src="{{ asset('img/svg/star.svg') }}">
+                                    <img src="{{ asset('img/svg/star.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                </div>
+                                <div class="review-author__name">
+                                    Апполинария Гашигашвилия
+                                </div>
+                                <div class="review-author__subtitle">
+                                    30.08.2021  Великий Новгород
+                                </div>
+                            </div>
+                        </div>
+                        <div class="review__title">
+                            Могло быть лучше
+                        </div>
+                        <div class="review__text">
+                            Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.
+                        </div>
+                        <div class="review__showmore">
+                            Читать полностью
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="reviews__toggler reviews__toggler_right swiper-button-next"><img src="{{ asset('img/svg/arrour.svg') }}"></div>
-        <div class="reviews__toggler reviews__toggler_left swiper-button-prev"><img src="{{ asset('img/svg/arrouw.svg') }}"></div>
-        <div class="reviews__pagination swiper-pagination"></div>
+        <div class="slider__toggler slider__toggler_right swiper-button-next" id="sw1r"><img src="{{ asset('img/svg/arrour.svg') }}"></div>
+        <div class="slider__toggler slider__toggler_left swiper-button-prev" id="sw1l"><img src="{{ asset('img/svg/arrouw.svg') }}"></div>
+        <div class="slider__pagination swiper-pagination" id="sw1p"></div>
     </div>
-    <div class="reviews__footer">
+    <div class="slider__footer">
+        <a class="btn btn-orange">Записаться на осмотр</a>
+    </div>
+</section>
+
+<section class="articles slider">
+    <div class="slider__container container">
+        <div class="articles__header">
+            <div class="slider__title">Наши статьи</div>
+            <a class="articles__link link-reset" href="#">
+                <span>Смотреть больше</span>
+                <img src="{{ asset('img/svg/arrowsimple.svg') }}">
+            </a>
+        </div>
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="slider__slide swiper-slide">
+                    <img class="slider__image" src="{{ asset('img/car2.jpg') }}">
+                    <div class="articles__body">
+                        <div class="articles__tag green">Безопасность</div>
+                        <div class="articles__text">Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.</div>
+                        <div class="articles__footer">
+                            <div class="articles__link-detail">Читать статью</div>
+                            <div class="articles__date">30.07.2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__slide swiper-slide">
+                    <img class="slider__image" src="{{ asset('img/car2.jpg') }}">
+                    <div class="articles__body">
+                        <div class="articles__tag green">Безопасность</div>
+                        <div class="articles__text">Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.</div>
+                        <div class="articles__footer">
+                            <div class="articles__link-detail">Читать статью</div>
+                            <div class="articles__date">30.07.2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__slide swiper-slide">
+                    <img class="slider__image" src="{{ asset('img/car2.jpg') }}">
+                    <div class="articles__body">
+                        <div class="articles__tag green">Безопасность</div>
+                        <div class="articles__text">Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.</div>
+                        <div class="articles__footer">
+                            <div class="articles__link-detail">Читать статью</div>
+                            <div class="articles__date">30.07.2022</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__slide swiper-slide">
+                    <img class="slider__image" src="{{ asset('img/car2.jpg') }}">
+                    <div class="articles__body">
+                        <div class="articles__tag green">Безопасность</div>
+                        <div class="articles__text">Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.</div>
+                        <div class="articles__footer">
+                            <div class="articles__link-detail">Читать статью</div>
+                            <div class="articles__date">30.07.2022</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider__toggler slider__toggler_right swiper-button-next" id="sw2r"><img src="{{ asset('img/svg/arrour.svg') }}"></div>
+        <div class="slider__toggler slider__toggler_left swiper-button-prev" id="sw2l"><img src="{{ asset('img/svg/arrouw.svg') }}"></div>
+        <div class="slider__pagination swiper-pagination" id="sw2p"></div>
+    </div>
+    <div class="slider__footer">
         <a class="btn btn-orange">Записаться на осмотр</a>
     </div>
 </section>
@@ -621,9 +800,9 @@
 </section>
 
 <section class="home-section work-cities">
-    <div class="container">
+    <div class="container" data-spoiler="block">
         <div class="home-section__title advantages__title">В каких городах работает CarPrice</div>
-        <div class="work-cities__list d-flex jc-sb">
+        <div class="work-cities__list">
             <ul>
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
@@ -639,7 +818,7 @@
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
             </ul>
-            <ul>
+            <ul data-spoiler="hide">
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
@@ -654,7 +833,7 @@
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
             </ul>
-            <ul>
+            <ul data-spoiler="hide">
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
@@ -669,7 +848,7 @@
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
             </ul>
-            <ul>
+            <ul data-spoiler="hide">
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
@@ -684,7 +863,7 @@
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
             </ul>
-            <ul>
+            <ul data-spoiler="hide">
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
                 <li><a href="#">Москва</a></li>
@@ -700,5 +879,6 @@
                 <li><a href="#">Москва</a></li>
             </ul>
         </div>
+        <button class="work-cities__button" data-spoiler="button">Показать еще <img src="{{ asset('img/svg/arrowsimple.svg') }}"></button>
     </div>
 </section>

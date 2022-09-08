@@ -1,6 +1,8 @@
 .work-cities {
     .work-cities__list {
         padding-top: 40px;
+        display: flex;
+        justify-content: space-between;
     }
     .work-cities__list ul {
         list-style: none;
@@ -18,5 +20,31 @@
         font-size: 16px;
         color: #2E3D4A;
         text-decoration: none;
+    }
+
+    .work-cities__button {
+        background: none;
+        border: none;
+        font-family: 'Geometria';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        color: #06892B;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .work-cities__button {
+        transition: 0.3s;
+    }
+    .work-cities__button.active img {
+        transform: rotate(180deg);
+    }
+}
+
+@media (max-width: 575.98px){
+    .work-cities .work-cities__list {
+        display: block;
     }
 }

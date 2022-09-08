@@ -67,6 +67,7 @@ button,
 textarea,
 select {
   font: inherit;
+  padding: 0;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
@@ -176,17 +177,103 @@ select {
   color: #06892B;
 }
 
-.swiper-pagination-bullet {
+.slider {
+  padding: 60px 0;
+  margin-bottom: 56px;
+  overflow: hidden;
+}
+.slider .slider__container {
+  position: relative;
+}
+.slider .slider__slide {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.slider .slider__title {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  color: #2E3D4A;
+  margin-bottom: 32px;
+}
+.slider .review__title {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #2E3D4A;
+  margin-bottom: 8px;
+}
+.slider .review__text {
+  font-family: "Geometria light";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #2E3D4A;
+  line-height: 21px;
+  margin-bottom: 6px;
+}
+.slider .review__showmore {
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #06892B;
+  cursor: pointer;
+}
+.slider .review__showmore:hover {
+  text-decoration: underline;
+}
+.slider .slider__footer {
+  margin-top: 60px;
+  text-align: center;
+}
+.slider .slider__image {
+  width: 100%;
+}
+.slider .review__body {
+  padding: 20px 20px 30px;
+}
+.slider .slider__toggler {
+  width: 38px;
+}
+.slider .slider__pagination {
+  bottom: -35px;
+}
+.slider .review__author {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.slider .swiper-pagination-bullet {
   height: 4px;
   width: 43px;
   border-radius: 26px;
   margin: 0 9px !important;
 }
-
-.swiper-pagination-bullet-active {
+.slider .swiper-pagination-bullet-active {
   background-color: #0D6064;
 }
+.slider .slider__toggler_left {
+  left: -20px;
+}
+.slider .slider__toggler_right {
+  right: -20px;
+}
 
+@media (max-width: 767.98px) {
+  .slider .slider__toggler_right {
+    top: 0;
+    right: 20px;
+  }
+  .slider .slider__toggler_left {
+    top: 0;
+    right: 82px;
+    left: auto;
+  }
+}
 .btn {
   display: inline-block;
   text-decoration: unset;
@@ -294,14 +381,13 @@ select {
   padding: 41px 0 25px 0;
   border-bottom: 1px solid #4F5153;
   margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .footer .footer__nav ul {
-  list-style: none;
-  padding: 0;
-}
-.footer .footer__nav ul li {
-  display: inline-block;
-  margin-left: 24px;
+  display: flex;
+  gap: 24px;
 }
 .footer .footer__sign {
   margin-bottom: 16px;
@@ -314,6 +400,7 @@ select {
   font-weight: 700;
   font-size: 16px;
   color: #FFFFFF;
+  line-height: 24px;
 }
 .footer .footer__sign {
   font-family: "Geometria light";
@@ -327,7 +414,15 @@ select {
   font-size: 16px;
   color: #87978C;
 }
+.footer .footer__logo {
+  margin-bottom: 12px;
+}
 
+@media (max-width: 767.98px) {
+  .footer .footer__nav {
+    display: block;
+  }
+}
 .modal .modal__window {
   padding: 40px 40px 40px 50px;
   background-color: #fff;
@@ -415,6 +510,100 @@ select {
   .banner .banner__title {
     font-size: 30px;
     line-height: 33px;
+  }
+}
+.articles .articles__header {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+}
+.articles .articles__tag {
+  background: #ccc;
+  border-radius: 46px;
+  padding: 8px 12px 6px;
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-top: 10px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.articles .articles__text {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #000000;
+  margin-bottom: 24px;
+}
+.articles .articles__date {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #999999;
+}
+.articles .articles__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 36px;
+  padding: 0 20px;
+  background: #FDE8D6;
+  border-radius: 8px;
+}
+.articles .articles__link img {
+  -o-object-fit: none;
+     object-fit: none;
+  transform: rotate(-90deg);
+}
+.articles .articles__link span {
+  white-space: nowrap;
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #E65425;
+}
+.articles .articles__link-detail {
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #06892B;
+  border: 1px solid #06892B;
+  height: 36px;
+  width: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.articles .articles__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+.articles .articles__tag.blue {
+  background: #2B74B9;
+}
+.articles .articles__tag.green {
+  background: #0B7A6A;
+}
+.articles .articles__tag.pink {
+  background: #783294;
+}
+
+@media (max-width: 767.98px) {
+  .articles .articles__link {
+    display: none;
   }
 }
 .home-section {
@@ -956,6 +1145,8 @@ select {
 }
 .work-cities .work-cities__list {
   padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 .work-cities .work-cities__list ul {
   list-style: none;
@@ -972,7 +1163,30 @@ select {
   color: #2E3D4A;
   text-decoration: none;
 }
+.work-cities .work-cities__button {
+  background: none;
+  border: none;
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #06892B;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.work-cities .work-cities__button {
+  transition: 0.3s;
+}
+.work-cities .work-cities__button.active img {
+  transform: rotate(180deg);
+}
 
+@media (max-width: 575.98px) {
+  .work-cities .work-cities__list {
+    display: block;
+  }
+}
 .questions .questions__head {
   padding: 18px 15px;
   cursor: pointer;
@@ -1004,65 +1218,19 @@ select {
 .questions .questions__element:last-child {
   border-bottom: none;
 }
-.questions .questions__cross {
+.questions .questions__element .questions__cross {
   position: absolute;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
-}
-.questions .questions__element .questions__cross {
-  transform: rotate(45deg);
+  transform: translateY(-50%) rotate(45deg);
   transition: 0.3s;
 }
 .questions .questions__element.active .questions__cross {
-  transform: rotate(0deg);
+  transform: translateY(-50%) rotate(0deg);
 }
 
 .reviews {
   background: #F7F7FF;
-  padding: 60px 0;
-  margin-bottom: 56px;
-}
-.reviews .reviews__container {
-  position: relative;
-}
-.reviews .reviews__slide {
-  background-color: white;
-}
-.reviews .reviews__title {
-  font-family: "Geometria";
-  font-weight: 500;
-  font-size: 32px;
-  line-height: 40px;
-  color: #2E3D4A;
-  margin-bottom: 32px;
-}
-.reviews .reviews__footer {
-  margin-top: 60px;
-  text-align: center;
-}
-.reviews .reviews__image {
-  width: 100%;
-}
-.reviews .review__body {
-  padding: 20px 20px 30px;
-}
-.reviews .reviews__toggler {
-  width: 38px;
-}
-.reviews .reviews__toggler_left {
-  left: -20px;
-}
-.reviews .reviews__toggler_right {
-  right: -20px;
-}
-.reviews .reviews__pagination {
-  bottom: -35px;
-}
-.reviews .review__author {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 20px;
 }
 
 .review-author .review-author__stars {
