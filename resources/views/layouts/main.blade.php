@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    
+    <div id="top"></div>
     <header>
     @include('includes.header')
     </header>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="modal__link-list">
                     @foreach($cities as $item)
-                    <a class="modal__link link-reset {{ (($city->id ?? '') == $item->id ? 'active' : '') }}" 
+                    <a class="modal__link link-reset {{ (($city->id ?? '') == $item->id ? 'active' : '') }}"
                         href="{{ route('current_city', $item->link) }}">{{ $item->name }}
                     </a>
                     @endforeach

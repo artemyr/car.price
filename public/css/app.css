@@ -417,6 +417,17 @@ select {
 .footer .footer__logo {
   margin-bottom: 12px;
 }
+.footer .footer__policy {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .footer__policy img {
+  transform: rotate(180deg);
+  background: #06892B;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+}
 
 @media (max-width: 767.98px) {
   .footer .footer__nav {

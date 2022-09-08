@@ -17,5 +17,8 @@
     </div>
     <div class="footer__policy">
         <a>Политика обработки персональных данных</a>
+        <a href="#top">
+            <img src="{{ asset('img/svg/arrowsimple.svg') }}">
+        </a>
     </div>
 </div>

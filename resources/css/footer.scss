@@ -54,6 +54,19 @@
     .footer__logo {
         margin-bottom: 12px;
     }
+
+    .footer__policy {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            transform: rotate(180deg);
+            background: #06892B;
+            width: 48px;
+            height: 48px;
+            border-radius: 100%;
+        }
+    }
 }
 
 
