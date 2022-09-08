@@ -826,10 +826,13 @@ select {
 .auction-cats .action-cats__button:hover {
   color: #06892B;
 }
-.auction-cats .action-cats__button_active {
+.auction-cats .action-cats__button.active {
   background: #06892B;
   color: #FFFFFF;
   font-weight: 700;
+}
+.auction-cats .action-cats__sub-cats {
+  position: relative;
 }
 .auction-cats .action-cats__sub-cats a {
   display: inline-block;
@@ -842,6 +845,23 @@ select {
 }
 .auction-cats .action-cats__sub-cats a:hover {
   color: #06892B;
+}
+.auction-cats .action-cats__sub-cat {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s, visibility 0.3s;
+  visibility: hidden;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
+.auction-cats .action-cats__sub-cat.active {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  top: 0;
+  left: 0;
 }
 
 .auction-cats.auction-cats_mobile .auction-cats__wrapper {
@@ -951,6 +971,51 @@ select {
   font-size: 16px;
   color: #2E3D4A;
   text-decoration: none;
+}
+
+.questions .questions__head {
+  padding: 18px 15px;
+  cursor: pointer;
+  position: relative;
+}
+.questions .questions__body {
+  overflow: hidden;
+  transition: height 0.3s, padding-top 0.3s;
+  padding-left: 33px;
+  margin-bottom: 11px;
+  font-family: "Geometria";
+  font-weight: 400;
+  font-size: 14px;
+  color: #2E3D4A;
+}
+.questions .questions__question {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  color: #2E3D4A;
+}
+.questions .questions__body.not-active {
+  margin: 0;
+}
+.questions .questions__element {
+  border-bottom: 1px solid #CCCCCC;
+}
+.questions .questions__element:last-child {
+  border-bottom: none;
+}
+.questions .questions__cross {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.questions .questions__element .questions__cross {
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+.questions .questions__element.active .questions__cross {
+  transform: rotate(0deg);
 }
 
 .reviews {

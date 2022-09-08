@@ -395,23 +395,34 @@
     </div>
 </section>
 
-<section class="home-section auction-cats">
+<section class="home-section auction-cats" data-product-card-page="section-tabs">
     <div class="container">
         <div class="home-section__title auction-cats__title">Категории аукциона</div>
 
         <div class="auction-cats__wrapper">
-            <div class="action-cats__root-cats">
-                <div class="action-cats__button action-cats__button_active">По кузову</div>
-                <div class="action-cats__button">По назначению</div>
-                <div class="action-cats__button">С проблемами</div>
-                <div class="action-cats__button">По рулю</div>
-            </div>
+            <ul class="action-cats__root-cats">
+                <li class="action-cats__button active" data-product-card-page="btn-tab">По кузову</li>
+                <li class="action-cats__button" data-product-card-page="btn-tab">По назначению</li>
+                <li class="action-cats__button" data-product-card-page="btn-tab">С проблемами</li>
+                <li class="action-cats__button" data-product-card-page="btn-tab">По рулю</li>
+            </ul>
             <div class="action-cats__sub-cats">
-                <a href="#">Битые авто</a>
-                <a href="#">Конфискованные и арестованные авто</a>
-                <a href="#">Залоги, кредиты, должники, банки</a>
-                <a href="#">Авто по банкротству</a>
-                <a href="#">Лизинговые авто</a>
+                <div class="action-cats__sub-cat active" data-product-card-page="item-tab">
+                    <a href="#">Битые авто</a>
+                    <a href="#">Конфискованные и арестованные авто</a>
+                    <a href="#">Залоги, кредиты, должники, банки</a>
+                    <a href="#">Авто по банкротству</a>
+                    <a href="#">Лизинговые авто</a>
+                </div>
+                <div class="action-cats__sub-cat" data-product-card-page="item-tab">
+                    <a href="#">Конфискованные и арестованные авто</a>
+                </div>
+                <div class="action-cats__sub-cat" data-product-card-page="item-tab">
+                    <a href="#">Залоги, кредиты, должники, банки</a>
+                </div>
+                <div class="action-cats__sub-cat" data-product-card-page="item-tab">
+                    <a href="#">Авто по банкротству</a>
+                </div>
             </div>
         </div>
 
@@ -447,7 +458,7 @@
                             </div>
                         </div>
                         <div class="review__title">
-asd
+                            asd
                         </div>
                         <div class="review__text">
                             
@@ -498,8 +509,49 @@ asd
 
         <div class="home-section-row__wrapper">
             <div class="home-section-row__title">Частые<br> вопросы</div>
-            <div class="home-section-row__body">Порой, человек попадает в такие обстоятельства, когда деньги нужны не просто срочно, а немедленно. Что делать в такой ситуации? Банки в этом случае не помогут, так как процедура рассмотрения заявки и весь процесс достаточно длителен.
-                Выйти из затруднительного финансового положения, можно взяв займ денег онлайн. Достаточно иметь паспорт, доступ в интернет и пару минут свободного времени.
+            <div class="home-section-row__body">
+                <div class="questions__list">
+                    <div class="questions__element" data-accordion="block">
+                        <div class="questions__head" data-accordion="head">
+                            <span class="questions__question">Что такое онлайн займ?</span>
+                            <img class="questions__cross" src="{{ asset('img/svg/cross.svg') }}">
+                        </div>
+                        <div class="questions__body" data-accordion="body">
+                            Порой, человек попадает в такие обстоятельства, когда деньги нужны не просто срочно, а немедленно. Что делать в такой ситуации? Банки в этом случае не помогут, так как процедура рассмотрения заявки и весь процесс достаточно длителен.<br>
+                            Выйти из затруднительного финансового положения, можно взяв займ денег онлайн. Достаточно иметь паспорт, доступ в интернет и пару минут свободного времени.
+                        </div>
+                    </div>
+                    <div class="questions__element" data-accordion="block">
+                        <div class="questions__head" data-accordion="head">
+                            <span class="questions__question">Что такое онлайн займ?</span>
+                            <img class="questions__cross" src="{{ asset('img/svg/cross.svg') }}">
+                        </div>
+                        <div class="questions__body" data-accordion="body">
+                            Порой, человек попадает в такие обстоятельства, когда деньги нужны не просто срочно, а немедленно. Что делать в такой ситуации? Банки в этом случае не помогут, так как процедура рассмотрения заявки и весь процесс достаточно длителен.
+                            Выйти из затруднительного финансового положения, можно взяв займ денег онлайн. Достаточно иметь паспорт, доступ в интернет и пару минут свободного времени.
+                        </div>
+                    </div>
+                    <div class="questions__element" data-accordion="block">
+                        <div class="questions__head" data-accordion="head">
+                            <span class="questions__question">Что такое онлайн займ?</span>
+                            <img class="questions__cross" src="{{ asset('img/svg/cross.svg') }}">
+                        </div>
+                        <div class="questions__body" data-accordion="body">
+                            Порой, человек попадает в такие обстоятельства, когда деньги нужны не просто срочно, а немедленно. Что делать в такой ситуации? Банки в этом случае не помогут, так как процедура рассмотрения заявки и весь процесс достаточно длителен.
+                            Выйти из затруднительного финансового положения, можно взяв займ денег онлайн. Достаточно иметь паспорт, доступ в интернет и пару минут свободного времени.
+                        </div>
+                    </div>
+                    <div class="questions__element" data-accordion="block">
+                        <div class="questions__head" data-accordion="head">
+                            <span class="questions__question">Что такое онлайн займ?</span>
+                            <img class="questions__cross" src="{{ asset('img/svg/cross.svg') }}">
+                        </div>
+                        <div class="questions__body" data-accordion="body">
+                            Порой, человек попадает в такие обстоятельства, когда деньги нужны не просто срочно, а немедленно. Что делать в такой ситуации? Банки в этом случае не помогут, так как процедура рассмотрения заявки и весь процесс достаточно длителен.
+                            Выйти из затруднительного финансового положения, можно взяв займ денег онлайн. Достаточно иметь паспорт, доступ в интернет и пару минут свободного времени.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

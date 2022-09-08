@@ -1,0 +1,42 @@
+.questions {
+    .questions__head {
+        padding: 18px 15px;
+        cursor: pointer;
+        position: relative;
+    }
+    .questions__body{
+        overflow: hidden;
+        transition: height 0.3s, padding-top 0.3s;
+        padding-left: 33px;
+        margin-bottom: 11px;
+        font-family: 'Geometria';
+        font-weight: 400;
+        font-size: 14px;
+        color: #2E3D4A;
+    }
+    .questions__question{
+        font-family: 'Geometria';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+        color: #2E3D4A;
+    }
+    .questions__body.not-active{margin: 0;}
+    .questions__element{
+        border-bottom: 1px solid #CCCCCC;
+    }
+    .questions__element:last-child{border-bottom: none;}
+    .questions__cross {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .questions__element .questions__cross {
+        transform: rotate(45deg);
+        transition: 0.3s;
+    }
+    .questions__element.active .questions__cross {
+        transform: rotate(0deg);
+    }
+}
