@@ -17,6 +17,11 @@
         z-index: 5;
     }
 
+    .top-menu__pointer{
+        width: 16px;
+        height: 20px;
+    }
+
     .top-menu__item a,
     .top-menu__item span {
         font-family: "Geometria light";
@@ -37,6 +42,8 @@
                 left: 0;
                 top: 50%;
                 transform: translateY(-50%);
+                width: 34px;
+                height: 34px;
             }
 
             .dropdown-menu__subtitle {

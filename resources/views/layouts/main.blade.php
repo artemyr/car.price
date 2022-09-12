@@ -28,13 +28,19 @@
             <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
                 <div class="modal__header">
                     <div class="modal__title">Выберите город</div>
-                    <img data-hystclose src="{{ asset('img/svg/cross.svg') }}">
+                    <svg data-hystclose><use xlink:href="{{ asset('img/svg/sprite.svg#cross') }}"></use></svg>
                 </div>
                 <div class="modal__link-list">
-                    @foreach($cities as $item)
-                    <a class="modal__link link-reset {{ (($city->id ?? '') == $item->id ? 'active' : '') }}"
-                        href="{{ route('current_city', $item->link) }}">{{ $item->name }}
-                    </a>
+                    @foreach($dividedCities as $key => $row)
+                    <ul>
+                        @foreach($row as $col)
+                        <li>
+                            <a class="modal__link link-reset {{ (($city->id ?? '') == $col['id'] ? 'active' : '') }}"
+                                href="{{ route('current_city', $col['link']) }}">{{ $col['name'] }}
+                            </a>
+                        </li>
+                        @endforeach
+                    </ul>
                     @endforeach
                 </div>
             </div>

@@ -26,6 +26,16 @@
 
     .footer__policy {
         padding-bottom: 40px;
+
+        svg {
+            height: 10px;
+            width: 16px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(180deg);
+            use {stroke:white;}
+        }
     }
 
     .footer__menu {
@@ -53,18 +63,23 @@
 
     .footer__logo {
         margin-bottom: 12px;
+
+        svg {
+            height: 32px;
+            width: 52px;
+        }
     }
 
     .footer__policy {
         display: flex;
         justify-content: space-between;
 
-        img {
-            transform: rotate(180deg);
+        .footer__toggle-top {
             background: #06892B;
             width: 48px;
             height: 48px;
             border-radius: 100%;
+            position: relative;
         }
     }
 }

@@ -21,6 +21,7 @@ class BaseController extends Controller
         $row = 0;
         foreach ($this->cities as $item){
             $this->dividedCities[$row][$col] = [
+                    'id' => $item->id,
                     'name' => $item->name,
                     'link' => $item->link,
                 ];

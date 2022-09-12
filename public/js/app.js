@@ -55,15 +55,18 @@
 
   function init_accordion(option) {
     var block = document.querySelectorAll('[data-accordion="block"]');
-    block.forEach(function (itemBlock) {
-      var btn = itemBlock.querySelector('[data-accordion="head"]');
-      var el = itemBlock.querySelector('[data-accordion="body"]');
-      smoothView(btn, el);
-      btn.addEventListener('click', function () {
-        itemBlock.classList.toggle('active');
+
+    if (block.length > 0) {
+      block.forEach(function (itemBlock) {
+        var btn = itemBlock.querySelector('[data-accordion="head"]');
+        var el = itemBlock.querySelector('[data-accordion="body"]');
+        smoothView(btn, el);
+        btn.addEventListener('click', function () {
+          itemBlock.classList.toggle('active');
+        });
       });
-    });
-    if (option == 'first_active') block[0].querySelector('[data-accordion="head"]').click();
+      if (option == 'first_active') block[0].querySelector('[data-accordion="head"]').click();
+    }
   }
 
   function smoothView(btn, el) {

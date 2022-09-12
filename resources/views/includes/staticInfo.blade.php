@@ -25,7 +25,7 @@
         <div class="howThisWork__steps howThisWork-steps">
             <div class="howThisWork-steps__item">
                 <div class="howThisWork-steps__step">
-                    <div class="howThisWork-steps__punktir"></div>
+                    <svg class="howThisWork-steps__punktir"><use xlink:href="{{ asset('img/svg/sprite.svg#line') }}"></use></svg>
                     <div class="howThisWork-steps__round howThisWork-steps__round_r"></div>
                     <div class="howThisWork-steps__step_green1"></div>
                     Шаг 1
@@ -41,7 +41,7 @@
             </div>
             <div class="howThisWork-steps__item">
                 <div class="howThisWork-steps__step">
-                    <div class="howThisWork-steps__punktir"></div>
+                    <svg class="howThisWork-steps__punktir"><use xlink:href="{{ asset('img/svg/sprite.svg#line') }}"></use></svg>
                     <div class="howThisWork-steps__round howThisWork-steps__round_l"></div>
                     <div class="howThisWork-steps__round howThisWork-steps__round_r"></div>
                     <div class="howThisWork-steps__step_green2"></div>
@@ -58,7 +58,7 @@
             </div>
             <div class="howThisWork-steps__item">
                 <div class="howThisWork-steps__step">
-                    <div class="howThisWork-steps__punktir"></div>
+                    <svg class="howThisWork-steps__punktir"><use xlink:href="{{ asset('img/svg/sprite.svg#line') }}"></use></svg>
                     <div class="howThisWork-steps__round howThisWork-steps__round_l"></div>
                     <div class="howThisWork-steps__round howThisWork-steps__round_r"></div>
                     <div class="howThisWork-steps__step_green3"></div>
@@ -170,28 +170,28 @@
                     <div class="whereSell-card__hours">2 часа</div>
                     <div class="whereSell-card__marks">
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                     </div>
                 </div>
@@ -200,58 +200,58 @@
                     <div class="whereSell-card__hours">6-7 часов</div>
                     <div class="whereSell-card__marks">
                     <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                     </div>
                 </div>
                 <div class="whereSell__card whereSell__card_hide whereSell-card">
                     <div class="whereSell-card__title">Объявления</div>
-                    <div class="whereSell-card__hours"><img src="{{ asset('img/svg/infinity.svg') }}"></div>
+                    <div class="whereSell-card__hours"><svg><use xlink:href="{{ asset('img/svg/sprite.svg#infinity') }}"></use></svg></div>
                     <div class="whereSell-card__marks">
                     <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                     </div>
                 </div>
@@ -276,28 +276,28 @@
                     <div class="whereSell-card__hours">6-7 часов</div>
                     <div class="whereSell-card__marks">
                     <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                     </div>
                 </div>
@@ -319,31 +319,31 @@
             <div class="whereSell__cards">
                 <div class="whereSell__card whereSell-card">
                     <div class="whereSell-card__title">Объявления</div>
-                    <div class="whereSell-card__hours"><img src="{{ asset('img/svg/infinity.svg') }}"></div>
+                    <div class="whereSell-card__hours"><svg><use xlink:href="{{ asset('img/svg/sprite.svg#infinity') }}"></use></svg></div>
                     <div class="whereSell-card__marks">
                     <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/approval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="green"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                         <div class="whereSell-card__mark">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
-                            <img src="{{ asset('img/svg/disapproval.svg') }}">
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
+                            <svg class="gray"><use xlink:href="{{ asset('img/svg/sprite.svg#approval') }}"></use></svg>
                         </div>
                     </div>
                 </div>
@@ -460,11 +460,11 @@
                             </div>
                             <div>
                                 <div class="review-author__stars">
-                                    <img src="{{ asset('img/svg/star.svg') }}">
-                                    <img src="{{ asset('img/svg/star.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
                                 </div>
                                 <div class="review-author__name">
                                     Апполинария Гашигашвилия
@@ -494,11 +494,11 @@
                             </div>
                             <div>
                                 <div class="review-author__stars">
-                                    <img src="{{ asset('img/svg/star.svg') }}">
-                                    <img src="{{ asset('img/svg/star.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
                                 </div>
                                 <div class="review-author__name">
                                     Апполинария Гашигашвилия
@@ -528,11 +528,11 @@
                             </div>
                             <div>
                                 <div class="review-author__stars">
-                                    <img src="{{ asset('img/svg/star.svg') }}">
-                                    <img src="{{ asset('img/svg/star.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
                                 </div>
                                 <div class="review-author__name">
                                     Апполинария Гашигашвилия
@@ -562,11 +562,11 @@
                             </div>
                             <div>
                                 <div class="review-author__stars">
-                                    <img src="{{ asset('img/svg/star.svg') }}">
-                                    <img src="{{ asset('img/svg/star.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
                                 </div>
                                 <div class="review-author__name">
                                     Апполинария Гашигашвилия
@@ -596,11 +596,11 @@
                             </div>
                             <div>
                                 <div class="review-author__stars">
-                                    <img src="{{ asset('img/svg/star.svg') }}">
-                                    <img src="{{ asset('img/svg/star.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
-                                    <img src="{{ asset('img/svg/nonstar.svg') }}">
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                    <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
                                 </div>
                                 <div class="review-author__name">
                                     Апполинария Гашигашвилия
@@ -624,8 +624,8 @@
             </div>
         </div>
 
-        <div class="slider__toggler slider__toggler_right swiper-button-next" id="sw1r"><img src="{{ asset('img/svg/arrour.svg') }}"></div>
-        <div class="slider__toggler slider__toggler_left swiper-button-prev" id="sw1l"><img src="{{ asset('img/svg/arrouw.svg') }}"></div>
+        <div class="slider__toggler slider__toggler_right swiper-button-next" id="sw1r"><svg class="right"><use xlink:href="{{ asset('img/svg/sprite.svg#arrowr') }}"></use></svg></div>
+        <div class="slider__toggler slider__toggler_left swiper-button-prev" id="sw1l"><svg class="left"><use xlink:href="{{ asset('img/svg/sprite.svg#arrowr') }}"></use></svg></div>
         <div class="slider__pagination swiper-pagination" id="sw1p"></div>
     </div>
     <div class="slider__footer">
@@ -639,7 +639,7 @@
             <div class="slider__title">Наши статьи</div>
             <a class="articles__link link-reset" href="#">
                 <span>Смотреть больше</span>
-                <img src="{{ asset('img/svg/arrowsimple.svg') }}">
+                <svg><use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use></svg>
             </a>
         </div>
         <div class="swiper mySwiper2">
@@ -691,8 +691,8 @@
             </div>
         </div>
 
-        <div class="slider__toggler slider__toggler_right swiper-button-next" id="sw2r"><img src="{{ asset('img/svg/arrour.svg') }}"></div>
-        <div class="slider__toggler slider__toggler_left swiper-button-prev" id="sw2l"><img src="{{ asset('img/svg/arrouw.svg') }}"></div>
+        <div class="slider__toggler slider__toggler_right swiper-button-next" id="sw2r"><svg class="right"><use xlink:href="{{ asset('img/svg/sprite.svg#arrowr') }}"></use></svg></div>
+        <div class="slider__toggler slider__toggler_left swiper-button-prev" id="sw2l"><svg class="left"><use xlink:href="{{ asset('img/svg/sprite.svg#arrowr') }}"></use></svg></div>
         <div class="slider__pagination swiper-pagination" id="sw2p"></div>
     </div>
     <div class="slider__footer">
@@ -710,7 +710,7 @@
                     <div class="questions__element" data-accordion="block">
                         <div class="questions__head" data-accordion="head">
                             <span class="questions__question">Что такое онлайн займ?</span>
-                            <img class="questions__cross" src="{{ asset('img/svg/cross.svg') }}">
+                            <svg class="questions__cross"><use xlink:href="{{ asset('img/svg/sprite.svg#cross') }}"></use></svg>
                         </div>
                         <div class="questions__body" data-accordion="body">
                             Порой, человек попадает в такие обстоятельства, когда деньги нужны не просто срочно, а немедленно. Что делать в такой ситуации? Банки в этом случае не помогут, так как процедура рассмотрения заявки и весь процесс достаточно длителен.<br>
@@ -720,7 +720,7 @@
                     <div class="questions__element" data-accordion="block">
                         <div class="questions__head" data-accordion="head">
                             <span class="questions__question">Что такое онлайн займ?</span>
-                            <img class="questions__cross" src="{{ asset('img/svg/cross.svg') }}">
+                            <svg class="questions__cross"><use xlink:href="{{ asset('img/svg/sprite.svg#cross') }}"></use></svg>
                         </div>
                         <div class="questions__body" data-accordion="body">
                             Порой, человек попадает в такие обстоятельства, когда деньги нужны не просто срочно, а немедленно. Что делать в такой ситуации? Банки в этом случае не помогут, так как процедура рассмотрения заявки и весь процесс достаточно длителен.
@@ -730,7 +730,7 @@
                     <div class="questions__element" data-accordion="block">
                         <div class="questions__head" data-accordion="head">
                             <span class="questions__question">Что такое онлайн займ?</span>
-                            <img class="questions__cross" src="{{ asset('img/svg/cross.svg') }}">
+                            <svg class="questions__cross"><use xlink:href="{{ asset('img/svg/sprite.svg#cross') }}"></use></svg>
                         </div>
                         <div class="questions__body" data-accordion="body">
                             Порой, человек попадает в такие обстоятельства, когда деньги нужны не просто срочно, а немедленно. Что делать в такой ситуации? Банки в этом случае не помогут, так как процедура рассмотрения заявки и весь процесс достаточно длителен.
@@ -740,7 +740,7 @@
                     <div class="questions__element" data-accordion="block">
                         <div class="questions__head" data-accordion="head">
                             <span class="questions__question">Что такое онлайн займ?</span>
-                            <img class="questions__cross" src="{{ asset('img/svg/cross.svg') }}">
+                            <svg class="questions__cross"><use xlink:href="{{ asset('img/svg/sprite.svg#cross') }}"></use></svg>
                         </div>
                         <div class="questions__body" data-accordion="body">
                             Порой, человек попадает в такие обстоятельства, когда деньги нужны не просто срочно, а немедленно. Что делать в такой ситуации? Банки в этом случае не помогут, так как процедура рассмотрения заявки и весь процесс достаточно длителен.
@@ -764,22 +764,22 @@
         <div class="advantages__wrapper">
             <div class="advantages__list">
                 <div class="advantages__item advantages-item">
-                    <div class="advantages-item__icon"><img src="{{ asset('img/svg/carloop.svg') }}"></div>
+                    <div class="advantages-item__icon"><svg><use xlink:href="{{ asset('img/svg/sprite.svg#carloop') }}"></use></svg></div>
                     <div class="advantages-item__title">Экспертная оценка</div>
                     <div class="advantages-item__body">Все автомобили осматривают профессионалы, вам будет доступна полная информация о машине</div>
                 </div>
                 <div class="advantages__item advantages-item">
-                    <div class="advantages-item__icon"><img src="{{ asset('img/svg/guard.svg') }}"></div>
+                    <div class="advantages-item__icon"><svg><use xlink:href="{{ asset('img/svg/sprite.svg#guard') }}"></use></svg></div>
                     <div class="advantages-item__title">Экспертная оценка</div>
                     <div class="advantages-item__body">Все автомобили осматривают профессионалы, вам будет доступна полная информация о машине</div>
                 </div>
                 <div class="advantages__item advantages-item">
-                    <div class="advantages-item__icon"><img src="{{ asset('img/svg/list.svg') }}"></div>
+                    <div class="advantages-item__icon"><svg><use xlink:href="{{ asset('img/svg/sprite.svg#list') }}"></use></svg></div>
                     <div class="advantages-item__title">Экспертная оценка</div>
                     <div class="advantages-item__body">Все автомобили осматривают профессионалы, вам будет доступна полная информация о машине</div>
                 </div>
                 <div class="advantages__item advantages-item">
-                    <div class="advantages-item__icon"><img src="{{ asset('img/svg/car.svg') }}"></div>
+                    <div class="advantages-item__icon"><svg><use xlink:href="{{ asset('img/svg/sprite.svg#car') }}"></use></svg></div>
                     <div class="advantages-item__title">Экспертная оценка</div>
                     <div class="advantages-item__body">Все автомобили осматривают профессионалы, вам будет доступна полная информация о машине</div>
                 </div>
@@ -798,7 +798,9 @@
         <div class="some-text__wrapper d-flex jc-sb">
             <div>
                 <a class="some-text__logo logo link-reset" href="{{ route('main') }}">
-                    <div class="logo__svg"><img src="{{ asset('img/svg/logo.svg') }}"></div>
+                    <svg class="some-text__logo-svg logo__svg">
+                        <use xlink:href="{{ asset('img/svg/sprite.svg#logo') }}"></use>
+                    </svg>
                     <div><span class="some-text__logo-text logo__text">Car-price.<span>online</span></span></div>
                 </a>
                 <div class="some-text__text">
@@ -818,92 +820,17 @@
 
 <section class="home-section work-cities">
     <div class="container" data-spoiler="block">
-        <div class="home-section__title advantages__title">В каких городах работает CarPrice</div>
+        <div class="home-section__title">В каких городах работает CarPrice</div>
         <div class="work-cities__list">
-{{--            <ul>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--            </ul>--}}
-{{--            <ul data-spoiler="hide">--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--            </ul>--}}
-{{--            <ul data-spoiler="hide">--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--            </ul>--}}
-{{--            <ul data-spoiler="hide">--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--            </ul>--}}
-{{--            <ul data-spoiler="hide">--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--                <li><a href="#">Москва</a></li>--}}
-{{--            </ul>--}}
-
-            @foreach($dividedCities as $row)
-            <ul>
+            @foreach($dividedCities as $key => $row)
+            <ul 
+            @if($key > 0) data-spoiler="hide" @endif>
                 @foreach($row as $col)
                 <li><a href="{{ route('current_city', $col['link']) }}">{{ $col['name'] }}</a></li>
                 @endforeach
             </ul>
             @endforeach
         </div>
-        <button class="work-cities__button" data-spoiler="button">Показать еще <img src="{{ asset('img/svg/arrowsimple.svg') }}"></button>
+        <button class="work-cities__button" data-spoiler="button">Показать еще <svg><use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use></svg></button>
     </div>
 </section>

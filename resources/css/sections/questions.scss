@@ -3,6 +3,11 @@
         padding: 18px 15px;
         cursor: pointer;
         position: relative;
+
+        svg {
+            height: 17px;
+            width: 17px;
+        }
     }
     .questions__body{
         overflow: hidden;

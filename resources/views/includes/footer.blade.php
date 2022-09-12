@@ -1,7 +1,7 @@
 <div class="container">
     <div class="footer__nav">
         <a class="footer__logo logo link-reset" href="{{ route('main') }}">
-            <div class="logo__svg"><img src="{{ asset('img/svg/footerlogo.svg') }}"></div>
+            <div class="logo__svg"><svg><use xlink:href="{{ asset('img/svg/sprite.svg#footerlogo') }}"></use></svg></div>
             <div><span class="footer__logo-text logo__text">Car-price.<span>online</span></span></div>
         </a>
         <div class="footer__menu">
@@ -17,8 +17,8 @@
     </div>
     <div class="footer__policy">
         <a>Политика обработки персональных данных</a>
-        <a href="#top">
-            <img src="{{ asset('img/svg/arrowsimple.svg') }}">
+        <a class="footer__toggle-top" href="#top">
+            <svg><use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use></svg>
         </a>
     </div>
 </div>

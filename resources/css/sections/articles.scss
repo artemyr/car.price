@@ -43,9 +43,11 @@
         background: #FDE8D6;
         border-radius: 8px;
 
-        img {
-            object-fit: none;
+        svg {
+            height: 7px;
+            width: 12px;
             transform: rotate(-90deg);
+            use{stroke:#E65425;}
         }
         span {
             white-space: nowrap;

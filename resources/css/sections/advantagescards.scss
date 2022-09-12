@@ -33,9 +33,15 @@
 }
 
 .advantages-item {
-    .advantages-item__icon img {
-        margin: 0 auto;
-        margin-bottom: 16px;
+    .advantages-item__icon {
+        text-align: center;
+        
+        svg {
+            margin: 0 auto;
+            margin-bottom: 16px;
+            height: 94px;
+            width: 94px;
+        }
     }
     .advantages-item__title {
         font-family: 'Geometria';

@@ -33,12 +33,22 @@
         display: flex;
         align-items: center;
         gap: 4px;
+
+        svg {
+            width: 13px;
+            height: 7px;
+
+            use {stroke:#06892B;}
+        }
     }
 
     .work-cities__button {
         transition: 0.3s;
     }
-    .work-cities__button.active img {
+
+
+
+    .work-cities__button.active svg {
         transform: rotate(180deg);
     }
 }

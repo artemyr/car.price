@@ -76,6 +76,11 @@
         height: 20px;
         display: flex;
         align-items: center;
+
+        svg {
+            width: 24px;
+            height: 11px;
+        }
     }
 }
 
@@ -130,6 +135,15 @@
             margin-bottom: 36px;
             display: flex;
             justify-content: space-between;
+
+            svg {
+                width: 22px;
+                height: 22px;
+            }
+
+            svg.green use{fill: #06892B;}
+            
+            svg.gray use{fill: #cccccc;}
         }
     }
     .whereSell-card__marks :last-child {

@@ -3,13 +3,13 @@
         <div class="d-flex ali-c fl-gap-10">
 
             <a class="header-nav__logo logo link-reset" href="{{ route('main') }}">
-                <div class="logo__svg"><img src="{{ asset('img/svg/logo.svg') }}"></div>
+                <svg class="logo__svg"><use xlink:href="{{ asset('img/svg/sprite.svg#logo') }}"></use></svg>
                 <div><span class="header-nav__logo-font logo__text">Car-price.<span>online</span></span></div>
             </a>
 
             <div class="m-1200">
                 <div class="header-nav__choose-city top-menu">
-                    <img src="{{ asset('img/svg/pointer.svg') }}">
+                    <svg class="top-menu__pointer"><use xlink:href="{{ asset('img/svg/sprite.svg#pointer') }}"></use></svg>
                     <div class="top-menu__item cursor-pointer">
                         <span data-hystmodal="#myModal">{{ $city->name ?? 'Выберите город' }}</span>
                     </div>
@@ -29,7 +29,7 @@
                         <ul class="top-menu__dropdown dropdown-menu">
                             @foreach($categories as $category)
                             <li class="dropdown-menu__item">
-                                <div class="dropdown-menu__icon"><img src="{{ asset('img/svg/menu-icon.svg') }}"></div>
+                                <svg class="dropdown-menu__icon"><use xlink:href="{{ asset('img/svg/sprite.svg#menu-icon') }}"></use></svg>
                                 <a class="" href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
                                 <div class="dropdown-menu__subtitle">
                                     Да каких лиц предназначено

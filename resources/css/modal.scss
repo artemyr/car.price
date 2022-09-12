@@ -3,6 +3,7 @@
         padding: 40px 40px 40px 50px;
         background-color: #fff;
         border-radius: 10px;
+        width: 1280px;
     }
 
     .modal__link {
@@ -15,13 +16,20 @@
     }
 
     .modal__link-list {
-
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
     }
 
     .modal__header {
         display: flex;
         justify-content: space-between;
         margin-bottom: 32px;
+
+        svg {
+            height: 17px;
+            width: 17px;
+        }
     }
 
     .modal__title {
@@ -30,5 +38,17 @@
         font-size: 24px;
         line-height: 33px;
         color: #2E3D4A;
+    }
+}
+
+@media (max-width: 1330px){
+    .modal .modal__window {
+        width: 900px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .modal .modal__window {
+        width: 600px;
     }
 }

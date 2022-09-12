@@ -69,6 +69,10 @@
 
     .slider__toggler {
         width: 38px;
+
+        svg.left {
+            transform: rotate(180deg);
+        }
     }
 
     .slider__pagination {

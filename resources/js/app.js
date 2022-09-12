@@ -52,19 +52,21 @@
     function init_accordion(option) {
         const block = document.querySelectorAll('[data-accordion="block"]')
 
-        block.forEach(itemBlock => {
-            const btn = itemBlock.querySelector('[data-accordion="head"]')
-            const el = itemBlock.querySelector('[data-accordion="body"]')
+        if(block.length > 0){
+            block.forEach(itemBlock => {
+                const btn = itemBlock.querySelector('[data-accordion="head"]')
+                const el = itemBlock.querySelector('[data-accordion="body"]')
 
-            smoothView(btn, el)
+                smoothView(btn, el)
 
-            btn.addEventListener('click', () => {
-                itemBlock.classList.toggle('active')
+                btn.addEventListener('click', () => {
+                    itemBlock.classList.toggle('active')
+                })
             })
-        })
 
-        if(option == 'first_active')
-            block[0].querySelector('[data-accordion="head"]').click();
+            if(option == 'first_active')
+                block[0].querySelector('[data-accordion="head"]').click();
+        }
     }
 
     function smoothView(btn, el, startHeight = 0) {
