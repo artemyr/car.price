@@ -13,8 +13,43 @@
             border: 2px solid #CCCCCC;
             border-radius: 100%;
             width: 76px;
+            height: 76px;
             margin: 0 auto;
+            margin-bottom: 19px;
             position: relative;
+            flex-shrink: 0;
+
+            .howThisWork-steps__punktir {
+                position: absolute;
+                content: '';
+                left: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 160px;
+                height: 3px;
+                margin: 0 30px;
+                // border: 2px dashed #CCCCCC;
+                background-image: url(/img/svg/line.svg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            .howThisWork-steps__round {
+                position: absolute;
+                content: '';
+                top: 50%;
+                transform: translateY(-50%);
+                border-radius: 100%;
+                border: 2px solid #CCC;
+                width: 13px;
+                height: 13px;
+            }
+            .howThisWork-steps__round_l {
+                right: calc(100% + 9px);
+            }
+            .howThisWork-steps__round_r {
+                left: calc(100% + 9px);
+            }
 
             .howThisWork-steps__step_green1 {
                 position: absolute;
@@ -64,6 +99,7 @@
         font-size: 16px;
         text-align: center;
         color: #2E3D4A;
+        margin-bottom: 12px;
     }
     .howThisWork-steps__subtitle {
         font-family: 'Geometria';
@@ -75,10 +111,25 @@
 }
 
 
+@media (max-width: 1199.98px){
+    .howThisWork .howThisWork-steps .howThisWork-steps__step .howThisWork-steps__punktir {
+        width: 110px;
+        margin: 0 34px;
+    }
+}
+
 @media (max-width: 991.98px) {
     .howThisWork {
         .howThisWork__steps {
             grid-template-columns: 1fr 1fr;
+        }
+
+        .howThisWork-steps__step .howThisWork-steps__punktir {
+            display: none;
+        }
+
+        .howThisWork-steps__step .howThisWork-steps__round {
+            display: none;
         }
     }
 }
@@ -87,6 +138,21 @@
     .howThisWork {
         .howThisWork__steps {
             grid-template-columns: 1fr;
+        }
+
+        .howThisWork-steps__title {
+            text-align: left;
+            margin-bottom: 8px;
+        }
+
+        .howThisWork-steps__subtitle {
+            text-align: left;
+        }
+
+        .howThisWork-steps__item {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
         }
     }
 }
