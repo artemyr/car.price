@@ -25,49 +25,66 @@
         <div class="howThisWork__steps howThisWork-steps">
             <div class="howThisWork-steps__item">
                 <div class="howThisWork-steps__step">
+                    <div class="howThisWork-steps__punktir"></div>
+                    <div class="howThisWork-steps__round howThisWork-steps__round_r"></div>
                     <div class="howThisWork-steps__step_green1"></div>
                     Шаг 1
                 </div>
-                <div class="howThisWork-steps__title">
-                    Оставьте заявку
-                </div>
-                <div class="howThisWork-steps__subtitle">
-                    Оставьте номер телефона, в СМС вам придёт код доступа в личный кабинет
+                <div class="howThisWork-steps__footer">
+                    <div class="howThisWork-steps__title">
+                        Оставьте заявку
+                    </div>
+                    <div class="howThisWork-steps__subtitle">
+                        Оставьте номер телефона, в СМС вам придёт код доступа в личный кабинет
+                    </div>
                 </div>
             </div>
             <div class="howThisWork-steps__item">
                 <div class="howThisWork-steps__step">
+                    <div class="howThisWork-steps__punktir"></div>
+                    <div class="howThisWork-steps__round howThisWork-steps__round_l"></div>
+                    <div class="howThisWork-steps__round howThisWork-steps__round_r"></div>
                     <div class="howThisWork-steps__step_green2"></div>
                     Шаг 2
                 </div>
-                <div class="howThisWork-steps__title">
-                    Проверка авто
-                </div>
-                <div class="howThisWork-steps__subtitle">
-                    Авто проверят, сфотографируют и оформят за 2 часа
+                <div class="howThisWork-steps__footer">
+                    <div class="howThisWork-steps__title">
+                        Проверка авто
+                    </div>
+                    <div class="howThisWork-steps__subtitle">
+                        Авто проверят, сфотографируют и оформят за 2 часа
+                    </div>
                 </div>
             </div>
             <div class="howThisWork-steps__item">
                 <div class="howThisWork-steps__step">
+                    <div class="howThisWork-steps__punktir"></div>
+                    <div class="howThisWork-steps__round howThisWork-steps__round_l"></div>
+                    <div class="howThisWork-steps__round howThisWork-steps__round_r"></div>
                     <div class="howThisWork-steps__step_green3"></div>
                     Шаг 3
                 </div>
-                <div class="howThisWork-steps__title">
-                    Машина на аукционе
-                </div>
-                <div class="howThisWork-steps__subtitle">
-                    Машина попадает на аукцион бесплатно, без скрытых платежей
+                <div class="howThisWork-steps__footer">
+                    <div class="howThisWork-steps__title">
+                        Машина на аукционе
+                    </div>
+                    <div class="howThisWork-steps__subtitle">
+                        Машина попадает на аукцион бесплатно, без скрытых платежей
+                    </div>
                 </div>
             </div>
             <div class="howThisWork-steps__item">
                 <div class="howThisWork-steps__step howThisWork-steps__step_finaly">
+                    <div class="howThisWork-steps__round howThisWork-steps__round_l"></div>
                     profit
                 </div>
-                <div class="howThisWork-steps__title">
-                    Победа
-                </div>
-                <div class="howThisWork-steps__subtitle">
-                    Выбираете подходящее предложение и забираете деньги
+                <div class="howThisWork-steps__footer">
+                    <div class="howThisWork-steps__title">
+                        Победа
+                    </div>
+                    <div class="howThisWork-steps__subtitle">
+                        Выбираете подходящее предложение и забираете деньги
+                    </div>
                 </div>
             </div>
         </div>
