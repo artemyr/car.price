@@ -26,6 +26,22 @@ class DatabaseSeeder extends Seeder
         $data[] = ['name' => 'Санкт-Петербург', 'link' => 'saint-peterburg', 'name_predloshniy_padesh' => 'Санкт-Петербурге'];
         $data[] = ['name' => 'Ростов-на-Дону', 'link' => 'rostov-on-don', 'name_predloshniy_padesh' => 'Ростове-на-Дону'];
 
+        $data[] = ['name' => 'Абакан', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Белгород', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Великий Новгород', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Владимир', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Волгоград', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Вологда', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Воронеж', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Дубна', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Домодедово', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Зеленоград', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Екатеринбург', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Иваново', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Ижевск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Йошкар-Ола', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['name' => 'Казань', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+
         foreach($data as $item)
             City::create($item);
     }
@@ -45,7 +61,7 @@ class DatabaseSeeder extends Seeder
     private function createPosts()
     {
         $data = [];
-        $data[] = 
+        $data[] =
         [
             'title' => 'краснодар - битое авто',
             'content' => 'объявление в городе краснодар категория битое авто',
@@ -55,7 +71,7 @@ class DatabaseSeeder extends Seeder
             'category_id' => 1,
             'link' => 'krasnodar-bitoe-auto'
         ];
-        $data[] = 
+        $data[] =
         [
             'title' => 'москва - битое авто',
             'content' => 'объявление в городе москва категория битое авто',
@@ -65,7 +81,7 @@ class DatabaseSeeder extends Seeder
             'category_id' => 1,
             'link' => 'moskow-bitoe-auto'
         ];
-        $data[] = 
+        $data[] =
         [
             'title' => 'краснодар - убитое авто',
             'content' => 'объявление в городе краснодар категория убитое авто',
@@ -75,7 +91,7 @@ class DatabaseSeeder extends Seeder
             'category_id' => 2,
             'link' => 'krasnodar-ubitue-auto'
         ];
-        $data[] = 
+        $data[] =
         [
             'title' => 'москва - убитое авто',
             'content' => 'объявление в городе москва категория убитое авто',
@@ -93,30 +109,30 @@ class DatabaseSeeder extends Seeder
     private function createArticles()
     {
         $data = [];
-        $data[] = 
+        $data[] =
         [
             'title' => 'краснодар - статья 1',
             'content' => 'объявление в городе краснодар 1',
             'link' => 'kras-1',
-        ]; 
-        $data[] = 
+        ];
+        $data[] =
         [
             'title' => 'краснодар - статья 2',
             'content' => 'объявление в городе краснодар 2',
             'link' => 'kras-2',
-        ];    
-        $data[] = 
+        ];
+        $data[] =
         [
             'title' => 'Москва - статья 1',
             'content' => 'объявление в городе Москва 1',
             'link' => 'mos-1',
-        ]; 
-        $data[] = 
+        ];
+        $data[] =
         [
             'title' => 'Москва - статья 2',
             'content' => 'объявление в городе Москва 2',
             'link' => 'mos-2',
-        ];     
+        ];
 
         foreach($data as $item)
             Article::create($item);
@@ -125,26 +141,26 @@ class DatabaseSeeder extends Seeder
     private function createReviews()
     {
         $data = [];
-        $data[] = 
+        $data[] =
         [
             'title' => 'краснодар - отзыв 1',
             'content' => 'отзыв в городе краснодар 1',
-        ]; 
-        $data[] = 
+        ];
+        $data[] =
         [
             'title' => 'краснодар - отзыв 2',
             'content' => 'отзыв в городе краснодар 2',
-        ];    
-        $data[] = 
+        ];
+        $data[] =
         [
             'title' => 'Москва - отзыв 1',
             'content' => 'отзыв в городе Москва 1',
-        ]; 
-        $data[] = 
+        ];
+        $data[] =
         [
             'title' => 'Москва - отзыв 2',
             'content' => 'отзыв в городе Москва 2',
-        ];     
+        ];
 
         foreach($data as $item)
             Review::create($item);
@@ -157,8 +173,8 @@ class DatabaseSeeder extends Seeder
         $this->createPosts();
         $this->createArticles();
         $this->createReviews();
-        
-        // $tags = Tag::factory(6)->create();        
+
+        // $tags = Tag::factory(6)->create();
         // foreach($posts as $post) {
         //     $tagsIds = $tags->random(5)->pluck('id');
         //     $post->tags()->attach($tagsIds);

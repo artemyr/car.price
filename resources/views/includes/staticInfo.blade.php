@@ -803,81 +803,89 @@
     <div class="container" data-spoiler="block">
         <div class="home-section__title advantages__title">В каких городах работает CarPrice</div>
         <div class="work-cities__list">
+{{--            <ul>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--            </ul>--}}
+{{--            <ul data-spoiler="hide">--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--            </ul>--}}
+{{--            <ul data-spoiler="hide">--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--            </ul>--}}
+{{--            <ul data-spoiler="hide">--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--            </ul>--}}
+{{--            <ul data-spoiler="hide">--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--                <li><a href="#">Москва</a></li>--}}
+{{--            </ul>--}}
+
+            @foreach($dividedCities as $row)
             <ul>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
+                @foreach($row as $col)
+                <li><a href="{{ route('current_city', $col['link']) }}">{{ $col['name'] }}</a></li>
+                @endforeach
             </ul>
-            <ul data-spoiler="hide">
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-            </ul>
-            <ul data-spoiler="hide">
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-            </ul>
-            <ul data-spoiler="hide">
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-            </ul>
-            <ul data-spoiler="hide">
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-                <li><a href="#">Москва</a></li>
-            </ul>
+            @endforeach
         </div>
         <button class="work-cities__button" data-spoiler="button">Показать еще <img src="{{ asset('img/svg/arrowsimple.svg') }}"></button>
     </div>
