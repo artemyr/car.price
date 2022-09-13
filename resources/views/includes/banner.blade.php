@@ -4,7 +4,7 @@
             <div class="banner__left">
                 <div class="banner__top">
                     <div class="banner__title">
-                        Оцените рыночную <br> стоимость вашей машины
+                        Оцените рыночную <br> стоимость вашей машины{!! ($city->name_predloshniy_padesh)?'<br>в '.$city->name_predloshniy_padesh : '' !!}
                     </div>
                     <div class="banner__subtitle">
                         С возможностью продажи на аукционе по выгодной <br> цене в день обращения
@@ -23,5 +23,5 @@
                 </div>
             </div>
         </div>
-    </div>    
+    </div>
 </div>

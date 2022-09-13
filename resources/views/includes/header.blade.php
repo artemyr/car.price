@@ -1,7 +1,6 @@
 <div class="container">
     <div class="header-nav d-flex jc-sb ali-c">
         <div class="d-flex ali-c fl-gap-10">
-
             <a class="header-nav__logo logo link-reset" href="{{ route('main') }}">
                 <svg class="logo__svg"><use xlink:href="{{ asset('img/svg/sprite.svg#logo') }}"></use></svg>
                 <div><span class="header-nav__logo-font logo__text">Car-price.<span>online</span></span></div>
@@ -14,7 +13,12 @@
                         <span data-hystmodal="#myModal">{{ $city->name ?? 'Выберите город' }}</span>
                     </div>
                 </div>
+            </div>
 
+            <div class="header-nav__mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
         <div class="d-flex ali-c m-1200">

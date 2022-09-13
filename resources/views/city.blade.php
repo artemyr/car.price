@@ -2,6 +2,8 @@
 
 @section('content')
 
-В городе {{ $city->name_predloshniy_padesh }}
+@include('includes.banner')
+
+@include('includes.staticInfo')
 
 @endsection
