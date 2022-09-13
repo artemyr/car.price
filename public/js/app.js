@@ -161,9 +161,22 @@
     });
   }
 
+  function toggleMenu() {
+    var menu = document.querySelector('[js-toggle-menu="menu"]');
+    if (!menu) return;
+    var btnMenu = document.querySelector('[js-toggle-menu="toggler"]');
+    var body = document.body;
+    btnMenu.addEventListener('click', function (e) {
+      btnMenu.classList.toggle('active');
+      menu.classList.toggle('active');
+      body.classList.toggle('scroll-lock');
+    });
+  }
+
   init_accordion('first_active');
   init_tabs();
   init_spoilers();
+  toggleMenu();
 })(window);
 
 /***/ }),

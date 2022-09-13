@@ -14,13 +14,8 @@
                     </div>
                 </div>
             </div>
-
-            <div class="header-nav__mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </div>
+
         <div class="d-flex ali-c m-1200">
             <nav class="top-menu">
                 <ul class="d-flex">
@@ -33,7 +28,7 @@
                         <ul class="top-menu__dropdown dropdown-menu">
                             @foreach($categories as $category)
                             <li class="dropdown-menu__item">
-                                <svg class="dropdown-menu__icon"><use xlink:href="{{ asset('img/svg/sprite.svg#menu-icon') }}"></use></svg>
+                                <svg class="dropdown-menu__icon"><use xlink:href="{{ asset('img/svg/sprite.svg#').$category->icon }}"></use></svg>
                                 <a class="" href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
                                 <div class="dropdown-menu__subtitle">
                                     Да каких лиц предназначено
@@ -61,6 +56,12 @@
             <div class="button-block">
                 <a class="btn btn-green" href="#">Оценка авто</a>
             </div>
+        </div>
+
+        <div class="header-nav__mobile-menu" js-toggle-menu="toggler">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </div>
 </div>

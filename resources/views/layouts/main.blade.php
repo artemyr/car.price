@@ -47,6 +47,20 @@
         </div>
     </div>
 
+    <div class="mobile-menu" js-toggle-menu="menu">
+        <div class="mobile-menu__header">
+            <div class="mobile-menu__title">
+                Меню
+            </div>
+        </div>
+        <div class="mobile-menu__body">2</div>
+        <div class="mobile-menu__footer">
+            <a class="mobile-menu__button btn btn-green">
+                Оценка авто
+            </a>
+        </div>
+    </div>
+
     <script src="{{ asset('js/hystmodal.min.js') }}"></script>
     <script src="{{ asset('js/swiper.min.js') }}"></script>
     <script defer src="{{ asset('js/app.js') }}"></script>
