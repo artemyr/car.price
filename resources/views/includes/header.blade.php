@@ -31,7 +31,7 @@
                                 <svg class="dropdown-menu__icon"><use xlink:href="{{ asset('img/svg/sprite.svg#').$category->icon }}"></use></svg>
                                 <a class="" href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
                                 <div class="dropdown-menu__subtitle">
-                                    Да каких лиц предназначено
+                                    {{ $category->subtitle ?? '' }}
                                 </div>
                             </li>
                             @endforeach

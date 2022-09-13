@@ -12,6 +12,10 @@ class ShowController extends BaseController
     {
         $city = City::where('link', $city)->firstOrFail();
 
-        return view('city', compact('city') + $this->template_vars());
+        $cities = $this->cities;
+        $dividedCities = $this->dividedCities;
+        $categories = $this->categories;
+
+        return view('city', compact('city','categories','cities','dividedCities'));
     }
 }

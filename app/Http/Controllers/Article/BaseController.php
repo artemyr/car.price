@@ -8,17 +8,8 @@ use App\Models\Category;
 
 class BaseController extends Controller 
 {
-    private $cities;
-    private $categories;
-
     public function __construct ()
     {
-        $this->cities = City::all();
-        $this->categories = Category::all();
-    }
-
-    public function template_vars() 
-    {
-        return ['cities' => $this->cities, 'categories' => $this->categories];
+        $this->getDefaultVars();
     }
 }

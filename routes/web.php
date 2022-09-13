@@ -27,6 +27,17 @@ Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admi
         Route::delete('/{post}', 'DestroyController')->name('admin.post.destroy');
         Route::patch('/{post}', 'UpdateController')->name('admin.post.update');
     });
+
+    Route::group(["namespace" => "City", 'prefix' => 'cities'], function() {
+        Route::get('', 'IndexController')->name('admin.city.index');
+        // Route::get('/create', 'CreateController')->name('admin.city.create');
+        // Route::post('/create', 'StoreController')->name('admin.city.store');
+
+        Route::get('/{city}/edit', 'EditController')->name('admin.city.edit');
+        Route::get('/{city}', 'ShowController')->name('admin.city.show');
+        // Route::delete('/{city}', 'DestroyController')->name('admin.city.destroy');
+        Route::patch('/{city}', 'UpdateController')->name('admin.city.update');
+    });
 });
 
 

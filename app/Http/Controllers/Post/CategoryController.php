@@ -16,12 +16,16 @@ class CategoryController extends BaseController
         $city = City::where('link', $city)->firstOrFail();
         $category = Category::where('link', $category)->firstOrFail();
 
-        $data['city_id'] = $city->id;
-        $data['category_id'] = $category->id;
+        // $data['city_id'] = $city->id;
+        // $data['category_id'] = $category->id;
 
-        $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
-        $posts = Post::filter($filter)->paginate(10);
+        // $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
+        // $posts = Post::filter($filter)->paginate(10);
 
-        return view('post.category', compact('posts','category','city') + $this->getCitiesAndCategories() );
+        $cities = $this->cities;
+        $dividedCities = $this->dividedCities;
+        $categories = $this->categories;
+
+        return view('post.category', compact('category','city','categories','cities','dividedCities'));
     }
 }

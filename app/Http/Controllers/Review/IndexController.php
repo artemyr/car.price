@@ -11,6 +11,11 @@ class IndexController extends BaseController
     public function __invoke()
     {
         $reviews = Review::all();
-        return view('review.index', compact('reviews') + $this->template_vars());
+
+        $cities = $this->cities;
+        $dividedCities = $this->dividedCities;
+        $categories = $this->categories;
+
+        return view('review.index', compact('reviews','categories','cities','dividedCities'));
     }
 }

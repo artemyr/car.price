@@ -16,17 +16,6 @@ class EditController extends Controller
         $categorys = Category::all();
         $tags = Tag::all();
 
-        $citys = [
-            (object)[
-                'id' => 1,
-                'title' => 'moskow'
-            ],
-            (object)[
-                'id' => 2,
-                'title' => 'krasnoar'
-            ]
-        ];
-
-        return view('admin.post.edit', compact('post','posts','categorys','tags','citys'));
+        return view('admin.post.edit', compact('post','posts','categorys','tags'));
     }
 }

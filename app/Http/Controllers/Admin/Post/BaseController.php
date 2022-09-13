@@ -13,18 +13,4 @@ class BaseController extends Controller
     {
         $this->service = $service;
     }
-
-
-    private $citys = [
-        'moskow' => 1,
-        'krasnodar' => 2,
-    ];
-
-    public function initCity($city)
-    {
-        if (isset($this->citys[$city]))
-            return $this->citys[$city];
-        else
-            return false;
-    }
 }

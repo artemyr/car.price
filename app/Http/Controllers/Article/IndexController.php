@@ -11,6 +11,11 @@ class IndexController extends BaseController
     public function __invoke()
     {
         $articles = Article::all();
-        return view('article.index', compact('articles') + $this->template_vars());
+
+        $cities = $this->cities;
+        $dividedCities = $this->dividedCities;
+        $categories = $this->categories;
+
+        return view('article.index', compact('articles','categories','cities','dividedCities'));
     }
 }

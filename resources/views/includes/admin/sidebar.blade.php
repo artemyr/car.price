@@ -5,8 +5,17 @@
             <a href="{{ route('admin.post.index') }}" class="nav-link">
                 <i class="nav-icon fas fa-calendar-alt"></i>
                 <p>
-                    Posts
-                    <span class="badge badge-info right">{{ $posts->total() }}</span>
+                    Посты
+                    <span class="badge badge-info right">{{ isset($posts) ? $posts->total() : '?' }}</span>
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('admin.city.index') }}" class="nav-link">
+                <i class="nav-icon fas fa-calendar-alt"></i>
+                <p>
+                    Города
+                    <span class="badge badge-info right"></span>
                 </p>
             </a>
         </li>

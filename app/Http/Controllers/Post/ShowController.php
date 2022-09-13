@@ -14,6 +14,10 @@ class ShowController extends BaseController
         $city = City::where('link', $city)->firstOrFail();
         $post = Post::where('link', $post)->firstOrFail();
 
-        return view('post.show', compact('post', 'city', 'category') + $this->getCitiesAndCategories() );
+        $cities = $this->cities;
+        $dividedCities = $this->dividedCities;
+        $categories = $this->categories;
+
+        return view('post.show', compact('post', 'city', 'category','categories','cities','dividedCities'));
     }
 }

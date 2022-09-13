@@ -9,6 +9,10 @@ class IndexController extends BaseController
 {
     public function __invoke()
     {
-        return view('main', $this->template_vars());
+        $cities = $this->cities;
+        $dividedCities = $this->dividedCities;
+        $categories = $this->categories;
+
+        return view('main', compact('categories','cities','dividedCities'));
     }
 }
