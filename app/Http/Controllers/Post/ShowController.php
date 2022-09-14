@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Post;
 
 use App\Models\Post;
 use App\Models\City;
-use App\Http\Controllers\Post\BaseController;
 use Illuminate\Http\Request;
 
 class ShowController extends BaseController

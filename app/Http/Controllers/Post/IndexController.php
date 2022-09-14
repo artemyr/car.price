@@ -4,13 +4,12 @@ namespace App\Http\Controllers\Post;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
-use App\Http\Controllers\Post\BaseController;
 use App\Http\Requests\Post\FilterRequest;
 use App\Http\Filters\PostFilter;
 
 class IndexController extends BaseController
 {
-    public function __invoke ($city, FilterRequest $request)    
+    public function __invoke ($city, FilterRequest $request)
     {
         // $this->authorize('view', auth()->user());
         $data = $request->validated();
