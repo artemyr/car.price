@@ -30,23 +30,23 @@ Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admi
 
     Route::group(["namespace" => "City", 'prefix' => 'cities'], function() {
         Route::get('', 'IndexController')->name('admin.city.index');
-        // Route::get('/create', 'CreateController')->name('admin.city.create');
-        // Route::post('/create', 'StoreController')->name('admin.city.store');
+        Route::get('/create', 'CreateController')->name('admin.city.create');
+        Route::post('/create', 'StoreController')->name('admin.city.store');
 
         Route::get('/{city}/edit', 'EditController')->name('admin.city.edit');
         Route::get('/{city}', 'ShowController')->name('admin.city.show');
-        // Route::delete('/{city}', 'DestroyController')->name('admin.city.destroy');
+        Route::delete('/{city}', 'DestroyController')->name('admin.city.destroy');
         Route::patch('/{city}', 'UpdateController')->name('admin.city.update');
     });
 
     Route::group(["namespace" => "Category", 'prefix' => 'categories'], function() {
         Route::get('', 'IndexController')->name('admin.category.index');
-         Route::get('/create', 'CreateController')->name('admin.category.create');
-        // Route::post('/create', 'StoreController')->name('admin.category.store');
+        Route::get('/create', 'CreateController')->name('admin.category.create');
+        Route::post('/create', 'StoreController')->name('admin.category.store');
 
         Route::get('/{category}/edit', 'EditController')->name('admin.category.edit');
         Route::get('/{category}', 'ShowController')->name('admin.category.show');
-        // Route::delete('/{category}', 'DestroyController')->name('admin.category.destroy');
+        Route::delete('/{category}', 'DestroyController')->name('admin.category.destroy');
         Route::patch('/{category}', 'UpdateController')->name('admin.category.update');
     });
 });

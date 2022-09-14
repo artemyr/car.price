@@ -1,48 +1,53 @@
 @extends('layouts.admin')
 @section('content')
-<div>
-    <div class="mb-20">
-        <p>{{ $post->title }}</p>
+<div class="admin-show">
+    <div class="admin-show__form-control">
+        <div class="admin-show__label">Название</div>
+        <div class="admin-show__content">{{ $post->title }}</div>
     </div>
-    <div class="mb-20">
-        <p>content:</p>
-        <div>{{ $post->content }}</div>
-    </div>
-    <div class="mb-20">{{ $post->image }}</div>
-    
-    <div class="mb-20">{{ $post->likes }}</div>
 
-    <div class="mb-20">
-        <p>Tags:
+    <div class="admin-show__form-control">
+        <div class="admin-show__label">Контент:</div>
+        <div class="admin-show__content">{{ $post->content }}</div>
+    </div>
+
+    <div class="admin-show__form-control">
+        {{ $post->image }}
+    </div>
+    
+    <div class="admin-show__form-control">
+        {{ $post->likes }}
+    </div>
+
+    <div class="admin-show__form-control">
+        <div class="admin-show__label">Tags:</div>
+        <div class="admin-show__content">
             @foreach($post->tags as $tag)
             {{ $tag->title }}
             @endforeach
-        </p>
+        </div>
     </div>
 
-    <div class="mb-20">
-        <p>Category: {{ $post->category->title }}</p>
+    <div class="admin-show__form-control">
+        <div class="admin-show__label">Category: </div>
+        <div class="admin-show__content">{{ $post->category->title }}</div>
     </div>
 
-    <div class="mb-20">
-        <p>City: {{ $post->city }}</p>
+    <div class="admin-show__form-control">
+        <div class="admin-show__label">City: </div>
+        <div class="admin-show__content">{{ $post->city }}</div>
+    </div>
+
+    <div>
+        <form action="{{ route('admin.post.destroy', $post->id) }}" method="POST">
+            @csrf
+            @method('delete')
+            <input class="admin-show__remove" type="submit" value="Удалить">
+        </form>
+    </div>
+    <div>
+        <a href="{{ route('admin.post.index') }}">Назад</a>
     </div>
 </div>
-<div>
-<div>
-    <form action="{{ route('admin.post.edit', $post->id) }}" method="GET">
-        @csrf
-        <input type="submit" value="Update">
-    </form>
-</div>
-<div>
-    <form action="{{ route('admin.post.destroy', $post->id) }}" method="POST">
-        @csrf
-        @method('delete')
-        <input type="submit" value="Delete">
-    </form>
-</div>
-<div>
-    <a href="{{ route('admin.post.index') }}">Back</a>
-</div>
+
 @endsection

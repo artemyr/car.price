@@ -1,12 +1,25 @@
 @extends('layouts.admin')
 @section('content')
-<a href="{{ route('admin.post.create') }}">Создать новый</a>
-<div class="post-list">
-    @foreach($posts as $post)
-        <div><a href="{{ route('admin.post.show', $post->id) }}">{{ $post->id }}. {{ $post->title }}</a></div>
-    @endforeach
+
+<div class="admin-list">
+    <a class="admin-list__create" href="{{ route('admin.post.create') }}">Создать новый</a>
+    
+    <div class="admin-list__body">
+        @foreach($posts as $post)
+        <div class="admin-list__form-control">
+            <form action="{{ route('admin.post.destroy', $post->id) }}" method="POST">
+                @csrf
+                @method('delete')
+                <input class="admin-list__remove" type="submit" value="x">
+            </form>
+            <a class="admin-list__link" href="{{ route('admin.post.edit', $post->id) }}">{{ $post->id }}. {{ $post->title }}</a>
+        </div>
+        @endforeach
+        </div>
+        <div>
+            {{ $posts->withQueryString()->links() }}
+        </div>
+    </div>
 </div>
-<div>
-    {{ $posts->withQueryString()->links() }}
-</div>
+
 @endsection

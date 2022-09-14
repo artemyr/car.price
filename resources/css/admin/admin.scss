@@ -1,0 +1,61 @@
+.admin-list{
+    .admin-list__create {
+        background-color: rgb(65, 151, 39);
+        color: white;
+        border-radius: 10px;
+        padding: 10px 15px;
+    }
+    .admin-list__body {
+        padding-top: 15px;
+    }
+    .admin-list__form-control {
+        margin-bottom: 20px;
+        form {display: inline}
+    }
+    .admin-list__remove {
+        background-color: rgb(196, 63, 63);
+        color: white;
+        border-radius: 10px;
+        padding: 2px 3px;
+        margin-right: 15px;
+    }
+    .admin-list__link {
+        color: rgb(120 140 255);
+        font-size: 20px;
+    }
+}
+
+.admin-edit {
+    label {display: block;}
+    input[type=text] {min-width: 500px;border-radius: 10px;}
+    .admin-edit__form-control {
+        margin-bottom: 20px;
+    }
+    .admin-edit__save {
+        background-color: rgb(65, 151, 39);
+        color: white;
+        border-radius: 10px;
+        padding: 10px 15px;
+    }
+}
+
+.admin-show {
+    form {display: inline;}
+    .admin-show__form-control {
+        margin-bottom: 20px;
+    }
+    .admin-show__label{
+        color: rgb(120, 140, 255);
+        font-size: 20px;
+    }
+    .admin-show__content{
+        padding: 5px 2px;
+        border: 2px solid rgb(120, 140, 255);
+    }
+    .admin-show__remove {
+        background-color: rgb(196, 63, 63);
+        color: white;
+        border-radius: 10px;
+        padding: 10px 15px;
+    }
+}

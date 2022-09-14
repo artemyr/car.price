@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Category;
+namespace App\Http\Requests\City;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateRequest extends FormRequest
+class StoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,9 @@ class UpdateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'string',
+            'name' => 'string',
             'link' => 'string',
-            'subtitle' => 'string|nullable',
-            'icon' => 'string|nullable',
-            'rel' => 'integer|nullable',
+            'name_predloshniy_padesh' => 'string',
         ];
     }
 }

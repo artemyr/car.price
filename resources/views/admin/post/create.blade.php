@@ -4,7 +4,7 @@
    <form action="{{ route('admin.post.store') }}" method="POST">
         @csrf
         <div class="mb-20">
-            <label for="title">Title</label>
+            <label for="title">Название</label>
             <input 
                 value="{{ old('title') }}"
                 name="title" id="title" type="text">
@@ -60,7 +60,7 @@
         </div>
 
         <div>
-            <input type="submit" value="Create">
+            <input type="submit" value="Создать">
         </div>
    </form>
 </div>

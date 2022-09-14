@@ -558,7 +558,6 @@ select {
 }
 .modal .modal__link-list {
   display: flex;
-  justify-content: space-between;
   gap: 30px;
 }
 .modal .modal__header {
@@ -1367,7 +1366,7 @@ select {
 .work-cities .work-cities__list {
   padding-top: 40px;
   display: flex;
-  justify-content: space-between;
+  gap: 50px;
 }
 .work-cities .work-cities__list ul {
   list-style: none;
