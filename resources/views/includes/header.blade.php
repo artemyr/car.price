@@ -33,6 +33,13 @@
                                 <div class="dropdown-menu__subtitle">
                                     {{ $category->subtitle ?? '' }}
                                 </div>
+
+                                @if(isset($category->subcategories))
+                                    @foreach($category->subcategories as $subcategory)
+                                    {{ $subcategory->title }}<br>
+                                    @endforeach
+                                @endif
+
                             </li>
                             @endforeach
                         </ul>

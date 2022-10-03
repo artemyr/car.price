@@ -23,4 +23,24 @@ class Service
         }
         return $dividedCities;
     }
+
+    public function freshCategories ($categories)
+    {
+        $tmp_cats = [];
+
+        foreach($categories as $key => $category){
+            if ($category->rel != null){
+                $tmp_cats[$category->rel][] = $category;
+                unset($categories[$key]);
+            }
+        }
+
+        foreach($categories as $key => $category){
+            if (isset($tmp_cats[$category->id])){
+                $categories[$key]->setSubcategory($tmp_cats[$category->id]);
+            }
+        }
+
+        return $categories;
+    }
 }

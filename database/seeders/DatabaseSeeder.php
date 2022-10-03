@@ -54,6 +54,12 @@ class DatabaseSeeder extends Seeder
         $data[] = ['title' => 'По кузову', 'link' => 'po-kuzovu', 'icon' => 'menu-icon-3','subtitle' => 'Виды автомобилей'];
         $data[] = ['title' => 'По рулю', 'link' => 'po-rulu', 'icon' => 'menu-icon-4','subtitle' => 'Расположение руля в авто'];
 
+        $data[] = ['title' => 'Битые авто', 'link' => 'bitie', 'rel' => 1];
+        $data[] = ['title' => 'Конфискованные и арестованные авто', 'link' => 'konf', 'rel' => 1];
+        $data[] = ['title' => 'Залоги, кредиты, должники, банки', 'link' => 'zalog', 'rel' => 1];
+        $data[] = ['title' => 'Авто по банкротству', 'link' => 'bankr', 'rel' => 1];
+        $data[] = ['title' => 'Лизинговые авто', 'link' => 'liz', 'rel' => 1];
+
         foreach($data as $item)
             Category::create($item);
     }

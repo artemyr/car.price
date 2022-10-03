@@ -31,7 +31,7 @@ class AppServiceProvider extends ServiceProvider
         $cities = City::all();
         \View::share('cities', $cities);
         \View::share('dividedCities', $service->dividedCities($cities));
-        \View::share('categories', Category::all());
+        \View::share('categories', $service->freshCategories(Category::all()));
 
         Paginator::defaultView('vendor.pagination.default');
     }
