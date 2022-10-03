@@ -221,6 +221,41 @@ select {
 .mobile-menu .mobile-menu__footer {
   padding: 0 20px 24px;
 }
+.mobile-menu .mobile-menu__pointer {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.mobile-menu .mobile-menu__choose-city {
+  display: flex;
+  align-items: center;
+  font-family: "Geometria light";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 120%;
+  color: #2E3D4A;
+  margin-bottom: 24px;
+}
+.mobile-menu .mobile-menu__item, .mobile-menu .mobile-menu__item a {
+  font-family: "Geometria";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  color: #272630;
+  text-decoration: none;
+  margin-bottom: 24px;
+}
+.mobile-menu .mobile-menu__item_dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-menu .mobile-menu__arrow {
+  stroke: #707378;
+  width: 16px;
+  height: 8px;
+  transform: rotate(-90deg);
+}
 
 .mobile-menu.active {
   transform: translateY(0);

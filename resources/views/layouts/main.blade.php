@@ -53,7 +53,33 @@
                 Меню
             </div>
         </div>
-        <div class="mobile-menu__body">2</div>
+        <div class="mobile-menu__body">
+            <div class="mobile-menu__choose-city" data-hystmodal="#myModal">
+                <svg class="mobile-menu__pointer">
+                    <use xlink:href="{{ asset('img/svg/sprite.svg#pointer') }}"></use>
+                </svg>
+                {{ $city->name ?? 'Выберите город' }}
+            </div>
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item mobile-menu__item_dropdown">
+                    <span>Купить авто</span>
+                    <svg class="mobile-menu__arrow">
+                        <use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use>
+                    </svg>
+
+                    <ul style="display:none" class="mobile-menu__dropdown dropdown-menu">
+                        @foreach($categories as $category)
+                        <li class="dropdown-menu__item">
+                            <a class="" href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
+                        </li>
+                        @endforeach
+                    </ul>
+                </li>
+                <li class="mobile-menu__item"><a href="#">Автодилерам</a></li>
+                <li class="mobile-menu__item"><a href="{{ route('article.index') }}">Статьи</a></li>
+                <li class="mobile-menu__item"><a href="{{ route('review.index') }}">Отзывы</a></li>
+            </ul>
+        </div>
         <div class="mobile-menu__footer">
             <a class="mobile-menu__button btn btn-green">
                 Оценка авто
