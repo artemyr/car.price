@@ -6,7 +6,7 @@
                 <i class="nav-icon fas fa-calendar-alt"></i>
                 <p>
                     Категории
-                    <span class="badge badge-info right">?</span>
+                    <span class="badge badge-info right">{{ isset($categories) ? count($categories) : '?' }}</span>
                 </p>
             </a>
         </li>
@@ -24,7 +24,7 @@
                 <i class="nav-icon fas fa-calendar-alt"></i>
                 <p>
                     Города
-                    <span class="badge badge-info right">?</span>
+                    <span class="badge badge-info right">{{ isset($cities) ? count($cities) : '?' }}</span>
                 </p>
             </a>
         </li>
