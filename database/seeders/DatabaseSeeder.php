@@ -54,12 +54,6 @@ class DatabaseSeeder extends Seeder
         $data[] = ['title' => 'По кузову', 'link' => 'po-kuzovu', 'icon' => 'menu-icon-3','subtitle' => 'Виды автомобилей'];
         $data[] = ['title' => 'По рулю', 'link' => 'po-rulu', 'icon' => 'menu-icon-4','subtitle' => 'Расположение руля в авто'];
 
-        $data[] = ['title' => 'Битые авто', 'link' => 'bitie', 'rel' => 1];
-        $data[] = ['title' => 'Конфискованные и арестованные авто', 'link' => 'konf', 'rel' => 1];
-        $data[] = ['title' => 'Залоги, кредиты, должники, банки', 'link' => 'zalog', 'rel' => 1];
-        $data[] = ['title' => 'Авто по банкротству', 'link' => 'bankr', 'rel' => 1];
-        $data[] = ['title' => 'Лизинговые авто', 'link' => 'liz', 'rel' => 1];
-
         foreach($data as $item)
             Category::create($item);
     }
@@ -69,43 +63,53 @@ class DatabaseSeeder extends Seeder
         $data = [];
         $data[] =
         [
-            'title' => 'краснодар - битое авто',
+            'title' => 'Битые авто',
             'content' => 'объявление в городе краснодар категория битое авто',
             'likes' => 0,
             'city_id' => 1,
             'is_published' => 1,
             'category_id' => 1,
-            'link' => 'krasnodar-bitoe-auto'
+            'link' => 'bitie'
         ];
         $data[] =
         [
-            'title' => 'москва - битое авто',
+            'title' => 'Конфискованные и арестованные авто',
             'content' => 'объявление в городе москва категория битое авто',
             'likes' => 0,
             'city_id' => 2,
             'is_published' => 1,
             'category_id' => 1,
-            'link' => 'moskow-bitoe-auto'
+            'link' => 'konf'
         ];
         $data[] =
         [
-            'title' => 'краснодар - убитое авто',
+            'title' => 'Залоги, кредиты, должники, банки',
             'content' => 'объявление в городе краснодар категория убитое авто',
             'likes' => 0,
             'city_id' => 1,
             'is_published' => 1,
             'category_id' => 2,
-            'link' => 'krasnodar-ubitue-auto'
+            'link' => 'zalog'
         ];
         $data[] =
         [
-            'title' => 'москва - убитое авто',
+            'title' => 'Авто по банкротству',
             'content' => 'объявление в городе москва категория убитое авто',
             'likes' => 0,
             'city_id' => 2,
             'is_published' => 1,
             'category_id' => 2,
-            'link' => 'moskow-ubitue-auto'
+            'link' => 'bankr'
+        ];
+        $data[] =
+        [
+            'title' => 'Лизинговые авто',
+            'content' => 'объявление в городе москва категория убитое авто',
+            'likes' => 0,
+            'city_id' => 2,
+            'is_published' => 1,
+            'category_id' => 2,
+            'link' => 'liz'
         ];
 
         foreach($data as $item)

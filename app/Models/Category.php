@@ -16,8 +16,4 @@ class Category extends Model
     {
         return $this->hasMany(Post::class);
     }
-
-    public function setSubcategory($cat){
-        $this->attributes["subcategories"] = $cat;
-    }
 }

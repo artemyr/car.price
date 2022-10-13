@@ -20,7 +20,6 @@ class CreateCategoriesTable extends Migration
             $table->string('link');
             $table->string('subtitle')->nullable();
             $table->string('icon')->nullable();
-            $table->unsignedBigInteger('rel')->nullable();
 
             $table->timestamps();
         });
