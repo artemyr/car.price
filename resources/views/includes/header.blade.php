@@ -26,20 +26,23 @@
                     <li class="top-menu__item">
                         <span>Купить авто</span>
                         <ul class="top-menu__dropdown dropdown-menu">
-                            @foreach($categories as $category)
-                            <li class="dropdown-menu__item">
-                                <svg class="dropdown-menu__icon"><use xlink:href="{{ asset('img/svg/sprite.svg#').$category->icon }}"></use></svg>
-                                <a class="" href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
-                                <div class="dropdown-menu__subtitle">
-                                    {{ $category->subtitle ?? '' }}
-                                </div>
+                            @if(isset($categories))
+                                @foreach($categories as $category)
+                                <li class="dropdown-menu__item">
+                                    <svg class="dropdown-menu__icon"><use xlink:href="{{ asset('img/svg/sprite.svg#').$category->icon }}"></use></svg>
+                                    <a class="" href="{{ route('category', [$city->link ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
+                                    <div class="dropdown-menu__subtitle">
+                                        {{ $category->subtitle ?? '' }}
+                                    </div>
 
-                                <?/**
-                                 * TODO show category posts
-                                 */ ?>
-
-                            </li>
-                            @endforeach
+                                    <ul class="dropdown-menu__posts">
+                                        @foreach($category->posts as $post)
+                                            <li><a href="{{ route('post.show', [$city->link ?? $cities[0]->link, $category->link, $post->link]) }}">{{ $post->title }}</a></li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                                @endforeach
+                            @endif
                         </ul>
                     </li>
                     <li class="top-menu__item"><a href="#">Автодилерам</a></li>

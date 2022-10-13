@@ -68,11 +68,13 @@
                     </svg>
 
                     <ul style="display:none" class="mobile-menu__dropdown dropdown-menu">
-                        @foreach($categories as $category)
-                        <li class="dropdown-menu__item">
-                            <a class="" href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
-                        </li>
-                        @endforeach
+                        @if(isset($categories))
+                            @foreach($categories as $category)
+                            <li class="dropdown-menu__item">
+                                <a class="" href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
+                            </li>
+                            @endforeach
+                        @endif
                     </ul>
                 </li>
                 <li class="mobile-menu__item"><a href="#">Автодилерам</a></li>

@@ -13,10 +13,11 @@ class ShowController extends BaseController
         $city = City::where('link', $city)->firstOrFail();
         $post = Post::where('link', $post)->firstOrFail();
 
-        $cities = $this->cities;
-        $dividedCities = $this->dividedCities;
-        $categories = $this->categories;
+        $categories = $city->categories;
+        foreach ($categories as $category){
+            $category['posts'] = $category->posts;
+        }
 
-        return view('post.show', compact('post', 'city', 'category','categories','cities','dividedCities'));
+        return view('post.show', compact('post', 'city', 'category','categories'));
     }
 }

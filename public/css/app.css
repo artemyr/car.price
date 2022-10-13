@@ -99,6 +99,12 @@ select {
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: "Manrope";
+  src: url("/fonts/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 .d-none {
   display: none;
 }
@@ -440,6 +446,34 @@ select {
   font-weight: 500;
   font-size: 16px;
   color: #000000;
+}
+.top-menu .dropdown-menu .dropdown-menu__posts {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 20px 30px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(38, 46, 60, 0.15);
+  width: 250px;
+  z-index: 10;
+  flex-direction: column;
+  gap: 16px;
+}
+.top-menu .dropdown-menu .dropdown-menu__posts li a {
+  font-family: "Manrope";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  color: #000000;
+}
+.top-menu .dropdown-menu .dropdown-menu__posts li a:hover {
+  color: #06892B;
+  cursor: pointer;
+}
+.top-menu .dropdown-menu .dropdown-menu__item:hover .dropdown-menu__posts {
+  display: flex;
 }
 
 .header-nav {

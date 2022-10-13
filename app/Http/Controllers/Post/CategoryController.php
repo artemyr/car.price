@@ -14,12 +14,17 @@ class CategoryController extends BaseController
         $city = City::where('link', $city)->firstOrFail();
         $category = Category::where('link', $category)->firstOrFail();
 
+        $categories = $city->categories;
+        foreach ($categories as $category1){
+            $category['posts'] = $category1->posts;
+        }
+
 //         $data['city_id'] = $city->id;
 //         $data['category_id'] = $category->id;
 //
 //         $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
 //         $posts = Post::filter($filter)->paginate(10);
 
-        return view('post.category', compact('category','city'));
+        return view('post.category', compact('category','city', 'categories'));
     }
 }
