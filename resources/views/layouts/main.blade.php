@@ -61,17 +61,33 @@
                 {{ $city->name ?? 'Выберите город' }}
             </div>
             <ul class="mobile-menu__list">
-                <li class="mobile-menu__item mobile-menu__item_dropdown">
-                    <span>Купить авто</span>
-                    <svg class="mobile-menu__arrow">
-                        <use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use>
-                    </svg>
+                <li class="mobile-menu__item mobile-menu__item_dropdown" js-toggle-menu="catalog_btn">
+                    <div class="mobile-menu__row">
+                        <span>Купить авто</span>
+                        <svg class="mobile-menu__arrow">
+                            <use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use>
+                        </svg>
+                    </div>
 
-                    <ul style="display:none" class="mobile-menu__dropdown dropdown-menu">
+                    <ul class="mobile-menu__dropdown dropdown-menu" onclick="event.stopPropagation()">
                         @if(isset($categories))
                             @foreach($categories as $category)
-                            <li class="dropdown-menu__item">
-                                <a class="" href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
+                            <li class="dropdown-menu__item" js-toggle-menu="open_elements">
+                                <a href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
+                                <svg class="mobile-menu__arrow">
+                                    <use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use>
+                                </svg>
+
+                                <ul class="dropdown-menu__elements" onclick="event.stopPropagation()">
+                                    <li js-toggle-menu="close_elements">
+                                        Назад
+                                    </li>
+                                    @foreach($category->posts as $post)
+                                        <li>
+                                            <a href="{{ route('post.show', [$city->link ?? $cities[0]->link, $category->link, $post->link]) }}">{{ $post->title }}</a>
+                                        </li>
+                                    @endforeach
+                                </ul>
                             </li>
                             @endforeach
                         @endif

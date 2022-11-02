@@ -175,7 +175,31 @@
             btnMenu.classList.toggle('active');
             menu.classList.toggle('active');
             body.classList.toggle('scroll-lock');
+
+            menu.classList.remove('open')
         })
+
+        //submenu
+        const catalog_btn = document.querySelector('[js-toggle-menu="catalog_btn"]')
+        catalog_btn.addEventListener('click', (e) => {
+            e.stopPropagation()
+            menu.classList.toggle('open')
+        })
+
+        //elements
+        const open_elements_btn = document.querySelectorAll('[js-toggle-menu="open_elements"]')
+        open_elements_btn.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                btn.querySelector('.dropdown-menu__elements').classList.toggle('open')
+            })
+        })
+
+        const close_elements = document.querySelectorAll('[js-toggle-menu="close_elements"]')
+        close_elements.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                btn.closest('.dropdown-menu__elements').classList.toggle('open')
+            })
+        })     
     }
 
     init_accordion('first_active');
