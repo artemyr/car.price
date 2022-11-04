@@ -9,6 +9,7 @@ use App\Models\City;
 use App\Models\Category;
 use App\Models\CarpriceOfficeAddrass;
 use App\Models\GlobalSetting;
+use App\Models\Articles;
 use App\Services\Base\Service;
 
 class AppServiceProvider extends ServiceProvider

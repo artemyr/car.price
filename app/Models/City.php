@@ -21,4 +21,9 @@ class City extends Model
     {
         return $this->hasMany(Category::class);
     }
+
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
 }

@@ -10,4 +10,9 @@ class Article extends Model
     use HasFactory;
 
     protected $guarded = false;
+
+    public function city()
+    {
+        return $this->belongsTo(City::class);
+    }
 }

@@ -550,72 +550,7 @@
     </div>
 </section>
 
-<section class="articles slider">
-    <div class="slider__container container">
-        <div class="articles__header">
-            <div class="slider__title">Наши статьи</div>
-            <a class="articles__link link-reset" href="#">
-                <span>Смотреть больше</span>
-                <svg><use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use></svg>
-            </a>
-        </div>
-        <div class="swiper mySwiper2">
-            <div class="swiper-wrapper">
-                <div class="slider__slide swiper-slide">
-                    <img class="slider__image" src="{{ asset('img/car2.jpg') }}">
-                    <div class="articles__body">
-                        <div class="articles__tag green">Безопасность</div>
-                        <div class="articles__text">Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.</div>
-                        <div class="articles__footer">
-                            <div class="articles__link-detail">Читать статью</div>
-                            <div class="articles__date">30.07.2022</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__slide swiper-slide">
-                    <img class="slider__image" src="{{ asset('img/car2.jpg') }}">
-                    <div class="articles__body">
-                        <div class="articles__tag green">Безопасность</div>
-                        <div class="articles__text">Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.</div>
-                        <div class="articles__footer">
-                            <div class="articles__link-detail">Читать статью</div>
-                            <div class="articles__date">30.07.2022</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__slide swiper-slide">
-                    <img class="slider__image" src="{{ asset('img/car2.jpg') }}">
-                    <div class="articles__body">
-                        <div class="articles__tag green">Безопасность</div>
-                        <div class="articles__text">Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.</div>
-                        <div class="articles__footer">
-                            <div class="articles__link-detail">Читать статью</div>
-                            <div class="articles__date">30.07.2022</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__slide swiper-slide">
-                    <img class="slider__image" src="{{ asset('img/car2.jpg') }}">
-                    <div class="articles__body">
-                        <div class="articles__tag green">Безопасность</div>
-                        <div class="articles__text">Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.</div>
-                        <div class="articles__footer">
-                            <div class="articles__link-detail">Читать статью</div>
-                            <div class="articles__date">30.07.2022</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="slider__toggler slider__toggler_right swiper-button-next" id="sw2r"><svg class="right"><use xlink:href="{{ asset('img/svg/sprite.svg#arrowr') }}"></use></svg></div>
-        <div class="slider__toggler slider__toggler_left swiper-button-prev" id="sw2l"><svg class="left"><use xlink:href="{{ asset('img/svg/sprite.svg#arrowr') }}"></use></svg></div>
-        <div class="slider__pagination swiper-pagination" id="sw2p"></div>
-    </div>
-    <div class="slider__footer">
-        <a href="{{ $partner_link->value }}" class="btn btn-orange">Записаться на осмотр</a>
-    </div>
-</section>
+@include('includes.dynamic.articles')
 
 <section class="home-section-row questions">
     <div class="container">

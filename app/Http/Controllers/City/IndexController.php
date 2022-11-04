@@ -15,6 +15,8 @@ class IndexController extends BaseController
             $category['posts'] = $category->posts;
         }
 
-        return view('main',compact('categories'));
+        $articles = $city->articles;
+
+        return view('main',compact('categories','articles'));
     }
 }
