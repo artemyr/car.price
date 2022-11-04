@@ -1,7 +1,7 @@
 @extends('layouts.main')
 @section('content')
 
-@include('post.banner')
+@include('post.banner_category')
 
 @include('includes.staticInfo')
 
