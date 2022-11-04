@@ -7,42 +7,14 @@
                 <img src="{{ asset('img/map.jpg') }}">
             </div>
             <div class="contacts__list">
+                @foreach($capriceOfficeAddresses as $address)
                 <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
+                    <div class="contact-list-item__title">{{ $address->city }}</div>
+                    <div class="contact-list-item__subtitle">{{ $address->address }}</div>
+                    <div class="contact-list-item__body">{{ $address->phone }}<br>{{ $address->work_time }}</div>
+                    <div class="contact-list-item__bottom"><a href="{{ $address->link }}">Записаться на осмотр</a></div>
                 </div>
-                <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
-                </div>
-                <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
-                </div>
-                <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
-                </div>
-                <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
-                </div>
-                <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
-                </div>
+                @endforeach
             </div>
         </div>
 
