@@ -41,13 +41,14 @@
         margin-bottom: 6px;
     }
 
-    .review__showmore{
+    .review__showmore a{
         font-family: 'Geometria';
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
         color: #06892B;
         cursor: pointer;
+        text-decoration: none;
     }
 
     .review__showmore:hover {

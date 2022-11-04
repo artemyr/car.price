@@ -16,7 +16,8 @@ class IndexController extends BaseController
         }
 
         $articles = $city->articles;
+        $reviews = $city->reviews;
 
-        return view('main',compact('categories','articles'));
+        return view('main',compact('categories','articles','reviews'));
     }
 }

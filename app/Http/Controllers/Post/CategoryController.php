@@ -20,6 +20,7 @@ class CategoryController extends BaseController
         }
 
         $articles = $city->articles;
+        $reviews = $city->reviews;
 
 //         $data['city_id'] = $city->id;
 //         $data['category_id'] = $category->id;
@@ -27,6 +28,6 @@ class CategoryController extends BaseController
 //         $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
 //         $posts = Post::filter($filter)->paginate(10);
 
-        return view('post.category', compact('category','city', 'categories', 'articles'));
+        return view('post.category', compact('category','city', 'categories', 'articles', 'reviews'));
     }
 }
