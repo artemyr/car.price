@@ -6,9 +6,9 @@
         </a>
         <div class="footer__menu">
             <ul>
-                <li>Автодилерам</li>
-                <li>Статьи</li>
-                <li>Отзывы</li>
+                <li><a href="{{ $partner_link->value }}">Автодилерам</a></li>
+                <li><a href="#">Статьи</a></li>
+                <li><a href="#">Отзывы</a></li>
             </ul>
         </div>
     </div>

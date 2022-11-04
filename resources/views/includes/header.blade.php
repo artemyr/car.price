@@ -45,7 +45,7 @@
                             @endif
                         </ul>
                     </li>
-                    <li class="top-menu__item"><a href="#">Автодилерам</a></li>
+                    <li class="top-menu__item"><a href="{{ $partner_link->value }}">Автодилерам</a></li>
                     <li class="top-menu__item"><a href="{{ route('article.index') }}">Статьи</a></li>
                     <li class="top-menu__item"><a href="{{ route('review.index') }}">Отзывы</a></li>
 
@@ -62,7 +62,7 @@
                 </form>
             </nav>
             <div class="button-block">
-                <a class="btn btn-green" href="#">Оценка авто</a>
+                <a class="btn btn-green" href="{{ $partner_link->value }}">Оценка авто</a>
             </div>
         </div>
 

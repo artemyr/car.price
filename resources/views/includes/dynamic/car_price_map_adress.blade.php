@@ -19,7 +19,7 @@
         </div>
 
         <div class="home-section__footer">
-            <a class="btn btn-orange">Записаться на осмотр</a>
+            <a href="{{ $partner_link->value }}" class="btn btn-orange">Записаться на осмотр</a>
         </div>
 
     </div>

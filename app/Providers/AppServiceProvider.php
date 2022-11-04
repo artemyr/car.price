@@ -8,6 +8,7 @@ use Illuminate\Pagination\Paginator;
 use App\Models\City;
 use App\Models\Category;
 use App\Models\CarpriceOfficeAddrass;
+use App\Models\GlobalSetting;
 use App\Services\Base\Service;
 
 class AppServiceProvider extends ServiceProvider
@@ -35,7 +36,11 @@ class AppServiceProvider extends ServiceProvider
         \View::share('cities', $cities);
         \View::share('dividedCities', $service->dividedCities($cities));
 //        \View::share('categories', Category::all());  //already is'n general
-        \View::share('capriceOfficeAddresses', $capriceOfficeAddresses);
+        \View::share('capriceOfficeAddresses', $capriceOfficeAddresses);        
+
+        //gloval config
+        \View::share('partner_link', GlobalSetting::where('code','partner_link')->first());
+        \View::share('video_link', GlobalSetting::where('code','video_link')->first());
 
         Paginator::defaultView('vendor.pagination.default');
     }

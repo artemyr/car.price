@@ -89,7 +89,7 @@
             </div>
         </div>
         <div class="home-section__footer">
-            <a class="btn btn-orange">Записаться на осмотр</a>
+            <a href="{{ $partner_link->value }}" class="btn btn-orange">Записаться на осмотр</a>
         </div>
     </div>
 </section>
@@ -136,12 +136,14 @@
                 </div>
             </div>
             <div class="whyCarPrice__item">
-                <img src="{{ asset('img/advantagesvideo.png') }}">
+                <a href="{{ $video_link->value }}">
+                    <img src="{{ asset('img/advantagesvideo.png') }}">
+                </a>
             </div>
         </div>
 
         <div class="home-section__footer">
-            <a class="btn btn-orange">Продать машину</a>
+            <a href="{{ $partner_link->value }}" class="btn btn-orange">Продать машину</a>
         </div>
     </div>
 </section>
@@ -351,7 +353,7 @@
         </div>
 
         <div class="home-section__footer">
-            <a class="btn btn-orange">Продать машину</a>
+            <a href="{{ $partner_link->value }}" class="btn btn-orange">Продать машину</a>
         </div>
 
     </div>
@@ -544,7 +546,7 @@
         <div class="slider__pagination swiper-pagination" id="sw1p"></div>
     </div>
     <div class="slider__footer">
-        <a class="btn btn-orange">Записаться на осмотр</a>
+        <a href="{{ $partner_link->value }}" class="btn btn-orange">Записаться на осмотр</a>
     </div>
 </section>
 
@@ -611,7 +613,7 @@
         <div class="slider__pagination swiper-pagination" id="sw2p"></div>
     </div>
     <div class="slider__footer">
-        <a class="btn btn-orange">Записаться на осмотр</a>
+        <a href="{{ $partner_link->value }}" class="btn btn-orange">Записаться на осмотр</a>
     </div>
 </section>
 
@@ -667,7 +669,7 @@
         </div>
 
         <div class="home-section-row__footer">
-            <a class="btn btn-orange">Записаться на осмотр</a>
+            <a href="{{ $partner_link->value }}" class="btn btn-orange">Записаться на осмотр</a>
         </div>
     </div>
 </section>
@@ -702,7 +704,7 @@
         </div>
 
         <div class="home-section__footer">
-            <a class="btn btn-orange">Записаться на осмотр</a>
+            <a href="{{ $partner_link->value }}" class="btn btn-orange">Записаться на осмотр</a>
         </div>
 
     </div>
@@ -727,7 +729,7 @@
         </div>
 
         <div class="home-section__footer">
-            <a class="btn btn-orange">Записаться на аукцион</a>
+            <a href="{{ $partner_link->value }}" class="btn btn-orange">Записаться на аукцион</a>
         </div>
 
     </div>

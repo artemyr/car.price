@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class="banner__bottom">
-                    <a class="btn btn-orange">Оцените авто</a>
+                    <a href="{{ $partner_link->value }}" class="btn btn-orange">Оцените авто</a>
                     <div class="banner__sign">
                         Нажимая кнопку, вы соглашаетесь <br> с <a href="">политикой конфиденциальности</a>
                     </div>
