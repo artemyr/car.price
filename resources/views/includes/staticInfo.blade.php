@@ -412,39 +412,7 @@
     </div>
 </section>
 
-<section class="home-section auction-cats" data-product-card-page="section-tabs">
-    <div class="container">
-        <div class="home-section__title auction-cats__title">Категории аукциона</div>
-
-        <div class="auction-cats__wrapper">
-            <ul class="action-cats__root-cats">
-                <li class="action-cats__button active" data-product-card-page="btn-tab">По кузову</li>
-                <li class="action-cats__button" data-product-card-page="btn-tab">По назначению</li>
-                <li class="action-cats__button" data-product-card-page="btn-tab">С проблемами</li>
-                <li class="action-cats__button" data-product-card-page="btn-tab">По рулю</li>
-            </ul>
-            <div class="action-cats__sub-cats">
-                <div class="action-cats__sub-cat active" data-product-card-page="item-tab">
-                    <a href="#">Битые авто</a>
-                    <a href="#">Конфискованные и арестованные авто</a>
-                    <a href="#">Залоги, кредиты, должники, банки</a>
-                    <a href="#">Авто по банкротству</a>
-                    <a href="#">Лизинговые авто</a>
-                </div>
-                <div class="action-cats__sub-cat" data-product-card-page="item-tab">
-                    <a href="#">Конфискованные и арестованные авто</a>
-                </div>
-                <div class="action-cats__sub-cat" data-product-card-page="item-tab">
-                    <a href="#">Залоги, кредиты, должники, банки</a>
-                </div>
-                <div class="action-cats__sub-cat" data-product-card-page="item-tab">
-                    <a href="#">Авто по банкротству</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
+@include('includes.auction_categories')
 
 <section class="reviews slider">
     <div class="slider__container container">
