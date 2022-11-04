@@ -1,0 +1,1 @@
+/resources/views/includes/staticInfo.blade.php в самом начале есть меню для мобилки, но сейчас оно статично
