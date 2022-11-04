@@ -10,6 +10,7 @@ use App\Models\City;
 use App\Models\Article;
 use App\Models\Review;
 use App\Models\CarpriceOfficeAddrass;
+use App\Models\GlobalSetting;
 
 class DatabaseSeeder extends Seeder
 {
@@ -233,6 +234,26 @@ class DatabaseSeeder extends Seeder
             CarpriceOfficeAddrass::create($item);
     }
 
+    private function createGlobalSettings()
+    {
+        $data = [];
+        $data[] =
+        [
+            'code' => 'partner_link',
+            'name' => 'Ссылка партнера CarPrice',
+            'value' => 'https://carprice.ru/link',
+        ];
+        $data[] =
+        [
+            'code' => 'video_link',
+            'name' => 'Ссылка на видео',
+            'value' => 'https://carprice.ru/video',
+        ];
+
+        foreach($data as $item)
+            GlobalSetting::create($item);
+    }
+
     public function run()
     {
         $this->createCities();
@@ -241,6 +262,7 @@ class DatabaseSeeder extends Seeder
         $this->createArticles();
         $this->createReviews();
         $this->createCarpriceOfficeAddress();
+        $this->createGlobalSettings();
 
         // $tags = Tag::factory(6)->create();
         // foreach($posts as $post) {
