@@ -357,62 +357,9 @@
     </div>
 </section>
 
-<section class="home-section contacts">
-    <div class="container">
-        <div class="home-section__title">Адреса и телефоны офисов CarPrice</div>
+@include('includes.dynamic.car_price_map_adress')
 
-        <div class="contacts__wrapper">
-            <div class="contacts__map">
-                <img src="{{ asset('img/map.jpg') }}">
-            </div>
-            <div class="contacts__list">
-                <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
-                </div>
-                <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
-                </div>
-                <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
-                </div>
-                <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
-                </div>
-                <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
-                </div>
-                <div class="contacts__item contact-list-item">
-                    <div class="contact-list-item__title">Новороссийск</div>
-                    <div class="contact-list-item__subtitle">Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9</div>
-                    <div class="contact-list-item__body">8 861 205-02-25<br>Ежедневно 10:00–20:00</div>
-                    <div class="contact-list-item__bottom"><a href="#">Записаться на осмотр</a></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="home-section__footer">
-            <a class="btn btn-orange">Записаться на осмотр</a>
-        </div>
-
-    </div>
-</section>
-
-@include('includes.auction_categories')
+@include('includes.dynamic.auction_categories')
 
 <section class="reviews slider">
     <div class="slider__container container">
@@ -786,19 +733,4 @@
     </div>
 </section>
 
-<section class="home-section work-cities">
-    <div class="container" data-spoiler="block">
-        <div class="home-section__title">В каких городах работает CarPrice</div>
-        <div class="work-cities__list">
-            @foreach($dividedCities as $key => $row)
-            <ul 
-            @if($key > 0) data-spoiler="hide" @endif>
-                @foreach($row as $col)
-                <li><a href="{{ route('current_city', $col['link']) }}">{{ $col['name'] }}</a></li>
-                @endforeach
-            </ul>
-            @endforeach
-        </div>
-        <button class="work-cities__button" data-spoiler="button">Показать еще <svg><use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use></svg></button>
-    </div>
-</section>
+@include('includes.dynamic.work_citys')
