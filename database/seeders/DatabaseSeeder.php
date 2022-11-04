@@ -9,6 +9,7 @@ use App\Models\Tag;
 use App\Models\City;
 use App\Models\Article;
 use App\Models\Review;
+use App\Models\CarpriceOfficeAddrass;
 
 class DatabaseSeeder extends Seeder
 {
@@ -176,6 +177,62 @@ class DatabaseSeeder extends Seeder
             Review::create($item);
     }
 
+    private function createCarpriceOfficeAddress()
+    {
+        $data = [];
+        $data[] =
+        [
+            'city' => 'Новороссийск',
+            'address' => 'Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9',
+            'phone' => '8 861 205-02-25',
+            'work_time' => 'Ежедневно 10:00–20:00',
+            'link' => '123',
+        ];
+        $data[] =
+        [
+            'city' => 'Москва',
+            'address' => 'Московская область, г. Москва, ул. Мантулинская, дом 12 ',
+            'phone' => '8 861 205-02-25',
+            'work_time' => 'Ежедневно 10:00–20:00',
+            'link' => '123',
+        ];
+        $data[] =
+        [
+            'city' => 'Новороссийск',
+            'address' => 'Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9',
+            'phone' => '8 861 205-02-25',
+            'work_time' => 'Ежедневно 10:00–20:00',
+            'link' => '123',
+        ];
+        $data[] =
+        [
+            'city' => 'Москва',
+            'address' => 'Московская область, г. Москва, ул. Мантулинская, дом 12 ',
+            'phone' => '8 861 205-02-25',
+            'work_time' => 'Ежедневно 10:00–20:00',
+            'link' => '123',
+        ];
+        $data[] =
+        [
+            'city' => 'Новороссийск',
+            'address' => 'Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9',
+            'phone' => '8 861 205-02-25',
+            'work_time' => 'Ежедневно 10:00–20:00',
+            'link' => '123',
+        ];
+        $data[] =
+        [
+            'city' => 'Москва',
+            'address' => 'Московская область, г. Москва, ул. Мантулинская, дом 12 ',
+            'phone' => '8 861 205-02-25',
+            'work_time' => 'Ежедневно 10:00–20:00',
+            'link' => '123',
+        ];
+
+        foreach($data as $item)
+            CarpriceOfficeAddrass::create($item);
+    }
+
     public function run()
     {
         $this->createCities();
@@ -183,6 +240,7 @@ class DatabaseSeeder extends Seeder
         $this->createPosts();
         $this->createArticles();
         $this->createReviews();
+        $this->createCarpriceOfficeAddress();
 
         // $tags = Tag::factory(6)->create();
         // foreach($posts as $post) {
