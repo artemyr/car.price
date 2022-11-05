@@ -4,6 +4,7 @@
 namespace App\Http\Controllers\City;
 
 use App\Models\City;
+use App\Models\MoreAskedQuestion;
 
 class IndexController extends BaseController
 {
@@ -18,6 +19,8 @@ class IndexController extends BaseController
         $articles = $city->articles;
         $reviews = $city->reviews;
 
-        return view('main',compact('categories','articles','reviews'));
+        $moreAskedQuestions = MoreAskedQuestion::all();
+
+        return view('main',compact('categories','articles','reviews','moreAskedQuestions'));
     }
 }

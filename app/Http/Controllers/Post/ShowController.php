@@ -23,6 +23,8 @@ class ShowController extends BaseController
         $articles = $city->articles;
         $reviews = $city->reviews;
 
-        return view('post.show', compact('post', 'city', 'category', 'categories', 'articles','reviews'));
+        $moreAskedQuestions = MoreAskedQuestion::all();
+
+        return view('post.show', compact('post', 'city', 'category', 'categories', 'articles','reviews','moreAskedQuestions'));
     }
 }
