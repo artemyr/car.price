@@ -4,22 +4,22 @@ namespace App\Http\Controllers\Post;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\Review;
+use App\Models\Article;
+use App\Models\Category;
+use App\Models\MoreAskedQuestion;
 use App\Http\Requests\Post\FilterRequest;
 use App\Http\Filters\PostFilter;
 
 class IndexController extends BaseController
 {
-    public function __invoke ($city, FilterRequest $request)
+    public function __invoke ()
     {
-        // $this->authorize('view', auth()->user());
-        $data = $request->validated();
+        $reviews = Review::all();
+        $articles = Article::all();
+        $moreAskedQuestions = MoreAskedQuestion::all();
+        $categories = Category::all();
 
-        $data['city'] = $this->initCity($city);
-        if(!$data['city']) return "cant find city";
-
-        $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
-        $posts = Post::filter($filter)->paginate(10);
-
-        return view('post.index', compact('posts','city'));
+        return view('post.main', compact('reviews','articles','moreAskedQuestions','categories'));
     }
 }

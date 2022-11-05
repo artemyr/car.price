@@ -78,12 +78,20 @@ Route::group(["namespace" => "Review"], function() {
 
 
 
+
+
 // last
 Route::group(["namespace" => "City"], function() {
-    Route::get('/', 'IndexController')->name('main');
-    Route::get('/{city}', 'ShowController')->name('current_city');
+    Route::get('/{city}', 'ShowController')->name('current_city')->where('city', \App\Models\City::getAllCitySlugs());
+    Route::get('/{city}/{category}', 'CategoryController')->name('city.category')->where('city', \App\Models\City::getAllCitySlugs());
+    Route::get('/{city}/{category}/{post}', 'ShowPostController')->name('city.post.show')->where('city', \App\Models\City::getAllCitySlugs());
 });
+
+
+
+// last
 Route::group(["namespace" => "Post"], function() {
-    Route::get('/{city}/{category}', 'CategoryController')->name('category');
-    Route::get('/{city}/{category}/{post}', 'ShowController')->name('post.show');
+    Route::get('/', 'IndexController')->name('main');
+    Route::get('/{category}', 'CategoryController')->name('category');
+    Route::get('/{category}/{post}', 'ShowController')->name('post.show');
 });

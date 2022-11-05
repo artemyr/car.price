@@ -4,27 +4,24 @@ namespace App\Http\Controllers\Post;
 
 use App\Models\Post;
 use App\Models\City;
+use App\Models\Review;
+use App\Models\Article;
+use App\Models\MoreAskedQuestion;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ShowController extends BaseController
 {
-    public function __invoke ($city, $category, $post)
+    public function __invoke ($category, $post)
     {
-        $city = City::where('link', $city)->firstOrFail();
-        $post = Post::where('link', $post)->firstOrFail();
-        $category = Category::where('link', $category)->firstOrFail();
+        $category = Category::where('link',$category)->firstOrFail();
+        $post = Post::where('link',$post)->firstOrFail();
 
-        $categories = $city->categories;
-        foreach ($categories as $category1){
-            $category['posts'] = $category1->posts;
-        }
-
-        $articles = $city->articles;
-        $reviews = $city->reviews;
-
+        $reviews = Review::all();
+        $articles = Article::all();
+        $categories = Category::all();
         $moreAskedQuestions = MoreAskedQuestion::all();
 
-        return view('post.show', compact('post', 'city', 'category', 'categories', 'articles','reviews','moreAskedQuestions'));
+        return view('post.show', compact('post', 'category', 'categories', 'articles','reviews','moreAskedQuestions'));
     }
 }

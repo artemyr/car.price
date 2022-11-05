@@ -7,11 +7,12 @@ use App\Models\City;
 use App\Models\Post;
 use App\Models\MoreAskedQuestion;
 
-class ShowController extends BaseController
+class ShowPostController extends BaseController
 {
-    public function __invoke($city)
+    public function __invoke($city, $category, $post)
     {
         $city = City::where('link', $city)->firstOrFail();
+        $post = Post::where('link', $post)->firstOrFail();
 
         $categories = $city->categories;
 
@@ -23,6 +24,6 @@ class ShowController extends BaseController
         $reviews = $city->reviews;
         $moreAskedQuestions = MoreAskedQuestion::all();
 
-        return view('city.main', compact('city','categories','articles','reviews','moreAskedQuestions'));
+        return view('city.show_post', compact('city','categories','articles','reviews','moreAskedQuestions','post'));
     }
 }

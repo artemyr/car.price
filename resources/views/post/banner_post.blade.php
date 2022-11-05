@@ -4,7 +4,7 @@
             <div class="banner__left">
                 <div class="banner__top">
                     <div class="banner__title">
-                        Выкуп автомобилей <br>{{ Illuminate\Support\Str::lower($post->title) }} <br>в {{ $city->name_predloshniy_padesh }}
+                        Выкуп автомобилей <br>{{ Illuminate\Support\Str::lower($post->title) }}
                     </div>
                     <div class="banner__subtitle">
                         Вы сможете смотреть торги сразу после <br> регистрации — вносить депозит необязательно

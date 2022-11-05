@@ -1,7 +1,7 @@
-@extends('layouts.post.main')
+@extends('layouts.city.main')
 @section('content')
 
-@include('post.banner_post')
+@include('city.banner_post')
 
 @include('includes.staticInfo')
 

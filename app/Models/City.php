@@ -31,4 +31,13 @@ class City extends Model
     {
         return $this->hasMany(Review::class);
     }
+
+    public static function getAllCitySlugs(){
+        $res = [];
+        foreach (self::select('link')->get() as $item) {
+            $res[] = $item->link;
+        }
+
+        return implode("|",$res);
+    }
 }

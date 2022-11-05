@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.city.main')
 
 @section('content')
 

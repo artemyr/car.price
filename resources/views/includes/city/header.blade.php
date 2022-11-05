@@ -29,14 +29,14 @@
                             @foreach($categories as $category)
                             <li class="dropdown-menu__item">
                                 <svg class="dropdown-menu__icon"><use xlink:href="{{ asset('img/svg/sprite.svg#').$category->icon }}"></use></svg>
-                                <a class="" href="{{ route('category', [$city->link ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
+                                <a class="" href="{{ route('city.category', [$city->link ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
                                 <div class="dropdown-menu__subtitle">
                                     {{ $category->subtitle ?? '' }}
                                 </div>
 
                                 <ul class="dropdown-menu__posts">
                                     @foreach($category->posts as $post)
-                                        <li><a href="{{ route('post.show', [$city->link ?? $cities[0]->link, $category->link, $post->link]) }}">{{ $post->title }}</a></li>
+                                        <li><a href="{{ route('city.post.show', [$city->link ?? $cities[0]->link, $category->link, $post->link]) }}">{{ $post->title }}</a></li>
                                     @endforeach
                                 </ul>
                             </li>
