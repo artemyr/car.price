@@ -17,6 +17,9 @@ class ShowController extends BaseController
             $category['posts'] = $category->posts;
         }
 
-        return view('city', compact('city','categories'));
+        $articles = $city->articles;
+        $reviews = $city->reviews;
+
+        return view('city', compact('city','categories','articles','reviews'));
     }
 }
