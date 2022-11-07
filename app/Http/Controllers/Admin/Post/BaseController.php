@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers\Admin\Post;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Admin\AdminController;
 use App\Services\Post\Service;
 
-class BaseController extends Controller 
+class BaseController extends AdminController 
 {
     public $service;
 
