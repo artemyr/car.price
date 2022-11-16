@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 
 class AdminController extends Controller 
 {
-    private $content = "";
+    private $content = [];
 
     private function getControl($arParams) {
 
@@ -38,8 +38,8 @@ class AdminController extends Controller
             case 'select':
                     $res = "
             <div class=\"admin-edit__form-control\">
-                <label for=\"category\">Category</label>
-                <select name=\"category_id\" id=\"category\">
+                <label for=\"". $code ."\">". $name ."</label>
+                <select name=\"". $code ."\" id=\"". $code ."\">
                 ";
                         foreach ($value as $item) {
                             $res .= "    <option ";
@@ -85,8 +85,11 @@ class AdminController extends Controller
         return $res;
     }
 
-    private function addContent($content) {
-        $this->content .= $content;
+    private function addContent($position, $content) {
+        if(isset($this->content[$position]))
+            $this->content[$position] .= $content;
+        else
+            $this->content[$position] = $content;
     }
 
     private function getContent() {
@@ -94,21 +97,19 @@ class AdminController extends Controller
     }
 
     protected function getEditForm($postid, $arrControlls) {
-        $this->addContent($this->getHeader($postid));
+        $this->addContent('top',$this->getHeader($postid));
 
         foreach($arrControlls as $controll) {
-            $this->addContent($this->getControl($controll));
+            $this->addContent('bottom',$this->getControl($controll));
         }
 
-        $this->addContent($this->getFooter());
+        $this->addContent('bottom',$this->getFooter());
         return $this->getContent();
     }
     
     private function getHeader($postid) {
         return "<div class=\"admin-edit\">
-    <form action=\"".route('admin.post.update', $postid)."\" method=\"POST\">
-        @csrf
-        @method('patch')";
+    <form action=\"".route('admin.post.update', $postid)."\" method=\"POST\">";
     }
 
     private function getFooter() {

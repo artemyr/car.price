@@ -1,6 +1,9 @@
 @extends('layouts.admin')
 @section('content')
 
-{!! $formControll !!}
+{!! $formControll['top'] !!}
+@csrf
+@method('patch')
+{!! $formControll['bottom'] !!}
 
 @endsection
