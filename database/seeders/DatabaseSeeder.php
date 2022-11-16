@@ -367,11 +367,28 @@ class DatabaseSeeder extends Seeder
             MoreAskedQuestion::create($item);
     }
 
+    private function createTags()
+    {
+        $data = [];
+        $data[] =
+        [
+            'title' => 'Собаки',
+        ];
+        $data[] =
+        [
+            'title' => 'Кошки',
+        ];
+
+        foreach($data as $item)
+            Tag::create($item);
+    }
+
     public function run()
     {
         $this->createCities();
         $this->createCategories();
         $this->createPosts();
+        $this->createTags();
         $this->createArticles();
         $this->createReviews();
         $this->createCarpriceOfficeAddress();

@@ -54,7 +54,7 @@ class EditController extends BaseController
             ],
             [
                 'select',
-                'city',
+                'city_id',
                 $cities, 
                 'Город поста',
                 $post->city_id

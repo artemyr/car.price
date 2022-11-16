@@ -68,8 +68,8 @@ class AdminController extends Controller
                                     }
                                 }
         
-                                $res .= "value=\" $item->id \">";
-                                $res .= $item->title;
+                                $res .= "value=\" $item1->id \">";
+                                $res .= $item1->title;
                             $res .= "</option>
                 ";
                             }
