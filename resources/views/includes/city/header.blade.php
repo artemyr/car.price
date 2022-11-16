@@ -10,7 +10,7 @@
                 <div class="header-nav__choose-city top-menu">
                     <svg class="top-menu__pointer"><use xlink:href="{{ asset('img/svg/sprite.svg#pointer') }}"></use></svg>
                     <div class="top-menu__item cursor-pointer">
-                        <span data-hystmodal="#myModal">{{ $city->name ?? 'Выберите город' }}</span>
+                        <span data-hystmodal="#myModal">{{ $city->title ?? 'Выберите город' }}</span>
                     </div>
                 </div>
             </div>

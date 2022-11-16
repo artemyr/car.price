@@ -6,7 +6,7 @@
             <ul 
             @if($key > 0) data-spoiler="hide" @endif>
                 @foreach($row as $col)
-                <li><a href="{{ route('current_city', $col['link']) }}">{{ $col['name'] }}</a></li>
+                <li><a href="{{ route('current_city', $col['link']) }}">{{ $col['title'] }}</a></li>
                 @endforeach
             </ul>
             @endforeach

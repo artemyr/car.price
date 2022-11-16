@@ -36,7 +36,7 @@
                         @foreach($row as $col)
                         <li>
                             <a class="modal__link link-reset {{ (($city->id ?? '') == $col['id'] ? 'active' : '') }}"
-                                href="{{ route('current_city', $col['link']) }}">{{ $col['name'] }}
+                                href="{{ route('current_city', $col['link']) }}">{{ $col['title'] }}
                             </a>
                         </li>
                         @endforeach
@@ -58,7 +58,7 @@
                 <svg class="mobile-menu__pointer">
                     <use xlink:href="{{ asset('img/svg/sprite.svg#pointer') }}"></use>
                 </svg>
-                {{ $city->name ?? 'Выберите город' }}
+                {{ $city->title ?? 'Выберите город' }}
             </div>
             <ul class="mobile-menu__list">
                 <li class="mobile-menu__item mobile-menu__item_dropdown" js-toggle-menu="catalog_btn">

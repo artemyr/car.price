@@ -12,7 +12,7 @@ class Service
         foreach ($cities as $item){
             $dividedCities[$row][$col] = [
                     'id' => $item->id,
-                    'name' => $item->name,
+                    'title' => $item->title,
                     'link' => $item->link,
                 ];
             if($col >= 12){
