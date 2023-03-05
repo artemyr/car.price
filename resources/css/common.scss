@@ -18,3 +18,19 @@
 .scroll-lock {
     overflow: hidden;
 }
+
+.blog-pages-wrapper {
+    margin-bottom: 58px;
+    margin-top: 10px;
+    
+    .blog-pages-h1 {
+        font-family: Geometria;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #2E3D4A;
+        margin-bottom: 24px;
+    }
+}

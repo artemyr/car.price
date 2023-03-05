@@ -36,7 +36,7 @@ class AppServiceProvider extends ServiceProvider
 
         \View::share('cities', $cities);
         \View::share('dividedCities', $service->dividedCities($cities));
-//        \View::share('categories', Category::all());  //already is'n general
+//        \View::share('categories', Category::all());  //already is'n general (uses cities selection)
         \View::share('capriceOfficeAddresses', $capriceOfficeAddresses);        
 
         //gloval config
