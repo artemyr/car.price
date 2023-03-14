@@ -115,6 +115,8 @@
             letter-spacing: 0px;
             text-align: left;
             color:#2E3D4A;
+            margin-bottom: 20px;
+            margin-top: 20px;
         }
         p {
             font-family: Geometria;
@@ -124,6 +126,10 @@
             letter-spacing: 0px;
             text-align: left;
             color: #2E3D4A;
+            padding-bottom: 6px;
+        }
+        ul,ol {
+            padding-top: 20px;
         }
         ul li, ol li {
             font-family: Geometria;
@@ -135,6 +141,7 @@
             color: #2E3D4A;
             padding-left: 20px;
             position: relative;
+            padding-bottom: 10px;
         }
         ul li:before {
             content: '';
@@ -146,6 +153,25 @@
             left: 0px;
             top: 8px;
         }
+        ol li:before {
+            /* Определяем элемент, который будет нумероваться — li. Псевдоэлемент before указывает, что содержимое, вставляемое при помощи свойства content, будет располагаться перед пунктами списка. Здесь же устанавливается значение приращения счетчика (по умолчанию равно 1). */
+            counter-increment: li;
+            /* С помощью свойства content выводится номер пункта списка. counters() означает, что генерируемый текст представляет собой значения всех счетчиков с таким именем. Точка в кавычках добавляет разделяющую точку между цифрами, а точка с пробелом добавляется перед содержимым каждого пункта списка */
+            content: counters(li, ".");
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            color: #06892B;;
+         }
+    }
+    .blog-detail-pages-wrapper__socials-label{
+        font-family: Geometria;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #999999;        
     }
     .blog-detail-pages-wrapper__date{
         font-family: Geometria;
@@ -195,7 +221,7 @@
         align-items: center;
         padding-bottom: 20px;
         border-bottom: 1px solid #999999;
-        margin-bottom: 32px;
+        margin-bottom: 12px;
     }
 }
 

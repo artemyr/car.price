@@ -28,7 +28,12 @@
 
                 <div class="blog-detail-pages-wrapper__title-bottom">
                     <div class="blog-detail-pages-wrapper__date">{{ $article->cr_date }}</div>
-                    <div>Socials</div>
+                    <div class="blog-detail-pages-wrapper__socials">
+                        <div class="blog-detail-pages-wrapper__socials-label">Поделиться</div>
+                        <div class="blog-detail-pages-wrapper__socials-links">
+                            
+                        </div>
+                    </div>
                 </div>
 
                 <div class="blog-detail-pages-wrapper__detail-text">
