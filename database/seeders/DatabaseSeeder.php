@@ -24,26 +24,26 @@ class DatabaseSeeder extends Seeder
     private function createCities()
     {
         $data = [];
-        $data[] = ['name' => 'Краснодар', 'link' => 'krasnodar', 'name_predloshniy_padesh' => 'Краснодаре'];
-        $data[] = ['name' => 'Москва', 'link' => 'moskow', 'name_predloshniy_padesh' => 'Москве'];
-        $data[] = ['name' => 'Санкт-Петербург', 'link' => 'saint-peterburg', 'name_predloshniy_padesh' => 'Санкт-Петербурге'];
-        $data[] = ['name' => 'Ростов-на-Дону', 'link' => 'rostov-on-don', 'name_predloshniy_padesh' => 'Ростове-на-Дону'];
+        $data[] = ['title' => 'Краснодар', 'link' => 'krasnodar', 'name_predloshniy_padesh' => 'Краснодаре'];
+        $data[] = ['title' => 'Москва', 'link' => 'moskow', 'name_predloshniy_padesh' => 'Москве'];
+        $data[] = ['title' => 'Санкт-Петербург', 'link' => 'saint-peterburg', 'name_predloshniy_padesh' => 'Санкт-Петербурге'];
+        $data[] = ['title' => 'Ростов-на-Дону', 'link' => 'rostov-on-don', 'name_predloshniy_padesh' => 'Ростове-на-Дону'];
 
-        $data[] = ['name' => 'Абакан', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Белгород', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Великий Новгород', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Владимир', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Волгоград', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Вологда', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Воронеж', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Дубна', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Домодедово', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Зеленоград', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Екатеринбург', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Иваново', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Ижевск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Йошкар-Ола', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
-        $data[] = ['name' => 'Казань', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Абакан', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Белгород', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Великий Новгород', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Владимир', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Волгоград', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Вологда', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Воронеж', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Дубна', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Домодедово', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Зеленоград', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Екатеринбург', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Иваново', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Ижевск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Йошкар-Ола', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Казань', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
 
         foreach($data as $item)
             City::create($item);
@@ -362,11 +362,28 @@ class DatabaseSeeder extends Seeder
             MoreAskedQuestion::create($item);
     }
 
+    private function createTags()
+    {
+        $data = [];
+        $data[] =
+        [
+            'title' => 'Собаки',
+        ];
+        $data[] =
+        [
+            'title' => 'Кошки',
+        ];
+
+        foreach($data as $item)
+            Tag::create($item);
+    }
+
     public function run()
     {
         $this->createCities();
         $this->createCategories();
         $this->createPosts();
+        $this->createTags();
         $this->createArticles();
         $this->createReviews();
         $this->createCarpriceOfficeAddress();
