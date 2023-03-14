@@ -11,7 +11,7 @@
             <div class="breadcrumbs__item">...</div>
         </div>
         <h1 class="blog-pages-h1">Статьи</h1>
-    <div>
+    </div>
     <section class="articles">
         <div class="container">
             <div class="articles__items-container">
