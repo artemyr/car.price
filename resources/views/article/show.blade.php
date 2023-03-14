@@ -27,12 +27,12 @@
                 <div class="blog-detail-pages-wrapper__title">{{ $article->title }}</div>
 
                 <div class="blog-detail-pages-wrapper__title-bottom">
-                    <div>{{ $article->cr_date }}</div>
+                    <div class="blog-detail-pages-wrapper__date">{{ $article->cr_date }}</div>
                     <div>Socials</div>
                 </div>
 
                 <div class="blog-detail-pages-wrapper__detail-text">
-                    <div>{{ $article->content }}</div>
+                    <div>{!! $article->content !!}</div>
                 </div>
 
             </div>
@@ -57,7 +57,7 @@
                         <div class="sidebar__item">
                         5. Консультации по телефону по оборудованию бассейнов и уходу за водой бассейнов
                         </div>
-                    </div>                
+                    </div>
                 </div>
             </div>
         </div>
