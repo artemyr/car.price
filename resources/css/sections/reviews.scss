@@ -1,55 +1,53 @@
-.reviews {
-
-    .reviews__items-container {
+.review {
+    .review__items-container {
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 19px;
     }
-    .reviews__item {
+    .review__item {
         border-radius: 12px;
         overflow: hidden;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
     }
-    .reviews__image {
-        width: 100%;
-    }
-    .reviews__body{
-        padding: 20px 20px 30px;
-    }
-    .reviews__title{
-        font-family: Geometria;
-        font-size: 16px;
+    .review__title {
+        font-family: 'Geometria';
         font-weight: 500;
+        font-size: 16px;
         line-height: 20px;
-        letter-spacing: 0em;
-        text-align: left;
         color: #2E3D4A;
         margin-bottom: 8px;
     }
-    .reviews__content{
-        font-family: Geometria;
+    .review__author {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+    .review__body {
+        padding: 20px 20px 30px;
+    }
+    .review__text {
+        font-family: 'Geometria light';
+        font-style: normal;
+        font-weight: 600;
         font-size: 14px;
-        font-weight: 400;
-        line-height: 21px;
-        letter-spacing: 0em;
-        text-align: left;
         color: #2E3D4A;
+        line-height: 21px;
         margin-bottom: 6px;
     }
-    .reviews__link{
-        font-family: Geometria;
-        font-size: 14px;
+    .review__showmore a{
+        font-family: 'Geometria';
         font-weight: 400;
+        font-size: 14px;
         line-height: 18px;
-        letter-spacing: 0em;
-        text-align: left;
         color: #06892B;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .review__showmore:hover {
+        text-decoration: underline;
     }
 }
 
-.reviews.slider {
-    background: #F7F7FF;
-}
 
 .review-author {
     .review-author__stars {

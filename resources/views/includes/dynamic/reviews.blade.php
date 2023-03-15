@@ -1,4 +1,4 @@
-<section class="reviews slider">
+<section class="review slider">
     <div class="slider__container container">
         <div class="slider__title">Отзывы</div>
         <div class="swiper mySwiper">
@@ -12,6 +12,7 @@
                                     <img src="{{ asset($review->author_ava) }}">
                                 </div>
                                 <div>
+                                    {{ $review->rate }}
                                     <div class="review-author__stars">
                                         <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
                                         <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>

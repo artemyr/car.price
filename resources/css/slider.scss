@@ -6,13 +6,11 @@
     .slider__container{
         position: relative;
     }
-
     .slider__slide {
         background-color: white;
         border-radius: 12px;
         overflow: hidden;
     }
-
     .slider__title {
         font-family: 'Geometria';
         font-weight: 500;
@@ -21,53 +19,13 @@
         color: #2E3D4A;
         margin-bottom: 32px;
     }
-
-    .review__title {
-        font-family: 'Geometria';
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 20px;
-        color: #2E3D4A;
-        margin-bottom: 8px;
-    }
-
-    .review__text {
-        font-family: 'Geometria light';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        color: #2E3D4A;
-        line-height: 21px;
-        margin-bottom: 6px;
-    }
-
-    .review__showmore a{
-        font-family: 'Geometria';
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 18px;
-        color: #06892B;
-        cursor: pointer;
-        text-decoration: none;
-    }
-
-    .review__showmore:hover {
-        text-decoration: underline;
-    }
-
     .slider__footer {
         margin-top: 60px;
         text-align: center;
     }
-
     .slider__image {
         width: 100%;
     }
-
-    .review__body {
-        padding: 20px 20px 30px;
-    }
-
     .slider__toggler {
         width: 38px;
 
@@ -75,17 +33,9 @@
             transform: rotate(180deg);
         }
     }
-
     .slider__pagination {
         bottom: -35px;
     }
-
-    .review__author {
-        display: flex;
-        gap: 16px;
-        margin-bottom: 20px;
-    }
-
     .swiper-pagination-bullet {
         height: 4px;
         width: 43px;
@@ -103,6 +53,10 @@
     .slider__toggler_right {
         right: -20px;
     }
+}
+
+.reviews.slider {
+    background: #F7F7FF;
 }
 
 @media (max-width: 767.98px){
