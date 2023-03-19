@@ -28,26 +28,26 @@
     });
 
     var swiper2 = new Swiper(".mySwiper2",
-        {
-            slidesPerView: 1,
-            spaceBetween: 28,
-            navigation: {
-                nextEl: "#sw2r",
-                prevEl: "#sw2l",
+    {
+        slidesPerView: 1,
+        spaceBetween: 28,
+        navigation: {
+            nextEl: "#sw2r",
+            prevEl: "#sw2l",
+        },
+        pagination: {
+            el: "#sw2p",
+            clickable: true
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 3,
             },
-            pagination: {
-                el: "#sw2p",
-                clickable: true
-            },
-            breakpoints: {
-                1200: {
-                    slidesPerView: 3,
-                },
-                768: {
-                    slidesPerView: 2,
-                }
+            768: {
+                slidesPerView: 2,
             }
-        });
+        }
+    });
 
     function init_accordion(option) {
         const block = document.querySelectorAll('[data-accordion="block"]')

@@ -47,6 +47,20 @@
         </div>
     </div>
 
+    <div class="modal hystmodal" id="reviewPopUp" aria-hidden="true">
+        <div class="hystmodal__wrap">
+            <div class="hystmodal__window modal__window" role="dialog" aria-modal="true">
+                <div class="modal__header">
+                    <div class="modal__title">Выберите город</div>
+                    <svg data-hystclose><use xlink:href="{{ asset('img/svg/sprite.svg#cross') }}"></use></svg>
+                </div>
+                <div class="modal__link-list">
+                    123
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="mobile-menu" js-toggle-menu="menu">
         <div class="mobile-menu__header">
             <div class="mobile-menu__title">

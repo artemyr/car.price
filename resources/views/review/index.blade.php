@@ -27,11 +27,15 @@
                                 </div>
                                 <div>
                                     <div class="review-author__stars">
-                                        <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
-                                        <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
-                                        <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
-                                        <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
-                                        <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+
+                                        @for ($i = 1; $i <= 5; $i++)
+                                            @if ($review->rate >= $i)
+                                            <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                            @else
+                                            <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                            @endif                                        
+                                        @endfor
+
                                     </div>
                                     <div class="review-author__name">
                                         {{ $review->author }}
@@ -44,7 +48,7 @@
 
                             <div class="review__title">{{ $review->title }}</div>
                             <div class="review__text">{{ $review->content }}</div>
-                            <div class="review__showmore">
+                            <div data-hystmodal="#reviewPopUp" class="review__showmore">
                                 <a>Читать полностью</a>
                             </div>
                         </div>

@@ -223,7 +223,7 @@ class DatabaseSeeder extends Seeder
 
             'author' => 'Сурен Багодуровичь',
             'cr_date' => '30.08.2021',
-            'rate' => 3,
+            'rate' => 1,
             'image_path' => 'img/car.jpg',
             'author_ava' => 'img/preson.jpg',
         ];
@@ -236,7 +236,7 @@ class DatabaseSeeder extends Seeder
 
             'author' => 'Сурен Багодуровичь',
             'cr_date' => '30.08.2021',
-            'rate' => 4,
+            'rate' => 2,
             'image_path' => 'img/car.jpg',
             'author_ava' => 'img/preson.jpg',
         ];
@@ -262,7 +262,20 @@ class DatabaseSeeder extends Seeder
 
             'author' => 'Сурен Багодуровичь',
             'cr_date' => '30.08.2021',
-            'rate' => 3,
+            'rate' => 4,
+            'image_path' => 'img/car.jpg',
+            'author_ava' => 'img/preson.jpg',
+        ];
+        $data[] =
+        [
+            'title' => 'Могло быть и лучше',
+            'link' => 'city4',
+            'city_id' => 1,
+            'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
+
+            'author' => 'Сурен Багодуровичь',
+            'cr_date' => '30.08.2021',
+            'rate' => 5,
             'image_path' => 'img/car.jpg',
             'author_ava' => 'img/preson.jpg',
         ];
