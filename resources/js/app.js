@@ -206,4 +206,30 @@
     init_tabs();
     init_spoilers();
     toggleMenu();
-})(window)
+})(window);
+
+
+(function (window){
+	'use strict';
+
+	if (window.JCpopup)
+		return;
+
+	window.JCpopup = function (arParams)
+	{
+        this.params = arParams;
+		this.init();
+	};
+
+	window.JCpopup.prototype = {
+		init: function()
+		{
+            const btn = document.querySelector('[js-insert-info-to-popup="'+ this.params.id +'"]')
+            const modal = document.querySelector('#reviewPopUp')
+            const text = this.params.content;
+            btn.addEventListener('click',function(){
+                modal.querySelector('.modal__content').innerHTML = text
+            })
+		},
+    }
+})(window);
