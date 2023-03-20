@@ -199,7 +199,7 @@
             btn.addEventListener('click', (e) => {
                 btn.closest('.dropdown-menu__elements').classList.toggle('open')
             })
-        })     
+        })
     }
 
     init_accordion('first_active');
@@ -226,9 +226,33 @@
 		{
             const btn = document.querySelector('[js-insert-info-to-popup="'+ this.params.id +'"]')
             const modal = document.querySelector('#reviewPopUp')
+
+            const img = this.params.img;
+            const title = this.params.title;
             const text = this.params.content;
+            const author = this.params.author;
+            const cr_date = this.params.cr_date;
+            const author_ava = this.params.author_ava;
+
+            const rate = this.params.rate;
+            let rateHTML = ``;
+            for (let i = 1; i <= 5;i++){
+                if(rate >= i) rateHTML += `<svg><use xlink:href="http://car-price-dev/img/svg/sprite.svg#star"></use></svg>`;
+                else rateHTML += `<svg><use xlink:href="http://car-price-dev/img/svg/sprite.svg#nostar"></use></svg>`;
+            }
+
             btn.addEventListener('click',function(){
-                modal.querySelector('.modal__content').innerHTML = text
+
+                modal.querySelector('.review__title').innerHTML = title;
+                modal.querySelector('.review__text').innerHTML = text;
+                modal.querySelector('.review-author__name').innerHTML = author;
+                modal.querySelector('.review-author__subtitle').innerHTML = cr_date;
+                modal.querySelector('.review-author__ava img').src = author_ava;
+                modal.querySelector('.review-author__stars').innerHTML = rateHTML;
+
+                modal.querySelector('.modal__header').style.backgroundImage = 'url('+img+')';
+                modal.querySelector('.modal__header').style.backgroundRepeat = 'no-repeat';
+                modal.querySelector('.modal__header').style.backgroundSize = 'cover';
             })
 		},
     }

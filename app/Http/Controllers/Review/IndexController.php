@@ -12,6 +12,7 @@ class IndexController extends BaseController
     public function __invoke()
     {
         $reviews = Review::all();
+//        dd($reviews->first()->preview_text);
         $categories = Category::all();
 
         return view('review.index', compact('reviews','categories'));

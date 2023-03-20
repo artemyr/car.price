@@ -54,7 +54,39 @@
                     <div class="modal__title"></div>
                     <svg data-hystclose><use xlink:href="{{ asset('img/svg/sprite.svg#cross') }}"></use></svg>
                 </div>
-                <div class="modal__content"></div>
+                <div class="modal__content">
+                    <div class="review">
+
+                        <div class="review__author review-author">
+                            <div class="review-author__ava">
+                                <img src="{{ asset($review->author_ava) }}">
+                            </div>
+                            <div>
+                                <div class="review-author__stars">
+
+                                    @for ($i = 1; $i <= 5; $i++)
+                                        @if ($review->rate >= $i)
+                                            <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
+                                        @else
+                                            <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
+                                        @endif
+                                    @endfor
+
+                                </div>
+                                <div class="review-author__name">
+                                    {{ $review->author }}
+                                </div>
+                                <div class="review-author__subtitle">
+                                    {{ $review->cr_date }}  Великий Новгород
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="review__title">{{ $review->title }}</div>
+                        <div class="review__text">{{ $review->content }}</div>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>

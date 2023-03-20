@@ -33,7 +33,7 @@
                                             <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
                                             @else
                                             <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
-                                            @endif                                        
+                                            @endif
                                         @endfor
 
                                     </div>
@@ -47,7 +47,7 @@
                             </div>
 
                             <div class="review__title">{{ $review->title }}</div>
-                            <div class="review__text">{{ $review->content }}</div>
+                            <div class="review__text">{{ $review->preview_text }}</div>
                             <div js-insert-info-to-popup="{{ $review->id }}" data-hystmodal="#reviewPopUp" class="review__showmore">
                                 <a>Читать полностью</a>
                             </div>
@@ -58,7 +58,11 @@
                                     "img": '{{ asset($review->image_path) }}',
                                     "title": '{{ $review->title }}',
                                     "content": '{{ $review->content }}',
-                                    "id": '{{ $review->id }}'
+                                    "id": '{{ $review->id }}',
+                                    "rate": '{{ $review->rate }}',
+                                    "author": '{{ $review->author }}',
+                                    "cr_date": '{{ $review->cr_date }}',
+                                    "author_ava": '{{ $review->author_ava }}',
                                 });
                                 // console.log(obj_{{ $review->id }});
                             })

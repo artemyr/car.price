@@ -7,7 +7,21 @@
     }
 
     .modal__window_for-review {
-        
+        padding: 0;
+        width: 784px;
+        overflow: hidden;
+    }
+
+    .modal__window_for-review .modal__header {
+        height: 309px;
+    }
+
+    .modal__window_for-review .modal__header svg {
+        margin: 20px;
+    }
+
+    .modal__content {
+        padding: 0 40px 40px;
     }
 
     .modal__link {
@@ -32,6 +46,7 @@
         svg {
             height: 17px;
             width: 17px;
+            cursor: pointer;
         }
     }
 
