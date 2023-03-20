@@ -70,3 +70,13 @@
         width: 600px;
     }
 }
+
+@media (max-width: 575.98px) {
+    .modal .modal__window {
+        margin: 10px;
+        width: calc(100% - 10px);
+    }
+    .modal .modal__window_for-review .modal__header {
+        height:180px;
+    }
+}

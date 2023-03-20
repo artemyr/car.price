@@ -115,6 +115,13 @@
             font-size: 18px;
         }
     }
+    .whereSell-card {
+        .whereSell-card__marks {
+            .whereSell-card__mark {
+                margin-bottom: 32px;
+            }
+        }
+    }
 }
 
 .whereSell-card {
@@ -142,21 +149,11 @@
             }
 
             svg.green use{fill: #06892B;}
-            
+
             svg.gray use{fill: #cccccc;}
         }
     }
     .whereSell-card__marks :last-child {
         margin:0;
-    }
-}
-
-@media (max-width: 575.98px){
-    .whereSell-card {
-        .whereSell-card__marks {
-            .whereSell-card__mark {
-                margin-bottom: 32px;
-            }
-        }
     }
 }

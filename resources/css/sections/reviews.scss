@@ -51,7 +51,6 @@
     }
 }
 
-
 .review-author {
     .review-author__stars {
         display: flex;
@@ -77,5 +76,17 @@
         font-size: 12px;
         line-height: 15px;
         color: #999999;
+    }
+}
+
+@media (max-width: 991.98px){
+    .review .review__items-container {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media (max-width: 575.98px){
+    .review .review__items-container {
+        grid-template-columns: 1fr
     }
 }

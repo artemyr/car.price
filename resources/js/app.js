@@ -253,6 +253,7 @@
                 modal.querySelector('.modal__header').style.backgroundImage = 'url('+img+')';
                 modal.querySelector('.modal__header').style.backgroundRepeat = 'no-repeat';
                 modal.querySelector('.modal__header').style.backgroundSize = 'cover';
+                modal.querySelector('.modal__header').style.backgroundPosition = 'center';
             })
 		},
     }

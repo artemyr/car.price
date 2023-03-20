@@ -12,3 +12,6 @@
 2. (Затем `npm i`, чтобы сформировать папку node_modules)
 3. Затем `php artisan migrate:fresh --seed`, чтобы залить бд и исходные сущьности
 
+## CSS breakpoints
+1330 1199.98 991.98 575.98
+
