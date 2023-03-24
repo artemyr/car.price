@@ -26,6 +26,13 @@
                 padding: 0 24px;
                 width: 50%;
                 height: 60px;
+
+                @include size576 {
+                    font-size: 14px;
+                    height: 56px;
+                    font-family: 'Geometria light';
+                    padding: 0 16px;
+                }
             }
         }
 
@@ -48,16 +55,33 @@
                 box-shadow: 0px 4px 20px rgba(38, 46, 60, 0.15);
                 border-radius: 20px;
                 width: 263px;
+
+                @include size576 {
+                    width: 190px;
+                    padding: 14px 20px;
+                }
             }
 
             .whereSell-card_green {
                 border: 1px solid #06892B;
+            }
+
+            @include size1200 {
+                grid-template-columns: 1fr;
+
+                .whereSell__card_hide {
+                    display: none;
+                }
             }
         }
     }
 
     .whereSell__wrapper_hide{
         display: none;
+
+        @include size1200 {
+            display: block;
+        }
     }
 
     .whereSell-card__title{
@@ -66,6 +90,10 @@
         font-size: 24px;
         color: #2E3D4A;
         line-height: 30px;
+
+        @include size576 {
+            font-size: 18px;
+        }
     }
 
     .whereSell-card__hours {
@@ -80,46 +108,6 @@
         svg {
             width: 24px;
             height: 11px;
-        }
-    }
-}
-
-@media (max-width: 1199.98px){
-    .whereSell .whereSell__wrapper_hide {
-        display: block;
-    }
-    .whereSell .whereSell__wrapper {
-        .whereSell__cards {
-            grid-template-columns: 1fr;
-
-            .whereSell__card_hide {
-                display: none;
-            }
-        }
-    }
-}
-
-@media (max-width: 575.98px){
-    .whereSell .whereSell__wrapper {
-        .whereSell__cards .whereSell__card {
-            width: 190px;
-            padding: 14px 20px;
-        }
-        .whereSell__signs li{
-            font-size: 14px;
-            height: 56px;
-            font-family: 'Geometria light';
-            padding: 0 16px;
-        }
-        .whereSell-card__title {
-            font-size: 18px;
-        }
-    }
-    .whereSell-card {
-        .whereSell-card__marks {
-            .whereSell-card__mark {
-                margin-bottom: 32px;
-            }
         }
     }
 }

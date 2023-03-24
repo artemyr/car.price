@@ -12,7 +12,6 @@
                                     <img src="{{ asset($review->author_ava) }}">
                                 </div>
                                 <div>
-                                    {{ $review->rate }}
                                     <div class="review-author__stars">
 
                                         @for ($i = 1; $i <= 5; $i++)
@@ -20,7 +19,7 @@
                                             <svg><use xlink:href="{{ asset('img/svg/sprite.svg#star') }}"></use></svg>
                                             @else
                                             <svg><use xlink:href="{{ asset('img/svg/sprite.svg#nostar') }}"></use></svg>
-                                            @endif                                        
+                                            @endif
                                         @endfor
 
                                     </div>

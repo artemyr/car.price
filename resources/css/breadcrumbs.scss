@@ -11,8 +11,26 @@
         letter-spacing: 0em;
         text-align: left;
         color: #969EA4;
+
+        a {
+            color: #969EA4;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
     .breadcrumbs__item.white {
         color: white;
+
+        a {
+            color: #fff;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
-} 
+}

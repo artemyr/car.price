@@ -4,11 +4,9 @@
 <div class="blog-pages-wrapper">
     <div class="container">
         <div class="breadcrumbs">
-            <div class="breadcrumbs__item">Главная</div>
+            <div class="breadcrumbs__item"><a href="{{ route('main') }}">Главная</a></div>
             <div class="breadcrumbs__item">/</div>
-            <div class="breadcrumbs__item">...</div>
-            <div class="breadcrumbs__item">/</div>
-            <div class="breadcrumbs__item">...</div>
+            <div class="breadcrumbs__item">Отзывы</div>
         </div>
         <h1 class="blog-pages-h1">Отзывы</h1>
     </div>

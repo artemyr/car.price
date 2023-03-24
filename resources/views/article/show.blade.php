@@ -6,11 +6,11 @@
     <div class="blog-detail-pages-wrapper__banner">
         <div class="container">
             <div class="breadcrumbs">
-                <div class="breadcrumbs__item white">Главная</div>
+                <div class="breadcrumbs__item white"><a href="{{ route('main') }}">Главная</a></div>
                 <div class="breadcrumbs__item white">/</div>
-                <div class="breadcrumbs__item white">...</div>
+                <div class="breadcrumbs__item white"><a href="{{ route('article.index') }}">Статьи</a></div>
                 <div class="breadcrumbs__item white">/</div>
-                <div class="breadcrumbs__item white">...</div>
+                <div class="breadcrumbs__item white">{{ $article->title }}</div>
             </div>
         </div>
     </div>
@@ -31,7 +31,7 @@
                     <div class="blog-detail-pages-wrapper__socials">
                         <div class="blog-detail-pages-wrapper__socials-label">Поделиться</div>
                         <div class="blog-detail-pages-wrapper__socials-links">
-                            
+
                         </div>
                     </div>
                 </div>
