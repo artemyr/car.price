@@ -8,7 +8,7 @@
         @method('patch')
         <div class="admin-edit__form-control">
             <label for="name">Название города:</label>
-            <input name="name" id="name" type="text" value="{{ $city->name }}">
+            <input name="name" id="name" type="text" value="{{ $city->title }}">
         </div>
 
         <div class="admin-edit__form-control">

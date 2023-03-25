@@ -15,6 +15,7 @@ class UpdateController extends BaseController
 
         $city->update($data);
 
-        return redirect()->route('admin.city.show', $city->id);
+        // return redirect()->route('admin.city.show', $city->id);
+        return redirect()->route('admin.city.index');
     }
 }

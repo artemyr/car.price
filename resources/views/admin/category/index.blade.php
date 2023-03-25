@@ -7,12 +7,16 @@
     <div class="admin-list__body">
         @foreach($categories as $category)
         <div class="admin-list__form-control">
-            <form action="{{ route('admin.category.destroy', $category->id) }}" method="POST">
-                @csrf
-                @method('delete')
-                <input class="admin-list__remove" type="submit" value="x">
-            </form>
-            <a class="admin-list__link" href="{{ route('admin.category.edit', $category->id) }}">{{ $category->title }}</a> 
+            <div>
+                <a class="admin-list__link" href="{{ route('admin.category.edit', $category->id) }}">{{ $category->title }}</a> 
+            </div>
+            <div>
+                <form action="{{ route('admin.category.destroy', $category->id) }}" method="POST">
+                    @csrf
+                    @method('delete')
+                    <input class="admin-list__remove" type="submit" value="x">
+                </form>
+            </div>
         </div>
         @endforeach
     </div>
