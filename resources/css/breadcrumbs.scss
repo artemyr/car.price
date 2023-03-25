@@ -2,6 +2,11 @@
     display: flex;
     gap: 3px;
     margin-bottom: 30px;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     .breadcrumbs__item {
         font-family: Geometria;
@@ -11,6 +16,8 @@
         letter-spacing: 0em;
         text-align: left;
         color: #969EA4;
+        white-space: nowrap;
+        text-overflow: ellipsis;
 
         a {
             color: #969EA4;
@@ -30,6 +37,14 @@
 
             &:hover {
                 text-decoration: underline;
+            }
+        }
+
+        @include size992 {
+            color: #969EA4;
+
+            a {
+                color: #969EA4;
             }
         }
     }

@@ -200,6 +200,12 @@
         margin-bottom: -135px;
         padding-top: 10px;
         background-image: url('/img/background_article_detail.png');
+        @include size992 {
+            background-color: unset;
+            height: unset;
+            margin-bottom: 0;
+            background-image: none;
+        }
     }
     .blog-detail-pages-wrapper__image {
         border-radius: 16px;
