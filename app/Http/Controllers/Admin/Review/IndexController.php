@@ -10,6 +10,7 @@ class IndexController extends Controller
     public function __invoke ()
     {
         $reviews = Review::all();
-        return view('admin.review.index', compact('reviews'));
+        $meta['h1'] = 'Отзывы';
+        return view('admin.review.index', compact('reviews','meta'));
     }
 }

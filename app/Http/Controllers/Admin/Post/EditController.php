@@ -65,7 +65,7 @@ class EditController extends BaseController
                 $post->city_id
             ],
         ]);
-
-        return view('admin.post.edit', compact('formControll'));
+        $meta['h1'] = 'Пост';
+        return view('admin.post.edit', compact('formControll','meta'));
     }
 }

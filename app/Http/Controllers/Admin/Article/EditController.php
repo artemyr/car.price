@@ -64,7 +64,7 @@ class EditController extends BaseController
                 'Дата создания статьи'
             ],
         ]);
-
-        return view('admin.article.edit', compact('formControll'));
+        $meta['h1'] = 'Статья';
+        return view('admin.article.edit', compact('formControll','meta'));
     }
 }

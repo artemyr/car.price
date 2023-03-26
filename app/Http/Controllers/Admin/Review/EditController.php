@@ -70,7 +70,7 @@ class EditController extends BaseController
                 'Картинка отзыва'
             ],
         ]);
-
-        return view('admin.review.edit', compact('formControll'));
+        $meta['h1'] = 'Отзыв';
+        return view('admin.review.edit', compact('formControll','meta'));
     }
 }

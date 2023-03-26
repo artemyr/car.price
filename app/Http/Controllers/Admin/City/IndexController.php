@@ -10,7 +10,8 @@ class IndexController extends Controller
     public function __invoke ()
     {
         $cities = City::all();
+        $meta['h1'] = 'Города';
 
-        return view('admin.city.index', compact('cities'));
+        return view('admin.city.index', compact('cities','meta'));
     }
 }

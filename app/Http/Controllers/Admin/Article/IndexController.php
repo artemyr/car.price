@@ -10,6 +10,7 @@ class IndexController extends Controller
     public function __invoke ()
     {
         $articles = Article::all();
-        return view('admin.article.index', compact('articles'));
+        $meta['h1'] = 'Статьи';
+        return view('admin.article.index', compact('articles','meta'));
     }
 }

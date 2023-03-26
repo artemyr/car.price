@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $meta['h1'] = 'Админка';
+        return view('home', compact('meta'));
     }
 }

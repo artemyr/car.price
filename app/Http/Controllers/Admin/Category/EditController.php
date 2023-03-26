@@ -36,7 +36,7 @@ class EditController extends BaseController
                 'Иконка'
             ],
         ]);
-
-        return view('admin.category.edit', compact('formControll'));
+        $meta['h1'] = 'Категория';
+        return view('admin.category.edit', compact('formControll','meta'));
     }
 }

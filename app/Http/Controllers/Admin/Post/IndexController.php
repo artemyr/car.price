@@ -16,7 +16,8 @@ class IndexController extends Controller
 
         $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
         $posts = Post::filter($filter)->paginate(10);
+        $meta['h1'] = 'Посты';
 
-        return view('admin.post.index', compact('posts'));
+        return view('admin.post.index', compact('posts','meta'));
     }
 }

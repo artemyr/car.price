@@ -30,7 +30,8 @@ class EditController extends BaseController
                 'Город в предложном падеже'
             ],
         ]);
+        $meta['h1'] = 'Пост';
 
-        return view('admin.city.edit', compact('formControll'));
+        return view('admin.city.edit', compact('formControll','meta'));
     }
 }
