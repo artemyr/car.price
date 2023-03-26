@@ -62,10 +62,12 @@ class AdminController extends Controller
                 <select multiple name=\"". $code ."\" id=\"". $code ."\">
                 ";
                         foreach ($value as $item1) {
-                            $res .= "    <option ";                            
-                                foreach($default_value as $item2) {
-                                    if($item1->id == $item2->id) {                                        
-                                        $res .= "selected ";
+                            $res .= "    <option ";
+                                if($default_value){
+                                    foreach($default_value as $item2) {
+                                        if($item1->id == $item2->id) {                                        
+                                            $res .= "selected ";
+                                        }
                                     }
                                 }
         

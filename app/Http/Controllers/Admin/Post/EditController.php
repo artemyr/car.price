@@ -26,6 +26,12 @@ class EditController extends BaseController
                 'Заголовок поста'
             ],
             [
+                'text',
+                'link',
+                $post->link, 
+                'Ссылка поста'
+            ],
+            [
                 'textarea',
                 'content',
                 $post->content, 

@@ -15,10 +15,14 @@
     }
     .admin-list__form-control {
         display: grid;
-        grid-template-columns: auto 25px;
+        grid-template-columns: 50px 200px auto max-content;
         border-bottom: 1px solid #ced4da;
         margin-bottom: 20px;
         padding-bottom: 10px;
+
+        .admin-list__form-control-item {
+            padding: 10px;
+        }
     }
     .admin-list__remove {
         background-color: rgb(196, 63, 63);
