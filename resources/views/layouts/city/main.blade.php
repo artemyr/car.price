@@ -64,7 +64,7 @@
                 <li class="mobile-menu__item mobile-menu__item_dropdown" js-toggle-menu="catalog_btn">
                     <div class="mobile-menu__row">
                         <span>Купить авто</span>
-                        <svg class="mobile-menu__arrow">
+                        <svg class="mobile-menu__arrow right">
                             <use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use>
                         </svg>
                     </div>
@@ -74,12 +74,15 @@
                             @foreach($categories as $category)
                             <li class="dropdown-menu__item" js-toggle-menu="open_elements">
                                 <a href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
-                                <svg class="mobile-menu__arrow">
+                                <svg class="mobile-menu__arrow right">
                                     <use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use>
                                 </svg>
 
                                 <ul class="dropdown-menu__elements" onclick="event.stopPropagation()">
                                     <li js-toggle-menu="close_elements">
+                                        <svg class="mobile-menu__arrow left">
+                                            <use xlink:href="http://car-price/img/svg/sprite.svg#simplearrow"></use>
+                                        </svg>
                                         Назад
                                     </li>
                                     @foreach($category->posts as $post)

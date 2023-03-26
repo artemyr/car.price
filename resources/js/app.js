@@ -167,17 +167,34 @@
 
     function toggleMenu() {
         const menu = document.querySelector('[js-toggle-menu="menu"]')
+        menu.style.opacity = '1';
         if (!menu) return
         const btnMenu = document.querySelector('[js-toggle-menu="toggler"]')
         const body = document.body
 
-        btnMenu.addEventListener('click', (e) => {
-            btnMenu.classList.toggle('active');
-            menu.classList.toggle('active');
-            body.classList.toggle('scroll-lock');
-
-            menu.classList.remove('open')
+        document.addEventListener('click', (e) => {
+            if(e.target.closest('[js-toggle-menu=toggler]')) {
+                btnMenu.classList.toggle('active');
+                menu.classList.toggle('active');
+                body.classList.toggle('scroll-lock');
+    
+                menu.classList.remove('open')
+            } else {
+                btnMenu.classList.remove('active');
+                menu.classList.remove('active');
+                body.classList.remove('scroll-lock');
+    
+                menu.classList.remove('open')
+            }
         })
+
+        // btnMenu.addEventListener('click', (e) => {
+        //     btnMenu.classList.toggle('active');
+        //     menu.classList.toggle('active');
+        //     body.classList.toggle('scroll-lock');
+
+        //     menu.classList.remove('open')
+        // })
 
         //submenu
         const catalog_btn = document.querySelector('[js-toggle-menu="catalog_btn"]')
@@ -198,6 +215,13 @@
         close_elements.forEach(btn => {
             btn.addEventListener('click', (e) => {
                 btn.closest('.dropdown-menu__elements').classList.toggle('open')
+            })
+        })
+
+        const close_sections = document.querySelectorAll('[js-toggle-menu="close_sections"]')
+        close_sections.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                menu.classList.remove('open')
             })
         })
     }
