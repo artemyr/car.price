@@ -253,8 +253,8 @@
             const rate = this.params.rate;
             let rateHTML = ``;
             for (let i = 1; i <= 5;i++){
-                if(rate >= i) rateHTML += `<svg><use xlink:href="http://car-price-dev/img/svg/sprite.svg#star"></use></svg>`;
-                else rateHTML += `<svg><use xlink:href="http://car-price-dev/img/svg/sprite.svg#nostar"></use></svg>`;
+                if(rate >= i) rateHTML += `<svg><use xlink:href="/img/svg/sprite.svg#star"></use></svg>`;
+                else rateHTML += `<svg><use xlink:href="/img/svg/sprite.svg#nostar"></use></svg>`;
             }
 
             btn.addEventListener('click',function(){

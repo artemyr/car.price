@@ -37,10 +37,25 @@
                             <div class="review__text">
                                 {{ $review->content }}
                             </div>
-                            <div data-hystmodal="#reviewPopUp" class="review__showmore">
+                            <div js-insert-info-to-popup="{{ $review->id }}" data-hystmodal="#reviewPopUp" class="review__showmore">
                                 <a href="{{ route('review.index') }}">Читать полностью</a>
                             </div>
                         </div>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function(){
+                                var obj_{{ $review->id }} = new JCpopup({
+                                    "img": '{{ asset($review->image_path) }}',
+                                    "title": '{{ $review->title }}',
+                                    "content": '{{ $review->content }}',
+                                    "id": '{{ $review->id }}',
+                                    "rate": '{{ $review->rate }}',
+                                    "author": '{{ $review->author }}',
+                                    "cr_date": '{{ $review->cr_date }}',
+                                    "author_ava": '{{ $review->author_ava }}',
+                                });
+                                // console.log(obj_{{ $review->id }});
+                            })
+                        </script>
                     </div>
                 @endforeach
             </div>
