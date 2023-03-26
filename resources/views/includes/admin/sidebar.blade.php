@@ -2,6 +2,15 @@
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-header">ADMIN</li>
         <li class="nav-item">
+            <a href="{{ route('admin.city.index') }}" class="nav-link">
+                <i class="nav-icon fas fa-calendar-alt"></i>
+                <p>
+                    Города
+                    <span class="badge badge-info right">{{ isset($cities) ? count($cities) : '?' }}</span>
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
             <a href="{{ route('admin.category.index') }}" class="nav-link">
                 <i class="nav-icon fas fa-calendar-alt"></i>
                 <p>
@@ -19,12 +28,22 @@
                 </p>
             </a>
         </li>
+
         <li class="nav-item">
-            <a href="{{ route('admin.city.index') }}" class="nav-link">
+            <a href="{{ route('admin.article.index') }}" class="nav-link">
                 <i class="nav-icon fas fa-calendar-alt"></i>
                 <p>
-                    Города
-                    <span class="badge badge-info right">{{ isset($cities) ? count($cities) : '?' }}</span>
+                    Статьи
+                    <span class="badge badge-info right">{{ isset($articles) ? count($articles) : '?' }}</span>
+                </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{{ route('admin.review.index') }}" class="nav-link">
+                <i class="nav-icon fas fa-calendar-alt"></i>
+                <p>
+                    Отзывы
+                    <span class="badge badge-info right">{{ isset($rewiews) ? count($rewiews) : '?' }}</span>
                 </p>
             </a>
         </li>

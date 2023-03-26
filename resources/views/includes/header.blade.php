@@ -20,7 +20,7 @@
             <nav class="top-menu">
                 <ul class="d-flex">
                     @can('view', auth()->user())
-                    <li class="top-menu__item"><a href="{{ route('admin.post.index') }}">Admin</a></li>
+                    <li class="top-menu__item"><a href="{{ route('home') }}">Admin</a></li>
                     @endcan
 
                     <li class="top-menu__item">

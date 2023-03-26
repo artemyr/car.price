@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 class AdminController extends Controller 
 {
     private $content = [];
+    private $route = '';
 
     private function getControl($arParams) {
 
@@ -96,7 +97,9 @@ class AdminController extends Controller
         return $this->content;
     }
 
-    protected function getEditForm($postid, $arrControlls) {
+    protected function getEditForm($postid, $route, $arrControlls) {
+        $this->route = $route;
+
         $this->addContent('top',$this->getHeader($postid));
 
         foreach($arrControlls as $controll) {
@@ -109,7 +112,7 @@ class AdminController extends Controller
     
     private function getHeader($postid) {
         return "<div class=\"admin-edit\">
-    <form action=\"".route('admin.post.update', $postid)."\" method=\"POST\">";
+    <form action=\"".route($this->route, $postid)."\" method=\"POST\">";
     }
 
     private function getFooter() {

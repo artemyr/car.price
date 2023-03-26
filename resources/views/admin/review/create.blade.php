@@ -3,7 +3,6 @@
 
 {!! $formControll['top'] !!}
 @csrf
-@method('patch')
 {!! $formControll['bottom'] !!}
 
 @endsection

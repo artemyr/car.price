@@ -19,9 +19,9 @@ class AdminPanelMiddleware
         // dd(auth()->id());
         // dd(auth()->user()->role);
 
-        if(auth()->user()->role !== 'admin'){
-            return redirect()->route('home');
-        }
+        if(!auth()->id()) return redirect()->route('home');
+
+        if(auth()->user()->role !== 'admin') return redirect()->route('home');
 
         return $next($request);
     }

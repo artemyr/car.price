@@ -14,12 +14,11 @@ class EditController extends BaseController
 {
     public function __invoke (Post $post)
     {
-        $posts = Post::paginate(1);
         $categorys = Category::all();
         $tags = Tag::all();
         $cities = City::all();
 
-        $formControll = $this->getEditForm($post->id, [
+        $formControll = $this->getEditForm($post->id, 'admin.post.update', [
             [
                 'text',
                 'title',

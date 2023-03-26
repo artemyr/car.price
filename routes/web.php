@@ -49,6 +49,28 @@ Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admi
         Route::delete('/{category}', 'DestroyController')->name('admin.category.destroy');
         Route::patch('/{category}', 'UpdateController')->name('admin.category.update');
     });
+
+    Route::group(["namespace" => "Article", 'prefix' => 'articles'], function() {
+        Route::get('', 'IndexController')->name('admin.article.index');
+        Route::get('/create', 'CreateController')->name('admin.article.create');
+        Route::post('/create', 'StoreController')->name('admin.article.store');
+
+        Route::get('/{article}/edit', 'EditController')->name('admin.article.edit');
+        Route::get('/{article}', 'ShowController')->name('admin.article.show');
+        Route::delete('/{article}', 'DestroyController')->name('admin.article.destroy');
+        Route::patch('/{article}', 'UpdateController')->name('admin.article.update');
+    });
+
+    Route::group(["namespace" => "Review", 'prefix' => 'reviews'], function() {
+        Route::get('', 'IndexController')->name('admin.review.index');
+        Route::get('/create', 'CreateController')->name('admin.review.create');
+        Route::post('/create', 'StoreController')->name('admin.review.store');
+
+        Route::get('/{review}/edit', 'EditController')->name('admin.review.edit');
+        Route::get('/{review}', 'ShowController')->name('admin.review.show');
+        Route::delete('/{review}', 'DestroyController')->name('admin.review.destroy');
+        Route::patch('/{review}', 'UpdateController')->name('admin.review.update');
+    });
 });
 
 
