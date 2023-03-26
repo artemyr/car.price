@@ -70,6 +70,12 @@
                     </div>
 
                     <ul class="mobile-menu__dropdown dropdown-menu" onclick="event.stopPropagation()">
+                        <li class="dropdown-menu__item" js-toggle-menu="close_sections">
+                            <svg class="mobile-menu__arrow left">
+                                <use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use>
+                            </svg>
+                            Назад
+                        </li>
                         @if(isset($categories))
                             @foreach($categories as $category)
                             <li class="dropdown-menu__item" js-toggle-menu="open_elements">
@@ -81,7 +87,7 @@
                                 <ul class="dropdown-menu__elements" onclick="event.stopPropagation()">
                                     <li js-toggle-menu="close_elements">
                                         <svg class="mobile-menu__arrow left">
-                                            <use xlink:href="http://car-price/img/svg/sprite.svg#simplearrow"></use>
+                                            <use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use>
                                         </svg>
                                         Назад
                                     </li>
