@@ -14,29 +14,21 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 30px;
-        max-height:538px;
-        overflow: auto;
+
+        @include size768 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include size576 {
+            grid-template-columns: 1fr;
+        }
     }
     .contacts__item {
         max-width: 240px;
         padding: 20px 0 24px 0;
-        border-bottom: 1px solid #E7E9EB;;
-    }
-}
+        border-bottom: 1px solid #E7E9EB;
 
-@media (max-width: 767.98px){
-    .contacts .contacts__list {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 575.98px){
-    .contacts {
-        .contacts__list {
-            grid-template-columns: 1fr;
-        }
-
-        .contacts__item {
+        @include size576 {
             max-width: unset;
         }
     }

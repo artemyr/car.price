@@ -188,14 +188,6 @@
             }
         })
 
-        // btnMenu.addEventListener('click', (e) => {
-        //     btnMenu.classList.toggle('active');
-        //     menu.classList.toggle('active');
-        //     body.classList.toggle('scroll-lock');
-
-        //     menu.classList.remove('open')
-        // })
-
         //submenu
         const catalog_btn = document.querySelector('[js-toggle-menu="catalog_btn"]')
         catalog_btn.addEventListener('click', (e) => {

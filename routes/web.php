@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-
-
 Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admin'], function() {
     Route::group(["namespace" => "Post", 'prefix' => 'posts'], function() {
         Route::get('', 'IndexController')->name('admin.post.index');
@@ -73,18 +70,8 @@ Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admi
     });
 });
 
-
-// Route::group(["namespace" => "Post"], function() {
-//     Route::get('/{city}/posts', 'IndexController')->name('post.index');
-//     Route::get('/{city}/posts/{post}', 'ShowController')->name('post.show');
-// });
-
-
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-
 
 Route::group(["namespace" => "Article"], function() {
     Route::get('/articles', 'IndexController')->name('article.index');
@@ -97,19 +84,12 @@ Route::group(["namespace" => "Review"], function() {
     Route::get('/otzivi', 'IndexController')->name('review.index');
 });
 
-
-
-
-
-
 // last
 Route::group(["namespace" => "City"], function() {
     Route::get('/{city}', 'ShowController')->name('current_city')->where('city', \App\Models\City::getAllCitySlugs());
     Route::get('/{city}/{category}', 'CategoryController')->name('city.category')->where('city', \App\Models\City::getAllCitySlugs());
     Route::get('/{city}/{category}/{post}', 'ShowPostController')->name('city.post.show')->where('city', \App\Models\City::getAllCitySlugs());
 });
-
-
 
 // last
 Route::group(["namespace" => "Post"], function() {
