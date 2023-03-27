@@ -1,3 +1,5 @@
+@import '../vars';
+
 .admin-list{
     a.admin-list__create {
         background-color: rgb(65, 151, 39);
@@ -20,8 +22,18 @@
         margin-bottom: 20px;
         padding-bottom: 10px;
 
+        @include size768 {
+            grid-template-columns: 50px auto max-content;
+        }
+
         .admin-list__form-control-item {
             padding: 10px;
+
+            @include size768 {
+                &:nth-child(3) {
+                    display: none;
+                }
+            }
         }
     }
     .admin-list__remove {
@@ -111,4 +123,8 @@
         border-radius: 10px;
         padding: 10px 15px;
     }
+}
+
+.main-footer {
+    display: none;
 }

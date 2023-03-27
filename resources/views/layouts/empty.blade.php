@@ -12,6 +12,5 @@
     <div class="artemaster">       
         @yield('content')
     </div>
-    <script defer src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
