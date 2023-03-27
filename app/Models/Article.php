@@ -15,4 +15,9 @@ class Article extends Model
     {
         return $this->belongsTo(City::class);
     }
+
+    public function downloads()
+    {
+        return $this->morphToMany(Download::class, 'downloadable');
+    }
 }

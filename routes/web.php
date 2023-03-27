@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admin'], function() {
+
+    Route::resource('/download', 'DownloadController')->only(['store','update','destroy']);
+
     Route::group(["namespace" => "Post", 'prefix' => 'posts'], function() {
         Route::get('', 'IndexController')->name('admin.post.index');
         Route::get('/create', 'CreateController')->name('admin.post.create');
