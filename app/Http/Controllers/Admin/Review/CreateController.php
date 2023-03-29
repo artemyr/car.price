@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin\Review;
 
-use App\Http\Controllers\Admin\Post\BaseController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Models\Review;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\City;
 
-class CreateController extends BaseController
+class CreateController extends AdminController
 {
     public function __invoke ()
     {
@@ -24,7 +24,7 @@ class CreateController extends BaseController
             [
                 'select',
                 'city_id',
-                $cities, 
+                $cities,
                 'Город отзыва',
                 '',
             ],

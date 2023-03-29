@@ -2,14 +2,43 @@
 
 namespace App\Http\Controllers\Admin\Category;
 
+use App\Http\Controllers\Admin\AdminController;
 use App\Models\Category;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CreateController extends Controller
+class CreateController extends AdminController
 {
     public function __invoke ()
     {
-        return view('admin.category.create');
+        $formControll = $this->getEditForm('', 'admin.category.update', [
+            [
+                'text',
+                'title',
+                '',
+                'Название категории'
+            ],
+            [
+                'text',
+                'link',
+                '',
+                'Ссылка ведущая на город'
+            ],
+            [
+                'text',
+                'subtitle',
+                '',
+                'Подпись города в банере'
+            ],
+            [
+                'text',
+                'icon',
+                '',
+                'Иконка'
+            ],
+        ]);
+
+        $meta['h1'] = 'Создвне категории';
+        return view('admin.category.create', compact('formControll','meta'));
     }
 }

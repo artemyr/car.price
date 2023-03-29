@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Post;
 
-use App\Http\Controllers\Admin\Post\BaseController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Models\Category;
 use App\Models\Tag;
 use App\Models\Post;
@@ -10,7 +10,7 @@ use App\Models\City;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CreateController extends BaseController
+class CreateController extends AdminController
 {
     public function __invoke ()
     {
@@ -46,21 +46,21 @@ class CreateController extends BaseController
             [
                 'select',
                 'category_id',
-                $categorys, 
+                $categorys,
                 'Категория поста',
                 '',
             ],
             [
                 'select_multiple',
                 'tags[]',
-                $tags, 
+                $tags,
                 'Теги',
                 '',
             ],
             [
                 'select',
                 'city_id',
-                $cities, 
+                $cities,
                 'Город поста',
                 '',
             ],

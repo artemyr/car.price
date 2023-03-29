@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin\Review;
 
-use App\Http\Controllers\Admin\Post\BaseController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Controller;
 use App\Models\Review;
 use App\Models\City;
 
-class EditController extends BaseController
+class EditController extends AdminController
 {
     public function __invoke (Review $review)
     {
@@ -17,56 +17,56 @@ class EditController extends BaseController
             [
                 'text',
                 'title',
-                $review->title, 
+                $review->title,
                 'Название отзыва'
             ],
             [
                 'select',
                 'city_id',
-                $cities, 
+                $cities,
                 'Город отзыва',
                 $review->city_id
             ],
             [
                 'text',
                 'link',
-                $review->link, 
+                $review->link,
                 'Ссылка отзыва'
             ],
             [
                 'textarea',
                 'content',
-                $review->content, 
+                $review->content,
                 'Контент отзыва'
             ],
             [
                 'text',
                 'author',
-                $review->author, 
+                $review->author,
                 'Автор отзыва'
             ],
             [
                 'text',
                 'cr_date',
-                $review->cr_date,                     
+                $review->cr_date,
                 'Дата создания отзыва'
             ],
             [
                 'text',
                 'rate',
-                $review->rate,                     
+                $review->rate,
                 'Оценка отзыва'
             ],
             [
                 'text',
                 'image_path',
-                $review->image_path, 
+                $review->image_path,
                 'Картинка отзыва'
             ],
             [
                 'text',
                 'author_ava',
-                $review->author_ava, 
+                $review->author_ava,
                 'Картинка отзыва'
             ],
         ]);

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin\Category;
 
-use App\Http\Controllers\Admin\Post\BaseController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 
-class EditController extends BaseController
+class EditController extends AdminController
 {
     public function __invoke (Category $category)
     {
@@ -14,25 +14,25 @@ class EditController extends BaseController
             [
                 'text',
                 'title',
-                $category->title, 
+                $category->title,
                 'Название категории'
             ],
             [
                 'text',
                 'link',
-                $category->link, 
+                $category->link,
                 'Ссылка ведущая на город'
             ],
             [
                 'text',
                 'subtitle',
-                $category->subtitle, 
+                $category->subtitle,
                 'Подпись города в банере'
             ],
             [
                 'text',
                 'icon',
-                $category->icon, 
+                $category->icon,
                 'Иконка'
             ],
         ]);

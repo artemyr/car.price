@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin\Post;
 
-use App\Http\Controllers\Admin\Post\BaseController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Tag;
@@ -10,7 +10,7 @@ use App\Models\City;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class EditController extends BaseController
+class EditController extends AdminController
 {
     public function __invoke (Post $post)
     {
@@ -22,45 +22,45 @@ class EditController extends BaseController
             [
                 'text',
                 'title',
-                $post->title, 
+                $post->title,
                 'Заголовок поста'
             ],
             [
                 'text',
                 'link',
-                $post->link, 
+                $post->link,
                 'Ссылка поста'
             ],
             [
                 'textarea',
                 'content',
-                $post->content, 
+                $post->content,
                 'Контент поста'
             ],
             [
                 'text',
                 'image',
-                $post->image, 
+                $post->image,
                 'Картинка поста'
             ],
             [
                 'select',
                 'category_id',
-                $categorys, 
+                $categorys,
                 'Категория поста',
                 $post->category->id
             ],
             [
                 'select_multiple',
                 'tags[]',
-                $tags, 
+                $tags,
                 'Теги',
                 $post->tags
             ],
             [
                 'select',
                 'city_id',
-                $cities, 
+                $cities,
                 'Город поста',
                 $post->city_id
             ],
