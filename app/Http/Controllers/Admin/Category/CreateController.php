@@ -11,7 +11,7 @@ class CreateController extends AdminController
 {
     public function __invoke ()
     {
-        $formControll = $this->getEditForm('', 'admin.category.update', [
+        $formControll = $this->getEditForm('', 'admin.category.store', [
             [
                 'text',
                 'title',

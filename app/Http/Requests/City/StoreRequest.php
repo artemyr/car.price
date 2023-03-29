@@ -24,7 +24,7 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'string',
+            'title' => 'string',
             'link' => 'string',
             'name_predloshniy_padesh' => 'string',
         ];

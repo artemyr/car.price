@@ -18,7 +18,7 @@ class CreateController extends AdminController
         $tags = Tag::all();
         $cities = City::all();
 
-        $formControll = $this->getEditForm('', 'admin.post.create', [
+        $formControll = $this->getEditForm('', 'admin.post.store', [
             [
                 'text',
                 'title',
