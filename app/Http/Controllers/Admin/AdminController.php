@@ -122,7 +122,7 @@ class AdminController extends Controller
 
     private function getHeader($postid) {
         return "<div class=\"admin-edit\">
-    <form action=\"".route($this->route, $postid)."\" method=\"POST\">";
+    <form enctype=\"multipart/form-data\" action=\"".route($this->route, $postid)."\" method=\"POST\">";
     }
 
     private function getFooter() {

@@ -15,7 +15,10 @@ class StoreController extends Controller
          * TODO file save
          */
 
+        dd($request);
         $data = $request->validated();
+        dd($data);
+
 
         $article = Article::create($data);
 
