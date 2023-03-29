@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
-class AdminController extends Controller 
+class AdminController extends Controller
 {
     private $content = [];
     private $route = '';
@@ -65,12 +65,12 @@ class AdminController extends Controller
                             $res .= "    <option ";
                                 if($default_value){
                                     foreach($default_value as $item2) {
-                                        if($item1->id == $item2->id) {                                        
+                                        if($item1->id == $item2->id) {
                                             $res .= "selected ";
                                         }
                                     }
                                 }
-        
+
                                 $res .= "value=\" $item1->id \">";
                                 $res .= $item1->title;
                             $res .= "</option>
@@ -80,7 +80,15 @@ class AdminController extends Controller
                 </select>
             </div>";
                     break;
-                
+
+            case 'file':
+                $res = "
+            <div class=\"admin-edit__form-control\">
+                <label for=\"". $code ."\">". $name ."</label>
+                <input type=\"file\" name=\"". $code ."\" id=\"". $code ."\">". $value ."</input>
+            </div>";
+                break;
+
                 default:
                     # code...
                     break;
@@ -111,7 +119,7 @@ class AdminController extends Controller
         $this->addContent('bottom',$this->getFooter());
         return $this->getContent();
     }
-    
+
     private function getHeader($postid) {
         return "<div class=\"admin-edit\">
     <form action=\"".route($this->route, $postid)."\" method=\"POST\">";

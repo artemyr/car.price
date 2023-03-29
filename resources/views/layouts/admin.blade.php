@@ -35,9 +35,9 @@
         <a href="{{ route('main') }}" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{ route('logout') }}" 
+        <a href="{{ route('logout') }}"
           onclick="event.preventDefault();
-          document.getElementById('logout-form').submit();" 
+          document.getElementById('logout-form').submit();"
           class="nav-link">Logout</a>
       </li>
     </ul>
@@ -215,7 +215,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">{{ $meta['h1'] }}</h1>
+            <h1 class="m-0">{{ $meta['h1'] ?? '' }}</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">

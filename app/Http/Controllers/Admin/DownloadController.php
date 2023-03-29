@@ -16,7 +16,15 @@ class DownloadController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $path = $request->file->store('uploads', 'public');
+        $download = Download::create([
+            'title'=> $request->title,
+            'path' => $request->path,
+            'mime' => $request->file->getMimeType(),
+            'size' => $request->file->getSize(),
+        ]);
+
+        return $download->id;
     }
 
     /**
@@ -39,6 +47,12 @@ class DownloadController extends Controller
      */
     public function destroy(Download $download)
     {
-        //
+        if(! \Storage::disk('public')->delete($download->path)) {
+            return;
+        }
+
+        if ($download->delete()) {
+            return ['result' => true];
+        }
     }
 }

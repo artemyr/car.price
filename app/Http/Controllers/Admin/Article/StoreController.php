@@ -11,7 +11,10 @@ class StoreController extends Controller
 {
     public function __invoke (StoreRequest $request)
     {
-        dd($request);
+        /**
+         * TODO file save
+         */
+
         $data = $request->validated();
 
         $article = Article::create($data);

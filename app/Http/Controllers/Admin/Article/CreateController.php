@@ -64,6 +64,12 @@ class CreateController extends AdminController
                 '',
                 'Дата создания статьи'
             ],
+            [
+                'file',
+                'file',
+                '',
+                'Файлы'
+            ],
         ]);
 
         $meta['h1'] = 'Создание статьи';
