@@ -32,6 +32,6 @@ class EditController extends AdminController
         ]);
         $meta['h1'] = 'Пост';
 
-        return view('admin.city.edit', compact('formControll','meta'));
+        return view('admin.form.edit', compact('formControll','meta'));
     }
 }

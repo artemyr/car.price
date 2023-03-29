@@ -37,6 +37,6 @@ class EditController extends AdminController
             ],
         ]);
         $meta['h1'] = 'Категория';
-        return view('admin.category.edit', compact('formControll','meta'));
+        return view('admin.form.edit', compact('formControll','meta'));
     }
 }

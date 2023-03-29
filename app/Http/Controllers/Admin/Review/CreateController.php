@@ -72,6 +72,6 @@ class CreateController extends AdminController
             ],
         ]);
 
-        return view('admin.review.create', compact('formControll'));
+        return view('admin.form.create', compact('formControll'));
     }
 }

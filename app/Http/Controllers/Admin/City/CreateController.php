@@ -32,6 +32,6 @@ class CreateController extends AdminController
         ]);
         $meta['h1'] = 'Создать пост';
 
-        return view('admin.city.create', compact('formControll','meta'));
+        return view('admin.form.create', compact('formControll','meta'));
     }
 }

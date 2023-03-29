@@ -66,6 +66,6 @@ class CreateController extends AdminController
             ],
         ]);
 
-        return view('admin.post.create', compact('formControll'));
+        return view('admin.form.create', compact('formControll'));
     }
 }

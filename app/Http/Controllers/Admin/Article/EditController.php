@@ -63,8 +63,14 @@ class EditController extends AdminController
                 $article->cr_date,
                 'Дата создания статьи'
             ],
+            [
+                'file',
+                'file',
+                $article->file,
+                'Файл'
+            ],
         ]);
         $meta['h1'] = 'Статья';
-        return view('admin.article.edit', compact('formControll','meta'));
+        return view('admin.form.edit', compact('formControll','meta'));
     }
 }

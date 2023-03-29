@@ -110,7 +110,11 @@ class AdminController extends Controller
     protected function getEditForm($postid, $route, $arrControlls) {
         $this->route = $route;
 
-        $this->addContent('top',$this->getHeader($postid));
+        $multipart = '';
+        foreach ($arrControlls as $control) {
+            if ($control[0] == 'file') $multipart = "enctype=\"multipart/form-data\"";
+        }
+        $this->addContent('top',$this->getHeader($postid, $multipart));
 
         foreach($arrControlls as $controll) {
             $this->addContent('bottom',$this->getControl($controll));
@@ -120,9 +124,9 @@ class AdminController extends Controller
         return $this->getContent();
     }
 
-    private function getHeader($postid) {
+    private function getHeader($postid, $multipart) {
         return "<div class=\"admin-edit\">
-    <form enctype=\"multipart/form-data\" action=\"".route($this->route, $postid)."\" method=\"POST\">";
+    <form ".$multipart." action=\"".route($this->route, $postid)."\" method=\"POST\">";
     }
 
     private function getFooter() {

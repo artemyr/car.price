@@ -73,6 +73,6 @@ class CreateController extends AdminController
         ]);
 
         $meta['h1'] = 'Создание статьи';
-        return view('admin.article.create', compact('formControll','meta'));
+        return view('admin.form.create', compact('formControll','meta'));
     }
 }
