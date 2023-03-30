@@ -4,10 +4,16 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
+
+class MyForm {
+    public $multipart = false;
+    public $route = [];
+    public $controls = [];
+}
+
 class AdminController extends Controller
 {
-    private $content = [];
-    private $route = '';
+    private $res;
 
     private function getControl($arParams) {
 
@@ -96,45 +102,17 @@ class AdminController extends Controller
         return $res;
     }
 
-    private function addContent($position, $content) {
-        if(isset($this->content[$position]))
-            $this->content[$position] .= $content;
-        else
-            $this->content[$position] = $content;
-    }
+    protected function getEditForm($elid, $route, $arrControls) {
+        $this->res = new MyForm;
 
-    private function getContent() {
-        return $this->content;
-    }
+        $this->res->route = route($route, $elid);
+        foreach ($arrControls as $control) if ($control[0] == 'file') $this->res->multipart = true;
 
-    protected function getEditForm($postid, $route, $arrControlls) {
-        $this->route = $route;
-
-        $multipart = '';
-        foreach ($arrControlls as $control) {
-            if ($control[0] == 'file') $multipart = "enctype=\"multipart/form-data\"";
-        }
-        $this->addContent('top',$this->getHeader($postid, $multipart));
-
-        foreach($arrControlls as $controll) {
-            $this->addContent('bottom',$this->getControl($controll));
+        foreach ($arrControls as $control) {
+            $this->res->controls[] = $control;
         }
 
-        $this->addContent('bottom',$this->getFooter());
-        return $this->getContent();
+        return $this->res;
     }
 
-    private function getHeader($postid, $multipart) {
-        return "<div class=\"admin-edit\">
-    <form ".$multipart." action=\"".route($this->route, $postid)."\" method=\"POST\">";
-    }
-
-    private function getFooter() {
-        return "
-        <div>
-            <input class=\"admin-edit__save\" type=\"submit\" value=\"Сохранить\">
-        </div>
-    </form>
-</div>";
-    }
 }

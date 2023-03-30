@@ -13,7 +13,7 @@ class EditController extends AdminController
     {
         $cities = City::all();
 
-        $formControll = $this->getEditForm($article->id, 'admin.article.update', [
+        $formControl = $this->getEditForm($article->id, 'admin.article.update', [
             [
                 'text',
                 'title',
@@ -71,6 +71,6 @@ class EditController extends AdminController
             ],
         ]);
         $meta['h1'] = 'Статья';
-        return view('admin.form.edit', compact('formControll','meta'));
+        return view('admin.form.edit2', compact('formControl','meta'));
     }
 }
