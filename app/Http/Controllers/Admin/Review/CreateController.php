@@ -14,7 +14,7 @@ class CreateController extends AdminController
     {
         $cities = City::all();
 
-        $formControll = $this->getEditForm('', 'admin.review.store', [
+        $formControl = $this->getEditForm('', 'admin.review.store', [
             [
                 'text',
                 'title',
@@ -72,6 +72,6 @@ class CreateController extends AdminController
             ],
         ]);
 
-        return view('admin.form.create', compact('formControll'));
+        return view('admin.form.create', compact('formControl'));
     }
 }

@@ -10,7 +10,7 @@ class EditController extends AdminController
 {
     public function __invoke (City $city)
     {
-        $formControll = $this->getEditForm($city->id, 'admin.city.update', [
+        $formControl = $this->getEditForm($city->id, 'admin.city.update', [
             [
                 'text',
                 'title',
@@ -32,6 +32,6 @@ class EditController extends AdminController
         ]);
         $meta['h1'] = 'Пост';
 
-        return view('admin.form.edit', compact('formControll','meta'));
+        return view('admin.form.edit', compact('formControl','meta'));
     }
 }

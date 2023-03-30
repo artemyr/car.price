@@ -18,7 +18,7 @@ class CreateController extends AdminController
         $tags = Tag::all();
         $cities = City::all();
 
-        $formControll = $this->getEditForm('', 'admin.post.store', [
+        $formControl = $this->getEditForm('', 'admin.post.store', [
             [
                 'text',
                 'title',
@@ -66,6 +66,6 @@ class CreateController extends AdminController
             ],
         ]);
 
-        return view('admin.form.create', compact('formControll'));
+        return view('admin.form.create', compact('formControl'));
     }
 }

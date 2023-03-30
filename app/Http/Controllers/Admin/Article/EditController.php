@@ -71,6 +71,6 @@ class EditController extends AdminController
             ],
         ]);
         $meta['h1'] = 'Статья';
-        return view('admin.form.edit2', compact('formControl','meta'));
+        return view('admin.form.edit', compact('formControl','meta'));
     }
 }

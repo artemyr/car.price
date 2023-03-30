@@ -10,7 +10,7 @@ class CreateController extends AdminController
 {
     public function __invoke ()
     {
-        $formControll = $this->getEditForm('', 'admin.city.store', [
+        $formControl = $this->getEditForm('', 'admin.city.store', [
             [
                 'text',
                 'title',
@@ -32,6 +32,6 @@ class CreateController extends AdminController
         ]);
         $meta['h1'] = 'Создать пост';
 
-        return view('admin.form.create', compact('formControll','meta'));
+        return view('admin.form.create', compact('formControl','meta'));
     }
 }

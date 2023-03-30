@@ -14,7 +14,7 @@ class CreateController extends AdminController
     {
         $cities = City::all();
 
-        $formControll = $this->getEditForm('', 'admin.article.store', [
+        $formControl = $this->getEditForm('', 'admin.article.store', [
             [
                 'text',
                 'title',
@@ -73,6 +73,6 @@ class CreateController extends AdminController
         ]);
 
         $meta['h1'] = 'Создание статьи';
-        return view('admin.form.create', compact('formControll','meta'));
+        return view('admin.form.create', compact('formControl','meta'));
     }
 }

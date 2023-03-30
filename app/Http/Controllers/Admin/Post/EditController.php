@@ -18,7 +18,7 @@ class EditController extends AdminController
         $tags = Tag::all();
         $cities = City::all();
 
-        $formControll = $this->getEditForm($post->id, 'admin.post.update', [
+        $formControl = $this->getEditForm($post->id, 'admin.post.update', [
             [
                 'text',
                 'title',
@@ -66,6 +66,6 @@ class EditController extends AdminController
             ],
         ]);
         $meta['h1'] = 'Пост';
-        return view('admin.form.edit', compact('formControll','meta'));
+        return view('admin.form.edit', compact('formControl','meta'));
     }
 }

@@ -10,7 +10,7 @@ class EditController extends AdminController
 {
     public function __invoke (Category $category)
     {
-        $formControll = $this->getEditForm($category->id, 'admin.category.update', [
+        $formControl = $this->getEditForm($category->id, 'admin.category.update', [
             [
                 'text',
                 'title',
@@ -37,6 +37,6 @@ class EditController extends AdminController
             ],
         ]);
         $meta['h1'] = 'Категория';
-        return view('admin.form.edit', compact('formControll','meta'));
+        return view('admin.form.edit', compact('formControl','meta'));
     }
 }
