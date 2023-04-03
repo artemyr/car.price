@@ -38,12 +38,15 @@
                 </div>
             @endif
             @if($control->type == 'file')
-                <div class="admin-edit__form-control">
+                <!-- <div class="admin-edit__form-control">
                     <label for="{{ $control->code }}">{{ $control->name }}</label>
                     <input type="file" name="{{ $control->code }}" id="{{ $control->code }}">
-                </div>
+                </div> -->
+
+                <file-upload></file-upload>
             @endif
         @endforeach
+
         <div>
             <input class="admin-edit__save" type="submit" value="Сохранить">
         </div>

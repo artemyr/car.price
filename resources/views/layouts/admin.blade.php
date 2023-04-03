@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
 </head>
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-<div class="wrapper">
+<div class="wrapper" id="app">
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
@@ -273,6 +273,10 @@
 <script src="{{ asset('plugins/jquery-mapael/maps/usa_states.min.js') }}"></script>
 <!-- ChartJS -->
 <script src="{{ asset('plugins/chart.js/Chart.min.js') }}"></script>
+
+<script src="{{ asset('js/hystmodal.min.js') }}"></script>
+<script src="{{ asset('js/swiper.min.js') }}"></script>
+<script defer src="{{ asset('js/app.js') }}"></script>
 
 <!-- AdminLTE for demo purposes -->
 <!-- <script src="{{ asset('dist/js/demo.js') }}"></script> -->
