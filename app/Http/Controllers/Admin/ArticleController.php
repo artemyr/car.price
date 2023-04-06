@@ -141,7 +141,7 @@ class ArticleController extends AdminController
                 'file',
                 'file',
                 $article->downloads ?? [],
-                'Файл'
+                'Файлы'
             ],
         ]);
         $meta['h1'] = 'Статья';

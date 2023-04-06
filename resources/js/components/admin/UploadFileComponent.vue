@@ -1,22 +1,23 @@
 <template>
-    <div class="cont">
+    <div class="admin-edit__files">
         <div class="" v-if="fileProgress">
             <div class="progress-bar" :style="{ width: fileProgress + '%' }">{{ fileCurrent }}%</div>
         </div>
-        <div class="" v-for="(download, index) in downloads">
+        <div class="admin-edit__file" v-for="(download, index) in downloads">
             <input type="hidden" name="downloads[]" v-model="download.id">
             <div class="form-group">
                 <input type="text" placeholder="Подпись для файла" v-model="download.title">
             </div>
-            <div class="input-group">
-
-                <template class="" v-if="download.is_new">
-                    <input type="file" id="customFile" @change="fileInputChange(download)">
-                    <label for="customFile">Выберите файл</label>
-                    <button type="button" @click="uploadFile(download)">Загрузить</button>
-                </template>
-
-                <button type="button" @click="deleteFile(index)">Удалить</button>
+            <div class="admin-edit__input-group">
+                <div>
+                    <template class="" v-if="download.is_new">
+                        <input type="file" id="customFile" @change="fileInputChange(download)">
+                        <button type="button" @click="uploadFile(download)">Загрузить</button>
+                    </template>
+                </div>
+                <div>
+                    <button type="button" @click="deleteFile(index)">Удалить</button>
+                </div>
             </div>
         </div>
         <button type="button" @click="addFile">Добавить</button>
@@ -67,7 +68,7 @@ export default {
             await axios.post('/admin/download', form, {
                 onUploadProgress: (itemUpload) => {
                     this.fileProgress = Math.round( (itemUpload.loaded / itemUpload.total) *100 );
-                    this.fileCurrent = download.name + ' ' + this.fileProgress;
+                    this.fileCurrent = download.title + ' ' + this.fileProgress;
                 }
             })
             .then(response => {

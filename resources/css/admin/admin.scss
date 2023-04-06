@@ -102,6 +102,16 @@
             color: white;
         }
     }
+
+    .admin-edit__files {
+        .admin-edit__file {
+            margin-bottom: 20px;
+        }
+        .admin-edit__input-group {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
 
 .admin-show {
