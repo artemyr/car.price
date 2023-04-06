@@ -38,12 +38,10 @@
                 </div>
             @endif
             @if($control->type == 'file')
-                <!-- <div class="admin-edit__form-control">
+                <div class="admin-edit__form-control">
                     <label for="{{ $control->code }}">{{ $control->name }}</label>
-                    <input type="file" name="{{ $control->code }}" id="{{ $control->code }}">
-                </div> -->
-
-                <file-upload></file-upload>
+                    <file-upload :files="{{ $control->value ?? '[]' }}"></file-upload>
+                </div>
             @endif
         @endforeach
 

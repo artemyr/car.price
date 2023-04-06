@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="cont">
         <div class="" v-if="fileProgress">
             <div class="progress-bar" :style="{ width: fileProgress + '%' }">{{ fileCurrent }}%</div>
         </div>
@@ -34,8 +34,9 @@ export default {
             fileCurrent:'',
         }
     },
+    props: ['files'],
     mounted() {
-        console.log("mount");
+        this.downloads = this.files;
     },
     methods: {
         addFile() {

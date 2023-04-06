@@ -19,7 +19,7 @@ class DownloadController extends Controller
         $path = $request->file->store('uploads', 'public');
         $download = Download::create([
             'title'=> $request->title,
-            'path' => $request->path,
+            'path' => $path,
             'mime' => $request->file->getMimeType(),
             'size' => $request->file->getSize(),
         ]);

@@ -17,7 +17,6 @@ class CreateDownloadsTable extends Migration
             $table->id();
 
             $table->string('title')->nullable();
-            $table->string('filename');
             $table->string('path');
             $table->string('mime')->nullable();
             $table->string('size')->nullable();

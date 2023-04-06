@@ -32,7 +32,6 @@ class StoreRequest extends FormRequest
             'preview_text' => 'string|nullable',
             'image_path' => 'string|nullable',
             'cr_date' => 'string|nullable',
-            'file' => '',
         ];
     }
 }
