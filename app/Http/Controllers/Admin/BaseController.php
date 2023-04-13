@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 
-class AdminController extends Controller
+class BaseController extends Controller
 {
     private $res;
     protected function getEditForm($elid, $route, $arrControls) {

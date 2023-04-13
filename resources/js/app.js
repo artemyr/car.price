@@ -19,7 +19,8 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('file-upload', require('./components/admin/UploadFileComponent.vue').default);
+Vue.component('picture-upload', require('./components/admin/UploadPictureComponent.vue').default);
+Vue.component('files-upload', require('./components/admin/UploadFilesComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

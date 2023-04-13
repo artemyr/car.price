@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BaseController;
 use App\Http\Requests\Category\StoreRequest;
 use App\Http\Requests\Category\UpdateRequest;
 use App\Models\Category;
 
-class CategoryController extends AdminController
+class CategoryController extends BaseController
 {
     public function create ()
     {

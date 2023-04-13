@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admin'], function() {
 
-    Route::resource('/download', 'DownloadController')->only(['store','update','destroy']);
+    Route::resource('/download', 'File\DownloadController')->only(['store','update','destroy']);
+    Route::resource('/picture', 'File\PictureController')->only(['store','update','destroy']);
 
     Route::group(['prefix' => 'posts'], function() {
         Route::get('', 'PostController@index')->name('admin.post.index');

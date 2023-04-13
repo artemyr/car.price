@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BaseController;
 use App\Http\Filters\PostFilter;
 use App\Http\Requests\Post\FilterRequest;
 use App\Http\Requests\Post\StoreRequest;
@@ -13,7 +13,7 @@ use App\Models\Post;
 use App\Models\Tag;
 use App\Services\Post\Service;
 
-class PostController extends AdminController
+class PostController extends BaseController
 {
     public $service;
 

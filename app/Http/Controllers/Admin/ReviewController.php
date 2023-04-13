@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use \App\Http\Controllers\Admin\AdminController;
+use \App\Http\Controllers\Admin\BaseController;
 use App\Http\Requests\Review\StoreRequest;
 use App\Http\Requests\Review\UpdateRequest;
 use App\Models\City;
 use App\Models\Review;
 
-class ReviewController extends AdminController
+class ReviewController extends BaseController
 {
     public function create ()
     {

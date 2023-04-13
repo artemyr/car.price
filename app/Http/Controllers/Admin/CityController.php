@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Admin;
 
-use \App\Http\Controllers\Admin\AdminController;
+use \App\Http\Controllers\Admin\BaseController;
 use App\Http\Requests\City\StoreRequest;
 use App\Http\Requests\City\UpdateRequest;
 use App\Models\City;
 
-class CityController extends AdminController
+class CityController extends BaseController
 {
     public function create ()
     {

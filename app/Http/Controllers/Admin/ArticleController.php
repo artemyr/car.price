@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BaseController;
 use App\Http\Requests\Article\StoreRequest;
 use App\Http\Requests\Article\UpdateRequest;
 use App\Models\Article;
 use App\Models\City;
 
-class ArticleController extends AdminController
+class ArticleController extends BaseController
 {
     public function create ()
     {
@@ -65,7 +65,7 @@ class ArticleController extends AdminController
                 'Дата создания статьи'
             ],
             [
-                'file',
+                'file_multiple',
                 'file',
                 '[]',
                 'Файлы'
@@ -94,6 +94,18 @@ class ArticleController extends AdminController
                 $article->title,
                 'Заголовок статьи'
             ],
+            [
+                'file',
+                'picture_id',
+                null,
+                'Картинка анонса'
+            ],
+            // [
+            //     'file',
+            //     'detail_picture',
+            //     null,
+            //     'Детальная анонса'
+            // ],
             [
                 'text',
                 'link',
@@ -138,7 +150,7 @@ class ArticleController extends AdminController
                 'Дата создания статьи'
             ],
             [
-                'file',
+                'file_multiple',
                 'file',
                 $article->downloads ?? [],
                 'Файлы'
