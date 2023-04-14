@@ -74,7 +74,6 @@ class CityController extends BaseController
         $cities = City::all();
         return $cities;
         // $meta['h1'] = 'Города';
-
         // return view('admin.city.index', compact('cities','meta'));
     }
 

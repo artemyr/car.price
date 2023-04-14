@@ -30,7 +30,7 @@ Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admi
     });
 
     Route::group(['prefix' => 'cities'], function() {
-        Route::get('', 'CityController@index')->name('admin.city.index');
+//        Route::get('', 'CityController@index')->name('admin.city.index');
         Route::get('/create', 'CityController@create')->name('admin.city.create');
         Route::post('/create', 'CityController@store')->name('admin.city.store');
         Route::get('/{city}/edit', 'CityController@edit')->name('admin.city.edit');

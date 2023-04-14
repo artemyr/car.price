@@ -34,6 +34,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   methods: {
     getCities: function getCities() {
+      var _this = this;
+
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
         return _regeneratorRuntime().wrap(function _callee$(_context) {
           while (1) {
@@ -41,7 +43,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.next = 2;
                 return axios.get('/api/admin/cities', {}).then(function (response) {
-                  console.log(response);
+                  console.log(response.data);
+                  _this.cities = response.data;
                 })["catch"](function (error) {
                   console.log(error);
                 });

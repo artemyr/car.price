@@ -44,7 +44,8 @@ export default {
         async getCities () {
             await axios.get('/api/admin/cities', {})
             .then(response => {
-                console.log(response);
+                console.log(response.data)
+                this.cities = response.data;
             })
             .catch(error => {
                 console.log(error);

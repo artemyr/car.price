@@ -20,7 +20,7 @@
             <nav class="top-menu">
                 <ul class="d-flex">
                     @can('view', auth()->user())
-                    <li class="top-menu__item"><a href="{{ route('home') }}">Admin</a></li>
+                    <li class="top-menu__item"><a href="{{ route('admin') }}">Admin</a></li>
                     @endcan
 
                     <li class="top-menu__item">
@@ -47,7 +47,7 @@
                     <li class="top-menu__item"><a href="{{ route('article.index') }}">Статьи</a></li>
                     <li class="top-menu__item"><a href="{{ route('review.index') }}">Отзывы</a></li>
 
-                    <li style="display:none" class="top-menu__item"><a href="{{ route('home') }}">Auth</a></li>
+                    <li style="display:none" class="top-menu__item"><a href="{{ route('admin') }}">Auth</a></li>
                     <li style="display:none" class="top-menu__item"><a href="{{ route('logout') }}"
                         onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
