@@ -40,13 +40,13 @@
             @if($control->type == 'file')
                 <div class="admin-edit__form-control">
                     <label for="{{ $control->code }}">{{ $control->name }}</label>
-                    <picture-upload :file="{{ $control->value ?? '{id: 0, title: \'\', file: [], is_new: true}' }}" :fieldcode="{{ $control->code }}"></picture-upload>
+                    <!-- <picture-upload :file="{{ $control->value ?? '{id: 0, title: \'\', file: [], is_new: true}' }}" :fieldcode="{{ $control->code }}"></picture-upload> -->
                 </div>
             @endif
             @if($control->type == 'file_multiple')
                 <div class="admin-edit__form-control">
                     <label for="{{ $control->code }}">{{ $control->name }}</label>
-                    <files-upload :files="{{ $control->value ?? '[]' }}"></file-upload>
+                    <upload-files-component :files="{{ $control->value ?? '[]' }}"></upload-files-component>
                 </div>
             @endif
         @endforeach

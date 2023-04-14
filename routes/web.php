@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admin'], function() {
 
+    Route::get('', [App\Http\Controllers\HomeController::class, 'index'])->name('admin');
+
     Route::resource('/download', 'File\DownloadController')->only(['store','update','destroy']);
     Route::resource('/picture', 'File\PictureController')->only(['store','update','destroy']);
 
@@ -65,7 +67,6 @@ Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admi
 });
 
 Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::group(["namespace" => "Article"], function() {
     Route::get('/articles', 'IndexController')->name('article.index');

@@ -24,6 +24,12 @@ class HomeController extends Controller
     public function index()
     {
         $meta['h1'] = 'Админка';
-        return view('home', compact('meta'));
+
+        $vars = (object)[];
+        $vars->logo = asset('dist/img/AdminLTELogo.png');
+        $vars->userPhoto = asset('dist/img/user2-160x160.jpg');
+        $vars = json_encode($vars);
+
+        return view('admin.index', compact('meta','vars'));
     }
 }

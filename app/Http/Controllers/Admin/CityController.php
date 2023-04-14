@@ -72,9 +72,10 @@ class CityController extends BaseController
     public function index ()
     {
         $cities = City::all();
-        $meta['h1'] = 'Города';
+        return $cities;
+        // $meta['h1'] = 'Города';
 
-        return view('admin.city.index', compact('cities','meta'));
+        // return view('admin.city.index', compact('cities','meta'));
     }
 
     public function store (StoreRequest $request)
