@@ -15,7 +15,22 @@ export default new VueRouter({
         {
             path: '/admin/cities', 
             component: () => import('./views/admin/City/Index'),
-            name: 'cities.index'
+            name: 'admin.city.index'
+        },
+        {
+            path: '/admin/cities/create', 
+            component: () => import('./views/admin/City/Create'),
+            name: 'admin.city.create'
+        },
+        {
+            path: '/admin/cities/:id/edit', 
+            component: () => import('./views/admin/City/Edit'),
+            name: 'admin.city.edit'
+        },
+        {
+            path: '/admin/cities/:id', 
+            component: () => import('./views/admin/City/Show'),
+            name: 'admin.city.show'
         },
         {
             path: '/admin/categories', 

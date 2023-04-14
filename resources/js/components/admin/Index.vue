@@ -36,7 +36,7 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-header">ADMIN</li>
                     <li class="nav-item">
-                        <router-link :to="{name: 'cities.index'}" class="nav-link">
+                        <router-link :to="{name: 'admin.city.index'}" class="nav-link">
                             <i class="nav-icon fas fa-calendar-alt"></i>
                             <p>
                                 Города

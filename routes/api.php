@@ -21,5 +21,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group(["namespace" => "Admin", 'prefix' => 'admin',
 //    'middleware' => 'admin'
 ], function() {
-    Route::get('/cities', 'CityController@index')->name('admin.city.index');
+
+    Route::group(['prefix' => 'cities'], function() {
+        Route::get('/', 'CityController@index')->name('admin.city.index');
+        Route::get('/{city}', 'CityController@show')->name('admin.city.show');
+        Route::post('/', 'CityController@store')->name('admin.city.store');
+        Route::delete('/{city}', 'CityController@destroy')->name('admin.city.destroy');
+        Route::patch('/{city}', 'CityController@update')->name('admin.city.update');
+    });
 });

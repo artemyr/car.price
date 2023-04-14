@@ -39,7 +39,7 @@ class CityController extends BaseController
     public function destroy (City $city)
     {
         $city->delete();
-        return redirect()->route('admin.city.index');
+        // return redirect()->route('admin.city.index');
     }
 
     public function edit (City $city)
@@ -71,10 +71,12 @@ class CityController extends BaseController
 
     public function index ()
     {
-        $cities = City::all();
-        return $cities;
-        // $meta['h1'] = 'Города';
-        // return view('admin.city.index', compact('cities','meta'));
+        return City::all();
+    }
+
+    public function show (City $city)
+    {
+        return $city;
     }
 
     public function store (StoreRequest $request)
@@ -89,10 +91,8 @@ class CityController extends BaseController
     public function update (UpdateRequest $request, City $city)
     {
         $data = $request->validated();
-
         $city->update($data);
-
         // return redirect()->route('admin.city.show', $city->id);
-        return redirect()->route('admin.city.index');
+        // return redirect()->route('admin.city.index');
     }
 }
