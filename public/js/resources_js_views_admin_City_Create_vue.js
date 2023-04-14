@@ -39,6 +39,11 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     }
+  },
+  computed: {
+    isDisabled: function isDisabled() {
+      return this.title && this.link && this.name_predloshniy_padesh;
+    }
   }
 });
 
@@ -143,6 +148,7 @@ var render = function render() {
   })]), _vm._v(" "), _c("div", [_c("input", {
     staticClass: "admin-edit__save",
     attrs: {
+      disabled: !_vm.isDisabled,
       type: "submit",
       value: "Сохранить"
     },

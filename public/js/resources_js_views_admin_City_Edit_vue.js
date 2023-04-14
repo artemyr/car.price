@@ -32,9 +32,9 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get("/api/admin/cities/".concat(this.$route.params.id)).then(function (res) {
-        _this.title = res.data.title;
-        _this.link = res.data.link;
-        _this.name_predloshniy_padesh = res.data.name_predloshniy_padesh;
+        _this.title = res.data.data.title;
+        _this.link = res.data.data.link;
+        _this.name_predloshniy_padesh = res.data.data.name_predloshniy_padesh;
       });
     },
     update: function update() {
@@ -52,6 +52,11 @@ __webpack_require__.r(__webpack_exports__);
           }
         });
       });
+    }
+  },
+  computed: {
+    isDisabled: function isDisabled() {
+      return this.title && this.link && this.name_predloshniy_padesh;
     }
   }
 });
@@ -157,6 +162,7 @@ var render = function render() {
   })]), _vm._v(" "), _c("div", [_c("input", {
     staticClass: "admin-edit__save",
     attrs: {
+      disabled: !_vm.isDisabled,
       type: "submit",
       value: "Сохранить"
     },

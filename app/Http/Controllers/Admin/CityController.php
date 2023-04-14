@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use \App\Http\Controllers\Admin\BaseController;
+use \App\Http\Resources\Admin\City\Resource;
 use App\Http\Requests\City\StoreRequest;
 use App\Http\Requests\City\UpdateRequest;
 use App\Models\City;
@@ -71,27 +72,27 @@ class CityController extends BaseController
 
     public function index ()
     {
-        return City::all();
+        return Resource::collection(City::all());
     }
 
     public function show (City $city)
     {
-        return $city;
+        return new Resource($city);
     }
 
     public function store (StoreRequest $request)
     {
         $data = $request->validated();
-
-        $city = City::create($data);
-
-        return redirect()->route('admin.city.index');
+        City::create($data);
+        return response([]);
+        // return redirect()->route('admin.city.index');
     }
 
     public function update (UpdateRequest $request, City $city)
     {
         $data = $request->validated();
         $city->update($data);
+        return response([]);
         // return redirect()->route('admin.city.show', $city->id);
         // return redirect()->route('admin.city.index');
     }

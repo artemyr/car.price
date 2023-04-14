@@ -38,7 +38,7 @@ export default {
         getCity() {
             axios.get(`/api/admin/cities/${this.$route.params.id}`)
                 .then(res => {
-                    this.city = res.data
+                    this.city = res.data.data
                 })
         }
     }

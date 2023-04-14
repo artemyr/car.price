@@ -17,7 +17,7 @@
         </div>
 
         <div>
-            <input @click.prevent="store" class="admin-edit__save" type="submit" value="Сохранить">
+            <input :disabled="!isDisabled" @click.prevent="store" class="admin-edit__save" type="submit" value="Сохранить">
         </div>
     </div>
 </template>
@@ -44,6 +44,11 @@ export default {
                 .then(res => {
                     this.$router.push({ name: 'admin.city.index' })
                 })
+        }       
+    },
+    computed: {
+        isDisabled() {
+            return this.title && this.link && this.name_predloshniy_padesh;
         }
     }
 }

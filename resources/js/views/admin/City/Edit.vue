@@ -17,7 +17,7 @@
         </div>
 
         <div>
-            <input @click.prevent="update" class="admin-edit__save" type="submit" value="Сохранить">
+            <input :disabled="!isDisabled" @click.prevent="update" class="admin-edit__save" type="submit" value="Сохранить">
         </div>
     </div>
 </template>
@@ -42,9 +42,9 @@ export default {
         getCity() {
             axios.get(`/api/admin/cities/${this.$route.params.id}`)
                 .then(res => {
-                    this.title = res.data.title
-                    this.link = res.data.link
-                    this.name_predloshniy_padesh = res.data.name_predloshniy_padesh
+                    this.title = res.data.data.title
+                    this.link = res.data.data.link
+                    this.name_predloshniy_padesh = res.data.data.name_predloshniy_padesh
                 })
         },
         update() {
@@ -52,6 +52,11 @@ export default {
                 .then(res => {
                     this.$router.push({name:'admin.city.show', params: {id: this.$route.params.id}})
                 })
+        }
+    },
+    computed: {
+        isDisabled() {
+            return this.title && this.link && this.name_predloshniy_padesh;
         }
     }
 }

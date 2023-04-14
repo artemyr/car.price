@@ -44,7 +44,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.next = 2;
                 return axios.get('/api/admin/cities').then(function (response) {
-                  _this.cities = response.data;
+                  _this.cities = response.data.data;
                 })["catch"](function (error) {
                   console.log(error);
                 });
