@@ -1,20 +1,11 @@
 <template>
-    <div class="admin-edit" v-if="city">
+    <div class="admin-edit" v-if="entity">
 
-        <div class="admin-edit__form-control">
-            <label for="title">Название города</label>
-            <input v-model="city.title" id="title" type="text">
-        </div>
+        <EditTextComponent ref="input" :vars="{name:'Название',id:'title',value:entity.title}"></EditTextComponent>
 
-        <div class="admin-edit__form-control">
-            <label for="link">Ссылка ведущая на город</label>
-            <input v-model="city.link" id="link" type="text">
-        </div>
+        <EditTextComponent :vars="{name:'Ссылка',id:'link',value:entity.link}"></EditTextComponent>
 
-        <div class="admin-edit__form-control">
-            <label for="name_predloshniy_padesh">Город в предложном падеже</label>
-            <input v-model="city.name_predloshniy_padesh" id="name_predloshniy_padesh" type="text">
-        </div>
+        <EditTextComponent :vars="{name:'Город в предложном падеже',id:'name_predloshniy_padesh',value:entity.name_predloshniy_padesh}"></EditTextComponent>
 
         <div>
             <input :disabled="!isDisabled" @click.prevent="update" class="admin-edit__save" type="submit" value="Сохранить">
@@ -24,27 +15,36 @@
 
 <script>
 import { assertExpressionStatement } from '@babel/types';
+import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue';
 
 export default {
     name: 'Edit',
+    components: {
+        EditTextComponent
+    },
     data () {
         return {
-            city: null
+            entity: null
         }
     },
     props: [],
     mounted() {
+        // console.log(this.$refs.input); // udefined
         this.get();
     },
     methods: {
         get() {
             axios.get(`/api/admin/cities/${this.$route.params.id}`)
                 .then(res => {
-                    this.city = res.data.data
+                    this.entity = res.data.data
                 })
         },
         update() {
-            axios.patch(`/api/admin/cities/${this.$route.params.id}`, {title: this.title, link: this.link, name_predloshniy_padesh: this.name_predloshniy_padesh})
+            axios.patch(`/api/admin/cities/${this.$route.params.id}`, {
+                title: this.entity.title, 
+                link: this.entity.link, 
+                name_predloshniy_padesh: this.entity.name_predloshniy_padesh
+            })
                 .then(res => {
                     this.$router.push({name:'admin.city.show', params: {id: this.$route.params.id}})
                 })
@@ -52,7 +52,7 @@ export default {
     },
     computed: {
         isDisabled() {
-            return this.title && this.link && this.name_predloshniy_padesh;
+            return this.entity.title && this.entity.link && this.entity.name_predloshniy_padesh;
         }
     }
 }

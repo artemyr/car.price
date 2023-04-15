@@ -1,5 +1,32 @@
 (self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_views_admin_City_Edit_vue"],{
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/types */ "./node_modules/@babel/types/lib/index.js");
+/* harmony import */ var _babel_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_types__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'EditText',
+  data: function data() {
+    return {};
+  },
+  props: ['vars'],
+  mounted: function mounted() {// console.log(this.$parent);
+  },
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/admin/City/Edit.vue?vue&type=script&lang=js&":
 /*!*****************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/admin/City/Edit.vue?vue&type=script&lang=js& ***!
@@ -13,16 +40,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/types */ "./node_modules/@babel/types/lib/index.js");
 /* harmony import */ var _babel_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_admin_form_EditTextComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../components/admin/form/EditTextComponent.vue */ "./resources/js/components/admin/form/EditTextComponent.vue");
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Edit',
+  components: {
+    EditTextComponent: _components_admin_form_EditTextComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
-      city: null
+      entity: null
     };
   },
   props: [],
   mounted: function mounted() {
+    // console.log(this.$refs.input); // udefined
     this.get();
   },
   methods: {
@@ -30,16 +63,16 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get("/api/admin/cities/".concat(this.$route.params.id)).then(function (res) {
-        _this.city = res.data.data;
+        _this.entity = res.data.data;
       });
     },
     update: function update() {
       var _this2 = this;
 
       axios.patch("/api/admin/cities/".concat(this.$route.params.id), {
-        title: this.title,
-        link: this.link,
-        name_predloshniy_padesh: this.name_predloshniy_padesh
+        title: this.entity.title,
+        link: this.entity.link,
+        name_predloshniy_padesh: this.entity.name_predloshniy_padesh
       }).then(function (res) {
         _this2.$router.push({
           name: 'admin.city.show',
@@ -52,10 +85,62 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     isDisabled: function isDisabled() {
-      return this.title && this.link && this.name_predloshniy_padesh;
+      return this.entity.title && this.entity.link && this.entity.name_predloshniy_padesh;
     }
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _vm.vars ? _c("div", {
+    staticClass: "admin-edit__form-control"
+  }, [_c("label", {
+    attrs: {
+      "for": _vm.vars.id
+    }
+  }, [_vm._v(_vm._s(_vm.vars.name))]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.$parent.entity[_vm.vars.id],
+      expression: "$parent.entity[vars.id]"
+    }],
+    attrs: {
+      id: _vm.vars.id,
+      type: "text"
+    },
+    domProps: {
+      value: _vm.$parent.entity[_vm.vars.id]
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+
+        _vm.$set(_vm.$parent.entity, _vm.vars.id, $event.target.value);
+      }
+    }
+  })]) : _vm._e();
+};
+
+var staticRenderFns = [];
+render._withStripped = true;
+
 
 /***/ }),
 
@@ -75,90 +160,34 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm.city ? _c("div", {
+  return _vm.entity ? _c("div", {
     staticClass: "admin-edit"
-  }, [_c("div", {
-    staticClass: "admin-edit__form-control"
-  }, [_c("label", {
+  }, [_c("EditTextComponent", {
+    ref: "input",
     attrs: {
-      "for": "title"
-    }
-  }, [_vm._v("Название города")]), _vm._v(" "), _c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.city.title,
-      expression: "city.title"
-    }],
-    attrs: {
-      id: "title",
-      type: "text"
-    },
-    domProps: {
-      value: _vm.city.title
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-
-        _vm.$set(_vm.city, "title", $event.target.value);
+      vars: {
+        name: "Название",
+        id: "title",
+        value: _vm.entity.title
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "admin-edit__form-control"
-  }, [_c("label", {
+  }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
-      "for": "link"
-    }
-  }, [_vm._v("Ссылка ведущая на город")]), _vm._v(" "), _c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.city.link,
-      expression: "city.link"
-    }],
-    attrs: {
-      id: "link",
-      type: "text"
-    },
-    domProps: {
-      value: _vm.city.link
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-
-        _vm.$set(_vm.city, "link", $event.target.value);
+      vars: {
+        name: "Ссылка",
+        id: "link",
+        value: _vm.entity.link
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "admin-edit__form-control"
-  }, [_c("label", {
+  }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
-      "for": "name_predloshniy_padesh"
-    }
-  }, [_vm._v("Город в предложном падеже")]), _vm._v(" "), _c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.city.name_predloshniy_padesh,
-      expression: "city.name_predloshniy_padesh"
-    }],
-    attrs: {
-      id: "name_predloshniy_padesh",
-      type: "text"
-    },
-    domProps: {
-      value: _vm.city.name_predloshniy_padesh
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-
-        _vm.$set(_vm.city, "name_predloshniy_padesh", $event.target.value);
+      vars: {
+        name: "Город в предложном падеже",
+        id: "name_predloshniy_padesh",
+        value: _vm.entity.name_predloshniy_padesh
       }
     }
-  })]), _vm._v(" "), _c("div", [_c("input", {
+  }), _vm._v(" "), _c("div", [_c("input", {
     staticClass: "admin-edit__save",
     attrs: {
       disabled: !_vm.isDisabled,
@@ -171,7 +200,7 @@ var render = function render() {
         return _vm.update.apply(null, arguments);
       }
     }
-  })])]) : _vm._e();
+  })])], 1) : _vm._e();
 };
 
 var staticRenderFns = [];
@@ -218,6 +247,45 @@ module.exports = function toFastproperties(o) {
 
 /***/ }),
 
+/***/ "./resources/js/components/admin/form/EditTextComponent.vue":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/admin/form/EditTextComponent.vue ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditTextComponent.vue?vue&type=template&id=5e77e274& */ "./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274&");
+/* harmony import */ var _EditTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditTextComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EditTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__.render,
+  _EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/admin/form/EditTextComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/views/admin/City/Edit.vue":
 /*!************************************************!*\
   !*** ./resources/js/views/admin/City/Edit.vue ***!
@@ -257,6 +325,22 @@ component.options.__file = "resources/js/views/admin/City/Edit.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditTextComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/views/admin/City/Edit.vue?vue&type=script&lang=js&":
 /*!*************************************************************************!*\
   !*** ./resources/js/views/admin/City/Edit.vue?vue&type=script&lang=js& ***!
@@ -270,6 +354,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Edit.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/admin/City/Edit.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274& ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditTextComponent.vue?vue&type=template&id=5e77e274& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274&");
+
 
 /***/ }),
 

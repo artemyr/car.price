@@ -1,5 +1,32 @@
 (self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_views_admin_Article_Edit_vue"],{
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/types */ "./node_modules/@babel/types/lib/index.js");
+/* harmony import */ var _babel_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_types__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'EditText',
+  data: function data() {
+    return {};
+  },
+  props: ['vars'],
+  mounted: function mounted() {// console.log(this.$parent);
+  },
+  methods: {}
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/admin/Article/Edit.vue?vue&type=script&lang=js&":
 /*!********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/admin/Article/Edit.vue?vue&type=script&lang=js& ***!
@@ -13,12 +40,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _babel_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/types */ "./node_modules/@babel/types/lib/index.js");
 /* harmony import */ var _babel_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_types__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_admin_form_EditTextComponent_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../components/admin/form/EditTextComponent.vue */ "./resources/js/components/admin/form/EditTextComponent.vue");
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'Edit',
+  components: {
+    EditTextComponent: _components_admin_form_EditTextComponent_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
   data: function data() {
     return {
-      article: null
+      entity: null
     };
   },
   props: [],
@@ -30,16 +62,19 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get("/api/admin/articles/".concat(this.$route.params.id)).then(function (res) {
-        _this.article = res.data.data;
+        _this.entity = res.data.data;
       });
     },
     update: function update() {
       var _this2 = this;
 
       axios.patch("/api/admin/articles/".concat(this.$route.params.id), {
-        title: this.title,
-        link: this.link,
-        name_predloshniy_padesh: this.name_predloshniy_padesh
+        title: this.entity.title,
+        link: this.entity.link,
+        content: this.entity.content,
+        preview_text: this.entity.preview_text,
+        image_path: this.entity.image_path,
+        cr_date: this.entity.cr_date
       }).then(function (res) {
         _this2.$router.push({
           name: 'admin.article.show',
@@ -52,10 +87,62 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     isDisabled: function isDisabled() {
-      return this.title && this.link && this.name_predloshniy_padesh;
+      return true;
     }
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+      _c = _vm._self._c;
+
+  return _vm.vars ? _c("div", {
+    staticClass: "admin-edit__form-control"
+  }, [_c("label", {
+    attrs: {
+      "for": _vm.vars.id
+    }
+  }, [_vm._v(_vm._s(_vm.vars.name))]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.$parent.entity[_vm.vars.id],
+      expression: "$parent.entity[vars.id]"
+    }],
+    attrs: {
+      id: _vm.vars.id,
+      type: "text"
+    },
+    domProps: {
+      value: _vm.$parent.entity[_vm.vars.id]
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+
+        _vm.$set(_vm.$parent.entity, _vm.vars.id, $event.target.value);
+      }
+    }
+  })]) : _vm._e();
+};
+
+var staticRenderFns = [];
+render._withStripped = true;
+
 
 /***/ }),
 
@@ -75,171 +162,57 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm.article ? _c("div", {
+  return _vm.entity ? _c("div", {
     staticClass: "admin-edit"
-  }, [_c("div", {
-    staticClass: "admin-edit__form-control"
-  }, [_c("label", {
+  }, [_c("EditTextComponent", {
     attrs: {
-      "for": "title"
-    }
-  }, [_vm._v("Название")]), _vm._v(" "), _c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.article.title,
-      expression: "article.title"
-    }],
-    attrs: {
-      id: "title",
-      type: "text"
-    },
-    domProps: {
-      value: _vm.article.title
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-
-        _vm.$set(_vm.article, "title", $event.target.value);
+      vars: {
+        name: "Название",
+        id: "title",
+        value: _vm.entity.title
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "admin-edit__form-control"
-  }, [_c("label", {
+  }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
-      "for": "link"
-    }
-  }, [_vm._v("Ссылка")]), _vm._v(" "), _c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.article.link,
-      expression: "article.link"
-    }],
-    attrs: {
-      id: "link",
-      type: "text"
-    },
-    domProps: {
-      value: _vm.article.link
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-
-        _vm.$set(_vm.article, "link", $event.target.value);
+      vars: {
+        name: "Ссылка",
+        id: "link",
+        value: _vm.entity.link
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "admin-edit__form-control"
-  }, [_c("label", {
+  }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
-      "for": "content"
-    }
-  }, [_vm._v("Контент")]), _vm._v(" "), _c("textarea", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.article.content,
-      expression: "article.content"
-    }],
-    attrs: {
-      id: "content",
-      type: "text"
-    },
-    domProps: {
-      value: _vm.article.content
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-
-        _vm.$set(_vm.article, "content", $event.target.value);
+      vars: {
+        name: "Контент",
+        id: "content",
+        value: _vm.entity.content
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "admin-edit__form-control"
-  }, [_c("label", {
+  }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
-      "for": "preview_text"
-    }
-  }, [_vm._v("Текст анонса")]), _vm._v(" "), _c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.article.preview_text,
-      expression: "article.preview_text"
-    }],
-    attrs: {
-      id: "preview_text",
-      type: "text"
-    },
-    domProps: {
-      value: _vm.article.preview_text
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-
-        _vm.$set(_vm.article, "preview_text", $event.target.value);
+      vars: {
+        name: "Текст анонса",
+        id: "preview_text",
+        value: _vm.entity.preview_text
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "admin-edit__form-control"
-  }, [_c("label", {
+  }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
-      "for": "image_path"
-    }
-  }, [_vm._v("Картинка")]), _vm._v(" "), _c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.article.image_path,
-      expression: "article.image_path"
-    }],
-    attrs: {
-      id: "image_path",
-      type: "text"
-    },
-    domProps: {
-      value: _vm.article.image_path
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-
-        _vm.$set(_vm.article, "image_path", $event.target.value);
+      vars: {
+        name: "Картинка",
+        id: "image_path",
+        value: _vm.entity.image_path
       }
     }
-  })]), _vm._v(" "), _c("div", {
-    staticClass: "admin-edit__form-control"
-  }, [_c("label", {
+  }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
-      "for": "cr_date"
-    }
-  }, [_vm._v("Дата создания")]), _vm._v(" "), _c("input", {
-    directives: [{
-      name: "model",
-      rawName: "v-model",
-      value: _vm.article.cr_date,
-      expression: "article.cr_date"
-    }],
-    attrs: {
-      id: "cr_date",
-      type: "text"
-    },
-    domProps: {
-      value: _vm.article.cr_date
-    },
-    on: {
-      input: function input($event) {
-        if ($event.target.composing) return;
-
-        _vm.$set(_vm.article, "cr_date", $event.target.value);
+      vars: {
+        name: "Дата создания",
+        id: "cr_date",
+        value: _vm.entity.cr_date
       }
     }
-  })]), _vm._v(" "), _c("div", [_c("input", {
+  }), _vm._v(" "), _c("div", [_c("input", {
     staticClass: "admin-edit__save",
     attrs: {
       disabled: !_vm.isDisabled,
@@ -252,7 +225,7 @@ var render = function render() {
         return _vm.update.apply(null, arguments);
       }
     }
-  })])]) : _vm._e();
+  })])], 1) : _vm._e();
 };
 
 var staticRenderFns = [];
@@ -299,6 +272,45 @@ module.exports = function toFastproperties(o) {
 
 /***/ }),
 
+/***/ "./resources/js/components/admin/form/EditTextComponent.vue":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/admin/form/EditTextComponent.vue ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EditTextComponent.vue?vue&type=template&id=5e77e274& */ "./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274&");
+/* harmony import */ var _EditTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./EditTextComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _EditTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__.render,
+  _EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/admin/form/EditTextComponent.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/views/admin/Article/Edit.vue":
 /*!***************************************************!*\
   !*** ./resources/js/views/admin/Article/Edit.vue ***!
@@ -338,6 +350,22 @@ component.options.__file = "resources/js/views/admin/Article/Edit.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditTextComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EditTextComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/views/admin/Article/Edit.vue?vue&type=script&lang=js&":
 /*!****************************************************************************!*\
   !*** ./resources/js/views/admin/Article/Edit.vue?vue&type=script&lang=js& ***!
@@ -351,6 +379,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Edit.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/admin/Article/Edit.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Edit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274& ***!
+  \*************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_EditTextComponent_vue_vue_type_template_id_5e77e274___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./EditTextComponent.vue?vue&type=template&id=5e77e274& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/admin/form/EditTextComponent.vue?vue&type=template&id=5e77e274&");
+
 
 /***/ }),
 

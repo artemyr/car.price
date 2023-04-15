@@ -1,50 +1,32 @@
 <template>
-    <div class="admin-edit" v-if="article">
+    <div class="admin-edit" v-if="entity">
 
-        <div class="admin-edit__form-control">
-            <label for="title">Название</label>
-            <input v-model="article.title" id="title" type="text">
-        </div>
+        <EditTextComponent :vars="{name:'Название',id:'title',value:entity.title}"></EditTextComponent>
 
-        <div class="admin-edit__form-control">
-            <label for="link">Ссылка</label>
-            <input v-model="article.link" id="link" type="text">
-        </div>
+        <EditTextComponent :vars="{name:'Ссылка',id:'link',value:entity.link}"></EditTextComponent>
 
         <!-- <div class="admin-edit__form-control">
             <label for="city_id">Город статьи</label>
-            <input v-model="article.city_id" id="city_id" type="text">
+            <input v-model="entity.city_id" id="city_id" type="text">
         </div> -->
 
-        <div class="admin-edit__form-control">
-            <label for="content">Контент</label>
-            <textarea v-model="article.content" id="content" type="text"></textarea>
-        </div>
+        <EditTextComponent :vars="{name:'Контент',id:'content',value:entity.content}"></EditTextComponent>
         
         <!-- <div class="admin-edit__form-control">
             <label for="tag">Tag</label>
-            <textarea v-model="article.tag" id="tag" type="text"></textarea>
+            <textarea v-model="entity.tag" id="tag" type="text"></textarea>
         </div> -->
 
 
-        <div class="admin-edit__form-control">
-            <label for="preview_text">Текст анонса</label>
-            <input v-model="article.preview_text" id="preview_text" type="text">
-        </div>
+        <EditTextComponent :vars="{name:'Текст анонса',id:'preview_text',value:entity.preview_text}"></EditTextComponent>
 
-        <div class="admin-edit__form-control">
-            <label for="image_path">Картинка</label>
-            <input v-model="article.image_path" id="image_path" type="text">
-        </div>
+        <EditTextComponent :vars="{name:'Картинка',id:'image_path',value:entity.image_path}"></EditTextComponent>
 
-        <div class="admin-edit__form-control">
-            <label for="cr_date">Дата создания</label>
-            <input v-model="article.cr_date" id="cr_date" type="text">
-        </div>
+        <EditTextComponent :vars="{name:'Дата создания',id:'cr_date',value:entity.cr_date}"></EditTextComponent>
 
         <!-- <div class="admin-edit__form-control">
             <label for="file">Файлы</label>
-            <input v-model="article.file" id="file" type="text">
+            <input v-model="entity.file" id="file" type="text">
         </div> -->
     
 
@@ -56,12 +38,16 @@
 
 <script>
 import { assertExpressionStatement } from '@babel/types';
+import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue'
 
 export default {
     name: 'Edit',
+    components: {
+        EditTextComponent
+    },
     data () {
         return {
-            article: null,
+            entity: null,
         }
     },
     props: [],
@@ -72,11 +58,18 @@ export default {
         get() {
             axios.get(`/api/admin/articles/${this.$route.params.id}`)
                 .then(res => {
-                    this.article = res.data.data
+                    this.entity = res.data.data
                 })
         },
         update() {
-            axios.patch(`/api/admin/articles/${this.$route.params.id}`, {title: this.title, link: this.link, name_predloshniy_padesh: this.name_predloshniy_padesh})
+            axios.patch(`/api/admin/articles/${this.$route.params.id}`, {
+                title: this.entity.title, 
+                link: this.entity.link,
+                content: this.entity.content,
+                preview_text: this.entity.preview_text,
+                image_path: this.entity.image_path,
+                cr_date: this.entity.cr_date,
+            })
                 .then(res => {
                     this.$router.push({name:'admin.article.show', params: {id: this.$route.params.id}})
                 })
@@ -84,7 +77,7 @@ export default {
     },
     computed: {
         isDisabled() {
-            return this.title && this.link && this.name_predloshniy_padesh;
+            return true;
         }
     }
 }

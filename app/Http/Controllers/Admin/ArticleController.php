@@ -48,7 +48,6 @@ class ArticleController extends BaseController
         if($request->has('downloads'))
             $article->downloads()->attach($request->downloads);
 
-        // return redirect()->route('admin.article.show', $article->id);
-        return redirect()->route('admin.article.index');
+        return response([]);
     }
 }
