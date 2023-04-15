@@ -1,6 +1,6 @@
 <template>
     <div class="admin-list">
-        <router-link class="admin-list__create" :to="{ name: 'admin.city.create' }">Создать новый</router-link><br>
+        <router-link class="admin-list__create" :to="{ name: 'admin.review.create' }">Создать новый</router-link><br>
 
         <div class="admin-list__body">
             <div class="admin-list__form-control">
@@ -10,16 +10,16 @@
                 <div class="admin-list__form-control-item"></div>
             </div>
 
-            <div class="admin-list__form-control" v-for="(city, index) in cities">
+            <div class="admin-list__form-control" v-for="(review, index) in reviews">
                 <div class="admin-list__form-control-item">{{ index + 1 }}</div>
                 <div class="admin-list__form-control-item">
-                    <router-link class="admin-list__link" :to="{ name: 'admin.city.edit', params: {id: city.id} }">{{ city.title }}</router-link>
+                    <router-link class="admin-list__link" :to="{ name: 'admin.review.edit', params: {id: review.id} }">{{ review.title }}</router-link>
                 </div>
                 <div class="admin-list__form-control-item">
-                    {{ city.link }}
+                    {{ review.link }}
                 </div>
                 <div class="admin-list__form-control-item">
-                    <input @click.prevent="deleteCity(city.id)" class="admin-list__remove" type="submit" value="x">
+                    <input @click.prevent="deleteReview(review.id)" class="admin-list__remove" type="submit" value="x">
                 </div>
             </div>
 
@@ -34,7 +34,7 @@ export default {
     name: 'Index',
     data () {
         return {
-            cities: null,
+            reviews: null,
         }
     },
     props: [],
@@ -43,16 +43,16 @@ export default {
     },
     methods: {
         async get () {
-            await axios.get('/api/admin/cities')
+            await axios.get('/api/admin/reviews')
             .then(response => {
-                this.cities = response.data.data;
+                this.reviews = response.data.data;
             })
             .catch(error => {
                 console.log(error);
             })
         },
-        deleteCity(id) {
-            axios.delete(`/api/admin/cities/${id}`)
+        deleteReview(id) {
+            axios.delete(`/api/admin/reviews/${id}`)
                 .then(res => {
                     this.get();
                 })

@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
-use \App\Http\Controllers\Admin\BaseController;
+use App\Http\Controllers\Admin\BaseController;
+use App\Http\Resources\Admin\Review\Resource;
 use App\Http\Requests\Review\StoreRequest;
 use App\Http\Requests\Review\UpdateRequest;
 use App\Models\City;
@@ -148,9 +149,7 @@ class ReviewController extends BaseController
 
     public function index ()
     {
-        $reviews = Review::all();
-        $meta['h1'] = 'Отзывы';
-        return view('admin.review.index', compact('reviews','meta'));
+        return Resource::collection(Review::all());
     }
 
     public function show (Review $review)

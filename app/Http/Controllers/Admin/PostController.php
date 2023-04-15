@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\BaseController;
+use App\Http\Resources\Admin\Post\Resource;
 use App\Http\Filters\PostFilter;
 use App\Http\Requests\Post\FilterRequest;
 use App\Http\Requests\Post\StoreRequest;
@@ -148,9 +149,8 @@ class PostController extends BaseController
 
         $filter = app()->make(PostFilter::class, ['queryParams' => array_filter($data)]);
         $posts = Post::filter($filter)->paginate(10);
-        $meta['h1'] = 'Посты';
-
-        return view('admin.post.index', compact('posts','meta'));
+        
+        return Resource::collection($posts);
     }
 
     public function store (StoreRequest $request)

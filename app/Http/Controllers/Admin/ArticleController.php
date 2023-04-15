@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\BaseController;
+use App\Http\Resources\Admin\Article\Resource;
 use App\Http\Requests\Article\StoreRequest;
 use App\Http\Requests\Article\UpdateRequest;
 use App\Models\Article;
@@ -162,9 +163,7 @@ class ArticleController extends BaseController
 
     public function index ()
     {
-        $articles = Article::all();
-        $meta['h1'] = 'Статьи';
-        return view('admin.article.index', compact('articles','meta'));
+        return Resource::collection(Article::all());
     }
 
     public function store (StoreRequest $request)

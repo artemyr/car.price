@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Admin\BaseController;
+use App\Http\Resources\Admin\Category\Resource;
 use App\Http\Requests\Category\StoreRequest;
 use App\Http\Requests\Category\UpdateRequest;
 use App\Models\Category;
@@ -82,9 +83,7 @@ class CategoryController extends BaseController
 
     public function index ()
     {
-        $categories = Category::all();
-        $meta['h1'] = 'Категории';
-        return view('admin.category.index', compact('categories','meta'));
+        return Resource::collection(Category::all());
     }
 
     public function store (StoreRequest $request)
