@@ -18,35 +18,31 @@ __webpack_require__.r(__webpack_exports__);
   name: 'Edit',
   data: function data() {
     return {
-      title: null,
-      link: null,
-      name_predloshniy_padesh: null
+      article: null
     };
   },
   props: [],
   mounted: function mounted() {
-    this.getCity();
+    this.get();
   },
   methods: {
-    getCity: function getCity() {
+    get: function get() {
       var _this = this;
 
-      axios.get("/api/admin/cities/".concat(this.$route.params.id)).then(function (res) {
-        _this.title = res.data.data.title;
-        _this.link = res.data.data.link;
-        _this.name_predloshniy_padesh = res.data.data.name_predloshniy_padesh;
+      axios.get("/api/admin/articles/".concat(this.$route.params.id)).then(function (res) {
+        _this.article = res.data.data;
       });
     },
     update: function update() {
       var _this2 = this;
 
-      axios.patch("/api/admin/cities/".concat(this.$route.params.id), {
+      axios.patch("/api/admin/articles/".concat(this.$route.params.id), {
         title: this.title,
         link: this.link,
         name_predloshniy_padesh: this.name_predloshniy_padesh
       }).then(function (res) {
         _this2.$router.push({
-          name: 'admin.city.show',
+          name: 'admin.article.show',
           params: {
             id: _this2.$route.params.id
           }
@@ -79,7 +75,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _c("div", {
+  return _vm.article ? _c("div", {
     staticClass: "admin-edit"
   }, [_c("div", {
     staticClass: "admin-edit__form-control"
@@ -87,24 +83,25 @@ var render = function render() {
     attrs: {
       "for": "title"
     }
-  }, [_vm._v("Название города")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Название")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.title,
-      expression: "title"
+      value: _vm.article.title,
+      expression: "article.title"
     }],
     attrs: {
       id: "title",
       type: "text"
     },
     domProps: {
-      value: _vm.title
+      value: _vm.article.title
     },
     on: {
       input: function input($event) {
         if ($event.target.composing) return;
-        _vm.title = $event.target.value;
+
+        _vm.$set(_vm.article, "title", $event.target.value);
       }
     }
   })]), _vm._v(" "), _c("div", {
@@ -113,50 +110,133 @@ var render = function render() {
     attrs: {
       "for": "link"
     }
-  }, [_vm._v("Ссылка ведущая на город")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Ссылка")]), _vm._v(" "), _c("input", {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.link,
-      expression: "link"
+      value: _vm.article.link,
+      expression: "article.link"
     }],
     attrs: {
       id: "link",
       type: "text"
     },
     domProps: {
-      value: _vm.link
+      value: _vm.article.link
     },
     on: {
       input: function input($event) {
         if ($event.target.composing) return;
-        _vm.link = $event.target.value;
+
+        _vm.$set(_vm.article, "link", $event.target.value);
       }
     }
   })]), _vm._v(" "), _c("div", {
     staticClass: "admin-edit__form-control"
   }, [_c("label", {
     attrs: {
-      "for": "name_predloshniy_padesh"
+      "for": "content"
     }
-  }, [_vm._v("Город в предложном падеже")]), _vm._v(" "), _c("input", {
+  }, [_vm._v("Контент")]), _vm._v(" "), _c("textarea", {
     directives: [{
       name: "model",
       rawName: "v-model",
-      value: _vm.name_predloshniy_padesh,
-      expression: "name_predloshniy_padesh"
+      value: _vm.article.content,
+      expression: "article.content"
     }],
     attrs: {
-      id: "name_predloshniy_padesh",
+      id: "content",
       type: "text"
     },
     domProps: {
-      value: _vm.name_predloshniy_padesh
+      value: _vm.article.content
     },
     on: {
       input: function input($event) {
         if ($event.target.composing) return;
-        _vm.name_predloshniy_padesh = $event.target.value;
+
+        _vm.$set(_vm.article, "content", $event.target.value);
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "admin-edit__form-control"
+  }, [_c("label", {
+    attrs: {
+      "for": "preview_text"
+    }
+  }, [_vm._v("Текст анонса")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.article.preview_text,
+      expression: "article.preview_text"
+    }],
+    attrs: {
+      id: "preview_text",
+      type: "text"
+    },
+    domProps: {
+      value: _vm.article.preview_text
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+
+        _vm.$set(_vm.article, "preview_text", $event.target.value);
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "admin-edit__form-control"
+  }, [_c("label", {
+    attrs: {
+      "for": "image_path"
+    }
+  }, [_vm._v("Картинка")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.article.image_path,
+      expression: "article.image_path"
+    }],
+    attrs: {
+      id: "image_path",
+      type: "text"
+    },
+    domProps: {
+      value: _vm.article.image_path
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+
+        _vm.$set(_vm.article, "image_path", $event.target.value);
+      }
+    }
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "admin-edit__form-control"
+  }, [_c("label", {
+    attrs: {
+      "for": "cr_date"
+    }
+  }, [_vm._v("Дата создания")]), _vm._v(" "), _c("input", {
+    directives: [{
+      name: "model",
+      rawName: "v-model",
+      value: _vm.article.cr_date,
+      expression: "article.cr_date"
+    }],
+    attrs: {
+      id: "cr_date",
+      type: "text"
+    },
+    domProps: {
+      value: _vm.article.cr_date
+    },
+    on: {
+      input: function input($event) {
+        if ($event.target.composing) return;
+
+        _vm.$set(_vm.article, "cr_date", $event.target.value);
       }
     }
   })]), _vm._v(" "), _c("div", [_c("input", {
@@ -172,7 +252,7 @@ var render = function render() {
         return _vm.update.apply(null, arguments);
       }
     }
-  })])]);
+  })])]) : _vm._e();
 };
 
 var staticRenderFns = [];

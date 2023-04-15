@@ -18,6 +18,13 @@ class Resource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'link' => $this->link,
+            'city_id' => $this->city_id,
+            'content' => $this->content,
+            'tag' => $this->tag,
+            'preview_text' => $this->preview_text,
+            'image_path' => $this->image_path,
+            'cr_date' => $this->cr_date,
+            'file' => $this->file
         ];
     }
 }

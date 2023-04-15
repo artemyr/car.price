@@ -36,11 +36,11 @@ export default {
     },
     props: [],
     mounted() {
-        this.getCity();
+        this.get();
     },
     methods: {
-        getCity() {
-            axios.get(`/api/admin/cities/${this.$route.params.id}`)
+        get() {
+            axios.get(`/api/admin/categories/${this.$route.params.id}`)
                 .then(res => {
                     this.title = res.data.data.title
                     this.link = res.data.data.link
@@ -48,9 +48,9 @@ export default {
                 })
         },
         update() {
-            axios.patch(`/api/admin/cities/${this.$route.params.id}`, {title: this.title, link: this.link, name_predloshniy_padesh: this.name_predloshniy_padesh})
+            axios.patch(`/api/admin/categories/${this.$route.params.id}`, {title: this.title, link: this.link, name_predloshniy_padesh: this.name_predloshniy_padesh})
                 .then(res => {
-                    this.$router.push({name:'admin.city.show', params: {id: this.$route.params.id}})
+                    this.$router.push({name:'admin.category.show', params: {id: this.$route.params.id}})
                 })
         }
     },

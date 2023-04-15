@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admin'], function() {
 
-    Route::get('/{page}', [App\Http\Controllers\HomeController::class, 'index'])->name('admin')->where('page', '.*');
+    Route::get('', [App\Http\Controllers\HomeController::class, 'index'])->name('admin.index')->where('page', '.*');
+    Route::get('{page}', [App\Http\Controllers\HomeController::class, 'index'])->name('admin')->where('page', '.*');
 
     Route::resource('/download', 'File\DownloadController')->only(['store','update','destroy']);
     Route::resource('/picture', 'File\PictureController')->only(['store','update','destroy']);

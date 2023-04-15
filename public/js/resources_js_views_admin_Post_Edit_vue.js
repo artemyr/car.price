@@ -25,13 +25,13 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: [],
   mounted: function mounted() {
-    this.getCity();
+    this.get();
   },
   methods: {
-    getCity: function getCity() {
+    get: function get() {
       var _this = this;
 
-      axios.get("/api/admin/cities/".concat(this.$route.params.id)).then(function (res) {
+      axios.get("/api/admin/posts/".concat(this.$route.params.id)).then(function (res) {
         _this.title = res.data.data.title;
         _this.link = res.data.data.link;
         _this.name_predloshniy_padesh = res.data.data.name_predloshniy_padesh;
@@ -40,13 +40,13 @@ __webpack_require__.r(__webpack_exports__);
     update: function update() {
       var _this2 = this;
 
-      axios.patch("/api/admin/cities/".concat(this.$route.params.id), {
+      axios.patch("/api/admin/posts/".concat(this.$route.params.id), {
         title: this.title,
         link: this.link,
         name_predloshniy_padesh: this.name_predloshniy_padesh
       }).then(function (res) {
         _this2.$router.push({
-          name: 'admin.city.show',
+          name: 'admin.post.show',
           params: {
             id: _this2.$route.params.id
           }

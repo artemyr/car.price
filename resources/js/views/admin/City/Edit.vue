@@ -1,19 +1,19 @@
 <template>
-    <div class="admin-edit">
+    <div class="admin-edit" v-if="city">
 
         <div class="admin-edit__form-control">
             <label for="title">Название города</label>
-            <input v-model="title" id="title" type="text">
+            <input v-model="city.title" id="title" type="text">
         </div>
 
         <div class="admin-edit__form-control">
             <label for="link">Ссылка ведущая на город</label>
-            <input v-model="link" id="link" type="text">
+            <input v-model="city.link" id="link" type="text">
         </div>
 
         <div class="admin-edit__form-control">
             <label for="name_predloshniy_padesh">Город в предложном падеже</label>
-            <input v-model="name_predloshniy_padesh" id="name_predloshniy_padesh" type="text">
+            <input v-model="city.name_predloshniy_padesh" id="name_predloshniy_padesh" type="text">
         </div>
 
         <div>
@@ -29,22 +29,18 @@ export default {
     name: 'Edit',
     data () {
         return {
-            title: null,
-            link: null,
-            name_predloshniy_padesh: null
+            city: null
         }
     },
     props: [],
     mounted() {
-        this.getCity();
+        this.get();
     },
     methods: {
-        getCity() {
+        get() {
             axios.get(`/api/admin/cities/${this.$route.params.id}`)
                 .then(res => {
-                    this.title = res.data.data.title
-                    this.link = res.data.data.link
-                    this.name_predloshniy_padesh = res.data.data.name_predloshniy_padesh
+                    this.city = res.data.data
                 })
         },
         update() {
