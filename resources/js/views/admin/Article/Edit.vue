@@ -5,17 +5,17 @@
 
         <EditTextComponent :vars="{name:'Ссылка',id:'link',value:entity.link}"></EditTextComponent>
 
-        <!-- <div class="admin-edit__form-control">
-            <label for="city_id">Город статьи</label>
-            <input v-model="entity.city_id" id="city_id" type="text">
-        </div> -->
+        <EditSelectComponent :vars="{name:'Город статьи',id:'city_id',value:entity.city_id, entity:'cities'}"></EditSelectComponent>
 
-        <EditTextComponent :vars="{name:'Контент',id:'content',value:entity.content}"></EditTextComponent>
+        <EditTextAreaComponent :vars="{name:'Контент',id:'content',value:entity.content}"></EditTextAreaComponent>
         
+
+        <!-- <EditSelectMultiComponent :vars="{name:'Tag', id:'tag', value:entity.tag, entity:'tags'}"></EditSelectMultiComponent> -->
         <!-- <div class="admin-edit__form-control">
             <label for="tag">Tag</label>
             <textarea v-model="entity.tag" id="tag" type="text"></textarea>
         </div> -->
+
 
 
         <EditTextComponent :vars="{name:'Текст анонса',id:'preview_text',value:entity.preview_text}"></EditTextComponent>
@@ -39,15 +39,21 @@
 <script>
 import { assertExpressionStatement } from '@babel/types';
 import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue'
+import EditTextAreaComponent from '../../../components/admin/form/EditTextAreaComponent.vue'
+import EditSelectComponent from '../../../components/admin/form/EditSelectComponent.vue'
+import EditSelectMultiComponent from '../../../components/admin/form/EditSelectMultiComponent.vue'
 
 export default {
     name: 'Edit',
     components: {
-        EditTextComponent
+        EditTextComponent,
+        EditTextAreaComponent,
+        EditSelectComponent,
+        EditSelectMultiComponent
     },
     data () {
         return {
-            entity: null,
+            entity: null
         }
     },
     props: [],
@@ -68,6 +74,7 @@ export default {
                 content: this.entity.content,
                 preview_text: this.entity.preview_text,
                 image_path: this.entity.image_path,
+                city_id: this.entity.city_id,
                 cr_date: this.entity.cr_date,
             })
                 .then(res => {
