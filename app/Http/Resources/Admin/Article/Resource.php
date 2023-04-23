@@ -24,7 +24,7 @@ class Resource extends JsonResource
             'preview_text' => $this->preview_text,
             'image_path' => $this->image_path,
             'cr_date' => $this->cr_date,
-            'file' => $this->file
+            'downloads' => $this->downloads
         ];
     }
 }

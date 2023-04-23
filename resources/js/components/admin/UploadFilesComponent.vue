@@ -1,5 +1,6 @@
 <template>
     <div class="admin-edit__files">
+        <p>{{ vars.name }}</p>
         <div class="" v-if="fileProgress">
             <div class="progress-bar" :style="{ width: fileProgress + '%' }">{{ fileCurrent }}%</div>
         </div>
@@ -35,18 +36,27 @@ export default {
             fileCurrent:'',
         }
     },
-    props: ['files'],
+    props: ['vars'],
     mounted() {
-        this.downloads = this.files;
+        this.downloads = this.$parent.entity[this.vars.id];
+        this.updateList();
     },
     methods: {
         addFile() {
             this.downloads.push({id: 0, title: '', file: [], is_new: true});
         },
+        updateList() {
+            this.$parent.entity[this.vars.id] = [];
+            this.downloads.forEach(el => {
+                this.$parent.entity[this.vars.id].push(el.id)
+            })
+        },
         deleteFile(index) {
 
             if (this.downloads[index].is_new){
                 this.downloads.splice(index, 1);
+
+                this.updateList();
                 return;
             }
 
@@ -54,6 +64,8 @@ export default {
             .then(response => {
                 if (response.data.result) {
                     this.downloads.splice(index, 1);
+
+                    this.updateList();
                 }
             })
         },
@@ -78,6 +90,8 @@ export default {
             .catch(error => {
                 console.log(error);
             })
+
+            this.updateList();
 
             this.fileProgress = 0;
             this.fileCurrent = '';

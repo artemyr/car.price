@@ -17,12 +17,8 @@
 
         <EditTextComponent :vars="{name:'Дата создания',id:'cr_date'}"></EditTextComponent>
 
-        <!-- <div class="admin-edit__form-control">
-            <label for="file">Файлы</label>
-            <input v-model="entity.file" id="file" type="text">
-        </div> -->
+        <UploadFilesComponent :vars="{name: 'Файлы',id: 'downloads'}"></UploadFilesComponent>
     
-
         <div>
             <input :disabled="!isDisabled" @click.prevent="update" class="admin-edit__save" type="submit" value="Сохранить">
         </div>
@@ -34,13 +30,15 @@ import { assertExpressionStatement } from '@babel/types';
 import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue'
 import EditTextAreaComponent from '../../../components/admin/form/EditTextAreaComponent.vue'
 import EditSelectComponent from '../../../components/admin/form/EditSelectComponent.vue'
+import UploadFilesComponent from '../../../components/admin/UploadFilesComponent.vue'
 
 export default {
     name: 'Edit',
     components: {
         EditTextComponent,
         EditTextAreaComponent,
-        EditSelectComponent
+        EditSelectComponent,
+        UploadFilesComponent
     },
     data () {
         return {
@@ -67,7 +65,8 @@ export default {
                 image_path: this.entity.image_path,
                 city_id: this.entity.city_id,
                 cr_date: this.entity.cr_date,
-                tag: this.entity.tag
+                tag: this.entity.tag,
+                downloads: this.entity.downloads
             })
                 .then(res => {
                     this.$router.push({name:'admin.article.show', params: {id: this.$route.params.id}})
