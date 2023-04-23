@@ -62,4 +62,8 @@ Route::group(["namespace" => "Admin", 'prefix' => 'admin',
         Route::patch('/{category}', 'CategoryController@update')->name('admin.category.update');
     });
 
+    Route::group(['prefix' => 'tags'], function() {
+        Route::get('/', 'TagController@index')->name('admin.tag.index');
+    });
+
 });

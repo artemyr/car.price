@@ -9,14 +9,7 @@
 
         <EditTextAreaComponent :vars="{name:'Контент',id:'content',value:entity.content}"></EditTextAreaComponent>
         
-
-        <!-- <EditSelectMultiComponent :vars="{name:'Tag', id:'tag', value:entity.tag, entity:'tags'}"></EditSelectMultiComponent> -->
-        <!-- <div class="admin-edit__form-control">
-            <label for="tag">Tag</label>
-            <textarea v-model="entity.tag" id="tag" type="text"></textarea>
-        </div> -->
-
-
+        <EditTextComponent :vars="{name:'Подпись', id:'tag', value:entity.tag}"></EditTextComponent>
 
         <EditTextComponent :vars="{name:'Текст анонса',id:'preview_text',value:entity.preview_text}"></EditTextComponent>
 
@@ -41,15 +34,13 @@ import { assertExpressionStatement } from '@babel/types';
 import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue'
 import EditTextAreaComponent from '../../../components/admin/form/EditTextAreaComponent.vue'
 import EditSelectComponent from '../../../components/admin/form/EditSelectComponent.vue'
-import EditSelectMultiComponent from '../../../components/admin/form/EditSelectMultiComponent.vue'
 
 export default {
     name: 'Edit',
     components: {
         EditTextComponent,
         EditTextAreaComponent,
-        EditSelectComponent,
-        EditSelectMultiComponent
+        EditSelectComponent
     },
     data () {
         return {
@@ -76,6 +67,7 @@ export default {
                 image_path: this.entity.image_path,
                 city_id: this.entity.city_id,
                 cr_date: this.entity.cr_date,
+                tag: this.entity.tag
             })
                 .then(res => {
                     this.$router.push({name:'admin.article.show', params: {id: this.$route.params.id}})
@@ -84,7 +76,7 @@ export default {
     },
     computed: {
         isDisabled() {
-            return true;
+            return this.entity.title && this.entity.link;
         }
     }
 }

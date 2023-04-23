@@ -22,6 +22,7 @@ class Resource extends JsonResource
             'image' => $this->image,
             'category_id' => $this->category_id,
             'city_id' => $this->city_id,
+            'tags' => $this->tags->pluck('id'),
         ];
     }
 }

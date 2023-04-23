@@ -28,7 +28,7 @@ class StoreRequest extends FormRequest
             'content' => 'required|string',
             'image' => 'string',
             'category_id' => '',
-            'tags' => '',
+            'tags' => 'array|nullable',
             'city_id' => 'integer',
             'link' => 'string',
         ];

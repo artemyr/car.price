@@ -9,14 +9,7 @@
 
         <EditTextAreaComponent :vars="{name:'Контент',id:'content',value:entity.content}"></EditTextAreaComponent>
 
-
-        <!-- <EditSelectMultiComponent :vars="{name:'Tag', id:'tag', value:entity.tag, entity:'tags'}"></EditSelectMultiComponent> -->
-        <!-- <div class="admin-edit__form-control">
-            <label for="tag">Tag</label>
-            <textarea v-model="entity.tag" id="tag" type="text"></textarea>
-        </div> -->
-
-
+        <EditTextComponent :vars="{name:'Подпись', id:'tag', value:entity.tag}"></EditTextComponent>
 
         <EditTextComponent :vars="{name:'Текст анонса',id:'preview_text',value:entity.preview_text}"></EditTextComponent>
 
@@ -59,6 +52,7 @@ export default {
                 image_path: null,
                 city_id: null,
                 cr_date: null,
+                tag: null
             }
         }
     },
@@ -76,6 +70,7 @@ export default {
                 image_path: this.entity.image_path,
                 city_id: this.entity.city_id,
                 cr_date: this.entity.cr_date,
+                tag: this.entity.tag
             })
                 .then(res => {
                     this.$router.push({ name: 'admin.article.index' })

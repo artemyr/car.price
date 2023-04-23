@@ -1,28 +1,6 @@
 <template>
     <div class="admin-edit" v-if="entity">
 
-            <!-- [
-                'select',
-                'category_id',
-                $categorys,
-                'Категория поста',
-                '',
-            ],
-            [
-                'select_multiple',
-                'tags[]',
-                $tags,
-                'Теги',
-                '',
-            ],
-            [
-                'select',
-                'city_id',
-                $cities,
-                'Город поста',
-                '',
-            ], -->
-
         <EditTextComponent :vars="{name:'Название',id:'title',value:entity.title}"></EditTextComponent>
         
         <EditTextComponent :vars="{name:'Ссылка',id:'link',value:entity.link}"></EditTextComponent>
@@ -30,6 +8,8 @@
         <EditSelectComponent :vars="{name:'Категория',id:'category_id',value:entity.category_id, entity:'categories'}"></EditSelectComponent>
 
         <EditSelectComponent :vars="{name:'Город',id:'city_id',value:entity.city_id, entity:'cities'}"></EditSelectComponent>
+
+        <EditSelectMultiComponent :vars="{name:'Tag', id:'tags', value:entity.tags, entity:'tags'}"></EditSelectMultiComponent>
 
         <EditTextAreaComponent :vars="{name:'Контент',id:'content',value:entity.content}"></EditTextAreaComponent>
 
@@ -46,13 +26,15 @@ import { assertExpressionStatement } from '@babel/types';
 import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue'
 import EditTextAreaComponent from '../../../components/admin/form/EditTextAreaComponent.vue'
 import EditSelectComponent from '../../../components/admin/form/EditSelectComponent.vue'
+import EditSelectMultiComponent from '../../../components/admin/form/EditSelectMultiComponent.vue'
 
 export default {
     name: 'Edit',
     components: {
         EditTextComponent,
         EditTextAreaComponent,
-        EditSelectComponent
+        EditSelectComponent,
+        EditSelectMultiComponent
     },
     data () {
         return {
@@ -77,7 +59,8 @@ export default {
                 content: this.entity.content, 
                 image: this.entity.image,
                 category_id: this.entity.category_id,
-                city_id: this.entity.city_id
+                city_id: this.entity.city_id,
+                tags: this.entity.tags
             })
                 .then(res => {
                     this.$router.push({name:'admin.post.show', params: {id: this.$route.params.id}})

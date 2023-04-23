@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Resources\Admin\Review;
+namespace App\Http\Resources\Admin\Tag;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -17,14 +17,6 @@ class Resource extends JsonResource
         return [
             'id' => $this->id,
             'title' => $this->title,
-            'link' => $this->link,
-            'content' => $this->content,
-            'author' => $this->author,
-            'rate' => $this->rate,
-            'cr_date' => $this->cr_date,
-            'image_path' => $this->image_path,
-            'author_ava' => $this->author_ava,
-            'city_id' => $this->city_id,
         ];
     }
 }

@@ -26,7 +26,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   name: 'EditSelect',
   data: function data() {
     return {
-      entity: []
+      values: []
     };
   },
   props: ['vars'],
@@ -44,7 +44,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.next = 2;
                 return axios.get("/api/admin/".concat(_this.vars.entity)).then(function (response) {
-                  _this.entity = response.data.data;
+                  _this.values = response.data.data;
                 })["catch"](function (error) {
                   console.log(error);
                 });
@@ -234,7 +234,7 @@ var render = function render() {
         _vm.$set(_vm.$parent.entity, _vm.vars.id, $event.target.multiple ? $$selectedVal : $$selectedVal[0]);
       }
     }
-  }, _vm._l(_vm.entity, function (item) {
+  }, _vm._l(_vm.values, function (item) {
     return _c("option", {
       domProps: {
         value: item.id

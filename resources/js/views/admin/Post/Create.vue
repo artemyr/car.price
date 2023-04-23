@@ -9,6 +9,8 @@
 
         <EditSelectComponent :vars="{name:'Город',id:'city_id',value:entity.city_id, entity:'cities'}"></EditSelectComponent>
 
+        <EditSelectMultiComponent :vars="{name:'Tag', id:'tags', value:entity.tags, entity:'tags'}"></EditSelectMultiComponent>
+
         <EditTextAreaComponent :vars="{name:'Контент',id:'content',value:entity.content}"></EditTextAreaComponent>
 
         <EditTextComponent :vars="{name:'Картинка поста',id:'image',value:entity.image}"></EditTextComponent>
@@ -24,13 +26,15 @@ import { assertExpressionStatement } from '@babel/types';
 import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue'
 import EditTextAreaComponent from '../../../components/admin/form/EditTextAreaComponent.vue'
 import EditSelectComponent from '../../../components/admin/form/EditSelectComponent.vue'
+import EditSelectMultiComponent from '../../../components/admin/form/EditSelectMultiComponent.vue'
 
 export default {
     name: 'Create',
     components: {
         EditTextComponent,
         EditTextAreaComponent,
-        EditSelectComponent
+        EditSelectComponent,
+        EditSelectMultiComponent
     },
     data () {
         return {
@@ -41,6 +45,7 @@ export default {
                 image: null,
                 category_id: null,
                 city_id: null,
+                tags: null
             }
         }
     },
@@ -56,7 +61,8 @@ export default {
                 content: this.entity.content,
                 image: this.entity.image,
                 city_id: this.entity.city_id,
-                category_id: this.entity.category_id
+                category_id: this.entity.category_id,
+                tags: this.entity.tags
             })
                 .then(res => {
                     this.$router.push({ name: 'admin.post.index' })

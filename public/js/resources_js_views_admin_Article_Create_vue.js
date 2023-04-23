@@ -26,7 +26,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   name: 'EditSelect',
   data: function data() {
     return {
-      entity: []
+      values: []
     };
   },
   props: ['vars'],
@@ -44,7 +44,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 _context.next = 2;
                 return axios.get("/api/admin/".concat(_this.vars.entity)).then(function (response) {
-                  _this.entity = response.data.data;
+                  _this.values = response.data.data;
                 })["catch"](function (error) {
                   console.log(error);
                 });
@@ -152,7 +152,8 @@ __webpack_require__.r(__webpack_exports__);
         preview_text: null,
         image_path: null,
         city_id: null,
-        cr_date: null
+        cr_date: null,
+        tag: null
       }
     };
   },
@@ -169,7 +170,8 @@ __webpack_require__.r(__webpack_exports__);
         preview_text: this.entity.preview_text,
         image_path: this.entity.image_path,
         city_id: this.entity.city_id,
-        cr_date: this.entity.cr_date
+        cr_date: this.entity.cr_date,
+        tag: this.entity.tag
       }).then(function (res) {
         _this.$router.push({
           name: 'admin.article.index'
@@ -230,7 +232,7 @@ var render = function render() {
         _vm.$set(_vm.$parent.entity, _vm.vars.id, $event.target.multiple ? $$selectedVal : $$selectedVal[0]);
       }
     }
-  }, _vm._l(_vm.entity, function (item) {
+  }, _vm._l(_vm.values, function (item) {
     return _c("option", {
       domProps: {
         value: item.id
@@ -398,6 +400,14 @@ var render = function render() {
         name: "Контент",
         id: "content",
         value: _vm.entity.content
+      }
+    }
+  }), _vm._v(" "), _c("EditTextComponent", {
+    attrs: {
+      vars: {
+        name: "Подпись",
+        id: "tag",
+        value: _vm.entity.tag
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {

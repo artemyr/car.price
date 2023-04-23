@@ -2,7 +2,7 @@
     <div v-if="vars" class="admin-edit__form-control">
         <label :for="vars.id">{{ vars.name }}</label>
         <select v-model="$parent.entity[vars.id]" :id="vars.id" multiple>
-            <option v-for="city in cities" :value="city.id">{{ city.title }}</option>
+            <option v-for="value in values" :value="value.id">{{ value.title }}</option>
         </select>
     </div>
 </template>
@@ -14,7 +14,7 @@ export default {
     name: 'EditSelectMulti',
     data () {
         return {
-            cities: []
+            values: []
         }
     },
     props: ['vars'],
@@ -24,9 +24,9 @@ export default {
     },
     methods: {
         async get () {
-            await axios.get('/api/admin/tags')
+            await axios.get(`/api/admin/${this.vars.entity}`)
             .then(response => {
-                this.cities = response.data.data;
+                this.values = response.data.data;
             })
             .catch(error => {
                 console.log(error);

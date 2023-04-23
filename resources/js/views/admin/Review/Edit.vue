@@ -1,19 +1,11 @@
 <template>
-    <div class="admin-edit" v-if="entity">
-
-       
-            <!-- [
-                'select',
-                'city_id',
-                $cities,
-                'Город отзыва',
-                '',
-            ], -->
-                    
+    <div class="admin-edit" v-if="entity">                    
 
         <EditTextComponent :vars="{name:'Название',id:'title',value:entity.title}"></EditTextComponent>
 
         <EditTextComponent :vars="{name:'Ссылка',id:'link',value:entity.link}"></EditTextComponent>
+
+        <EditSelectComponent :vars="{name:'Город',id:'city_id',value:entity.city_id, entity:'cities'}"></EditSelectComponent>
 
         <EditTextAreaComponent :vars="{name:'Контент',id:'content',value:entity.content}"></EditTextAreaComponent>
 
@@ -37,12 +29,14 @@
 import { assertExpressionStatement } from '@babel/types';
 import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue'
 import EditTextAreaComponent from '../../../components/admin/form/EditTextAreaComponent.vue'
+import EditSelectComponent from '../../../components/admin/form/EditSelectComponent.vue'
 
 export default {
     name: 'Edit',
     components: {
         EditTextComponent,
         EditTextAreaComponent,
+        EditSelectComponent
     },
     data () {
         return {
@@ -70,6 +64,7 @@ export default {
                 rate: this.entity.rate,
                 image_path: this.entity.image_path,
                 author_ava: this.entity.author_ava,
+                city_id: this.entity.city_id
             })
                 .then(res => {
                     this.$router.push({name:'admin.review.show', params: {id: this.$route.params.id}})
