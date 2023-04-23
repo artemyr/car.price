@@ -23,124 +23,11 @@ class PostController extends BaseController
         $this->service = $service;
     }
 
-    public function create ()
-    {
-        $categorys = Category::all();
-        $tags = Tag::all();
-        $cities = City::all();
-
-        $formControl = $this->getEditForm('', 'admin.post.store', [
-            [
-                'text',
-                'title',
-                '',
-                'Заголовок поста'
-            ],
-            [
-                'text',
-                'link',
-                '' ,
-                'Ссылка поста'
-            ],
-            [
-                'textarea',
-                'content',
-                '',
-                'Контент поста'
-            ],
-            [
-                'text',
-                'image',
-                '',
-                'Картинка поста'
-            ],
-            [
-                'select',
-                'category_id',
-                $categorys,
-                'Категория поста',
-                '',
-            ],
-            [
-                'select_multiple',
-                'tags[]',
-                $tags,
-                'Теги',
-                '',
-            ],
-            [
-                'select',
-                'city_id',
-                $cities,
-                'Город поста',
-                '',
-            ],
-        ]);
-
-        return view('admin.form.create', compact('formControl'));
-    }
 
     public function destroy (Post $post)
     {
         $post->delete();
-        return redirect()->route('admin.post.index');
-    }
-
-    public function edit (Post $post)
-    {
-        $categorys = Category::all();
-        $tags = Tag::all();
-        $cities = City::all();
-
-        $formControl = $this->getEditForm($post->id, 'admin.post.update', [
-            [
-                'text',
-                'title',
-                $post->title,
-                'Заголовок поста'
-            ],
-            [
-                'text',
-                'link',
-                $post->link,
-                'Ссылка поста'
-            ],
-            [
-                'textarea',
-                'content',
-                $post->content,
-                'Контент поста'
-            ],
-            [
-                'text',
-                'image',
-                $post->image,
-                'Картинка поста'
-            ],
-            [
-                'select',
-                'category_id',
-                $categorys,
-                'Категория поста',
-                $post->category->id
-            ],
-            [
-                'select_multiple',
-                'tags[]',
-                $tags,
-                'Теги',
-                $post->tags
-            ],
-            [
-                'select',
-                'city_id',
-                $cities,
-                'Город поста',
-                $post->city_id
-            ],
-        ]);
-        $meta['h1'] = 'Пост';
-        return view('admin.form.edit', compact('formControl','meta'));
+        return response([]);
     }
 
     public function index (FilterRequest $request)
@@ -151,6 +38,11 @@ class PostController extends BaseController
         $posts = Post::filter($filter)->paginate(10);
         
         return Resource::collection($posts);
+    }
+
+    public function show (Post $post)
+    {
+        return new Resource($post);
     }
 
     public function store (StoreRequest $request)
@@ -165,9 +57,8 @@ class PostController extends BaseController
     public function update (UpdateRequest $request, Post $post)
     {
         $data = $request->validated();
-
         $this->service->update($post, $data);
 
-        return redirect()->route('admin.post.index');
+        return response([]);
     }
 }

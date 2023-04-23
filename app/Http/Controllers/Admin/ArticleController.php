@@ -15,7 +15,7 @@ class ArticleController extends BaseController
     {
         $article->downloads()->detach();
         $article->delete();
-        return redirect()->route('admin.article.index');
+        return response([]);
     }
 
     public function index ()
@@ -36,7 +36,7 @@ class ArticleController extends BaseController
         if($request->has('downloads'))
             $article->downloads()->attach($request->downloads);
 
-        return redirect()->route('admin.article.index');
+        return response([]);
     }
 
     public function update (UpdateRequest $request, Article $article)

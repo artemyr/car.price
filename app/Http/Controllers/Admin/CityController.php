@@ -13,6 +13,7 @@ class CityController extends BaseController
     public function destroy (City $city)
     {
         $city->delete();
+        return response([]);
     }
 
     public function index ()

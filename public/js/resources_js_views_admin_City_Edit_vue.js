@@ -85,7 +85,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   computed: {
     isDisabled: function isDisabled() {
-      return this.entity.title && this.entity.link && this.entity.name_predloshniy_padesh;
+      return this.entity.title && this.entity.link;
     }
   }
 });

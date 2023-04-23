@@ -18,19 +18,19 @@ __webpack_require__.r(__webpack_exports__);
   name: 'Edit',
   data: function data() {
     return {
-      city: null
+      entity: null
     };
   },
   props: [],
   mounted: function mounted() {
-    this.getCity();
+    this.get();
   },
   methods: {
-    getCity: function getCity() {
+    get: function get() {
       var _this = this;
 
-      axios.get("/api/admin/cities/".concat(this.$route.params.id)).then(function (res) {
-        _this.city = res.data.data;
+      axios.get("/api/admin/posts/".concat(this.$route.params.id)).then(function (res) {
+        _this.entity = res.data.data;
       });
     }
   }
@@ -54,7 +54,7 @@ var render = function render() {
   var _vm = this,
       _c = _vm._self._c;
 
-  return _vm.city ? _c("div", {
+  return _vm.entity ? _c("div", {
     staticClass: "admin-edit"
   }, [_c("div", {
     staticClass: "admin-edit__form-control"
@@ -62,36 +62,46 @@ var render = function render() {
     attrs: {
       "for": "title"
     }
-  }, [_vm._v("Название города")]), _vm._v(" "), _c("p", {
+  }, [_vm._v("Название")]), _vm._v(" "), _c("p", {
     attrs: {
       id: "title"
     }
-  }, [_vm._v(_vm._s(_vm.city.title))])]), _vm._v(" "), _c("div", {
+  }, [_vm._v(_vm._s(_vm.entity.title))])]), _vm._v(" "), _c("div", {
     staticClass: "admin-edit__form-control"
   }, [_c("label", {
     attrs: {
       "for": "link"
     }
-  }, [_vm._v("Ссылка ведущая на город")]), _vm._v(" "), _c("p", {
+  }, [_vm._v("Ссылка")]), _vm._v(" "), _c("p", {
     attrs: {
       id: "link"
     }
-  }, [_vm._v(_vm._s(_vm.city.link))])]), _vm._v(" "), _c("div", {
+  }, [_vm._v(_vm._s(_vm.entity.link))])]), _vm._v(" "), _c("div", {
     staticClass: "admin-edit__form-control"
   }, [_c("label", {
     attrs: {
-      "for": "name_predloshniy_padesh"
+      "for": "link"
     }
-  }, [_vm._v("Город в предложном падеже")]), _vm._v(" "), _c("p", {
+  }, [_vm._v("Контент")]), _vm._v(" "), _c("p", {
     attrs: {
-      id: "name_predloshniy_padesh"
+      id: "link"
     }
-  }, [_vm._v(_vm._s(_vm.city.name_predloshniy_padesh))])]), _vm._v(" "), _c("router-link", {
+  }, [_vm._v(_vm._s(_vm.entity.content))])]), _vm._v(" "), _c("div", {
+    staticClass: "admin-edit__form-control"
+  }, [_c("label", {
+    attrs: {
+      "for": "link"
+    }
+  }, [_vm._v("Картинка поста")]), _vm._v(" "), _c("p", {
+    attrs: {
+      id: "link"
+    }
+  }, [_vm._v(_vm._s(_vm.entity.image))])]), _vm._v(" "), _c("router-link", {
     attrs: {
       to: {
-        name: "admin.city.edit",
+        name: "admin.post.edit",
         params: {
-          id: _vm.city.id
+          id: _vm.entity.id
         }
       }
     }

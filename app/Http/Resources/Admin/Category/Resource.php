@@ -18,6 +18,8 @@ class Resource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'link' => $this->link,
+            'subtitle' => $this->subtitle,
+            'icon' => $this->icon,
         ];
     }
 }

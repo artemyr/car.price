@@ -27,8 +27,7 @@ class UpdateRequest extends FormRequest
             'title' => 'string',
             'link' => 'string',
             'subtitle' => 'string|nullable',
-            'icon' => 'string|nullable',
-            'rel' => 'integer|nullable',
+            'icon' => 'string|nullable'
         ];
     }
 }

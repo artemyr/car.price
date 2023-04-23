@@ -52,7 +52,7 @@ export default {
     },
     computed: {
         isDisabled() {
-            return this.entity.title && this.entity.link && this.entity.name_predloshniy_padesh;
+            return this.entity.title && this.entity.link;
         }
     }
 }

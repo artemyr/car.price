@@ -27,8 +27,8 @@ class StoreRequest extends FormRequest
             'title' => 'required|string',
             'link' => 'required|string',
             'subtitle' => 'string|nullable',
-            'icon' => 'string|nullable',
-            'rel' => 'integer|nullable',
+            'city_id' => 'integer',
+            'icon' => 'string|nullable'
         ];
     }
 }
