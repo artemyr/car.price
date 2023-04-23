@@ -1,11 +1,11 @@
 <template>
     <div class="admin-edit" v-if="entity">
 
-        <EditTextComponent ref="input" :vars="{name:'Название',id:'title',value:entity.title}"></EditTextComponent>
+        <EditTextComponent ref="input" :vars="{name:'Название',id:'title'}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Ссылка',id:'link',value:entity.link}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Ссылка',id:'link'}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Город в предложном падеже',id:'name_predloshniy_padesh',value:entity.name_predloshniy_padesh}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Город в предложном падеже',id:'name_predloshniy_padesh'}"></EditTextComponent>
 
         <div>
             <input :disabled="!isDisabled" @click.prevent="update" class="admin-edit__save" type="submit" value="Сохранить">

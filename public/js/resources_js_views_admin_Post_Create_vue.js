@@ -496,16 +496,14 @@ var render = function render() {
     attrs: {
       vars: {
         name: "Название",
-        id: "title",
-        value: _vm.entity.title
+        id: "title"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Ссылка",
-        id: "link",
-        value: _vm.entity.link
+        id: "link"
       }
     }
   }), _vm._v(" "), _c("EditSelectComponent", {
@@ -513,7 +511,6 @@ var render = function render() {
       vars: {
         name: "Категория",
         id: "category_id",
-        value: _vm.entity.category_id,
         entity: "categories"
       }
     }
@@ -522,7 +519,6 @@ var render = function render() {
       vars: {
         name: "Город",
         id: "city_id",
-        value: _vm.entity.city_id,
         entity: "cities"
       }
     }
@@ -531,7 +527,6 @@ var render = function render() {
       vars: {
         name: "Tag",
         id: "tags",
-        value: _vm.entity.tags,
         entity: "tags"
       }
     }
@@ -539,16 +534,14 @@ var render = function render() {
     attrs: {
       vars: {
         name: "Контент",
-        id: "content",
-        value: _vm.entity.content
+        id: "content"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Картинка поста",
-        id: "image",
-        value: _vm.entity.image
+        id: "image"
       }
     }
   }), _vm._v(" "), _c("div", [_c("input", {

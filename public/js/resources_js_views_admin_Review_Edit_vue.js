@@ -377,16 +377,14 @@ var render = function render() {
     attrs: {
       vars: {
         name: "Название",
-        id: "title",
-        value: _vm.entity.title
+        id: "title"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Ссылка",
-        id: "link",
-        value: _vm.entity.link
+        id: "link"
       }
     }
   }), _vm._v(" "), _c("EditSelectComponent", {
@@ -394,7 +392,6 @@ var render = function render() {
       vars: {
         name: "Город",
         id: "city_id",
-        value: _vm.entity.city_id,
         entity: "cities"
       }
     }
@@ -402,48 +399,42 @@ var render = function render() {
     attrs: {
       vars: {
         name: "Контент",
-        id: "content",
-        value: _vm.entity.content
+        id: "content"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Автор",
-        id: "author",
-        value: _vm.entity.author
+        id: "author"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Дата создания",
-        id: "cr_date",
-        value: _vm.entity.cr_date
+        id: "cr_date"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Оценка",
-        id: "rate",
-        value: _vm.entity.rate
+        id: "rate"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Картинка",
-        id: "image_path",
-        value: _vm.entity.image_path
+        id: "image_path"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Аватарка",
-        id: "author_ava",
-        value: _vm.entity.author_ava
+        id: "author_ava"
       }
     }
   }), _vm._v(" "), _c("div", [_c("input", {

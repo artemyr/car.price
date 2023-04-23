@@ -286,16 +286,14 @@ var render = function render() {
     attrs: {
       vars: {
         name: "Название",
-        id: "title",
-        value: _vm.entity.title
+        id: "title"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Ссылка",
-        id: "link",
-        value: _vm.entity.link
+        id: "link"
       }
     }
   }), _vm._v(" "), _c("EditSelectComponent", {
@@ -303,7 +301,6 @@ var render = function render() {
       vars: {
         name: "Город",
         id: "city_id",
-        value: _vm.entity.city_id,
         entity: "cities"
       }
     }
@@ -311,16 +308,14 @@ var render = function render() {
     attrs: {
       vars: {
         name: "Подзаголовок",
-        id: "subtitle",
-        value: _vm.entity.subtitle
+        id: "subtitle"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Иконка",
-        id: "icon",
-        value: _vm.entity.icon
+        id: "icon"
       }
     }
   }), _vm._v(" "), _c("div", [_c("input", {

@@ -1,21 +1,21 @@
 <template>
     <div class="admin-edit" v-if="entity">
 
-        <EditTextComponent :vars="{name:'Название',id:'title',value:entity.title}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Название',id:'title'}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Ссылка',id:'link',value:entity.link}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Ссылка',id:'link'}"></EditTextComponent>
 
-        <EditSelectComponent :vars="{name:'Город статьи',id:'city_id',value:entity.city_id, entity:'cities'}"></EditSelectComponent>
+        <EditSelectComponent :vars="{name:'Город статьи',id:'city_id', entity:'cities'}"></EditSelectComponent>
 
-        <EditTextAreaComponent :vars="{name:'Контент',id:'content',value:entity.content}"></EditTextAreaComponent>
+        <EditTextAreaComponent :vars="{name:'Контент',id:'content'}"></EditTextAreaComponent>
         
-        <EditTextComponent :vars="{name:'Подпись', id:'tag', value:entity.tag}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Подпись', id:'tag',}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Текст анонса',id:'preview_text',value:entity.preview_text}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Текст анонса',id:'preview_text'}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Картинка',id:'image_path',value:entity.image_path}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Картинка',id:'image_path'}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Дата создания',id:'cr_date',value:entity.cr_date}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Дата создания',id:'cr_date'}"></EditTextComponent>
 
         <!-- <div class="admin-edit__form-control">
             <label for="file">Файлы</label>

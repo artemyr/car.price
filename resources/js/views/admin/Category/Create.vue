@@ -1,15 +1,15 @@
 <template>
     <div class="admin-edit">
 
-        <EditTextComponent :vars="{name:'Название',id:'title',value:entity.title}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Название',id:'title'}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Ссылка',id:'link',value:entity.link}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Ссылка',id:'link'}"></EditTextComponent>
 
-        <EditSelectComponent :vars="{name:'Город',id:'city_id',value:entity.city_id, entity:'cities'}"></EditSelectComponent>
+        <EditSelectComponent :vars="{name:'Город',id:'city_id', entity:'cities'}"></EditSelectComponent>
 
-        <EditTextComponent :vars="{name:'Подзаголовок',id:'subtitle',value:entity.subtitle}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Подзаголовок',id:'subtitle'}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Иконка',id:'icon',value:entity.icon}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Иконка',id:'icon'}"></EditTextComponent>
 
         <div>
             <input :disabled="!isDisabled" @click.prevent="store" class="admin-edit__save" type="submit" value="Сохранить">

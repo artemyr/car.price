@@ -1,23 +1,23 @@
 <template>
     <div class="admin-edit">
 
-        <EditTextComponent :vars="{name:'Название',id:'title',value:entity.title}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Название',id:'title',}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Ссылка',id:'link',value:entity.link}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Ссылка',id:'link',}"></EditTextComponent>
 
-        <EditSelectComponent :vars="{name:'Город',id:'city_id',value:entity.city_id, entity:'cities'}"></EditSelectComponent>
+        <EditSelectComponent :vars="{name:'Город',id:'city_id', entity:'cities'}"></EditSelectComponent>
 
-        <EditTextAreaComponent :vars="{name:'Контент',id:'content',value:entity.content}"></EditTextAreaComponent>
+        <EditTextAreaComponent :vars="{name:'Контент',id:'content',}"></EditTextAreaComponent>
 
-        <EditTextComponent :vars="{name:'Автор',id:'author',value:entity.author}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Автор',id:'author',}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Дата создания',id:'cr_date',value:entity.cr_date}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Дата создания',id:'cr_date',}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Оценка',id:'rate',value:entity.rate}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Оценка',id:'rate',}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Картинка',id:'image_path',value:entity.image_path}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Картинка',id:'image_path',}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Аватарка',id:'author_ava',value:entity.author_ava}"></EditTextComponent>
+        <EditTextComponent :vars="{name:'Аватарка',id:'author_ava',}"></EditTextComponent>
 
         <div>
             <input :disabled="!isDisabled" @click.prevent="store" class="admin-edit__save" type="submit" value="Сохранить">

@@ -158,24 +158,21 @@ var render = function render() {
     attrs: {
       vars: {
         name: "Название",
-        id: "title",
-        value: _vm.entity.title
+        id: "title"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Ссылка",
-        id: "link",
-        value: _vm.entity.link
+        id: "link"
       }
     }
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
         name: "Город в предложном падеже",
-        id: "name_predloshniy_padesh",
-        value: _vm.entity.name_predloshniy_padesh
+        id: "name_predloshniy_padesh"
       }
     }
   }), _vm._v(" "), _c("div", [_c("input", {
