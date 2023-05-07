@@ -21,7 +21,7 @@
                 </div>
             </div>
         </div>
-        <button type="button" @click="addFile">Добавить</button>
+        <button v-if="multiply" type="button" @click="addFile">Добавить</button>
     </div>
 </template>
 
@@ -36,10 +36,15 @@ export default {
             fileCurrent:'',
         }
     },
-    props: ['vars'],
+    props: ['vars', 'multiply'],
     mounted() {
         this.downloads = this.$parent.entity[this.vars.id];
-        this.updateList();
+        if (this.downloads.length > 0) {
+            this.updateList();
+        } else {
+            this.addFile();
+            this.updateList();
+        }
     },
     methods: {
         addFile() {

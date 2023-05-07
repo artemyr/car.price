@@ -30,7 +30,6 @@ class StoreRequest extends FormRequest
             'content' => 'string|nullable',
             'tag' => 'string|nullable',
             'preview_text' => 'string|nullable',
-            'image_path' => 'string|nullable',
             'cr_date' => 'string|nullable',
         ];
     }

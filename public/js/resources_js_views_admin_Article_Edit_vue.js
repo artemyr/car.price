@@ -30,10 +30,16 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       fileCurrent: ''
     };
   },
-  props: ['vars'],
+  props: ['vars', 'multiply'],
   mounted: function mounted() {
     this.downloads = this.$parent.entity[this.vars.id];
-    this.updateList();
+
+    if (this.downloads.length > 0) {
+      this.updateList();
+    } else {
+      this.addFile();
+      this.updateList();
+    }
   },
   methods: {
     addFile: function addFile() {
@@ -287,7 +293,6 @@ __webpack_require__.r(__webpack_exports__);
         link: this.entity.link,
         content: this.entity.content,
         preview_text: this.entity.preview_text,
-        image_path: this.entity.image_path,
         city_id: this.entity.city_id,
         cr_date: this.entity.cr_date,
         tag: this.entity.tag,
@@ -412,14 +417,14 @@ var render = function render() {
         }
       }
     }, [_vm._v("Удалить")])])])]);
-  }), _vm._v(" "), _c("button", {
+  }), _vm._v(" "), _vm.multiply ? _c("button", {
     attrs: {
       type: "button"
     },
     on: {
       click: _vm.addFile
     }
-  }, [_vm._v("Добавить")])], 2);
+  }, [_vm._v("Добавить")]) : _vm._e()], 2);
 };
 
 var staticRenderFns = [];
@@ -655,13 +660,6 @@ var render = function render() {
   }), _vm._v(" "), _c("EditTextComponent", {
     attrs: {
       vars: {
-        name: "Картинка",
-        id: "image_path"
-      }
-    }
-  }), _vm._v(" "), _c("EditTextComponent", {
-    attrs: {
-      vars: {
         name: "Дата создания",
         id: "cr_date"
       }
@@ -669,9 +667,10 @@ var render = function render() {
   }), _vm._v(" "), _c("UploadFilesComponent", {
     attrs: {
       vars: {
-        name: "Файлы",
+        name: "Картинка",
         id: "downloads"
-      }
+      },
+      multiply: false
     }
   }), _vm._v(" "), _c("div", [_c("input", {
     staticClass: "admin-edit__save",

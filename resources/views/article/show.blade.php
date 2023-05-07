@@ -18,7 +18,9 @@
     <div class="container">
         <div class="blog-detail-pages-wrapper__wrapper">
             <div class="blog-detail-pages-wrapper__image">
-                <img src="{{ asset($article->image_path) }}">
+                @foreach ($article->downloads as $image)
+                <img src="{{ asset('storage/'.$image->path) }}">
+                @endforeach
             </div>
         </div>
         <div class="blog-detail-pages-wrapper__wrapper">

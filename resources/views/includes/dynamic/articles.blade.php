@@ -11,7 +11,9 @@
             <div class="swiper-wrapper">
                 @foreach($articles as $article)
                 <div class="slider__slide swiper-slide">
-                    <img class="slider__image" src="{{ asset($article->image_path) }}">
+                    @foreach ($article->downloads as $image)
+                    <img class="slider__image" src="{{ asset('storage/'.$image->path) }}">
+                    @endforeach
                     <div class="articles__body">
                         <div class="articles__tag green">{{ $article->tag }}</div>
                         <div class="articles__text">{{ $article->preview_text }}</div>

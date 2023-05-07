@@ -22,7 +22,6 @@ class Resource extends JsonResource
             'content' => $this->content,
             'tag' => $this->tag,
             'preview_text' => $this->preview_text,
-            'image_path' => $this->image_path,
             'cr_date' => $this->cr_date,
             'downloads' => $this->downloads
         ];

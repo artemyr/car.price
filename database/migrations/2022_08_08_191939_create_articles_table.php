@@ -17,7 +17,6 @@ class CreateArticlesTable extends Migration
             $table->id();
 
             $table->unsignedBigInteger('city_id');
-            $table->unsignedBigInteger('picture_id')->nullable();
 
             $table->string('link');
             $table->string('title');
@@ -26,7 +25,6 @@ class CreateArticlesTable extends Migration
             $table->text('tag')->nullable();
             $table->text('preview_text');
             $table->text('cr_date');
-            $table->text('image_path');
 
             $table->timestamps();
         });

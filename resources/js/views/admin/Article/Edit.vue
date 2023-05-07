@@ -13,11 +13,9 @@
 
         <EditTextComponent :vars="{name:'Текст анонса',id:'preview_text'}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Картинка',id:'image_path'}"></EditTextComponent>
-
         <EditTextComponent :vars="{name:'Дата создания',id:'cr_date'}"></EditTextComponent>
 
-        <UploadFilesComponent :vars="{name: 'Файлы',id: 'downloads'}"></UploadFilesComponent>
+        <UploadFilesComponent :vars="{name: 'Картинка',id: 'downloads'}" :multiply="false"></UploadFilesComponent>
     
         <div>
             <input :disabled="!isDisabled" @click.prevent="update" class="admin-edit__save" type="submit" value="Сохранить">
@@ -62,7 +60,6 @@ export default {
                 link: this.entity.link,
                 content: this.entity.content,
                 preview_text: this.entity.preview_text,
-                image_path: this.entity.image_path,
                 city_id: this.entity.city_id,
                 cr_date: this.entity.cr_date,
                 tag: this.entity.tag,
