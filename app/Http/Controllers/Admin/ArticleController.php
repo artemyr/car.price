@@ -20,7 +20,7 @@ class ArticleController extends BaseController
 
     public function index ()
     {
-        return Resource::collection(Article::all());
+        return Resource::collection(Article::paginate(10));
     }
 
     public function show (Article $article)

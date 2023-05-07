@@ -19,7 +19,7 @@ class CategoryController extends BaseController
 
     public function index ()
     {
-        return Resource::collection(Category::all());
+        return Resource::collection(Category::paginate(10));
     }
 
     public function show (Category $category)

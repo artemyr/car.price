@@ -10,19 +10,26 @@
                 <div class="admin-list__form-control-item"></div>
             </div>
 
-            <div class="admin-list__form-control" v-for="(post, index) in posts">
+            <div class="admin-list__form-control" v-for="(element, index) in elements">
                 <div class="admin-list__form-control-item">{{ index + 1 }}</div>
                 <div class="admin-list__form-control-item">
-                    <router-link class="admin-list__link" :to="{ name: 'admin.post.edit', params: {id: post.id} }">{{ post.title }}</router-link>
+                    <router-link class="admin-list__link" :to="{ name: 'admin.post.edit', params: {id: element.id} }">{{ element.title }}</router-link>
                 </div>
                 <div class="admin-list__form-control-item">
-                    {{ post.link }}
+                    {{ element.link }}
                 </div>
                 <div class="admin-list__form-control-item">
-                    <input @click.prevent="deletePost(post.id)" class="admin-list__remove" type="submit" value="x">
+                    <input @click.prevent="deletePost(element.id)" class="admin-list__remove" type="submit" value="x">
                 </div>
             </div>
 
+        </div>
+
+        <div class="admin-list__pagen" v-if="pagen">
+            <a @click.prevent="get(pagen.first)" :href="pagen.first">Первая</a>
+            <a @click.prevent="get(pagen.prev)" :href="pagen.prev">Предидущая</a>
+            <a @click.prevent="get(pagen.next)" :href="pagen.next">Следующая</a>
+            <a @click.prevent="get(pagen.last)" :href="pagen.last">Последняя</a>
         </div>
     </div>
 </template>
@@ -34,18 +41,26 @@ export default {
     name: 'Index',
     data () {
         return {
-            posts: null,
+            elements: null,
+            pagen: null,
+            defaultLink: '/api/admin/posts',
+            curLink: null
         }
     },
     props: [],
     mounted() {
-        this.get()
+        this.curLink = this.defaultLink;
+        this.get(this.curLink);
     },
     methods: {
-        async get () {
-            await axios.get('/api/admin/posts')
+        async get (link) {
+            if (!link) return;
+            this.curLink = link;
+            await axios.get(link)
             .then(response => {
-                this.posts = response.data.data;
+                this.elements = response.data.data;
+                if (response.data.meta.last_page > 1) this.pagen = response.data.links
+                    else this.pagen = null
             })
             .catch(error => {
                 console.log(error);
@@ -54,7 +69,12 @@ export default {
         deletePost(id) {
             axios.delete(`/api/admin/posts/${id}`)
                 .then(res => {
-                    this.get();
+                    return this.get(this.curLink);
+                })
+                .then(res => {
+                    if (this.elements.length == 0) {
+                        this.get(this.defaultLink);
+                    }
                 })
         }
     }

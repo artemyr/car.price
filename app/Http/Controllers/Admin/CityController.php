@@ -18,7 +18,7 @@ class CityController extends BaseController
 
     public function index ()
     {
-        return Resource::collection(City::all());
+        return Resource::collection(City::paginate(10));
     }
 
     public function show (City $city)

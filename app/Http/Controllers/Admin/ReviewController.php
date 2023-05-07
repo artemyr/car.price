@@ -19,7 +19,7 @@ class ReviewController extends BaseController
 
     public function index ()
     {
-        return Resource::collection(Review::all());
+        return Resource::collection(Review::paginate(10));
     }
 
     public function show (Review $review)

@@ -26,15 +26,19 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   name: 'Index',
   data: function data() {
     return {
-      categories: null
+      elements: null,
+      pagen: null,
+      defaultLink: '/api/admin/categories',
+      curLink: null
     };
   },
   props: [],
   mounted: function mounted() {
-    this.get();
+    this.curLink = this.defaultLink;
+    this.get(this.curLink);
   },
   methods: {
-    get: function get() {
+    get: function get(link) {
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_regeneratorRuntime().mark(function _callee() {
@@ -42,14 +46,24 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _context.next = 2;
-                return axios.get('/api/admin/categories').then(function (response) {
-                  _this.categories = response.data.data;
+                if (link) {
+                  _context.next = 2;
+                  break;
+                }
+
+                return _context.abrupt("return");
+
+              case 2:
+                _this.curLink = link;
+                _context.next = 5;
+                return axios.get(link).then(function (response) {
+                  _this.elements = response.data.data;
+                  if (response.data.meta.last_page > 1) _this.pagen = response.data.links;else _this.pagen = null;
                 })["catch"](function (error) {
                   console.log(error);
                 });
 
-              case 2:
+              case 5:
               case "end":
                 return _context.stop();
             }
@@ -61,7 +75,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var _this2 = this;
 
       axios["delete"]("/api/admin/categories/".concat(id)).then(function (res) {
-        _this2.get();
+        return _this2.get(_this2.curLink);
+      }).then(function (res) {
+        if (_this2.elements.length == 0) {
+          _this2.get(_this2.defaultLink);
+        }
       });
     }
   }
@@ -96,7 +114,7 @@ var render = function render() {
     }
   }, [_vm._v("Создать новый")]), _c("br"), _vm._v(" "), _c("div", {
     staticClass: "admin-list__body"
-  }, [_vm._m(0), _vm._v(" "), _vm._l(_vm.categories, function (category, index) {
+  }, [_vm._m(0), _vm._v(" "), _vm._l(_vm.elements, function (element, index) {
     return _c("div", {
       staticClass: "admin-list__form-control"
     }, [_c("div", {
@@ -109,13 +127,13 @@ var render = function render() {
         to: {
           name: "admin.category.edit",
           params: {
-            id: category.id
+            id: element.id
           }
         }
       }
-    }, [_vm._v(_vm._s(category.title))])], 1), _vm._v(" "), _c("div", {
+    }, [_vm._v(_vm._s(element.title))])], 1), _vm._v(" "), _c("div", {
       staticClass: "admin-list__form-control-item"
-    }, [_vm._v("\n                " + _vm._s(category.link) + "\n            ")]), _vm._v(" "), _c("div", {
+    }, [_vm._v("\n                " + _vm._s(element.link) + "\n            ")]), _vm._v(" "), _c("div", {
       staticClass: "admin-list__form-control-item"
     }, [_c("input", {
       staticClass: "admin-list__remove",
@@ -126,11 +144,53 @@ var render = function render() {
       on: {
         click: function click($event) {
           $event.preventDefault();
-          return _vm.deleteCategory(category.id);
+          return _vm.deleteCategory(element.id);
         }
       }
     })])]);
-  })], 2)], 1);
+  })], 2), _vm._v(" "), _vm.pagen ? _c("div", {
+    staticClass: "admin-list__pagen"
+  }, [_c("a", {
+    attrs: {
+      href: _vm.pagen.first
+    },
+    on: {
+      click: function click($event) {
+        $event.preventDefault();
+        return _vm.get(_vm.pagen.first);
+      }
+    }
+  }, [_vm._v("Первая")]), _vm._v(" "), _c("a", {
+    attrs: {
+      href: _vm.pagen.prev
+    },
+    on: {
+      click: function click($event) {
+        $event.preventDefault();
+        return _vm.get(_vm.pagen.prev);
+      }
+    }
+  }, [_vm._v("Предидущая")]), _vm._v(" "), _c("a", {
+    attrs: {
+      href: _vm.pagen.next
+    },
+    on: {
+      click: function click($event) {
+        $event.preventDefault();
+        return _vm.get(_vm.pagen.next);
+      }
+    }
+  }, [_vm._v("Следующая")]), _vm._v(" "), _c("a", {
+    attrs: {
+      href: _vm.pagen.last
+    },
+    on: {
+      click: function click($event) {
+        $event.preventDefault();
+        return _vm.get(_vm.pagen.last);
+      }
+    }
+  }, [_vm._v("Последняя")])]) : _vm._e()], 1);
 };
 
 var staticRenderFns = [function () {
