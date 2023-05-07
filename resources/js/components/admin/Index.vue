@@ -123,10 +123,12 @@
 <script>
 export default {
     name: 'Index',
-    props: ['vars'],
     data () {
         return {
-            // logo: '123',
+            vars: {
+                logo: '/dist/img/AdminLTELogo.png',
+                userPhoto: '/dist/img/user2-160x160.jpg',
+            }
         }
     },
 }

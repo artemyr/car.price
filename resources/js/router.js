@@ -13,6 +13,18 @@ export default new VueRouter({
             component: AdminHomeComponent,
             name: 'admin.index'
         },
+// login
+        {
+            path: '/login', 
+            component: () => import('./components/admin/Login'),
+            name: 'admin.login'
+        },
+// login
+        {
+            path: '/register', 
+            component: () => import('./components/admin/Register'),
+            name: 'admin.register'
+        },
 // city
         {
             path: '/admin/cities', 

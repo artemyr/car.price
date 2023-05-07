@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::group(["namespace" => "Admin", 'prefix' => 'admin',
-//    'middleware' => 'admin'
+   'middleware' => ['auth:sanctum', 'admin']
 ], function() {
 
     Route::group(['prefix' => 'cities'], function() {

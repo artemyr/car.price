@@ -13,23 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(["namespace" => "Admin", 'prefix' => 'admin', 'middleware' => 'admin'], function() {
+Auth::routes();
 
-    Route::get('', [App\Http\Controllers\HomeController::class, 'index'])->name('admin.index');
-    Route::get('{page}', [App\Http\Controllers\HomeController::class, 'index'])->name('admin')->where('page', '.*');
+Route::group(["namespace" => "Admin", 'prefix' => 'admin'], function() {
+    Route::group(['middleware' => 'auth:sanctum'], function() {
+        Route::get('', [App\Http\Controllers\HomeController::class, 'index'])->name('admin.index');
+    });
 
-    Route::resource('/download', 'File\DownloadController')->only(['store','update','destroy']);
-    Route::resource('/picture', 'File\PictureController')->only(['store','update','destroy']);
+    Route::group(['middleware' => ['auth:sanctum', 'admin']], function() {
+        Route::get('{page}', [App\Http\Controllers\HomeController::class, 'index'])->name('admin')->where('page', '.*');
+        Route::resource('/download', 'File\DownloadController')->only(['store','update','destroy']);
+    });
 });
 
-Auth::routes();
+
+
+
 
 Route::group(["namespace" => "Article"], function() {
     Route::get('/articles', 'IndexController')->name('article.index');
     Route::get('/articles/{article}', 'ShowController')->name('article.show');
 });
-
-
 
 Route::group(["namespace" => "Review"], function() {
     Route::get('/otzivi', 'IndexController')->name('review.index');
