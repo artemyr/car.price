@@ -13,15 +13,9 @@
 
         <EditTextComponent :vars="{name:'Текст анонса',id:'preview_text'}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Картинка',id:'image_path'}"></EditTextComponent>
-
         <EditTextComponent :vars="{name:'Дата создания',id:'cr_date'}"></EditTextComponent>
 
-        <!-- <div class="admin-edit__form-control">
-            <label for="file">Файлы</label>
-            <input v-model="entity.file" id="file" type="text">
-        </div> -->
-
+        <UploadFilesComponent :vars="{name: 'Картинка',id: 'downloads'}" :multiply="false"></UploadFilesComponent>
 
         <div>
             <input :disabled="!isDisabled" @click.prevent="store" class="admin-edit__save" type="submit" value="Сохранить">
@@ -34,13 +28,15 @@ import { assertExpressionStatement } from '@babel/types';
 import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue'
 import EditTextAreaComponent from '../../../components/admin/form/EditTextAreaComponent.vue'
 import EditSelectComponent from '../../../components/admin/form/EditSelectComponent.vue'
+import UploadFilesComponent from '../../../components/admin/UploadFilesComponent.vue'
 
 export default {
     name: 'Create',
     components: {
         EditTextComponent,
         EditTextAreaComponent,
-        EditSelectComponent
+        EditSelectComponent,
+        UploadFilesComponent
     },
     data () {
         return {
@@ -49,16 +45,12 @@ export default {
                 link: null,
                 content: null,
                 preview_text: null,
-                image_path: null,
                 city_id: null,
                 cr_date: null,
-                tag: null
+                tag: null,
+                downloads: []
             }
         }
-    },
-    props: [],
-    mounted() {
-        
     },
     methods: {
         store() {
@@ -67,10 +59,10 @@ export default {
                 link: this.entity.link,
                 content: this.entity.content,
                 preview_text: this.entity.preview_text,
-                image_path: this.entity.image_path,
                 city_id: this.entity.city_id,
                 cr_date: this.entity.cr_date,
-                tag: this.entity.tag
+                tag: this.entity.tag,
+                downloads: this.entity.downloads
             })
                 .then(res => {
                     this.$router.push({ name: 'admin.article.index' })

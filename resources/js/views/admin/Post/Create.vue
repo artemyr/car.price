@@ -13,8 +13,6 @@
 
         <EditTextAreaComponent :vars="{name:'Контент',id:'content'}"></EditTextAreaComponent>
 
-        <EditTextComponent :vars="{name:'Картинка поста',id:'image'}"></EditTextComponent>
-
         <div>
             <input :disabled="!isDisabled" @click.prevent="store" class="admin-edit__save" type="submit" value="Сохранить">
         </div>

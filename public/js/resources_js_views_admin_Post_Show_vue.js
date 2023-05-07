@@ -86,17 +86,7 @@ var render = function render() {
     attrs: {
       id: "link"
     }
-  }, [_vm._v(_vm._s(_vm.entity.content))])]), _vm._v(" "), _c("div", {
-    staticClass: "admin-edit__form-control"
-  }, [_c("label", {
-    attrs: {
-      "for": "link"
-    }
-  }, [_vm._v("Картинка поста")]), _vm._v(" "), _c("p", {
-    attrs: {
-      id: "link"
-    }
-  }, [_vm._v(_vm._s(_vm.entity.image))])]), _vm._v(" "), _c("router-link", {
+  }, [_vm._v(_vm._s(_vm.entity.content))])]), _vm._v(" "), _c("router-link", {
     attrs: {
       to: {
         name: "admin.post.edit",

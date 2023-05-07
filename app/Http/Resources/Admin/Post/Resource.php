@@ -19,7 +19,6 @@ class Resource extends JsonResource
             'title' => $this->title,
             'link' => $this->link,
             'content' => $this->content,
-            'image' => $this->image,
             'category_id' => $this->category_id,
             'city_id' => $this->city_id,
             'tags' => $this->tags->pluck('id'),

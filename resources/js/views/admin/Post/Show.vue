@@ -16,11 +16,6 @@
             <p id="link">{{ entity.content }}</p>
         </div>
 
-        <div class="admin-edit__form-control">
-            <label for="link">Картинка поста</label>
-            <p id="link">{{ entity.image }}</p>
-        </div>
-
         <router-link :to="{ name: 'admin.post.edit', params: {id: entity.id}}">Edit</router-link>
     </div>
 </template>

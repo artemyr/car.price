@@ -13,8 +13,6 @@
 
         <EditTextAreaComponent :vars="{name:'Контент',id:'content'}"></EditTextAreaComponent>
 
-        <EditTextComponent :vars="{name:'Картинка поста',id:'image'}"></EditTextComponent>
-
         <div>
             <input :disabled="!isDisabled" @click.prevent="update" class="admin-edit__save" type="submit" value="Сохранить">
         </div>
@@ -60,7 +58,7 @@ export default {
                 image: this.entity.image,
                 category_id: this.entity.category_id,
                 city_id: this.entity.city_id,
-                tags: this.entity.tags
+                tags: this.entity.tags,
             })
                 .then(res => {
                     this.$router.push({name:'admin.post.show', params: {id: this.$route.params.id}})

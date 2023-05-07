@@ -537,13 +537,6 @@ var render = function render() {
         id: "content"
       }
     }
-  }), _vm._v(" "), _c("EditTextComponent", {
-    attrs: {
-      vars: {
-        name: "Картинка поста",
-        id: "image"
-      }
-    }
   }), _vm._v(" "), _c("div", [_c("input", {
     staticClass: "admin-edit__save",
     attrs: {
