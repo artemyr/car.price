@@ -16,7 +16,9 @@
 
                     @foreach($reviews as $review)
                     <div class="review__item">
-                        <img class="review__image" src="{{ asset($review->image_path) }}">
+                        @foreach ($review->downloads as $image)
+                        <img class="review__image" src="{{ asset('storage/'.$image->path) }}">
+                        @endforeach
                         <div class="review__body">
 
                             <div class="review__author review-author">
@@ -53,7 +55,9 @@
                         <script>
                             document.addEventListener('DOMContentLoaded', function(){
                                 var obj_{{ $review->id }} = new JCpopup({
-                                    "img": '{{ asset($review->image_path) }}',
+                                    @foreach ($review->downloads as $image)
+                                    "img": '{{ asset('storage/'.$image->path) }}',
+                                    @endforeach
                                     "title": '{{ $review->title }}',
                                     "content": '{{ $review->content }}',
                                     "id": '{{ $review->id }}',

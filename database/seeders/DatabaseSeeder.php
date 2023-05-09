@@ -218,7 +218,6 @@ class DatabaseSeeder extends Seeder
             'author' => 'Сурен Багодуровичь',
             'cr_date' => '30.08.2021',
             'rate' => 1,
-            'image_path' => 'img/car.jpg',
             'author_ava' => 'img/preson.jpg',
         ];
         $data[] =
@@ -231,7 +230,6 @@ class DatabaseSeeder extends Seeder
             'author' => 'Сурен Багодуровичь',
             'cr_date' => '30.08.2021',
             'rate' => 2,
-            'image_path' => 'img/car.jpg',
             'author_ava' => 'img/preson.jpg',
         ];
         $data[] =
@@ -244,7 +242,6 @@ class DatabaseSeeder extends Seeder
             'author' => 'Сурен Багодуровичь',
             'cr_date' => '30.08.2021',
             'rate' => 3,
-            'image_path' => 'img/car.jpg',
             'author_ava' => 'img/preson.jpg',
         ];
         $data[] =
@@ -257,7 +254,6 @@ class DatabaseSeeder extends Seeder
             'author' => 'Сурен Багодуровичь',
             'cr_date' => '30.08.2021',
             'rate' => 4,
-            'image_path' => 'img/car.jpg',
             'author_ava' => 'img/preson.jpg',
         ];
         $data[] =
@@ -270,7 +266,6 @@ class DatabaseSeeder extends Seeder
             'author' => 'Сурен Багодуровичь',
             'cr_date' => '30.08.2021',
             'rate' => 5,
-            'image_path' => 'img/car.jpg',
             'author_ava' => 'img/preson.jpg',
         ];
 

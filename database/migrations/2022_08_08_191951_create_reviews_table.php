@@ -25,7 +25,6 @@ class CreateReviewsTable extends Migration
             $table->string('author');
             $table->string('cr_date');
             $table->unsignedTinyInteger('rate');
-            $table->string('image_path');
             $table->string('author_ava');
 
             $table->timestamps();

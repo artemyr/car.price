@@ -273,7 +273,6 @@ __webpack_require__.r(__webpack_exports__);
       entity: null
     };
   },
-  props: [],
   mounted: function mounted() {
     this.get();
   },

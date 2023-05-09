@@ -43,7 +43,6 @@ export default {
             entity: null
         }
     },
-    props: [],
     mounted() {
         this.get();
     },

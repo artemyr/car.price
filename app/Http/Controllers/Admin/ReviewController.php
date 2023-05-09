@@ -30,8 +30,10 @@ class ReviewController extends BaseController
     public function store (StoreRequest $request)
     {
         $data = $request->validated();
-
         $review = Review::create($data);
+
+        if($request->has('downloads'))
+            $review->downloads()->attach($request->downloads);
 
         return redirect()->route('admin.review.index');
     }
@@ -40,6 +42,10 @@ class ReviewController extends BaseController
     {
         $data = $request->validated();
         $review->update($data);
+
+        $review->downloads()->detach();
+        if($request->has('downloads'))
+            $review->downloads()->attach($request->downloads);
 
         return response([]);
     }

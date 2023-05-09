@@ -22,9 +22,9 @@ class Resource extends JsonResource
             'author' => $this->author,
             'rate' => $this->rate,
             'cr_date' => $this->cr_date,
-            'image_path' => $this->image_path,
             'author_ava' => $this->author_ava,
             'city_id' => $this->city_id,
+            'downloads' => $this->downloads
         ];
     }
 }

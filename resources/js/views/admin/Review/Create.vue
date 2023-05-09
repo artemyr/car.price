@@ -15,7 +15,7 @@
 
         <EditTextComponent :vars="{name:'Оценка',id:'rate',}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Картинка',id:'image_path',}"></EditTextComponent>
+        <UploadFilesComponent :vars="{name: 'Картинка',id: 'downloads'}" :multiply="false"></UploadFilesComponent>
 
         <EditTextComponent :vars="{name:'Аватарка',id:'author_ava',}"></EditTextComponent>
 
@@ -30,13 +30,15 @@ import { assertExpressionStatement } from '@babel/types';
 import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue'
 import EditTextAreaComponent from '../../../components/admin/form/EditTextAreaComponent.vue'
 import EditSelectComponent from '../../../components/admin/form/EditSelectComponent.vue'
+import UploadFilesComponent from '../../../components/admin/UploadFilesComponent.vue'
 
 export default {
     name: 'Create',
     components: {
         EditTextComponent,
         EditTextAreaComponent,
-        EditSelectComponent
+        EditSelectComponent,
+        UploadFilesComponent
     },
     data () {
         return {
@@ -47,16 +49,11 @@ export default {
                 author: null,
                 cr_date: null,
                 rate: null,
-                image_path: null,
                 author_ava: null,
                 city_id: null,
-
+                downloads: []
             }
         }
-    },
-    props: [],
-    mounted() {
-        
     },
     methods: {
         store() {
@@ -67,9 +64,9 @@ export default {
                 author: this.entity.author,
                 cr_date: this.entity.cr_date,
                 rate: this.entity.rate,
-                image_path: this.entity.image_path,
                 author_ava: this.entity.author_ava,
                 city_id: this.entity.city_id,
+                downloads: this.entity.downloads,
 
             })
                 .then(res => {

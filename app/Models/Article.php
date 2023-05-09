@@ -20,9 +20,4 @@ class Article extends Model
     {
         return $this->morphToMany(Download::class, 'downloadable');
     }
-
-    public function picture()
-    {
-        return $this->belongsTo(Picture::class);
-    }
 }
