@@ -16,6 +16,7 @@
 6. Затем `php artisan migrate:fresh --seed`, чтобы залить бд и исходные сущьности
 7. вернуть файлы как было
 8. /config/sanctum.php в stateful указать актуальный домен сайта
+9. sail artisan storage:link сделать линк файловой системы
 
 ## CSS breakpoints
 1330 1200 992 768 576
