@@ -45,11 +45,11 @@
             font-weight: 700;
             line-height: normal;
         }
-    }
 
-    .review__item:hover .review__image:before {
-        background-color: #0E431DB2;
-        opacity: 1;
+        &:hover .review__image:before {
+            background-color: #0E431DB2;
+            opacity: 1;
+        }
     }
 
     .review__title {

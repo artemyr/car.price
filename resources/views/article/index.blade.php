@@ -18,10 +18,14 @@
                     <div class="articles__item">
                         @if (count($article->downloads) > 0)
                             @foreach ($article->downloads as $image)
-                            <img class="articles__image" src="{{ asset('storage/'.$image->path) }}">
+                                <div class="articles__image">
+                                    <img src="{{ asset('storage/'.$image->path) }}">
+                                </div>
                             @endforeach
                         @else
-                            <img class="articles__image" src="{{ asset('img/article_placeholder.jpg') }}">
+                            <div class="articles__image">
+                                <img src="{{ asset('img/article_placeholder.jpg') }}">
+                            </div>
                         @endif
                         <div class="articles__body">
                             <div class="articles__tag green">{{ $article->tag }}</div>
