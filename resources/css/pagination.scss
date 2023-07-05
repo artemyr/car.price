@@ -1,0 +1,47 @@
+.pagination {
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+
+    li {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        transition: all .3s;
+
+        a {
+            height: 100%;
+            width: 100%;
+            text-align: center;
+        }
+
+        &.active {
+            border: 1px solid $--base-green-color;
+
+            a, span {
+                color: $--base-green-color;
+            }
+        }
+
+        &:not([aria-disabled="true"]):not(.active):hover {
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        &:nth-child(1) {
+            margin-right: 22px;
+            font-size: 25px;
+        }
+
+        &:nth-last-child(1) {
+            margin-left: 22px;
+            font-size: 25px;
+        }
+    }
+}

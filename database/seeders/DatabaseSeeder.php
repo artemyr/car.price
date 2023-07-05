@@ -239,6 +239,16 @@ class DatabaseSeeder extends Seeder
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/3.jpg'
         ];
+        $data[] =
+        [
+            'title' => 'Москва - статья 2',
+            'content' => 'объявление в городе Москва 2',
+            'link' => 'mos-6',
+            'city_id' => 2,
+            'tag' => 'Безопасность',
+            'preview_text' => 'В частности, граница обучения кадров создаёт предпосылки для вывода текущих активов',
+            'cr_date' => '30.07.2022',
+        ];
 
         foreach($data as $item)
             Article::create($item);

@@ -8,6 +8,7 @@ use App\Models\GlobalSetting;
 use Closure;
 use Illuminate\Http\Request;
 use App\Services\Base\Service;
+use Illuminate\Pagination\Paginator;
 
 class GlobalVarsMiddlevare
 {
@@ -33,6 +34,8 @@ class GlobalVarsMiddlevare
         //gloval config
         \View::share('partner_link', GlobalSetting::where('code','partner_link')->first());
         \View::share('video_link', GlobalSetting::where('code','video_link')->first());
+
+        Paginator::defaultView('vendor.pagination.articles');
 
         return $next($request);
     }
