@@ -33,11 +33,13 @@ class City extends Model
     }
 
     public static function getAllCitySlugs(){
-        $res = [];
-        foreach (self::select('link')->get() as $item) {
-            $res[] = $item->link;
+        if(\Schema::hasTable('cities')) {
+            $res = [];
+            foreach (self::select('link')->get() as $item) {
+                $res[] = $item->link;
+            }
+            return implode("|",$res);
         }
-
-        return implode("|",$res);
+        return null;
     }
 }
