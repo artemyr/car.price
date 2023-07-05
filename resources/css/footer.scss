@@ -40,7 +40,7 @@
 
     .footer__menu {
         li a {
-            font-family: 'Geometria bold';
+            font-family: $--base-bold-font-family;
             font-weight: 700;
             font-size: 16px;
             color: #FFFFFF;
@@ -49,14 +49,14 @@
         }
     }
     .footer__sign {
-        font-family: 'Geometria light';
+        font-family: $--base-light-font-family;
         font-weight: 400;
         font-size: 16px;
         color: #FFFFFF;
     }
 
     .footer__policy {
-        font-family: 'Geometria light';
+        font-family: $--base-light-font-family;
         font-weight: 400;
         font-size: 16px;
         color: #87978C;

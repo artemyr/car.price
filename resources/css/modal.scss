@@ -25,7 +25,7 @@
     }
 
     .modal__link {
-        font-family: "Geometria light";
+        font-family: $--base-light-font-family;
         font-weight: 600;
         font-size: 16px;
         color: #2E3D4A;
@@ -51,7 +51,6 @@
     }
 
     .modal__title {
-        font-family: 'Geometria';
         font-weight: 700;
         font-size: 24px;
         line-height: 33px;

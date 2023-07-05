@@ -2,7 +2,6 @@
     padding: 56px 0;
 
     .home-section__title {
-        font-family: 'Geometria';
         font-weight: 500;
         font-size: 32px;
         color: #2E3D4A;
@@ -10,7 +9,7 @@
     }
 
     .home-section__subtitle {
-        font-family: 'Geometria light';
+        font-family: $--base-light-font-family;
         font-weight: 400;
         font-size: 16px;
         text-align: center;
@@ -22,7 +21,6 @@
 
 .home-section-row {
     .home-section-row__title {
-        font-family: 'Geometria';
         font-weight: 500;
         font-size: 32px;
         color: #2E3D4A;

@@ -15,7 +15,6 @@
             }
 
             li{
-                font-family: 'Geometria';
                 font-weight: 500;
                 font-size: 16px;
                 color: #2E3D4A;
@@ -30,7 +29,7 @@
                 @include size576 {
                     font-size: 14px;
                     height: 56px;
-                    font-family: 'Geometria light';
+                    font-family: $--base-light-font-family;
                     padding: 0 16px;
                 }
             }
@@ -85,7 +84,6 @@
     }
 
     .whereSell-card__title{
-        font-family: 'Geometria';
         font-weight: 500;
         font-size: 24px;
         color: #2E3D4A;
@@ -97,7 +95,7 @@
     }
 
     .whereSell-card__hours {
-        font-family: 'Geometria light';
+        font-family: $--base-light-font-family;
         font-weight: 400;
         font-size: 18px;
         color: #2E3D4A;

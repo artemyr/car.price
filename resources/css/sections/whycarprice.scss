@@ -42,7 +42,7 @@
 
 .advantages-item {
     .advantages-item__numbers {
-        font-family: 'Geometria light';
+        font-family: $--base-light-font-family;
         font-weight: 400;
         font-size: 20px;
         color: #CCCCCC;
@@ -62,14 +62,14 @@
     }
 
     .advantages-item__titles {
-        font-family: 'Geometria light';
+        font-family: $--base-light-font-family;
         font-weight: 400;
         font-size: 18px;
         color: #2E3D4A;
     }
 
     .advantages-item__sign {
-        font-family: 'Geometria light';
+        font-family: $--base-light-font-family;
         font-weight: 400;
         font-size: 14px;
         color: #999999;

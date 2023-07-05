@@ -24,21 +24,19 @@
     }
 
     .banner__title {
-        font-family: 'Geometria bold';
+        font-family: $--base-bold-font-family;
         font-size: 40px;
         color: #FFFFFF;
         line-height: 44px;
         margin-bottom: 16px;
     }
     .banner__subtitle {
-        font-family: 'Geometria';
         font-weight: 500;
         font-size: 16px;
         color: #FFFFFF;
         line-height: 24px;
     }
     .banner__sign {
-        font-family: 'Geometria';
         font-weight: 500;
         font-size: 14px;
         color: #FFFFFF;

@@ -24,7 +24,7 @@
 
     .top-menu__item a,
     .top-menu__item span {
-        font-family: "Geometria light";
+        font-family: $--base-light-font-family;
         color: #2E3D4A;
         text-decoration: none;
         font-weight: 800;
@@ -49,7 +49,7 @@
             }
 
             .dropdown-menu__subtitle {
-                font-family: 'Geometria light';
+                font-family: $--base-light-font-family;
                 font-weight: 400;
                 font-size: 13px;
                 line-height: 16px;
@@ -58,7 +58,7 @@
         }
 
         .dropdown-menu__item a{
-            font-family: 'Geometria bold';
+            font-family: $--base-bold-font-family;
             font-weight: 500;
             font-size: 16px;
             color: #000000;

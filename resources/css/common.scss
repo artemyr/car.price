@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: "Geometria bold";
+    font-family: $--base-bold-font-family;
     color: #2E3D4A;
 
     .logo__text span{
@@ -22,9 +22,8 @@
 .blog-pages-wrapper {
     margin-bottom: 58px;
     margin-top: 10px;
-    
+
     .blog-pages-h1 {
-        font-family: Geometria;
         font-size: 32px;
         font-weight: 500;
         line-height: 40px;

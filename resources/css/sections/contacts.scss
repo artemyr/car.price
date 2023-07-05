@@ -36,28 +36,26 @@
 
 .contact-list-item {
     .contact-list-item__title {
-        font-family: 'Geometria';
         font-weight: 500;
         font-size: 20px;
         color: #06892B;
         margin-bottom: 14px;
     }
     .contact-list-item__subtitle{
-        font-family: 'Geometria light';
+        font-family: $--base-light-font-family;
         font-weight: 600;
         font-size: 16px;
         color: #2E3D4A;
         margin-bottom: 10px;
     }
     .contact-list-item__body{
-        font-family: 'Geometria';
         font-weight: 500;
         font-size: 16px;
         color: #2E3D4A;
         margin-bottom: 10px;
     }
     .contact-list-item__bottom a {
-        font-family: 'Geometria light';
+        font-family: $--base-light-font-family;
         font-weight: 600;
         font-size: 16px;
         color: #06892B;
