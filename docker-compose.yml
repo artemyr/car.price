@@ -50,6 +50,17 @@ services:
             timeout: 5s
         restart: unless-stopped
 
+    phpmyadmin:
+        image: "phpmyadmin/phpmyadmin:latest"
+        ports:
+            - "8091:80"
+        depends_on:
+            - mysql
+        environment:
+            "PMA_HOST": "mysql"
+        networks:
+            - sail
+
 networks:
     sail:
         driver: bridge
