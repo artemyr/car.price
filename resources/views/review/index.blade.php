@@ -57,13 +57,9 @@
                         <script>
                             document.addEventListener('DOMContentLoaded', function(){
                                 var obj_{{ $review->id }} = new JCpopup({
-                                    @if (count($review->downloads) > 0)
-                                        @foreach ($review->downloads as $image)
-                                        "img": '{{ asset('storage/'.$image->path) }}',
-                                        @endforeach
-                                    @else
-                                        "img": '{{ asset('img/article_placeholder.jpg') }}',
-                                    @endif
+                                    @foreach ($review->images() as $image)
+                                    "img": '{{ $image }}',
+                                    @endforeach
                                     "title": '{{ $review->title }}',
                                     "content": '{{ $review->content }}',
                                     "id": '{{ $review->id }}',
