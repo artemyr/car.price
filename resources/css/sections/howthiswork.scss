@@ -53,7 +53,7 @@
 
             .howThisWork-steps__step_green1 {
                 position: absolute;
-                border: 3px solid #06892B;
+                border: 3px solid $--base-green-color;
                 height: 100%;
                 width: 100%;
                 border-radius: 100%;
@@ -61,7 +61,7 @@
             }
             .howThisWork-steps__step_green2 {
                 position: absolute;
-                border: 3px solid #06892B;
+                border: 3px solid $--base-green-color;
                 height: 100%;
                 width: 100%;
                 border-radius: 100%;
@@ -69,7 +69,7 @@
             }
             .howThisWork-steps__step_green3 {
                 position: absolute;
-                border: 3px solid #06892B;
+                border: 3px solid $--base-green-color;
                 height: 100%;
                 width: 100%;
                 border-radius: 100%;
@@ -78,8 +78,8 @@
         }
 
         .howThisWork-steps__step_finaly {
-            background-color: #06892B;
-            border: 2px solid #06892B;
+            background-color: $--base-green-color;
+            border: 2px solid $--base-green-color;
             border-radius: 100%;
             color: #FFFFFF;
         }
@@ -89,14 +89,12 @@
         font-weight: 500;
         font-size: 16px;
         text-align: center;
-        color: #2E3D4A;
         line-height: 74px;
     }
     .howThisWork-steps__title {
         font-weight: 500;
         font-size: 16px;
         text-align: center;
-        color: #2E3D4A;
         margin-bottom: 12px;
     }
     .howThisWork-steps__subtitle {

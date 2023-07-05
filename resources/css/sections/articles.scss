@@ -123,8 +123,8 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 18px;
-            color: #06892B;
-            border: 1px solid #06892B;
+            color: $--base-green-color;
+            border: 1px solid $--base-green-color;
             height: 36px;
             width: 190px;
             display: flex;
@@ -165,7 +165,6 @@
             line-height: 25px;
             letter-spacing: 0px;
             text-align: left;
-            color:#2E3D4A;
             margin-bottom: 20px;
             margin-top: 20px;
         }
@@ -175,7 +174,6 @@
             line-height: 24px;
             letter-spacing: 0px;
             text-align: left;
-            color: #2E3D4A;
             padding-bottom: 6px;
         }
         ul,ol {
@@ -187,7 +185,6 @@
             line-height: 24px;
             letter-spacing: 0em;
             text-align: left;
-            color: #2E3D4A;
             padding-left: 20px;
             position: relative;
             padding-bottom: 10px;
@@ -196,7 +193,7 @@
             content: '';
             width: 6px;
             height:6px;
-            background: #06892B;
+            background: $--base-green-color;
             border-radius: 100%;
             position: absolute;
             left: 0px;
@@ -210,7 +207,7 @@
             position: absolute;
             left: 0px;
             top: 0px;
-            color: #06892B;;
+            color: $--base-green-color;;
          }
     }
     .blog-detail-pages-wrapper__socials-label{
@@ -230,7 +227,7 @@
         color:#999999;
     }
     .blog-detail-pages-wrapper__banner {
-        background-color: #06892B;
+        background-color: $--base-green-color;
         height: 220px;
         margin-bottom: -135px;
         padding-top: 10px;
@@ -268,7 +265,6 @@
         line-height: 42px;
         letter-spacing: 0em;
         text-align: left;
-        color: #2E3D4A;
         margin-bottom: 24px;
     }
     .blog-detail-pages-wrapper__title-bottom {
@@ -302,7 +298,7 @@
         cursor: pointer;
     }
     .sidebar__item:hover{
-        color: #06892B;
+        color: $--base-green-color;
     }
     .sidebar__item-wrapper {
         display: grid;

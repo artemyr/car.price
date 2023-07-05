@@ -17,7 +17,6 @@
             li{
                 font-weight: 500;
                 font-size: 16px;
-                color: #2E3D4A;
 
                 display: flex;
                 align-items: center;
@@ -62,7 +61,7 @@
             }
 
             .whereSell-card_green {
-                border: 1px solid #06892B;
+                border: 1px solid $--base-green-color;
             }
 
             @include size1200 {
@@ -86,7 +85,6 @@
     .whereSell-card__title{
         font-weight: 500;
         font-size: 24px;
-        color: #2E3D4A;
         line-height: 30px;
 
         @include size576 {
@@ -98,7 +96,6 @@
         font-family: $--base-light-font-family;
         font-weight: 400;
         font-size: 18px;
-        color: #2E3D4A;
         height: 20px;
         display: flex;
         align-items: center;
@@ -115,8 +112,7 @@
         margin-bottom: 37px;
     }
     .whereSell-card__title_main {
-        color: #2E3D4A;
-        span {color:#06892B}
+        span {color:$--base-green-color}
     }
     .whereSell-card__hours {
         margin-bottom: 37px;
@@ -134,7 +130,7 @@
                 height: 22px;
             }
 
-            svg.green use{fill: #06892B;}
+            svg.green use{fill: $--base-green-color;}
 
             svg.gray use{fill: #cccccc;}
         }

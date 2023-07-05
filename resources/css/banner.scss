@@ -1,5 +1,5 @@
 .banner {
-    background: radial-gradient(25.2% 85.16% at 68.96% 64.94%, rgba(235, 255, 0, 0.5) 0%, rgba(235, 255, 0, 0) 100%), #06892B;
+    background: radial-gradient(25.2% 85.16% at 68.96% 64.94%, rgba(235, 255, 0, 0.5) 0%, rgba(235, 255, 0, 0) 100%), $--base-green-color;
     overflow: hidden;
 
     .banner__top {
@@ -51,7 +51,7 @@
 @media (max-width: 767.98px){
     .banner {
         padding-top: 70px;
-        background: radial-gradient(80.89% 55.68% at 105.73% 58.07%, rgba(235, 255, 0, 0.5) 0%, rgba(235, 255, 0, 0) 100%), #06892B;
+        background: radial-gradient(80.89% 55.68% at 105.73% 58.07%, rgba(235, 255, 0, 0.5) 0%, rgba(235, 255, 0, 0) 100%), $--base-green-color;
 
         .banner__image {
             position: relative;

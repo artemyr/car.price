@@ -3,10 +3,9 @@
     align-items: center;
     gap: 8px;
     font-family: $--base-bold-font-family;
-    color: #2E3D4A;
 
     .logo__text span{
-        color: #06892B;
+        color: $--base-green-color;
     }
 
     .logo__svg {
@@ -29,7 +28,6 @@
         line-height: 40px;
         letter-spacing: 0em;
         text-align: left;
-        color: #2E3D4A;
         margin-bottom: 24px;
     }
 }

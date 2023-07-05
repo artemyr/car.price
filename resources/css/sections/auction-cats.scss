@@ -30,11 +30,11 @@
     }
 
     .action-cats__button:hover{
-        color: #06892B;
+        color: $--base-green-color;
     }
 
     .action-cats__button.active {
-        background: #06892B;
+        background: $--base-green-color;
         color: #FFFFFF;
         font-weight: 700;
     }
@@ -49,12 +49,11 @@
         font-family: $--base-light-font-family;
         font-weight: 400;
         font-size: 16px;
-        color: #2E3D4A;
         text-decoration: none;
     }
 
     .action-cats__sub-cats a:hover{
-        color: #06892B;
+        color: $--base-green-color;
     }
 
     .action-cats__sub-cat {

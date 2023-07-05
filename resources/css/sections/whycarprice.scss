@@ -52,7 +52,7 @@
     .advantages-item__numbers::before {
         content: '';
         position: absolute;
-        background: #06892B;
+        background: $--base-green-color;
         width: 10px;
         height: 10px;
         border-radius: 100%;
@@ -65,7 +65,6 @@
         font-family: $--base-light-font-family;
         font-weight: 400;
         font-size: 18px;
-        color: #2E3D4A;
     }
 
     .advantages-item__sign {

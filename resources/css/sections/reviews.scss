@@ -56,7 +56,6 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 20px;
-        color: #2E3D4A;
         margin-bottom: 8px;
     }
     .review__author {
@@ -72,7 +71,6 @@
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
-        color: #2E3D4A;
         line-height: 21px;
         margin-bottom: 6px;
     }
@@ -80,7 +78,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
-        color: #06892B;
+        color: $--base-green-color;
         cursor: pointer;
         text-decoration: none;
     }
@@ -104,7 +102,6 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
-        color: #2E3D4A;
         margin-bottom: 4px;
     }
     .review-author__subtitle {
