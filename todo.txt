@@ -1,2 +1,0 @@
-/resources/views/includes/staticInfo.blade.php в самом начале есть меню для мобилки, но сейчас оно статично
-/resources/views/includes/dynamic/reviews.blade.php в отзывах есть ссылка читать полностью - но у нас нет детальной страницы отзыва. возможно нужно открывать в модалке
