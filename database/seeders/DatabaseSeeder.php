@@ -147,8 +147,9 @@ class DatabaseSeeder extends Seeder
             'link' => 'kras-1',
             'city_id' => 1,
             'tag' => 'Безопасность',
-            'preview_text' => 'Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.',
-            'cr_date' => '30.07.2022'
+            'preview_text' => 'Разнообразный и богатый опыт говорит нам, что реализация намеченных плановых заданий играя на фортепиано он увидел',
+            'cr_date' => '30.07.2022',
+            'preview_image' => 'uploads/images/articles/1.jpg'
         ];
         $data[] =
         [
@@ -157,8 +158,9 @@ class DatabaseSeeder extends Seeder
             'link' => 'kras-2',
             'city_id' => 1,
             'tag' => 'Безопасность',
-            'preview_text' => 'Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.',
-            'cr_date' => '30.07.2022'
+            'preview_text' => 'Однозначно, ключевые особенности структуры проекта могут быть смешаны с не уникальными данными до степени совершенной',
+            'cr_date' => '30.07.2022',
+            'preview_image' => 'uploads/images/articles/2.jpg'
         ];
         $data[] =
         [
@@ -167,8 +169,9 @@ class DatabaseSeeder extends Seeder
             'link' => 'kras-3',
             'city_id' => 1,
             'tag' => 'Безопасность',
-            'preview_text' => 'Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.',
-            'cr_date' => '30.07.2022'
+            'preview_text' => 'Имеется спорная точка зрения, гласящая примерно следующее: реплицированные',
+            'cr_date' => '30.07.2022',
+            'preview_image' => 'uploads/images/articles/3.jpg'
         ];
         $data[] =
         [
@@ -177,8 +180,9 @@ class DatabaseSeeder extends Seeder
             'link' => 'kras-4',
             'city_id' => 1,
             'tag' => 'Безопасность',
-            'preview_text' => 'Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.',
-            'cr_date' => '30.07.2022'
+            'preview_text' => 'Есть над чем задуматься: тщательные исследования конкурентов',
+            'cr_date' => '30.07.2022',
+            'preview_image' => 'uploads/images/articles/4.jpg'
         ];
         $data[] =
         [
@@ -187,8 +191,9 @@ class DatabaseSeeder extends Seeder
             'link' => 'mos-1',
             'city_id' => 2,
             'tag' => 'Безопасность',
-            'preview_text' => 'Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.',
-            'cr_date' => '30.07.2022'
+            'preview_text' => 'Разнообразный и богатый',
+            'cr_date' => '30.07.2022',
+            'preview_image' => 'uploads/images/articles/5.jpg'
         ];
         $data[] =
         [
@@ -197,8 +202,42 @@ class DatabaseSeeder extends Seeder
             'link' => 'mos-2',
             'city_id' => 2,
             'tag' => 'Безопасность',
-            'preview_text' => 'Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени.',
-            'cr_date' => '30.07.2022'
+            'preview_text' => 'Учитывая ключевые сценарии поведения, выбранный нами инновационный',
+            'cr_date' => '30.07.2022',
+            'preview_image' => 'uploads/images/articles/6.jpg'
+        ];
+        $data[] =
+        [
+            'title' => 'Москва - статья 2',
+            'content' => 'объявление в городе Москва 2',
+            'link' => 'mos-3',
+            'city_id' => 2,
+            'tag' => 'Безопасность',
+            'preview_text' => 'Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени',
+            'cr_date' => '30.07.2022',
+            'preview_image' => 'uploads/images/articles/1.jpg'
+        ];
+        $data[] =
+        [
+            'title' => 'Москва - статья 2',
+            'content' => 'объявление в городе Москва 2',
+            'link' => 'mos-4',
+            'city_id' => 2,
+            'tag' => 'Безопасность',
+            'preview_text' => 'Идейные соображения высшего порядка, а также укрепление и развитие внутренней структуры является качественно новой ступенью.',
+            'cr_date' => '30.07.2022',
+            'preview_image' => 'uploads/images/articles/2.jpg'
+        ];
+        $data[] =
+        [
+            'title' => 'Москва - статья 2',
+            'content' => 'объявление в городе Москва 2',
+            'link' => 'mos-5',
+            'city_id' => 2,
+            'tag' => 'Безопасность',
+            'preview_text' => 'В частности, граница обучения кадров создаёт предпосылки для вывода текущих активов',
+            'cr_date' => '30.07.2022',
+            'preview_image' => 'uploads/images/articles/3.jpg'
         ];
 
         foreach($data as $item)
@@ -219,6 +258,7 @@ class DatabaseSeeder extends Seeder
             'cr_date' => '30.08.2021',
             'rate' => 1,
             'author_ava' => 'img/preson.jpg',
+            'preview_image' => 'uploads/images/reviews/1.jpg'
         ];
         $data[] =
         [
@@ -234,6 +274,19 @@ class DatabaseSeeder extends Seeder
         ];
         $data[] =
         [
+            'title' => 'Удачно поставила',
+            'link' => 'city2',
+            'city_id' => 1,
+            'content' => 'Являясь всего лишь частью общей картины, диаграммы связей и по сей день остаются уделом либералов, которые жаждут быть заблокированы в рамках своих собственных рациональных ограничений.',
+
+            'author' => 'Сурен Багодуровичь',
+            'cr_date' => '30.08.2021',
+            'rate' => 2,
+            'author_ava' => 'img/preson.jpg',
+            'preview_image' => 'uploads/images/reviews/2.jpg'
+        ];
+        $data[] =
+        [
             'title' => 'Хорошая машина',
             'link' => 'city3',
             'city_id' => 1,
@@ -243,6 +296,7 @@ class DatabaseSeeder extends Seeder
             'cr_date' => '30.08.2021',
             'rate' => 3,
             'author_ava' => 'img/preson.jpg',
+            'preview_image' => 'uploads/images/reviews/3.jpg'
         ];
         $data[] =
         [
@@ -255,6 +309,7 @@ class DatabaseSeeder extends Seeder
             'cr_date' => '30.08.2021',
             'rate' => 4,
             'author_ava' => 'img/preson.jpg',
+            'preview_image' => 'uploads/images/reviews/4.jpg'
         ];
         $data[] =
         [
@@ -267,6 +322,20 @@ class DatabaseSeeder extends Seeder
             'cr_date' => '30.08.2021',
             'rate' => 5,
             'author_ava' => 'img/preson.jpg',
+            'preview_image' => 'uploads/images/reviews/5.jpg'
+        ];
+        $data[] =
+        [
+            'title' => 'Могло быть и лучше',
+            'link' => 'city5',
+            'city_id' => 1,
+            'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
+
+            'author' => 'Сурен Багодуровичь',
+            'cr_date' => '30.08.2021',
+            'rate' => 5,
+            'author_ava' => 'img/preson.jpg',
+            'preview_image' => 'uploads/images/reviews/6.jpg'
         ];
 
         foreach($data as $item)

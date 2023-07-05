@@ -20,6 +20,7 @@ class CreateReviewsTable extends Migration
 
             $table->string('title');
             $table->string('link');
+            $table->string('preview_image')->nullable();
             $table->text('content');
 
             $table->string('author');

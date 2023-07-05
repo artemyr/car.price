@@ -16,19 +16,11 @@
 
                     @foreach($reviews as $review)
                     <div class="review__item">
-
-                        @if (count($review->downloads) > 0)
-                            @foreach ($review->downloads as $image)
+                        @foreach ($review->images() as $image)
                             <div class="review__image">
-                                <img src="{{ asset('storage/'.$image->path) }}">
+                                <img src="{{ $image }}">
                             </div>
-                            @endforeach
-                        @else
-                            <div class="review__image">
-                                <img src="{{ asset('img/article_placeholder.jpg') }}">
-                            </div>
-                        @endif
-
+                        @endforeach
                         <div class="review__body">
 
                             <div class="review__author review-author">

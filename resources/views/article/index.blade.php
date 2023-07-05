@@ -13,31 +13,23 @@
     <section class="articles">
         <div class="container">
             <div class="articles__items-container">
-
-                    @foreach($articles as $article)
-                    <div class="articles__item">
-                        @if (count($article->downloads) > 0)
-                            @foreach ($article->downloads as $image)
-                                <div class="articles__image">
-                                    <img src="{{ asset('storage/'.$image->path) }}">
-                                </div>
-                            @endforeach
-                        @else
-                            <div class="articles__image">
-                                <img src="{{ asset('img/article_placeholder.jpg') }}">
-                            </div>
-                        @endif
-                        <div class="articles__body">
-                            <div class="articles__tag green">{{ $article->tag }}</div>
-                            <div class="articles__text">{{ $article->preview_text }}</div>
-                            <div class="articles__footer">
-                                <a href="{{ route('article.show', $article->link) }}" class="articles__link-detail">Читать статью</a>
-                                <div class="articles__date">{{ $article->cr_date }}</div>
-                            </div>
+                @foreach($articles as $article)
+                <div class="articles__item">
+                    @foreach ($article->images() as $image)
+                        <div class="articles__image">
+                            <img src="{{ $image }}">
+                        </div>
+                    @endforeach
+                    <div class="articles__body">
+                        <div class="articles__tag green">{{ $article->tag }}</div>
+                        <div class="articles__text">{{ $article->preview_text }}</div>
+                        <div class="articles__footer">
+                            <a href="{{ route('article.show', $article->link) }}" class="articles__link-detail">Читать статью</a>
+                            <div class="articles__date">{{ $article->cr_date }}</div>
                         </div>
                     </div>
-                    @endforeach
-
+                </div>
+                @endforeach
             </div>
         </div>
     </section>

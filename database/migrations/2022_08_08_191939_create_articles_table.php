@@ -20,6 +20,7 @@ class CreateArticlesTable extends Migration
 
             $table->string('link');
             $table->string('title');
+            $table->string('preview_image')->nullable();
             $table->text('content');
 
             $table->text('tag')->nullable();
