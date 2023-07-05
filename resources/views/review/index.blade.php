@@ -19,10 +19,14 @@
 
                         @if (count($review->downloads) > 0)
                             @foreach ($review->downloads as $image)
-                            <img class="review__image" src="{{ asset('storage/'.$image->path) }}">
+                            <div class="review__image">
+                                <img src="{{ asset('storage/'.$image->path) }}">
+                            </div>
                             @endforeach
                         @else
-                            <img class="articles__image" src="{{ asset('img/article_placeholder.jpg') }}">
+                            <div class="review__image">
+                                <img src="{{ asset('img/article_placeholder.jpg') }}">
+                            </div>
                         @endif
 
                         <div class="review__body">
