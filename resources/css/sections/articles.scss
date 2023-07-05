@@ -12,6 +12,45 @@
             grid-template-columns: 1fr
         }
     }
+
+    .articles__header {
+        display: flex;
+        gap: 20px;
+        align-items: start;
+
+        .articles__link {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            height: 36px;
+            padding: 0 20px;
+            background: #FDE8D6;
+            border-radius: 8px;
+
+            @include size768 {
+                display: none;
+            }
+
+            svg {
+                height: 7px;
+                width: 12px;
+                transform: rotate(-90deg);
+
+                use {
+                    stroke: #E65425;
+                }
+            }
+
+            span {
+                white-space: nowrap;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #E65425;
+            }
+        }
+    }
+
     .articles__item {
         border-radius: 12px;
         overflow: hidden;
@@ -48,74 +87,55 @@
             background-color: #0E431DB2;
             opacity: 1;
         }
+    }
 
-        .articles__header {
-            display: flex;
-            gap: 20px;
-            align-items: start;
+    .articles__text {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+        color: #000000;
+        margin-bottom: 24px;
+    }
+
+    .articles__date {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #999999;
+    }
+
+    .articles__tag {
+        background: #ccc;
+        border-radius: 46px;
+        padding: 8px 12px 6px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-top: 10px;
+        display: inline-block;
+        margin-bottom: 15px;
+
+        &.blue {
+            background: #2B74B9;
         }
 
-        .articles__tag {
-            background: #ccc;
-            border-radius: 46px;
-            padding: 8px 12px 6px;
-            font-weight: 500;
-            font-size: 12px;
-            line-height: 15px;
-            text-transform: uppercase;
-            color: #FFFFFF;
-            margin-top: 10px;
-            display: inline-block;
-            margin-bottom: 15px;
+        &.green {
+            background: #0B7A6A;
         }
 
-        .articles__text {
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 23px;
-            color: #000000;
-            margin-bottom: 24px;
+        &.pink {
+            background: #783294;
         }
+    }
 
-        .articles__date {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 15px;
-            color: #999999;
-        }
-
-        .articles__link {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            height: 36px;
-            padding: 0 20px;
-            background: #FDE8D6;
-            border-radius: 8px;
-
-            @include size768 {
-                display: none;
-            }
-
-            svg {
-                height: 7px;
-                width: 12px;
-                transform: rotate(-90deg);
-
-                use {
-                    stroke: #E65425;
-                }
-            }
-
-            span {
-                white-space: nowrap;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 20px;
-                color: #E65425;
-            }
-        }
+    .articles__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
 
         .articles__link-detail {
             font-family: 'Geometria';
@@ -133,25 +153,6 @@
             border-radius: 12px;
             cursor: pointer;
             text-decoration: none;
-        }
-
-        .articles__footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 10px;
-        }
-
-        .articles__tag.blue {
-            background: #2B74B9;
-        }
-
-        .articles__tag.green {
-            background: #0B7A6A;
-        }
-
-        .articles__tag.pink {
-            background: #783294;
         }
     }
 }

@@ -5,8 +5,8 @@
             <div class="swiper-wrapper">
                 @foreach($reviews as $review)
                     <div class="slider__slide swiper-slide">
-                        @foreach ($review->downloads as $image)
-                        <img class="slider__image" src="{{ asset('storage/'.$image->path) }}">
+                        @foreach ($review->images() as $image)
+                        <img class="slider__image" src="{{ $image }}">
                         @endforeach
                         <div class="review__body">
                             <div class="review__author review-author">
