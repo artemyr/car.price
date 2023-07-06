@@ -26,7 +26,7 @@ class CategoryController extends Controller
         $moreAskedQuestions = MoreAskedQuestion::all();
 
         $banner = (object)[];
-        $banner->title = "Выкуп автомобилей<br>" . mb_strtolower($category->title);
+        $banner->title = "Выкуп автомобилей<br>в $city->name_predloshniy_padesh<br>" . mb_strtolower($category->title);
 
         return view('main',compact('articles','reviews','moreAskedQuestions', 'banner'));
     }
