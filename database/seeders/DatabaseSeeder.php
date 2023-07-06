@@ -512,11 +512,28 @@ class DatabaseSeeder extends Seeder
         $data = [];
         $data[] =
         [
-            'title' => 'Собаки',
+            'title' => 'СДЕЛКИ',
+            'color' => 'purple',
         ];
         $data[] =
         [
-            'title' => 'Кошки',
+            'title' => 'БЕЗОПАСНОСТЬ',
+            'color' => 'blue',
+        ];
+        $data[] =
+        [
+            'title' => 'НОВОСТИ',
+            'color' => 'green',
+        ];
+        $data[] =
+        [
+            'title' => 'СТРАХОВАНИЕ',
+            'color' => 'gray',
+        ];
+        $data[] =
+        [
+            'title' => 'АКЦИИ',
+            'color' => 'orange',
         ];
 
         foreach($data as $item)
@@ -535,11 +552,18 @@ class DatabaseSeeder extends Seeder
         $this->createGlobalSettings();
         $this->createMoreAskedQuestions();
 
-        // $tags = Tag::factory(6)->create();
-        // foreach($posts as $post) {
-        //     $tagsIds = $tags->random(5)->pluck('id');
-        //     $post->tags()->attach($tagsIds);
-        // }
+//         $tags = Tag::factory(6)->create();
+//         foreach($posts as $post) {
+//             $tagsIds = $tags->random(5)->pluck('id');
+//             $post->tags()->attach($tagsIds);
+//         }
+
+        $articles = Article::all();
+        $tags = Tag::all();
+         foreach($articles as $article) {
+             $tagsIds = $tags->random(1)->pluck('id');
+             $article->tags()->attach($tagsIds);
+         }
 
         \App\Models\User::factory(1)->create();
     }

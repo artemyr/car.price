@@ -35,4 +35,9 @@ class Article extends Model
 
         return $arrImages;
     }
+
+    public function tags()
+    {
+        return $this->belongsToMany(Tag::class);
+    }
 }
