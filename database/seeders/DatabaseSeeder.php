@@ -154,7 +154,7 @@ class DatabaseSeeder extends Seeder
             ',
             'link' => 'kras-1',
             'city_id' => 1,
-            'tag' => 'Безопасность',
+            'tag' => 'Сделки',
             'preview_text' => 'Разнообразный и богатый опыт говорит нам, что реализация намеченных плановых заданий играя на фортепиано он увидел',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/1.jpg'
@@ -176,7 +176,7 @@ class DatabaseSeeder extends Seeder
             'content' => 'объявление в городе краснодар 2',
             'link' => 'kras-3',
             'city_id' => 1,
-            'tag' => 'Безопасность',
+            'tag' => 'Новости',
             'preview_text' => 'Имеется спорная точка зрения, гласящая примерно следующее: реплицированные',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/3.jpg'
@@ -187,7 +187,7 @@ class DatabaseSeeder extends Seeder
             'content' => 'объявление в городе краснодар 2',
             'link' => 'kras-4',
             'city_id' => 1,
-            'tag' => 'Безопасность',
+            'tag' => 'Страхование',
             'preview_text' => 'Есть над чем задуматься: тщательные исследования конкурентов',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/4.jpg'
@@ -198,7 +198,7 @@ class DatabaseSeeder extends Seeder
             'content' => 'объявление в городе Москва 1',
             'link' => 'mos-1',
             'city_id' => 2,
-            'tag' => 'Безопасность',
+            'tag' => 'Сделки',
             'preview_text' => 'Разнообразный и богатый',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/5.jpg'
@@ -209,7 +209,7 @@ class DatabaseSeeder extends Seeder
             'content' => 'объявление в городе Москва 2',
             'link' => 'mos-2',
             'city_id' => 2,
-            'tag' => 'Безопасность',
+            'tag' => 'Акции',
             'preview_text' => 'Учитывая ключевые сценарии поведения, выбранный нами инновационный',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/6.jpg'
@@ -231,7 +231,7 @@ class DatabaseSeeder extends Seeder
             'content' => 'объявление в городе Москва 2',
             'link' => 'mos-4',
             'city_id' => 2,
-            'tag' => 'Безопасность',
+            'tag' => 'Новости',
             'preview_text' => 'Идейные соображения высшего порядка, а также укрепление и развитие внутренней структуры является качественно новой ступенью.',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/2.jpg'
@@ -242,7 +242,7 @@ class DatabaseSeeder extends Seeder
             'content' => 'объявление в городе Москва 2',
             'link' => 'mos-5',
             'city_id' => 2,
-            'tag' => 'Безопасность',
+            'tag' => 'Сделки',
             'preview_text' => 'В частности, граница обучения кадров создаёт предпосылки для вывода текущих активов',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/3.jpg'
