@@ -3,10 +3,10 @@
         <div class="home-section__title">В каких городах работает CarPrice</div>
         <div class="work-cities__list">
             @foreach($dividedCities as $key => $row)
-            <ul 
+            <ul
             @if($key > 0) data-spoiler="hide" @endif>
                 @foreach($row as $col)
-                <li><a href="{{ route('current_city', $col['link']) }}">{{ $col['title'] }}</a></li>
+                <li><a href="{{ route('city', $col['link']) }}">{{ $col['title'] }}</a></li>
                 @endforeach
             </ul>
             @endforeach

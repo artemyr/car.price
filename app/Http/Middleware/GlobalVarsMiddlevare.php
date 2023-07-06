@@ -21,22 +21,62 @@ class GlobalVarsMiddlevare
      */
     public function handle(Request $request, Closure $next)
     {
-        $service = new Service;
+        $this->cities();
+        $this->addresses();
+        $this->globals();
+        $this->paginator();
+        $this->menu(City::where('link', $request->route('city'))->first());
 
+        return $next($request);
+    }
+
+    private function menu ($city) {
+        $menu = [];
+
+        if (!$city) $city = City::where('id', '1')->firstOrFail();
+
+        $categories = $city->categories();
+
+        foreach ($categories as $category){
+            $subcategories = [];
+            foreach ($category->subcategories as $subcat) {
+                $subcategories[] = (object)[
+                    'link' => route('category', [$city->link , $subcat->link]),
+                    'title' => $subcat->title,
+                ];
+            }
+
+            $menu[] = (object)[
+                'link' => route('category', [$city->link, $category->link]),
+                'title' => $category->title,
+                'icon' => $category->icon,
+                'subtitle' => $category->subtitle,
+                'subcategories' => $subcategories
+            ];
+        }
+
+        \View::share('categories', $menu);
+    }
+
+    private function cities () {
         $cities = City::all();
-        $capriceOfficeAddresses = CarpriceOfficeAddrass::all();
+        $service = new Service;
 
         \View::share('cities', $cities);
         \View::share('dividedCities', $service->dividedCities($cities));
 //        \View::share('categories', Category::all());  //already is'n general (uses cities selection)
-        \View::share('capriceOfficeAddresses', $capriceOfficeAddresses);
+    }
 
-        //gloval config
+    private function addresses () {
+        \View::share('capriceOfficeAddresses', CarpriceOfficeAddrass::all());
+    }
+
+    private function globals () {
         \View::share('partner_link', GlobalSetting::where('code','partner_link')->first());
         \View::share('video_link', GlobalSetting::where('code','video_link')->first());
+    }
 
+    private function paginator () {
         Paginator::defaultView('vendor.pagination.articles');
-
-        return $next($request);
     }
 }

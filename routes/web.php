@@ -26,10 +26,6 @@ Route::group(["namespace" => "Admin", 'prefix' => 'admin'], function() {
     });
 });
 
-
-
-
-
 Route::group(["namespace" => "Article"], function() {
     Route::get('/articles', 'IndexController')->name('article.index');
     Route::get('/articles/{article}', 'ShowController')->name('article.show');
@@ -39,16 +35,8 @@ Route::group(["namespace" => "Review"], function() {
     Route::get('/otzivi', 'IndexController')->name('review.index');
 });
 
-// last
-Route::group(["namespace" => "City"], function() {
-    Route::get('/{city}', 'ShowController')->name('current_city')->where('city', \App\Models\City::getAllCitySlugs());
-    Route::get('/{city}/{category}', 'CategoryController')->name('city.category')->where('city', \App\Models\City::getAllCitySlugs());
-    Route::get('/{city}/{category}/{post}', 'ShowPostController')->name('city.post.show')->where('city', \App\Models\City::getAllCitySlugs());
-});
 
-// last
-Route::group(["namespace" => "Post"], function() {
-    Route::get('/', 'IndexController')->name('main');
-    Route::get('/{category}', 'CategoryController')->name('category');
-    Route::get('/{category}/{post}', 'ShowController')->name('post.show');
-});
+
+Route::get('/', 'City\IndexController')->name('main');
+Route::get('/{city}/', 'City\ShowController')->name('city');
+Route::get('/{city}/{category}', 'CategoryController')->name('category');

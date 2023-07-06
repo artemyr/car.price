@@ -2,9 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
 class City extends Model
 {
     use HasFactory;
@@ -19,7 +19,18 @@ class City extends Model
 
     public function categories()
     {
-        return $this->hasMany(Category::class);
+        $categories = Category::where('city_id', $this->id)->orWhere('city_id', null)->get();
+
+        $multi = [];
+        foreach ($categories as $item) {
+            if ($item->parent_id == null) $multi[] = $item;
+        }
+
+        foreach ($multi as &$item) {
+            $item->subcategories = $categories->where('parent_id', $item->id);
+        }
+
+        return $multi;
     }
 
     public function articles()
@@ -30,16 +41,5 @@ class City extends Model
     public function reviews()
     {
         return $this->hasMany(Review::class);
-    }
-
-    public static function getAllCitySlugs(){
-        if(\Schema::hasTable('cities')) {
-            $res = [];
-            foreach (self::select('link')->get() as $item) {
-                $res[] = $item->link;
-            }
-            return implode("|",$res);
-        }
-        return null;
     }
 }

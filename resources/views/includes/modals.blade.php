@@ -11,7 +11,7 @@
                     @foreach($row as $col)
                     <li>
                         <a class="modal__link link-reset {{ (($city->id ?? '') == $col['id'] ? 'active' : '') }}"
-                            href="{{ route('current_city', $col['link']) }}">{{ $col['title'] }}
+                            href="{{ route('city', $col['link']) }}">{{ $col['title'] }}
                         </a>
                     </li>
                     @endforeach
@@ -81,7 +81,7 @@
                     @if(isset($categories))
                         @foreach($categories as $category)
                         <li class="dropdown-menu__item" js-toggle-menu="open_elements">
-                            <a href="{{ route('category', [($city->link) ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
+                            <a href="{{ $category->link }}">{{ $category->title }}</a>
                             <svg class="mobile-menu__arrow right">
                                 <use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use>
                             </svg>
@@ -93,11 +93,13 @@
                                     </svg>
                                     Назад
                                 </li>
-                                @foreach($category->posts as $post)
-                                    <li>
-                                        <a href="{{ route('post.show', [$city->link ?? $cities[0]->link, $category->link, $post->link]) }}">{{ $post->title }}</a>
-                                    </li>
-                                @endforeach
+                                @if($category->subcategories && count($category->subcategories) > 0)
+                                    @foreach($category->subcategories as $post)
+                                        <li>
+                                            <a href="{{ $post->link }}">{{ $post->title }}</a>
+                                        </li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </li>
                         @endforeach

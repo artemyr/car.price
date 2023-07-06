@@ -20,26 +20,28 @@
             <nav class="top-menu">
                 <ul class="d-flex">
                     @can('view', auth()->user())
-                    <li class="top-menu__item"><a href="{{ route('admin.index') }}">Admin</a></li>
+                        <li class="top-menu__item"><a href="{{ route('admin.index') }}">Admin</a></li>
                     @endcan
 
                     <li class="top-menu__item">
                         <span>Купить авто</span>
                         <ul class="top-menu__dropdown dropdown-menu">
                             @foreach($categories as $category)
-                            <li class="dropdown-menu__item">
-                                <svg class="dropdown-menu__icon"><use xlink:href="{{ asset('img/svg/sprite.svg#').$category->icon }}"></use></svg>
-                                <a class="" href="{{ route('category', [$city->link ?? $cities[0]->link, $category->link]) }}">{{ $category->title }}</a>
-                                <div class="dropdown-menu__subtitle">
-                                    {{ $category->subtitle ?? '' }}
-                                </div>
+                                <li class="dropdown-menu__item">
+                                    <svg class="dropdown-menu__icon"><use xlink:href="{{ asset('img/svg/sprite.svg#').$category->icon }}"></use></svg>
+                                    <a class="" href="{{ $category->link }}">{{ $category->title }}</a>
+                                    <div class="dropdown-menu__subtitle">
+                                        {{ $category->subtitle ?? '' }}
+                                    </div>
 
-                                <ul class="dropdown-menu__posts">
-                                    @foreach($category->posts as $post)
-                                        <li><a href="{{ route('post.show', [$city->link ?? $cities[0]->link, $category->link, $post->link]) }}">{{ $post->title }}</a></li>
-                                    @endforeach
-                                </ul>
-                            </li>
+                                    @if($category->subcategories && count($category->subcategories) > 0)
+                                    <ul class="dropdown-menu__posts">
+                                        @foreach($category->subcategories as $post)
+                                            <li><a href="{{ $post->link }}">{{ $post->title }}</a></li>
+                                        @endforeach
+                                    </ul>
+                                    @endif
+                                </li>
                             @endforeach
                         </ul>
                     </li>
@@ -49,9 +51,9 @@
 
                     <li style="display:none" class="top-menu__item"><a href="{{ route('admin.index') }}">Auth</a></li>
                     <li style="display:none" class="top-menu__item"><a href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
+                                                                       onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
-                        Logout
+                            Logout
                         </a>
                     </li>
                 </ul>
