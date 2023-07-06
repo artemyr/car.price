@@ -11,8 +11,6 @@ class IndexController extends BaseController
     public function __invoke()
     {
         $articles = Article::paginate(9);
-        $categories = Category::all();
-
-        return view('article.index', compact('articles','categories'));
+        return view('article.index', compact('articles'));
     }
 }

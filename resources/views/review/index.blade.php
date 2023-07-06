@@ -75,6 +75,8 @@
                     @endforeach
 
             </div>
+
+            {{ $reviews->links() }}
         </div>
     </section>
 </div>

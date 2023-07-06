@@ -353,6 +353,45 @@ class DatabaseSeeder extends Seeder
             'author_ava' => 'img/preson.jpg',
             'preview_image' => 'uploads/images/reviews/6.jpg'
         ];
+        $data[] =
+        [
+            'title' => 'Могло быть и лучше',
+            'link' => 'city6',
+            'city_id' => 1,
+            'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
+
+            'author' => 'Сурен Багодуровичь',
+            'cr_date' => '30.08.2021',
+            'rate' => 5,
+            'author_ava' => 'img/preson.jpg',
+            'preview_image' => 'uploads/images/reviews/6.jpg'
+        ];
+        $data[] =
+        [
+            'title' => 'Могло быть и лучше',
+            'link' => 'city7',
+            'city_id' => 1,
+            'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
+
+            'author' => 'Сурен Багодуровичь',
+            'cr_date' => '30.08.2021',
+            'rate' => 5,
+            'author_ava' => 'img/preson.jpg',
+            'preview_image' => 'uploads/images/reviews/6.jpg'
+        ];
+        $data[] =
+        [
+            'title' => 'Могло быть и лучше',
+            'link' => 'city8',
+            'city_id' => 1,
+            'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
+
+            'author' => 'Сурен Багодуровичь',
+            'cr_date' => '30.08.2021',
+            'rate' => 5,
+            'author_ava' => 'img/preson.jpg',
+            'preview_image' => 'uploads/images/reviews/6.jpg'
+        ];
 
         foreach($data as $item)
             Review::create($item);
