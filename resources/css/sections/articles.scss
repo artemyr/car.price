@@ -1,4 +1,9 @@
 .articles {
+
+    .slider__slide {
+        height: auto;
+    }
+
     .articles__items-container {
         display: grid;
         grid-template-columns: repeat(3,1fr);
@@ -51,9 +56,18 @@
         }
     }
 
+    .articles__body {
+        display: grid;
+        grid-template-rows: max-content auto max-content;
+    }
+
     .articles__item {
         border-radius: 12px;
         overflow: hidden;
+        height: 100%;
+
+        display: grid;
+        grid-template-rows: max-content auto;
 
         .articles__image {
             position: relative;

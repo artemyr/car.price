@@ -21,7 +21,11 @@
                         </div>
                     @endforeach
                     <div class="articles__body">
-                        <div class="articles__tag green">{{ $article->tag }}</div>
+
+                        <div class="articles__tag-wrapper">
+                            <div class="articles__tag green">{{ $article->tag }}</div>
+                        </div>
+
                         <div class="articles__text">{{ $article->preview_text }}</div>
                         <div class="articles__footer">
                             <a href="{{ route('article.show', $article->link) }}" class="articles__link-detail">Читать статью</a>

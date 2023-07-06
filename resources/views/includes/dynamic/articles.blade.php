@@ -11,15 +11,21 @@
             <div class="swiper-wrapper">
                 @foreach($articles as $article)
                 <div class="slider__slide swiper-slide">
-                    @foreach ($article->images() as $image)
-                    <img class="slider__image" src="{{ $image }}">
-                    @endforeach
-                    <div class="articles__body">
-                        <div class="articles__tag green">{{ $article->tag }}</div>
-                        <div class="articles__text">{{ $article->preview_text }}</div>
-                        <div class="articles__footer">
-                            <a href="{{ route('article.show', $article->link) }}" class="articles__link-detail">Читать статью</a>
-                            <div class="articles__date">{{ $article->cr_date }}</div>
+                    <div class="articles__item">
+                        @foreach ($article->images() as $image)
+                        <img class="slider__image" src="{{ $image }}">
+                        @endforeach
+                        <div class="articles__body">
+
+                            <div class="articles__tag-wrapper">
+                                <div class="articles__tag green">{{ $article->tag }}</div>
+                            </div>
+
+                            <div class="articles__text">{{ $article->preview_text }}</div>
+                            <div class="articles__footer">
+                                <a href="{{ route('article.show', $article->link) }}" class="articles__link-detail">Читать статью</a>
+                                <div class="articles__date">{{ $article->cr_date }}</div>
+                            </div>
                         </div>
                     </div>
                 </div>
