@@ -17,7 +17,7 @@
     </div>
     <div class="footer__policy">
         <a>Политика обработки персональных данных</a>
-        <a class="footer__toggle-top" href="#top">
+        <a class="footer__toggle-top" data-scroll-to-top>
             <svg><use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use></svg>
         </a>
     </div>

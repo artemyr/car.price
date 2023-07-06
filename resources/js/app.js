@@ -237,10 +237,20 @@ const app = new Vue({
         })
     }
 
+    function initAcrolToTop() {
+        const body = document.querySelector('body')
+        document.querySelectorAll('[data-scroll-to-top]').forEach(el => {
+            el.onclick = () => {
+                body.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            }
+        })
+    }
+
     init_accordion('first_active');
     init_tabs();
     init_spoilers();
     toggleMenu();
+    initAcrolToTop();
 })(window);
 
 
