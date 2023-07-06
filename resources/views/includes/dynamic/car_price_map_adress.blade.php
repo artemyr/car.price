@@ -3,9 +3,11 @@
         <div class="home-section__title">Адреса и телефоны офисов CarPrice</div>
 
         <div class="contacts__wrapper">
+
             <div class="contacts__map">
-                <img src="{{ asset('img/map.jpg') }}">
+                <div id="map" style="height: 585px"></div>
             </div>
+
             <div class="contacts__list">
                 @foreach($capriceOfficeAddresses as $address)
                 <div class="contacts__item contact-list-item">

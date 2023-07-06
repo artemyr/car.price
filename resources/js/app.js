@@ -196,13 +196,13 @@ const app = new Vue({
                 btnMenu.classList.toggle('active');
                 menu.classList.toggle('active');
                 body.classList.toggle('scroll-lock');
-    
+
                 menu.classList.remove('open')
             } else {
                 btnMenu.classList.remove('active');
                 menu.classList.remove('active');
                 body.classList.remove('scroll-lock');
-    
+
                 menu.classList.remove('open')
             }
         })
@@ -291,5 +291,42 @@ const app = new Vue({
                 modal.querySelector('.modal__header').style.backgroundPosition = 'center';
             })
 		},
+    }
+})(window);
+
+(function (window){
+    'use strict';
+
+    document.addEventListener('DOMContentLoaded',() =>{
+        ymaps.ready(yaMapInit);
+    })
+
+    let data = {
+        "type": "FeatureCollection",
+        "features": [
+            {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [55.831903, 37.411961]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://car-price.online'>car-price.online</a></b></font>", "balloonContentBody": "<p><em>Телефон в формате 2xxx-xxx:</em></p>", "balloonContentFooter": "<font size=1>car-price.online: </font> <strong>car-price.online</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>car-price.online</strong>"}},
+            {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [55.763338, 37.565466]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://car-price.online'>car-price.online</a></b></font>", "balloonContentBody": "<p><em>Телефон в формате 2xxx-xxx:</em></p>", "balloonContentFooter": "<font size=1>car-price.online: </font> <strong>car-price.online</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>car-price.online</strong>"}},
+        ]
+    }
+
+    function yaMapInit () {
+        var myMap = new ymaps.Map('map', {
+                center: [55.76, 37.64],
+                zoom: 10,
+                controls: ['zoomControl'],
+                behaviors: ['default', 'scrollZoom'],
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            objectManager = new ymaps.ObjectManager({
+                // Чтобы метки начали кластеризоваться, выставляем опцию.
+                clusterize: true,
+                // ObjectManager принимает те же опции, что и кластеризатор.
+                gridSize: 32,
+                clusterDisableClickZoom: true
+            });
+
+        myMap.geoObjects.add(objectManager);
+        objectManager.add(data);
     }
 })(window);
