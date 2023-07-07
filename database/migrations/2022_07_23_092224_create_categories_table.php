@@ -23,8 +23,7 @@ class CreateCategoriesTable extends Migration
             $table->string('subtitle')->nullable();
             $table->string('icon')->nullable();
 
-            $table->unsignedBigInteger('parent_id')->nullable();
-            $table->unsignedBigInteger('depth');
+            $table->unsignedBigInteger('parent_id');
 
             $table->timestamps();
         });

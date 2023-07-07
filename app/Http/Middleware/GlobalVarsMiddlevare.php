@@ -4,11 +4,13 @@ namespace App\Http\Middleware;
 
 use App\Models\CarpriceOfficeAddrass;
 use App\Models\City;
+use App\Models\Category;
 use App\Models\GlobalSetting;
 use Closure;
 use Illuminate\Http\Request;
 use App\Services\Base\Service;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\View;
 
 class GlobalVarsMiddlevare
 {
@@ -22,40 +24,25 @@ class GlobalVarsMiddlevare
     public function handle(Request $request, Closure $next)
     {
         $this->cities();
+        $this->city(City::where('link', $request->route('city'))->first());
         $this->addresses();
         $this->globals();
         $this->paginator();
-        $this->menu(City::where('link', $request->route('city'))->first());
+        $this->menu();
+
 
         return $next($request);
     }
 
-    private function menu ($city) {
-        $menu = [];
+    private function menu () {
+        View::composer('layouts.main', function ($view) {
+            $view->with('categories', Category::with('children')->where('parent_id', 0)->get());
+        });
+    }
 
-        if (!$city) $city = City::where('id', '1')->firstOrFail();
-
-        $categories = $city->categories();
-
-        foreach ($categories as $category){
-            $subcategories = [];
-            foreach ($category->subcategories as $subcat) {
-                $subcategories[] = (object)[
-                    'link' => route('category', [$city->link , $subcat->link]),
-                    'title' => $subcat->title,
-                ];
-            }
-
-            $menu[] = (object)[
-                'link' => route('category', [$city->link, $category->link]),
-                'title' => $category->title,
-                'icon' => $category->icon,
-                'subtitle' => $category->subtitle,
-                'subcategories' => $subcategories
-            ];
-        }
-
-        \View::share('categories', $menu);
+    private function city ($city) {
+       if ($city) \View::share('city', $city);
+        else \View::share('city', City::where('id', 1)->first());
     }
 
     private function cities () {

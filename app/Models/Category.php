@@ -16,4 +16,8 @@ class Category extends Model
     {
         return $this->belongsTo(City::class);
     }
+
+    public function children () {
+       return $this->hasMany(self::class, 'parent_id');
+    }
 }

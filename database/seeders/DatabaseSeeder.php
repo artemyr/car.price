@@ -52,18 +52,18 @@ class DatabaseSeeder extends Seeder
     private function createCategories()
     {
         $data = [];
-        $data[] = ['title' => 'С проблемами', 'link' => 's-problemami', 'icon' => 'menu-icon-1','subtitle' => 'Автомобили с дефектами', 'depth' => 1];
-        $data[] = ['title' => 'По назначению', 'link' => 'po-naznacheniu', 'icon' => 'menu-icon-2','subtitle' => 'Для каких лиц предназначено', 'depth' => 1];
-        $data[] = ['title' => 'По кузову', 'link' => 'po-kuzovu', 'icon' => 'menu-icon-3','subtitle' => 'Виды автомобилей', 'depth' => 1];
-        $data[] = ['title' => 'По рулю', 'link' => 'po-rulu', 'icon' => 'menu-icon-4','subtitle' => 'Расположение руля в авто', 'depth' => 1];
+        $data[] = ['title' => 'С проблемами', 'link' => 's-problemami', 'icon' => 'menu-icon-1','subtitle' => 'Автомобили с дефектами','parent_id' => 0];
+        $data[] = ['title' => 'По назначению', 'link' => 'po-naznacheniu', 'icon' => 'menu-icon-2','subtitle' => 'Для каких лиц предназначено','parent_id' => 0];
+        $data[] = ['title' => 'По кузову', 'link' => 'po-kuzovu', 'icon' => 'menu-icon-3','subtitle' => 'Виды автомобилей','parent_id' => 0];
+        $data[] = ['title' => 'По рулю', 'link' => 'po-rulu', 'icon' => 'menu-icon-4','subtitle' => 'Расположение руля в авто','parent_id' => 0];
 
-        $data[] = ['title' => 'Битые авто', 'link' => 'bitie', 'depth' => 2, 'parent_id' => 1];
-        $data[] = ['title' => 'Конфискованные и арестованные авто', 'link' => 'konf', 'depth' => 2, 'parent_id' => 1];
-        $data[] = ['title' => 'Залоги, кредиты, должники, банки', 'city_id' => 1, 'link' => 'zalog', 'depth' => 2, 'parent_id' => 1];
-        $data[] = ['title' => 'Авто по банкротству', 'link' => 'bankr', 'depth' => 2, 'parent_id' => 1];
-        $data[] = ['title' => 'Лизинговые авто', 'link' => 'liz', 'depth' => 2, 'parent_id' => 1];
+        $data[] = ['title' => 'Битые авто', 'link' => 'bitie', 'parent_id' => 1];
+        $data[] = ['title' => 'Конфискованные и арестованные авто', 'link' => 'konf', 'parent_id' => 1];
+        $data[] = ['title' => 'Залоги, кредиты, должники, банки', 'city_id' => 1, 'link' => 'zalog', 'parent_id' => 1];
+        $data[] = ['title' => 'Авто по банкротству', 'link' => 'bankr', 'parent_id' => 1];
+        $data[] = ['title' => 'Лизинговые авто', 'link' => 'liz', 'parent_id' => 1];
 
-        $data[] = ['title' => 'Категория только для москвы', 'city_id' => 2, 'link' => 'liz', 'depth' => 2, 'parent_id' => 1];
+        $data[] = ['title' => 'Категория только для москвы', 'city_id' => 2, 'link' => 'liz', 'parent_id' => 1];
 
         foreach($data as $item)
             Category::create($item);
