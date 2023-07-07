@@ -14,8 +14,8 @@
                 @if(isset($categories))
                     @foreach($categories as $key => $category)
                         <div class="action-cats__sub-cat {{ ($key == 0 ? 'active' : '') }}" data-product-card-page="item-tab">
-                            @foreach($category->subcategories as $post)
-                                <a href="{{ $post->link }}">{{ $post->title }}</a>
+                            @foreach($category->children as $item)
+                                <a href="{{ $item->link }}">{{ $item->title }}</a>
                             @endforeach
                         </div>
                     @endforeach

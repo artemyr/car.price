@@ -35,9 +35,10 @@ class GlobalVarsMiddlevare
     }
 
     private function menu () {
-        View::composer('layouts.main', function ($view) {
-            $view->with('categories', Category::with('children')->where('parent_id', 0)->get());
-        });
+//        View::composer('layouts.main', function ($view) {
+//            $view->with('categories', Category::with('children')->where('parent_id', 0)->get());
+//        });
+        \View::share('categories', Category::with('children')->where('parent_id', 0)->get());
     }
 
     private function city ($city) {
