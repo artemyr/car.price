@@ -22,6 +22,7 @@ class CreateCategoriesTable extends Migration
             $table->string('link');
             $table->string('subtitle')->nullable();
             $table->string('icon')->nullable();
+            $table->string('image')->nullable();
 
             $table->unsignedBigInteger('parent_id');
 

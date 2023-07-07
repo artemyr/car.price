@@ -5,8 +5,9 @@ namespace App\Http\Controllers\City;
 
 use App\Http\Controllers\Controller;
 use App\Models\City;
-use App\Models\Post;
 use App\Models\MoreAskedQuestion;
+use App\Models\Article;
+use App\Models\Review;
 
 class ShowController extends Controller
 {
@@ -14,13 +15,18 @@ class ShowController extends Controller
     {
         $city = City::where('link', $city)->firstOrFail();
 
-        $articles = $city->articles;
-        $reviews = $city->reviews;
-        $moreAskedQuestions = MoreAskedQuestion::all();
-
         $banner = (object)[];
         $banner->title = "Оцените рыночную <br> стоимость вашей машины <br>в $city->name_predloshniy_padesh";
+        $banner->image = asset('img/banner.png');
 
-        return view('main', compact('city','articles','reviews','moreAskedQuestions', 'banner'));
+        //        $articles = $city->articles;
+        //        $reviews = $city->reviews;
+
+        return view('main', [
+            'articles' => Article::all(),
+            'reviews' => Review::all(),
+            'moreAskedQuestions' => MoreAskedQuestion::all(),
+            'banner' => $banner
+        ]);
     }
 }

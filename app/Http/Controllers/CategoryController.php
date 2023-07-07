@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\City;
 use App\Models\Category;
 use App\Models\MoreAskedQuestion;
+use App\Models\Review;
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class CategoryController extends Controller
@@ -21,10 +23,11 @@ class CategoryController extends Controller
 
         $banner = (object)[];
         $banner->title = "Выкуп автомобилей<br>в $city->name_predloshniy_padesh<br>" . mb_strtolower($category->title);
+        $banner->image = asset('storage/'.$category->image);
 
         return view('main', [
-            'articles' => $city->articles,
-            'reviews' => $city->reviews,
+            'articles' => Article::all(),
+            'reviews' => Review::all(),
             'moreAskedQuestions' => MoreAskedQuestion::all(),
             'banner' => $banner,
         ]);

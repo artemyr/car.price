@@ -23,8 +23,10 @@ class GlobalVarsMiddlevare
      */
     public function handle(Request $request, Closure $next)
     {
+        $city = City::where('link', $request->route('city'))->first() ?? City::where('id', 1)->first();
+
         $this->cities();
-        $this->city(City::where('link', $request->route('city'))->first());
+        $this->city($city);
         $this->addresses();
         $this->globals();
         $this->paginator();
@@ -42,8 +44,7 @@ class GlobalVarsMiddlevare
     }
 
     private function city ($city) {
-       if ($city) \View::share('city', $city);
-        else \View::share('city', City::where('id', 1)->first());
+       \View::share('city', $city);
     }
 
     private function cities () {

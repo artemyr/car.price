@@ -19,7 +19,7 @@
             </div>
             <div class="banner__right">
                 <div class="banner__image">
-                    <img src="{{ asset('img/banner.png') }}">
+                    <img src="{{ $banner->image }}">
                 </div>
             </div>
         </div>

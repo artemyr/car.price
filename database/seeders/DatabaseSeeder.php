@@ -52,18 +52,16 @@ class DatabaseSeeder extends Seeder
     private function createCategories()
     {
         $data = [];
-        $data[] = ['title' => 'С проблемами', 'link' => 's-problemami', 'icon' => 'menu-icon-1','subtitle' => 'Автомобили с дефектами','parent_id' => 0];
-        $data[] = ['title' => 'По назначению', 'link' => 'po-naznacheniu', 'icon' => 'menu-icon-2','subtitle' => 'Для каких лиц предназначено','parent_id' => 0];
-        $data[] = ['title' => 'По кузову', 'link' => 'po-kuzovu', 'icon' => 'menu-icon-3','subtitle' => 'Виды автомобилей','parent_id' => 0];
-        $data[] = ['title' => 'По рулю', 'link' => 'po-rulu', 'icon' => 'menu-icon-4','subtitle' => 'Расположение руля в авто','parent_id' => 0];
+        $data[] = ['title' => 'С проблемами', 'link' => 's-problemami', 'icon' => 'menu-icon-1','subtitle' => 'Автомобили с дефектами','parent_id' => 0, 'image' => 'uploads/images/banners/1.png'];
+        $data[] = ['title' => 'По назначению', 'link' => 'po-naznacheniu', 'icon' => 'menu-icon-2','subtitle' => 'Для каких лиц предназначено','parent_id' => 0, 'image' => 'uploads/images/banners/2.png'];
+        $data[] = ['title' => 'По кузову', 'link' => 'po-kuzovu', 'icon' => 'menu-icon-3','subtitle' => 'Виды автомобилей','parent_id' => 0, 'image' => 'uploads/images/banners/3.png'];
+        $data[] = ['title' => 'По рулю', 'link' => 'po-rulu', 'icon' => 'menu-icon-4','subtitle' => 'Расположение руля в авто','parent_id' => 0, 'image' => 'uploads/images/banners/4.png'];
 
-        $data[] = ['title' => 'Битые авто', 'link' => 'bitie', 'parent_id' => 1];
-        $data[] = ['title' => 'Конфискованные и арестованные авто', 'link' => 'konf', 'parent_id' => 1];
-        $data[] = ['title' => 'Залоги, кредиты, должники, банки', 'city_id' => 1, 'link' => 'zalog', 'parent_id' => 1];
-        $data[] = ['title' => 'Авто по банкротству', 'link' => 'bankr', 'parent_id' => 1];
-        $data[] = ['title' => 'Лизинговые авто', 'link' => 'liz', 'parent_id' => 1];
-
-        $data[] = ['title' => 'Категория только для москвы', 'city_id' => 2, 'link' => 'liz', 'parent_id' => 1];
+        $data[] = ['title' => 'Битые авто', 'link' => 'bitie', 'parent_id' => 1, 'image' => 'uploads/images/banners/5.png'];
+        $data[] = ['title' => 'Конфискованные и арестованные авто', 'link' => 'konf', 'parent_id' => 1, 'image' => 'uploads/images/banners/6.png'];
+        $data[] = ['title' => 'Залоги, кредиты, должники, банки', 'link' => 'zalog', 'parent_id' => 1, 'image' => 'uploads/images/banners/7.png'];
+        $data[] = ['title' => 'Авто по банкротству', 'link' => 'bankr', 'parent_id' => 1, 'image' => 'uploads/images/banners/8.png'];
+        $data[] = ['title' => 'Лизинговые авто', 'link' => 'liz', 'parent_id' => 1, 'image' => 'uploads/images/banners/9.png'];
 
         foreach($data as $item)
             Category::create($item);
@@ -153,7 +151,6 @@ class DatabaseSeeder extends Seeder
             </ol>
             ',
             'link' => 'kras-1',
-            'city_id' => 1,
             'preview_text' => 'Разнообразный и богатый опыт говорит нам, что реализация намеченных плановых заданий играя на фортепиано он увидел',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/1.jpg'
@@ -163,7 +160,6 @@ class DatabaseSeeder extends Seeder
             'title' => 'краснодар - статья 2',
             'content' => 'объявление в городе краснодар 2',
             'link' => 'kras-2',
-            'city_id' => 1,
             'preview_text' => 'Однозначно, ключевые особенности структуры проекта могут быть смешаны с не уникальными данными до степени совершенной',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/2.jpg'
@@ -173,7 +169,6 @@ class DatabaseSeeder extends Seeder
             'title' => 'краснодар - статья 2',
             'content' => 'объявление в городе краснодар 2',
             'link' => 'kras-3',
-            'city_id' => 1,
             'preview_text' => 'Имеется спорная точка зрения, гласящая примерно следующее: реплицированные',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/3.jpg'
@@ -183,7 +178,6 @@ class DatabaseSeeder extends Seeder
             'title' => 'краснодар - статья 2',
             'content' => 'объявление в городе краснодар 2',
             'link' => 'kras-4',
-            'city_id' => 1,
             'preview_text' => 'Есть над чем задуматься: тщательные исследования конкурентов',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/4.jpg'
@@ -193,7 +187,6 @@ class DatabaseSeeder extends Seeder
             'title' => 'Москва - статья 1',
             'content' => 'объявление в городе Москва 1',
             'link' => 'mos-1',
-            'city_id' => 2,
             'preview_text' => 'Разнообразный и богатый',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/5.jpg'
@@ -203,7 +196,6 @@ class DatabaseSeeder extends Seeder
             'title' => 'Москва - статья 2',
             'content' => 'объявление в городе Москва 2',
             'link' => 'mos-2',
-            'city_id' => 2,
             'preview_text' => 'Учитывая ключевые сценарии поведения, выбранный нами инновационный',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/6.jpg'
@@ -213,7 +205,6 @@ class DatabaseSeeder extends Seeder
             'title' => 'Москва - статья 2',
             'content' => 'объявление в городе Москва 2',
             'link' => 'mos-3',
-            'city_id' => 2,
             'preview_text' => 'Вот вам яркий пример современных тенденций — курс на социально-ориентированный национальный проект в значительной степени',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/1.jpg'
@@ -223,7 +214,6 @@ class DatabaseSeeder extends Seeder
             'title' => 'Москва - статья 2',
             'content' => 'объявление в городе Москва 2',
             'link' => 'mos-4',
-            'city_id' => 2,
             'preview_text' => 'Идейные соображения высшего порядка, а также укрепление и развитие внутренней структуры является качественно новой ступенью.',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/2.jpg'
@@ -233,7 +223,6 @@ class DatabaseSeeder extends Seeder
             'title' => 'Москва - статья 2',
             'content' => 'объявление в городе Москва 2',
             'link' => 'mos-5',
-            'city_id' => 2,
             'preview_text' => 'В частности, граница обучения кадров создаёт предпосылки для вывода текущих активов',
             'cr_date' => '30.07.2022',
             'preview_image' => 'uploads/images/articles/3.jpg'
@@ -243,7 +232,6 @@ class DatabaseSeeder extends Seeder
             'title' => 'Москва - статья 2',
             'content' => 'объявление в городе Москва 2',
             'link' => 'mos-6',
-            'city_id' => 2,
             'preview_text' => 'В частности, граница обучения кадров создаёт предпосылки для вывода текущих активов',
             'cr_date' => '30.07.2022',
         ];
@@ -259,7 +247,6 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'Могло быть и лучше',
             'link' => 'city1',
-            'city_id' => 1,
             'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
 
             'author' => 'Сурен Багодуровичь',
@@ -272,7 +259,6 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'Удачно поставила',
             'link' => 'city2',
-            'city_id' => 1,
             'content' => 'Являясь всего лишь частью общей картины, диаграммы связей и по сей день остаются уделом либералов, которые жаждут быть заблокированы в рамках своих собственных рациональных ограничений.',
 
             'author' => 'Сурен Багодуровичь',
@@ -284,7 +270,6 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'Удачно поставила',
             'link' => 'city2',
-            'city_id' => 1,
             'content' => 'Являясь всего лишь частью общей картины, диаграммы связей и по сей день остаются уделом либералов, которые жаждут быть заблокированы в рамках своих собственных рациональных ограничений.',
 
             'author' => 'Сурен Багодуровичь',
@@ -297,7 +282,6 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'Хорошая машина',
             'link' => 'city3',
-            'city_id' => 1,
             'content' => 'Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности создаёт необходимость включения в производственный план целого ряда.',
 
             'author' => 'Сурен Багодуровичь',
@@ -310,7 +294,6 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'Могло быть и лучше',
             'link' => 'city4',
-            'city_id' => 1,
             'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
 
             'author' => 'Сурен Багодуровичь',
@@ -323,7 +306,6 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'Могло быть и лучше',
             'link' => 'city4',
-            'city_id' => 1,
             'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
 
             'author' => 'Сурен Багодуровичь',
@@ -336,7 +318,6 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'Могло быть и лучше',
             'link' => 'city5',
-            'city_id' => 1,
             'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
 
             'author' => 'Сурен Багодуровичь',
@@ -349,7 +330,6 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'Могло быть и лучше',
             'link' => 'city6',
-            'city_id' => 1,
             'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
 
             'author' => 'Сурен Багодуровичь',
@@ -362,7 +342,6 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'Могло быть и лучше',
             'link' => 'city7',
-            'city_id' => 1,
             'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
 
             'author' => 'Сурен Багодуровичь',
@@ -375,7 +354,6 @@ class DatabaseSeeder extends Seeder
         [
             'title' => 'Могло быть и лучше',
             'link' => 'city8',
-            'city_id' => 1,
             'content' => 'Наше дело не так однозначно, как может показаться: высокотехнологичная концепция общественного уклада играет определяющее значение для позиций, занимаемых участниками в отношении поставленных задач.',
 
             'author' => 'Сурен Багодуровичь',
