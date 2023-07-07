@@ -18,7 +18,9 @@
                         <div class="articles__body">
 
                             <div class="articles__tag-wrapper">
-                                <div class="articles__tag green">{{ $article->tag }}</div>
+                                @foreach ($article->tags as $tag)
+                                    <div class="articles__tag {{ $tag->color }}">{{ $tag->title }}</div>
+                                @endforeach
                             </div>
 
                             <div class="articles__text">{{ $article->preview_text }}</div>
