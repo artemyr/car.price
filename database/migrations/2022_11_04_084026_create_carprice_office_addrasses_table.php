@@ -21,6 +21,7 @@ class CreateCarpriceOfficeAddrassesTable extends Migration
             $table->string('phone');
             $table->string('work_time');
             $table->string('link');
+            $table->string('coords');
 
             $table->timestamps();
         });

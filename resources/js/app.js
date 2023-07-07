@@ -307,37 +307,66 @@ const app = new Vue({
 (function (window){
     'use strict';
 
-    document.addEventListener('DOMContentLoaded',() =>{
-        ymaps.ready(yaMapInit);
-    })
+    if (window.JCmap)
+        return;
 
-    let data = {
-        "type": "FeatureCollection",
-        "features": [
-            {"type": "Feature", "id": 0, "geometry": {"type": "Point", "coordinates": [55.831903, 37.411961]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://car-price.online'>car-price.online</a></b></font>", "balloonContentBody": "<p><em>Телефон в формате 2xxx-xxx:</em></p>", "balloonContentFooter": "<font size=1>car-price.online: </font> <strong>car-price.online</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>car-price.online</strong>"}},
-            {"type": "Feature", "id": 1, "geometry": {"type": "Point", "coordinates": [55.763338, 37.565466]}, "properties": {"balloonContentHeader": "<font size=3><b><a target='_blank' href='https://car-price.online'>car-price.online</a></b></font>", "balloonContentBody": "<p><em>Телефон в формате 2xxx-xxx:</em></p>", "balloonContentFooter": "<font size=1>car-price.online: </font> <strong>car-price.online</strong>", "clusterCaption": "<strong><s>Еще</s> одна</strong> метка", "hintContent": "<strong>car-price.online</strong>"}},
-        ]
-    }
+    window.JCmap = function (arParams)
+    {
+        this.params = arParams;
+        this.init();
+    };
 
-    function yaMapInit () {
-        if (!document.getElementById('map')) return;
-        var myMap = new ymaps.Map('map', {
-                center: [55.76, 37.64],
-                zoom: 10,
-                controls: ['zoomControl'],
-                behaviors: ['default', 'scrollZoom'],
-            }, {
-                searchControlProvider: 'yandex#search'
-            }),
-            objectManager = new ymaps.ObjectManager({
-                // Чтобы метки начали кластеризоваться, выставляем опцию.
-                clusterize: true,
-                // ObjectManager принимает те же опции, что и кластеризатор.
-                gridSize: 32,
-                clusterDisableClickZoom: true
-            });
+    window.JCmap.prototype = {
+        init: function()
+        {
+            this.features = []
 
-        myMap.geoObjects.add(objectManager);
-        objectManager.add(data);
+            this.params.addresses.forEach((el, index) => {
+                this.features.push({
+                    "type": "Feature",
+                    "id": index,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": el.coords
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<font size=3><b><a target='_blank' href='https://car-price.online'>car-price.online</a></b></font>",
+                        "balloonContentBody": `<p><em>${el.address}</em></p>`,
+                        "balloonContentFooter": `<font size=1>Часы работы: </font> <strong>${el.work_time}</strong>`,
+                        "clusterCaption": "<strong><s>Еще</s> одна</strong> метка",
+                        "hintContent": `<strong>${el.address}</strong>`
+                    }
+                })
+            })
+
+            let data = {
+                "type": "FeatureCollection",
+                "features": this.features
+            }
+
+            let yaMapInit = () => {
+                if (!document.getElementById('map')) return;
+                var myMap = new ymaps.Map('map', {
+                        center: this.params.center,
+                        zoom: 10,
+                        controls: ['zoomControl'],
+                        behaviors: ['drag'],
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    }),
+                    objectManager = new ymaps.ObjectManager({
+                        // Чтобы метки начали кластеризоваться, выставляем опцию.
+                        clusterize: true,
+                        // ObjectManager принимает те же опции, что и кластеризатор.
+                        gridSize: 32,
+                        clusterDisableClickZoom: true
+                    });
+
+                myMap.geoObjects.add(objectManager);
+                objectManager.add(data);
+            }
+
+            ymaps.ready(yaMapInit);
+        },
     }
 })(window);

@@ -18,9 +18,10 @@ class CreateCitiesTable extends Migration
 
             $table->string('title');
             $table->string('link');
+            $table->string('coords');
 
             $table->string('name_predloshniy_padesh');
-            
+
             $table->timestamps();
         });
     }
