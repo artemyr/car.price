@@ -4,6 +4,7 @@
 <div class="blog-detail-pages-wrapper">
 
     <div class="blog-detail-pages-wrapper__banner">
+        <div class="blog-detail-pages-wrapper__banner-image"></div>
         <div class="container">
             <div class="breadcrumbs">
                 <div class="breadcrumbs__item white"><a href="{{ route('main') }}">Главная</a></div>

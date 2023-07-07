@@ -320,6 +320,7 @@ const app = new Vue({
     }
 
     function yaMapInit () {
+        if (!document.getElementById('map')) return;
         var myMap = new ymaps.Map('map', {
                 center: [55.76, 37.64],
                 zoom: 10,
