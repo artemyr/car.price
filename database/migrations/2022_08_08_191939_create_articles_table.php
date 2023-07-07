@@ -23,7 +23,6 @@ class CreateArticlesTable extends Migration
             $table->string('preview_image')->nullable();
             $table->text('content');
 
-            $table->text('tag')->nullable();
             $table->text('preview_text');
             $table->text('cr_date');
 
