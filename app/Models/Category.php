@@ -12,12 +12,7 @@ class Category extends Model
     protected $table = 'categories';
     protected $guarded = false;
 
-    public function posts()
-    {
-        return $this->hasMany(Post::class);
-    }
-
-    public function city()
+   public function city()
     {
         return $this->belongsTo(City::class);
     }

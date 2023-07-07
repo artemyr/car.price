@@ -19,15 +19,14 @@ class CategoryController extends Controller
         $city = City::where('link', $city)->firstOrFail();
         $category = Category::where('link', $category)->firstOrFail();
 
-
-        $articles = $city->articles;
-        $reviews = $city->reviews;
-
-        $moreAskedQuestions = MoreAskedQuestion::all();
-
         $banner = (object)[];
         $banner->title = "Выкуп автомобилей<br>в $city->name_predloshniy_padesh<br>" . mb_strtolower($category->title);
 
-        return view('main',compact('articles','reviews','moreAskedQuestions', 'banner'));
+        return view('main', [
+            'articles' => $city->articles,
+            'reviews' => $city->reviews,
+            'moreAskedQuestions' => MoreAskedQuestion::all(),
+            'banner' => $banner,
+        ]);
     }
 }
