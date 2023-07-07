@@ -32,7 +32,18 @@
                 <div class="blog-detail-pages-wrapper__title-bottom">
                     <div class="blog-detail-pages-wrapper__date">{{ $article->cr_date }}</div>
                     <div class="blog-detail-pages-wrapper__socials">
-                        <div class="blog-detail-pages-wrapper__socials-label">Поделиться</div>
+                        <div class="blog-detail-pages-wrapper__socials-label">
+                            <span>Поделиться</span>
+                            <a href="#">
+                                <svg><use xlink:href="/img/svg/sprite.svg#vk-icon"></use></svg>
+                            </a>
+                            <a href="#">
+                                <svg><use xlink:href="/img/svg/sprite.svg#ok-icon"></use></svg>
+                            </a>
+                            <a href="#">
+                                <svg><use xlink:href="/img/svg/sprite.svg#tg-icon"></use></svg>
+                            </a>
+                        </div>
                         <div class="blog-detail-pages-wrapper__socials-links">
 
                         </div>
@@ -47,7 +58,8 @@
             <div class="blog-detail-pages-wrapper__sidebar">
                 <div class="sidebar">
                     <div class="sidebar__head">
-                        Содержание
+                        <svg><use xlink:href="/img/svg/sprite.svg#book-icon"></use></svg>
+                        <span>Содержание</span>
                     </div>
                     <div class="sidebar__item-wrapper">
                         <div class="sidebar__item">

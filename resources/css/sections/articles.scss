@@ -240,6 +240,17 @@
         letter-spacing: 0em;
         text-align: left;
         color: #999999;
+        display: flex;
+        gap: 8px;
+        align-items: center;
+
+        a {
+            line-height: 0;
+            svg {
+                height: 30px;
+                width: 30px;
+            }
+        }
     }
     .blog-detail-pages-wrapper__date{
         font-size: 16px;
@@ -272,6 +283,7 @@
         height: 100%;
         background-image: url(/img/background_article_detail.png);
         opacity: .4;
+        pointer-events: none;
         @include size992 {
             background-image: none;
         }
@@ -280,7 +292,7 @@
         border-radius: 16px;
         overflow: hidden;
         margin-bottom: 32px;
-        z-index: 9;
+        z-index: 2;
         img {
             width: 100%;
         }
@@ -326,6 +338,14 @@
         line-height: 25px;
         letter-spacing: 0em;
         text-align: left;
+        display: flex;
+        align-items: start;
+        gap: 8px;
+
+        svg {
+            height: 27px;
+            width: 27px;
+        }
     }
     .sidebar__item{
         font-size: 16px;
