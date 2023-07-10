@@ -78,32 +78,7 @@
                         </svg>
                         Назад
                     </li>
-                    @if(isset($categories))
-                        @foreach($categories as $category)
-                        <li class="dropdown-menu__item" js-toggle-menu="open_elements">
-                            <a href="{{ $category->link }}">{{ $category->title }}</a>
-                            <svg class="mobile-menu__arrow right">
-                                <use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use>
-                            </svg>
-
-                            <ul class="dropdown-menu__elements" onclick="event.stopPropagation()">
-                                <li js-toggle-menu="close_elements">
-                                    <svg class="mobile-menu__arrow left">
-                                        <use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use>
-                                    </svg>
-                                    Назад
-                                </li>
-                                @if($category->subcategories && count($category->subcategories) > 0)
-                                    @foreach($category->subcategories as $post)
-                                        <li>
-                                            <a href="{{ $post->link }}">{{ $post->title }}</a>
-                                        </li>
-                                    @endforeach
-                                @endif
-                            </ul>
-                        </li>
-                        @endforeach
-                    @endif
+                    @include('includes._mobile_menu')
                 </ul>
             </li>
             <li class="mobile-menu__item"><a href="#">Автодилерам</a></li>
