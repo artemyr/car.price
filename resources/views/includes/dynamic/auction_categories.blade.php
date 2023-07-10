@@ -15,7 +15,7 @@
                     @foreach($categories as $key => $category)
                         <div class="action-cats__sub-cat {{ ($key == 0 ? 'active' : '') }}" data-product-card-page="item-tab">
                             @foreach($category->children as $item)
-                                <a href="{{ $item->link }}">{{ $item->title }}</a>
+                                <a href="{{  route('category', [$city->link, $category->link]) }}">{{ $item->title }}</a>
                             @endforeach
                         </div>
                     @endforeach
