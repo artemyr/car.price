@@ -1,4 +1,7 @@
 @extends('layouts.main')
+
+@section('title') {{$article->title}} @endsection
+
 @section('content')
 
 <div class="blog-detail-pages-wrapper">

@@ -1,4 +1,7 @@
 @extends('layouts.main')
+
+@section('title') {{'Отзывы'}} @endsection
+
 @section('content')
 
 <div class="blog-pages-wrapper">
