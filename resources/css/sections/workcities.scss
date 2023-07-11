@@ -1,8 +1,9 @@
 .work-cities {
     .work-cities__list {
         padding-top: 40px;
-        display: flex;
-        gap: 50px;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
     }
     .work-cities__list ul {
         list-style: none;
@@ -50,7 +51,7 @@
     }
 }
 
-@media (max-width: 575.98px){
+@include size768 {
     .work-cities .work-cities__list {
         display: block;
     }

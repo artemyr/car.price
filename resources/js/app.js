@@ -160,26 +160,29 @@ const app = new Vue({
 
     function init_spoilers() {
         const screenWidth = window.screen.width
-        if(screenWidth > 576) {
+        if(screenWidth > 767) {
             const buttons = document.querySelectorAll('[data-spoiler="button"]')
             buttons.forEach((button, index) => {
                 button.style.display = 'none';
             })
-            return;
-        }
-
-        const spoilers = document.querySelectorAll('[data-spoiler="block"]')
-        spoilers.forEach((spoiler, index) => {
-
-            const button = spoiler.querySelector('[data-spoiler="button"]')
-            const hide = spoiler.querySelectorAll('[data-spoiler="hide"]')
-
-            hide.forEach((el, index) => {
-                el.style.overflow = 'hidden';
-                el.style.transition = 'height 0.3s';
-                smoothView(button, el)
+        } else {
+            const buttons = document.querySelectorAll('[data-spoiler="button"]')
+            buttons.forEach((button, index) => {
+                button.style.display = 'block';
             })
-        })
+            const spoilers = document.querySelectorAll('[data-spoiler="block"]')
+            spoilers.forEach((spoiler, index) => {
+
+                const button = spoiler.querySelector('[data-spoiler="button"]')
+                const hide = spoiler.querySelectorAll('[data-spoiler="hide"]')
+
+                hide.forEach((el, index) => {
+                    el.style.overflow = 'hidden';
+                    el.style.transition = 'height 0.3s';
+                    smoothView(button, el)
+                })
+            })
+        }
     }
 
     function toggleMenu() {
@@ -237,7 +240,7 @@ const app = new Vue({
         })
     }
 
-    function initAcrolToTop() {
+    function initScrollToTop() {
         const body = document.querySelector('body')
         document.querySelectorAll('[data-scroll-to-top]').forEach(el => {
             el.onclick = () => {
@@ -250,7 +253,12 @@ const app = new Vue({
     init_tabs();
     init_spoilers();
     toggleMenu();
-    initAcrolToTop();
+    initScrollToTop();
+
+    function windowResize() {
+        // init_spoilers();
+    }
+    window.addEventListener("resize", windowResize);
 })(window);
 
 

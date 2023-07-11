@@ -1,8 +1,16 @@
 .breadcrumbs {
-    display: flex;
-    gap: 3px;
     margin-bottom: 30px;
-    overflow-x: auto;
+    display: grid;
+    grid-template-columns: min-content;
+    overflow-x: scroll;
+
+    .breadcrumbs_list {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 3px;
+        overflow-x: auto;
+        width: 100%;
+    }
 
     &::-webkit-scrollbar {
         display: none;
@@ -27,7 +35,8 @@
             }
         }
     }
-    .breadcrumbs__item.white {
+
+    &.white .breadcrumbs__item {
         color: white;
 
         a {

@@ -33,7 +33,8 @@
     }
 
     .modal__link-list {
-        display: flex;
+        display: grid;
+        grid-auto-flow: column;
         gap: 30px;
     }
 

@@ -45,6 +45,49 @@ class DatabaseSeeder extends Seeder
         $data[] = ['title' => 'Йошкар-Ола', 'link' => 'dev', 'name_predloshniy_padesh' => 'Йошкар-Оле', 'coords' => '[56.631600, 47.886178]'];
         $data[] = ['title' => 'Казань', 'link' => 'dev', 'name_predloshniy_padesh' => 'Казане', 'coords' => '[55.796127, 49.106414]'];
 
+        $data[] = ['title' => 'Клуга', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Красногорск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Курск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Коломна', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Липецк', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Люберцы', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Можайск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Мурманск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Мытици', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Набрежные Челны', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Нижний Новгород', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Новороссийск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Новосибирск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Обнинск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Одинцово', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Омск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Оренбург', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Пенза', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Пермь', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Петрозаводск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Подольск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Ростов-на-Дону', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Рязань', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Самара', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Саров', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Северодвинск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Сочи', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Стерлитамк', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Сургут', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Серпухов', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Ступино', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Тамбов', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Тверь', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Тольятти', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Тула', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Тюмень', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Ульяновск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Уфа', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Чебоксары', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Череповец', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Чехов', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Ярославль', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+
         foreach($data as $item)
             City::create($item);
     }

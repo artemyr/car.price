@@ -15,7 +15,8 @@
         align-items: center;
 
         ul {
-            display: flex;
+            display: grid;
+            grid-auto-flow: column;
             gap: 24px;
         }
     }
@@ -90,8 +91,7 @@
     }
 }
 
-
-@media (max-width: 767.98px){
+@include size768 {
     .footer .footer__nav {
         display: block;
     }
