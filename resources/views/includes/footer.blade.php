@@ -16,7 +16,7 @@
         Внимание! Сайт Carprice-auction.ru представляет информацию о сервисе Carprice,<br> являясь независимым информационным сайтом
     </div>
     <div class="footer__policy">
-        <a>Политика обработки персональных данных</a>
+        <a href="#">Политика обработки персональных данных</a>
         <a class="footer__toggle-top" data-scroll-to-top>
             <svg><use xlink:href="{{ asset('img/svg/sprite.svg#simplearrow') }}"></use></svg>
         </a>
