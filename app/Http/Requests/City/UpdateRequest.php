@@ -27,6 +27,7 @@ class UpdateRequest extends FormRequest
             'title' => 'string',
             'link' => 'string',
             'name_predloshniy_padesh' => 'string',
+            'coords' => 'string',
         ];
     }
 }

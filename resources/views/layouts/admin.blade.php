@@ -207,8 +207,8 @@
 <!-- ChartJS -->
 <script src="{{ asset('plugins/chart.js/Chart.min.js') }}"></script>
 
-<script src="{{ asset('js/hystmodal.min.js') }}"></script>
-<script src="{{ asset('js/swiper.min.js') }}"></script>
+<script src="{{ asset('js/libs/hystmodal.min.js') }}"></script>
+<script src="{{ asset('js/libs/swiper.min.js') }}"></script>
 <script defer src="{{ asset('js/app.js') }}"></script>
 
 <!-- AdminLTE for demo purposes -->

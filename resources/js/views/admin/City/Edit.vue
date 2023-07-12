@@ -1,9 +1,18 @@
 <template>
     <div class="admin-edit" v-if="entity">
 
+        <div class="error" v-for="(arError, index) in errors">
+            <p class="error__label">{{ index }}</p>
+            <ul v-for="error of arError">
+                <li v-html="error"></li>
+            </ul>
+        </div>
+
         <EditNameLinkComponent></EditNameLinkComponent>
 
         <EditTextComponent :vars="{name:'Город в предложном падеже',id:'name_predloshniy_padesh'}"></EditTextComponent>
+
+        <EditTextComponent :vars="{name:'Координаты',id:'coords'}"></EditTextComponent>
 
         <div>
             <input :disabled="!isDisabled" @click.prevent="update" class="admin-edit__save" type="submit" value="Сохранить">
@@ -24,7 +33,8 @@ export default {
     },
     data () {
         return {
-            entity: null
+            entity: null,
+            errors: null
         }
     },
     mounted() {
@@ -41,10 +51,15 @@ export default {
             axios.patch(`/api/admin/cities/${this.$route.params.id}`, {
                 title: this.entity.title,
                 link: this.entity.link,
+                coords: this.entity.coords,
                 name_predloshniy_padesh: this.entity.name_predloshniy_padesh
             })
                 .then(res => {
-                    this.$router.push({name:'admin.city.show', params: {id: this.$route.params.id}})
+                    // this.$router.push({name:'admin.city.show', params: {id: this.$route.params.id}})
+                    this.$router.push({name:'admin.city.index', params: {id: this.$route.params.id}})
+                })
+                .catch(error => {
+                    this.errors = error.response.data.errors
                 })
         }
     },

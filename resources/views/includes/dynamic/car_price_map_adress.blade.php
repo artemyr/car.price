@@ -9,11 +9,11 @@
                 <script>
                     document.addEventListener('DOMContentLoaded', function(){
                         var obj_map = new JCmap({
-                            "center": {{ $city->coords }},
+                            "center": [{{ $city->coords }}],
                             "addresses": [
                                 @foreach($capriceOfficeAddresses as $item)
                                 {
-                                    'coords': {{ $item->coords }},
+                                    'coords': [{{ $item->coords }}],
                                     'city': '{{ $item->city }}',
                                     'address': '{{ $item->address }}',
                                     'work_time': '{{ $item->work_time }}'

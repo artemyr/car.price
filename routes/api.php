@@ -38,14 +38,6 @@ Route::group(["namespace" => "Admin", 'prefix' => 'admin',
         Route::patch('/{article}', 'ArticleController@update')->name('admin.article.update');
     });
 
-    Route::group(['prefix' => 'posts'], function() {
-        Route::get('/', 'PostController@index')->name('admin.post.index');
-        Route::get('/{post}', 'PostController@show')->name('admin.post.show');
-        Route::post('/', 'PostController@store')->name('admin.post.store');
-        Route::delete('/{post}', 'PostController@destroy')->name('admin.post.destroy');
-        Route::patch('/{post}', 'PostController@update')->name('admin.post.update');
-    });
-
     Route::group(['prefix' => 'reviews'], function() {
         Route::get('/', 'ReviewController@index')->name('admin.review.index');
         Route::get('/{review}', 'ReviewController@show')->name('admin.review.show');

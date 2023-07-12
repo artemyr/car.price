@@ -25,6 +25,7 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "transliteration": "^2.3.5",
         "vue": "^3.2.36",
         "vue-router": "^3.6.5"
     }

@@ -19,6 +19,7 @@ class Resource extends JsonResource
             'title' => $this->title,
             'link' => $this->link,
             'name_predloshniy_padesh' => $this->name_predloshniy_padesh,
+            'coords' => $this->coords,
         ];
     }
 }

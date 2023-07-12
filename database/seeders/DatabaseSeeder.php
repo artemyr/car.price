@@ -24,69 +24,69 @@ class DatabaseSeeder extends Seeder
     private function createCities()
     {
         $data = [];
-        $data[] = ['title' => 'Краснодар', 'link' => 'krasnodar', 'name_predloshniy_padesh' => 'Краснодаре', 'coords' => '[45.035470, 38.975313]'];
-        $data[] = ['title' => 'Москва', 'link' => 'moskow', 'name_predloshniy_padesh' => 'Москве', 'coords' => '[55.76, 37.64]'];
-        $data[] = ['title' => 'Санкт-Петербург', 'link' => 'saint-peterburg', 'name_predloshniy_padesh' => 'Санкт-Петербурге', 'coords' => '[59.938955, 30.315644]'];
-        $data[] = ['title' => 'Ростов-на-Дону', 'link' => 'rostov-on-don', 'name_predloshniy_padesh' => 'Ростове-на-Дону', 'coords' => '[47.222078, 39.720358]'];
+        $data[] = ['title' => 'Краснодар', 'link' => 'krasnodar', 'name_predloshniy_padesh' => 'Краснодаре', 'coords' => '45.035470, 38.975313'];
+        $data[] = ['title' => 'Москва', 'link' => 'moskow', 'name_predloshniy_padesh' => 'Москве', 'coords' => '55.76, 37.64'];
+        $data[] = ['title' => 'Санкт-Петербург', 'link' => 'saint-peterburg', 'name_predloshniy_padesh' => 'Санкт-Петербурге', 'coords' => '59.938955, 30.315644'];
+        $data[] = ['title' => 'Ростов-на-Дону', 'link' => 'rostov-on-don', 'name_predloshniy_padesh' => 'Ростове-на-Дону', 'coords' => '47.222078, 39.720358'];
 
-        $data[] = ['title' => 'Абакан', 'link' => 'dev', 'name_predloshniy_padesh' => 'Абакане', 'coords' => '[53.721152, 91.442396]'];
-        $data[] = ['title' => 'Белгород', 'link' => 'dev', 'name_predloshniy_padesh' => 'Белгороде', 'coords' => '[50.595414, 36.587277]'];
-        $data[] = ['title' => 'Великий Новгород', 'link' => 'dev', 'name_predloshniy_padesh' => 'Великом новгороде', 'coords' => '[58.522857, 31.269816]'];
-        $data[] = ['title' => 'Владимир', 'link' => 'dev', 'name_predloshniy_padesh' => 'Владимире', 'coords' => '[56.129057, 40.406635]'];
-        $data[] = ['title' => 'Волгоград', 'link' => 'dev', 'name_predloshniy_padesh' => 'Волгограде', 'coords' => '[48.707067, 44.516975]'];
-        $data[] = ['title' => 'Вологда', 'link' => 'dev', 'name_predloshniy_padesh' => 'Вологде', 'coords' => '[59.220501, 39.891523]'];
-        $data[] = ['title' => 'Воронеж', 'link' => 'dev', 'name_predloshniy_padesh' => 'Воронеже', 'coords' => '[51.660781, 39.200296]'];
-        $data[] = ['title' => 'Дубна', 'link' => 'dev', 'name_predloshniy_padesh' => 'Дубне', 'coords' => '[56.736345, 37.162189]'];
-        $data[] = ['title' => 'Домодедово', 'link' => 'dev', 'name_predloshniy_padesh' => 'Домодедово', 'coords' => '[55.413327, 37.906348]'];
-        $data[] = ['title' => 'Зеленоград', 'link' => 'dev', 'name_predloshniy_padesh' => 'Зленограде', 'coords' => '[55.991893, 37.214390]'];
-        $data[] = ['title' => 'Екатеринбург', 'link' => 'dev', 'name_predloshniy_padesh' => 'Екатеренбурге', 'coords' => '[56.838011, 60.597474]'];
-        $data[] = ['title' => 'Иваново', 'link' => 'dev', 'name_predloshniy_padesh' => 'Иваново', 'coords' => '[57.000353, 40.973930]'];
-        $data[] = ['title' => 'Ижевск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Ижевске', 'coords' => '[56.852676, 53.206900]'];
-        $data[] = ['title' => 'Йошкар-Ола', 'link' => 'dev', 'name_predloshniy_padesh' => 'Йошкар-Оле', 'coords' => '[56.631600, 47.886178]'];
-        $data[] = ['title' => 'Казань', 'link' => 'dev', 'name_predloshniy_padesh' => 'Казане', 'coords' => '[55.796127, 49.106414]'];
+        $data[] = ['title' => 'Абакан', 'link' => 'dev', 'name_predloshniy_padesh' => 'Абакане', 'coords' => '53.721152, 91.442396'];
+        $data[] = ['title' => 'Белгород', 'link' => 'dev', 'name_predloshniy_padesh' => 'Белгороде', 'coords' => '50.595414, 36.587277'];
+        $data[] = ['title' => 'Великий Новгород', 'link' => 'dev', 'name_predloshniy_padesh' => 'Великом новгороде', 'coords' => '58.522857, 31.269816'];
+        $data[] = ['title' => 'Владимир', 'link' => 'dev', 'name_predloshniy_padesh' => 'Владимире', 'coords' => '56.129057, 40.406635'];
+        $data[] = ['title' => 'Волгоград', 'link' => 'dev', 'name_predloshniy_padesh' => 'Волгограде', 'coords' => '48.707067, 44.516975'];
+        $data[] = ['title' => 'Вологда', 'link' => 'dev', 'name_predloshniy_padesh' => 'Вологде', 'coords' => '59.220501, 39.891523'];
+        $data[] = ['title' => 'Воронеж', 'link' => 'dev', 'name_predloshniy_padesh' => 'Воронеже', 'coords' => '51.660781, 39.200296'];
+        $data[] = ['title' => 'Дубна', 'link' => 'dev', 'name_predloshniy_padesh' => 'Дубне', 'coords' => '56.736345, 37.162189'];
+        $data[] = ['title' => 'Домодедово', 'link' => 'dev', 'name_predloshniy_padesh' => 'Домодедово', 'coords' => '55.413327, 37.906348'];
+        $data[] = ['title' => 'Зеленоград', 'link' => 'dev', 'name_predloshniy_padesh' => 'Зленограде', 'coords' => '55.991893, 37.214390'];
+        $data[] = ['title' => 'Екатеринбург', 'link' => 'dev', 'name_predloshniy_padesh' => 'Екатеренбурге', 'coords' => '56.838011, 60.597474'];
+        $data[] = ['title' => 'Иваново', 'link' => 'dev', 'name_predloshniy_padesh' => 'Иваново', 'coords' => '57.000353, 40.973930'];
+        $data[] = ['title' => 'Ижевск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Ижевске', 'coords' => '56.852676, 53.206900'];
+        $data[] = ['title' => 'Йошкар-Ола', 'link' => 'dev', 'name_predloshniy_padesh' => 'Йошкар-Оле', 'coords' => '56.631600, 47.886178'];
+        $data[] = ['title' => 'Казань', 'link' => 'dev', 'name_predloshniy_padesh' => 'Казане', 'coords' => '55.796127, 49.106414'];
 
-        $data[] = ['title' => 'Клуга', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Красногорск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Курск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Коломна', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Липецк', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Люберцы', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Можайск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Мурманск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Мытици', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Набрежные Челны', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Нижний Новгород', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Новороссийск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Новосибирск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Обнинск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Одинцово', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Омск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Оренбург', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Пенза', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Пермь', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Петрозаводск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Подольск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Ростов-на-Дону', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Рязань', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Самара', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Саров', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Северодвинск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Сочи', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Стерлитамк', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Сургут', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Серпухов', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Ступино', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Тамбов', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Тверь', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Тольятти', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Тула', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Тюмень', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Ульяновск', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Уфа', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Чебоксары', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Череповец', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Чехов', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
-        $data[] = ['title' => 'Ярославль', 'link' => 'dev', 'name_predloshniy_padesh' => '', 'coords' => ''];
+        $data[] = ['title' => 'Клуга', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Красногорск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Курск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Коломна', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Липецк', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Люберцы', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Можайск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Мурманск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Мытици', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Набрежные Челны', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Нижний Новгород', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Новороссийск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Новосибирск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Обнинск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Одинцово', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Омск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Оренбург', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Пенза', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Пермь', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Петрозаводск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Подольск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Ростов-на-Дону', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Рязань', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Самара', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Саров', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Северодвинск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Сочи', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Стерлитамк', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Сургут', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Серпухов', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Ступино', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Тамбов', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Тверь', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Тольятти', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Тула', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Тюмень', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Ульяновск', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Уфа', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Чебоксары', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Череповец', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Чехов', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
+        $data[] = ['title' => 'Ярославль', 'link' => 'dev', 'name_predloshniy_padesh' => 'Городе'];
 
         foreach($data as $item)
             City::create($item);
@@ -419,7 +419,7 @@ class DatabaseSeeder extends Seeder
             'address' => 'Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9',
             'phone' => '8 861 205-02-25',
             'work_time' => 'Ежедневно 10:00–20:00',
-            'coords' => '[44.683864, 37.786519]'
+            'coords' => '44.683864, 37.786519'
         ];
         $data[] =
         [
@@ -427,7 +427,7 @@ class DatabaseSeeder extends Seeder
             'address' => 'Московская область, г. Москва, ул. Мантулинская, дом 12',
             'phone' => '8 861 205-02-25',
             'work_time' => 'Ежедневно 10:00–20:00',
-            'coords' => '[55.756888, 37.553693]'
+            'coords' => '55.756888, 37.553693'
         ];
         $data[] =
         [
@@ -435,7 +435,7 @@ class DatabaseSeeder extends Seeder
             'address' => 'Краснодарский край, г. Краснодар, ул. Красных Партизан, 216',
             'phone' => '8 861 205-02-25',
             'work_time' => 'Ежедневно 10:00–20:00',
-            'coords' => '[45.049313, 38.967121]'
+            'coords' => '45.049313, 38.967121'
         ];
 
         $data[] =
@@ -444,7 +444,7 @@ class DatabaseSeeder extends Seeder
             'address' => 'Краснодарский край, г. Новороссийск, ул. Вербовая, дом 9',
             'phone' => '8 861 205-02-25',
             'work_time' => 'Ежедневно 10:00–20:00',
-            'coords' => '[1, 1]'
+            'coords' => '1, 1'
         ];
         $data[] =
         [
@@ -452,7 +452,7 @@ class DatabaseSeeder extends Seeder
             'address' => 'Московская область, г. Москва, ул. Мантулинская, дом 12',
             'phone' => '8 861 205-02-25',
             'work_time' => 'Ежедневно 10:00–20:00',
-            'coords' => '[2, 2]'
+            'coords' => '2, 2'
         ];
         $data[] =
         [
@@ -460,7 +460,7 @@ class DatabaseSeeder extends Seeder
             'address' => 'Краснодарский край, г. Краснодар, ул. Красных Партизан, 216',
             'phone' => '8 861 205-02-25',
             'work_time' => 'Ежедневно 10:00–20:00',
-            'coords' => '[3, 3]'
+            'coords' => '3, 3'
         ];
 
 
