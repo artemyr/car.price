@@ -32,7 +32,7 @@
                     <div class="contact-list-item__title">{{ $address->city }}</div>
                     <div class="contact-list-item__subtitle">{{ $address->address }}</div>
                     <div class="contact-list-item__body">{{ $address->phone }}<br>{{ $address->work_time }}</div>
-                    <div class="contact-list-item__bottom"><a href="{{ $address->link }}">Записаться на осмотр</a></div>
+                    <div class="contact-list-item__bottom"><a href="{{ $partner_link->value }}">Записаться на осмотр</a></div>
                 </div>
                 @endforeach
             </div>
