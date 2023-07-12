@@ -26,8 +26,8 @@
 
     @include('includes.modals')
 
-    <script src="{{ asset('js/hystmodal.min.js') }}"></script>
-    <script src="{{ asset('js/swiper.min.js') }}"></script>
+    <script src="{{ asset('js/libs/hystmodal.min.js') }}"></script>
+    <script src="{{ asset('js/libs/swiper.min.js') }}"></script>
     <script defer src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

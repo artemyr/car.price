@@ -10,15 +10,6 @@ import { assertExpressionStatement } from '@babel/types';
 
 export default {
     name: 'EditText',
-    data () {
-        return {}
-    },
     props: ['vars'],
-    mounted() {
-        // console.log(this.$parent);
-    },
-    methods: {
-        
-    }
 }
 </script>

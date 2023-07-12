@@ -1,9 +1,7 @@
 <template>
     <div class="admin-edit" v-if="entity">
 
-        <EditTextComponent ref="input" :vars="{name:'Название',id:'title'}"></EditTextComponent>
-
-        <EditTextComponent :vars="{name:'Ссылка',id:'link'}"></EditTextComponent>
+        <EditNameLinkComponent></EditNameLinkComponent>
 
         <EditTextComponent :vars="{name:'Город в предложном падеже',id:'name_predloshniy_padesh'}"></EditTextComponent>
 
@@ -16,20 +14,20 @@
 <script>
 import { assertExpressionStatement } from '@babel/types';
 import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue';
+import EditNameLinkComponent from '../../../components/admin/form/EditNameLinkComponent.vue';
 
 export default {
     name: 'Edit',
     components: {
-        EditTextComponent
+        EditTextComponent,
+        EditNameLinkComponent
     },
     data () {
         return {
             entity: null
         }
     },
-    props: [],
     mounted() {
-        // console.log(this.$refs.input); // udefined
         this.get();
     },
     methods: {
@@ -41,8 +39,8 @@ export default {
         },
         update() {
             axios.patch(`/api/admin/cities/${this.$route.params.id}`, {
-                title: this.entity.title, 
-                link: this.entity.link, 
+                title: this.entity.title,
+                link: this.entity.link,
                 name_predloshniy_padesh: this.entity.name_predloshniy_padesh
             })
                 .then(res => {

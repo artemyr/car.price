@@ -78,13 +78,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: 'EditText',
-  data: function data() {
-    return {};
-  },
-  props: ['vars'],
-  mounted: function mounted() {// console.log(this.$parent);
-  },
-  methods: {}
+  props: ['vars']
 });
 
 /***/ }),
