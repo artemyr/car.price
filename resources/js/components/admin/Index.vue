@@ -53,15 +53,6 @@
                             </p>
                         </router-link>
                     </li>
-                    <li class="nav-item">
-                        <router-link to="/admin/posts" class="nav-link">
-                            <i class="nav-icon fas fa-calendar-alt"></i>
-                            <p>
-                                Посты
-                                <span class="badge badge-info right"></span>
-                            </p>
-                        </router-link>
-                    </li>
 
                     <li class="nav-item">
                         <router-link to="/admin/articles" class="nav-link">

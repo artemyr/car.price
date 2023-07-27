@@ -71,6 +71,11 @@
         border: none;
     }
 
+    option:checked {
+        background: #343a40;
+        color: white;
+    }
+
     input.error {
         border: 2px solid red;
     }

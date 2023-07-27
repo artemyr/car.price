@@ -56,7 +56,7 @@ export default {
             })
                 .then(res => {
                     // this.$router.push({name:'admin.city.show', params: {id: this.$route.params.id}})
-                    this.$router.push({name:'admin.city.index', params: {id: this.$route.params.id}})
+                    this.$router.push({name:'admin.city.index'})
                 })
                 .catch(error => {
                     this.errors = error.response.data.errors

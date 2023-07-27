@@ -28,7 +28,6 @@ class UpdateRequest extends FormRequest
             'link' => 'string',
             'city_id' => 'integer|nullable',
             'content' => 'string|nullable',
-            'tag' => 'string|nullable',
             'preview_text' => 'string|nullable',
             'cr_date' => 'string|nullable',
             'picture_id' => 'integer|nullable',

@@ -2,6 +2,7 @@
     <div v-if="vars" class="admin-edit__form-control">
         <label :for="vars.id">{{ vars.name }}</label>
         <select v-model="$parent.entity[vars.id]" :id="vars.id">
+            <option :value="null">-</option>
             <option v-for="item in values" :value="item.id">{{ item.title }}</option>
         </select>
     </div>

@@ -1,22 +1,27 @@
 <template>
     <div class="admin-edit" v-if="entity">
 
-        <EditTextComponent :vars="{name:'Название',id:'title'}"></EditTextComponent>
+        <div class="error" v-for="(arError, index) in errors">
+            <p class="error__label">{{ index }}</p>
+            <ul v-for="error of arError">
+                <li v-html="error"></li>
+            </ul>
+        </div>
 
-        <EditTextComponent :vars="{name:'Ссылка',id:'link'}"></EditTextComponent>
+        <EditNameLinkComponent></EditNameLinkComponent>
 
         <EditSelectComponent :vars="{name:'Город статьи',id:'city_id', entity:'cities'}"></EditSelectComponent>
 
         <EditTextAreaComponent :vars="{name:'Контент',id:'content'}"></EditTextAreaComponent>
-        
-        <EditTextComponent :vars="{name:'Подпись', id:'tag',}"></EditTextComponent>
+
+        <EditSelectMulti :vars="{name:'Теги', id:'tags', entity: 'tags'}"></EditSelectMulti>
 
         <EditTextComponent :vars="{name:'Текст анонса',id:'preview_text'}"></EditTextComponent>
 
         <EditTextComponent :vars="{name:'Дата создания',id:'cr_date'}"></EditTextComponent>
 
         <UploadFilesComponent :vars="{name: 'Картинка',id: 'downloads'}" :multiply="false"></UploadFilesComponent>
-    
+
         <div>
             <input :disabled="!isDisabled" @click.prevent="update" class="admin-edit__save" type="submit" value="Сохранить">
         </div>
@@ -29,10 +34,14 @@ import EditTextComponent from '../../../components/admin/form/EditTextComponent.
 import EditTextAreaComponent from '../../../components/admin/form/EditTextAreaComponent.vue'
 import EditSelectComponent from '../../../components/admin/form/EditSelectComponent.vue'
 import UploadFilesComponent from '../../../components/admin/UploadFilesComponent.vue'
+import EditNameLinkComponent from "../../../components/admin/form/EditNameLinkComponent.vue";
+import EditSelectMulti from "../../../components/admin/form/EditSelectMultiComponent.vue";
 
 export default {
     name: 'Edit',
     components: {
+        EditSelectMulti,
+        EditNameLinkComponent,
         EditTextComponent,
         EditTextAreaComponent,
         EditSelectComponent,
@@ -40,7 +49,8 @@ export default {
     },
     data () {
         return {
-            entity: null
+            entity: null,
+            errors: null
         }
     },
     mounted() {
@@ -55,17 +65,20 @@ export default {
         },
         update() {
             axios.patch(`/api/admin/articles/${this.$route.params.id}`, {
-                title: this.entity.title, 
+                title: this.entity.title,
                 link: this.entity.link,
                 content: this.entity.content,
                 preview_text: this.entity.preview_text,
                 city_id: this.entity.city_id,
                 cr_date: this.entity.cr_date,
-                tag: this.entity.tag,
+                tags: this.entity.tags,
                 downloads: this.entity.downloads
             })
                 .then(res => {
-                    this.$router.push({name:'admin.article.show', params: {id: this.$route.params.id}})
+                    this.$router.push({name:'admin.article.index'})
+                })
+                .catch(error => {
+                    this.errors = error.response.data.errors
                 })
         }
     },

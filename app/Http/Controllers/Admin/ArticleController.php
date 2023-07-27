@@ -48,6 +48,10 @@ class ArticleController extends BaseController
         if($request->has('downloads'))
             $article->downloads()->attach($request->downloads);
 
+        $article->tags()->detach();
+        if($request->has('tags'))
+            $article->tags()->attach($request->tags);
+
         return response([]);
     }
 }

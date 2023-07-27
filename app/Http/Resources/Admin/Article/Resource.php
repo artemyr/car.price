@@ -20,7 +20,7 @@ class Resource extends JsonResource
             'link' => $this->link,
             'city_id' => $this->city_id,
             'content' => $this->content,
-            'tag' => $this->tag,
+            'tags' => $this->tags->pluck('id')->toArray(),
             'preview_text' => $this->preview_text,
             'cr_date' => $this->cr_date,
             'downloads' => $this->downloads

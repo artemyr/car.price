@@ -1,9 +1,14 @@
 <template>
     <div class="admin-edit" v-if="entity">
 
-        <EditTextComponent :vars="{name:'Название',id:'title'}"></EditTextComponent>
+        <div class="error" v-for="(arError, index) in errors">
+            <p class="error__label">{{ index }}</p>
+            <ul v-for="error of arError">
+                <li v-html="error"></li>
+            </ul>
+        </div>
 
-        <EditTextComponent :vars="{name:'Ссылка',id:'link'}"></EditTextComponent>
+        <EditNameLinkComponent></EditNameLinkComponent>
 
         <EditTextComponent :vars="{name:'Подзаголовок',id:'subtitle'}"></EditTextComponent>
 
@@ -18,15 +23,18 @@
 <script>
 import { assertExpressionStatement } from '@babel/types';
 import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue'
+import EditNameLinkComponent from "../../../components/admin/form/EditNameLinkComponent.vue";
 
 export default {
     name: 'Edit',
     components: {
+        EditNameLinkComponent,
         EditTextComponent,
     },
     data () {
         return {
-            entity: null
+            entity: null,
+            errors: null
         }
     },
     props: [],
@@ -42,13 +50,16 @@ export default {
         },
         update() {
             axios.patch(`/api/admin/categories/${this.$route.params.id}`, {
-                title: this.title, 
-                link: this.link, 
-                subtitle: this.subtitle,
-                icon: this.icon,
+                title: this.entity.title,
+                link: this.entity.link,
+                subtitle: this.entity.subtitle,
+                icon: this.entity.icon,
             })
                 .then(res => {
-                    this.$router.push({name:'admin.category.show', params: {id: this.$route.params.id}})
+                    this.$router.push({name:'admin.category.index'})
+                })
+                .catch(error => {
+                    this.errors = error.response.data.errors
                 })
         }
     },
