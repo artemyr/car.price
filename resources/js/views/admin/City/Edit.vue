@@ -15,7 +15,8 @@
         <EditTextComponent :vars="{name:'Координаты',id:'coords'}"></EditTextComponent>
 
         <div>
-            <input :disabled="!isDisabled" @click.prevent="update" class="admin-edit__save" type="submit" value="Сохранить">
+            <input :disabled="!isDisabled" @click.prevent="update(true)" class="admin-edit__save" type="submit" value="Сохранить">
+            <input :disabled="!isDisabled" @click.prevent="update(false)" class="admin-edit__save" type="submit" value="Применить">
         </div>
     </div>
 </template>
@@ -47,7 +48,7 @@ export default {
                     this.entity = res.data.data
                 })
         },
-        update() {
+        update(toIndex) {
             axios.patch(`/api/admin/cities/${this.$route.params.id}`, {
                 title: this.entity.title,
                 link: this.entity.link,
@@ -55,8 +56,14 @@ export default {
                 name_predloshniy_padesh: this.entity.name_predloshniy_padesh
             })
                 .then(res => {
-                    // this.$router.push({name:'admin.city.show', params: {id: this.$route.params.id}})
-                    this.$router.push({name:'admin.city.index'})
+                    if (toIndex){
+                        // this.$router.push({name:'admin.city.show', params: {id: this.$route.params.id}})
+                        this.$router.push({name:'admin.city.index'})
+                    } else {
+                        // this.$router.push({name:'admin.review.edit', params: {id: this.$route.params.id}})
+                        this.errors = {"Статус": ["Сохранено"]}
+                        document.querySelector('body').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+                    }
                 })
                 .catch(error => {
                     this.errors = error.response.data.errors
