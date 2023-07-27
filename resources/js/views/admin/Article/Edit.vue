@@ -18,7 +18,7 @@
 
         <EditTextComponent :vars="{name:'Текст анонса',id:'preview_text'}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Дата создания',id:'cr_date'}"></EditTextComponent>
+        <EditDate :vars="{name:'Дата создания',id:'cr_date'}"></EditDate>
 
         <UploadFilesComponent :vars="{name: 'Картинка',id: 'downloads'}" :multiply="false"></UploadFilesComponent>
 
@@ -36,10 +36,12 @@ import EditSelectComponent from '../../../components/admin/form/EditSelectCompon
 import UploadFilesComponent from '../../../components/admin/UploadFilesComponent.vue'
 import EditNameLinkComponent from "../../../components/admin/form/EditNameLinkComponent.vue";
 import EditSelectMulti from "../../../components/admin/form/EditSelectMultiComponent.vue";
+import EditDate from "../../../components/admin/form/EditDateComponent.vue";
 
 export default {
     name: 'Edit',
     components: {
+        EditDate,
         EditSelectMulti,
         EditNameLinkComponent,
         EditTextComponent,
