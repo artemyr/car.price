@@ -12,7 +12,15 @@
 
         <EditTextComponent :vars="{name:'Подзаголовок',id:'subtitle'}"></EditTextComponent>
 
-        <EditTextComponent :vars="{name:'Иконка',id:'icon'}"></EditTextComponent>
+        <EditSelectComponent
+            :vars="{name:'Иконка',id:'icon',
+                values: [
+                    {title:'Машинка с восклицательным знаком', id: 'menu-icon-1'},
+                    {title:'Машинка с ключем', id: 'menu-icon-2'},
+                    {title:'Машинка', id: 'menu-icon-3'},
+                    {title:'Руль', id: 'menu-icon-4'}
+                ]}">
+        </EditSelectComponent>
 
         <div>
             <input :disabled="!isDisabled" @click.prevent="update(true)" class="admin-edit__save" type="submit" value="Сохранить">
@@ -25,10 +33,12 @@
 import { assertExpressionStatement } from '@babel/types';
 import EditTextComponent from '../../../components/admin/form/EditTextComponent.vue'
 import EditNameLinkComponent from "../../../components/admin/form/EditNameLinkComponent.vue";
+import EditSelectComponent from "../../../components/admin/form/EditSelectComponent.vue";
 
 export default {
     name: 'Edit',
     components: {
+        EditSelectComponent,
         EditNameLinkComponent,
         EditTextComponent,
     },

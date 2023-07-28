@@ -20,8 +20,11 @@ export default {
     },
     props: ['vars'],
     mounted() {
-        this.get();
-        // console.log(this.$parent);
+        if(this.vars.values && this.vars.values.length > 0){
+            this.values = this.vars.values
+        } else {
+            this.get();
+        }
     },
     methods: {
         async get () {
