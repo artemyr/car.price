@@ -11,10 +11,11 @@
 1. тем убедится в наличии файла `.env` и правильной его конфигураии
 2. Затем `composer install`, чтобы сформировать папку vendor
 3. (Затем `npm i`, чтобы сформировать папку node_modules)
-4. Затем `php artisan migrate:fresh --seed`, чтобы залить бд и исходные сущьности
-5. вернуть файлы как было
-6. /config/sanctum.php в stateful указать актуальный домен сайта
-7. sail artisan storage:link сделать линк файловой системы
+4. (Затем `npm run watch`, чтобы собрать фронт)
+5. Затем `php artisan migrate:fresh --seed`, чтобы залить бд и исходные сущьности
+6. вернуть файлы как было
+7. /config/sanctum.php в stateful указать актуальный домен сайта
+8. sail artisan storage:link сделать линк файловой системы
 
 ## CSS breakpoints
 1330 1200 992 768 576
